@@ -31,8 +31,8 @@
 
 
 //Do while loop
- // do <statement>
- // while (<condition>)
+// do <statement>
+// while (<condition>)
 // It will be executed atleast once
 
 // var i=10
@@ -70,17 +70,19 @@
 
 
 
-// var i=0
-// if(i<3){
-// 	console.log(i);i++
+// var i = 0
+// if (i < 3) {
+//     console.log(i);
+//     i++
 // }
-// if(i<3){
-// console.log(i);i++
+// if (i < 3) {
+//     console.log(i);
+//     i++
 // }
-// if(i<3){
-// console.log(i);i++
+// if (i < 3) {
+//     console.log(i);
+//     i++
 // }
-
 
 
 
@@ -89,9 +91,9 @@
 
 // console.log(i);
 
-// var arr=["python","java","scala"];
-// for (var i=0;i<arr.length;i++){
-// 	console.log(arr[i]);
+// var arr = ["python", "java", "scala"];
+// for (var i = 0; i < arr.length; i++) {
+//     console.log(arr[i]);
 // }
 
 // var arr=[1,3,5];
@@ -110,20 +112,36 @@
 
 // findEvenNumber(arr);
 
+// for (var i = 4; i < 20; i++) {
+//     if (i % 2 == 0) {
+//         console.log(" i am in the if");
+//         continue;
+//     }
+//     console.log(i);
+// }
+
 // for (var i=4; i <20;i++){
-// 	if (i%2==0) continue;
+// 	if (i%3==0){
+// 		console.log(" i am in the if");
+// 		break
+// 	}
 // 	console.log(i);
 // }
+
+// console.log(" i am outside");
+
+
 
 // console.log(1%2)
 // for (<variable> in <objec>)
 // 	<statement>
 
 
-// var arr=['a','b','c'];
+// var arr = ['a', 'b', 'c'];
 // var arr="python";
 // for (var key in arr) {
-// 	console.log(arr[key])}
+//     console.log(arr[key])
+// }
 
 // var i=0;
 // while(++i<5) console.log(i);
@@ -132,23 +150,24 @@
 // while(i++<5) console.log(i);
 
 // for(var i=0;i<5;i++) console.log(i);
-
+// 
 // for(var i=0;i<5;++i) console.log(i);
 
 // if else
 
 
-// function divide(dividend,divisor){
-// 	switch(divisor) {
-// 		case 0:
-// 		       throw "Division error"
-//         default:
-//          return dividend/divisor;
+// function divide(dividend, divisor) {
+//     switch (divisor) {
+//         case 0:
+//             throw "Division error;
 
-// 	}
+//         default:
+//             return dividend / divisor;
+
+//     }
 // }
 
-// var x =divide(4,0);
+// var x = divide(4, 0);
 // console.log(x);
 
 
@@ -165,7 +184,7 @@
 //         text = "Looking forward to the Weekend";
 
 // }
-
+// console.log(text);
 
 
 
@@ -199,7 +218,7 @@
 //     console.log("default value");    
 // }
 
-// // console.log(day);
+// console.log(day);
 
 
 // var a = 2;
@@ -218,11 +237,19 @@
 //     console.log( "I don't know such values" );
 // }
 
+// var a = 2;
 
-
-
-
-
+// switch (a) {
+//   case 2:
+//     console.log( 'Too small' );
+//   case 4:
+//     console.log( 'Exactly!' );
+//     case 5:
+//     console.log( 'Too large' );
+//     break;
+//   default:
+//     console.log( "I don't know such values" );
+// }
 
 // var divisor=10
 // var dividend=20
@@ -231,13 +258,12 @@
 //          console.log("Division error");
 //         case 1:
 // 		       throw ""
-        
+
 
 //         default:
 //          console.log(dividend/divisor);
 
 // }
-
 
 
 
@@ -262,6 +288,8 @@
 // var x =divide(4,2);
 // console.log(x);
 
+// var x =4;
+// var y =14;
 
 // function compar(x,y){
 // 	switch(true) {
@@ -271,20 +299,18 @@
 //         return 0;
 //         case x>y:
 //         return 1
-                // console.log( "its big value")
-                 // break;
-        // case 3:
-        //         console.log( "its 3 value")
-                 // break;
-         // default:
-         // return dividend/divisor;
+// console.log( "its big value")
+// break;
+// case 3:
+//         console.log( "its 3 value")
+// break;
+// default:
+// return dividend/divisor;
 
 // 	}
 // }
 
-
-
-
+// 
 
 // var a = "1";
 // var b = 0;
@@ -338,3 +364,29 @@
 //     console.log( 'An unknown value' )
 // }
 
+// / var a = {9,8,2,7}
+// // for (var i = 0; i < a.length; i++} {
+// 	for (var j = 0; j < a.length; j++) {
+// 		if (a[j] > a[j+1]) swap(a[j], a[j+1])
+
+
+var a = [9, 8, 2, 7]
+// for (var i = 0; i < a.length; i++) {
+    for (var j = 0; j < a.length; j++) {
+        if (a[j] > a[j + 1]) {
+            var temp = a[j]
+            a[j] = a[j + 1]
+            a[j + 1] = temp
+
+        }       }
+//     }  console.log(" printing the value of i and array" + i)
+//     for (var k = 0; k < a.length; k++) {
+           
+//             console.log(a[k]);
+//         }
+// }
+
+for (var i = 0; i < a.length; i++) {
+
+    console.log(a[i]);
+}

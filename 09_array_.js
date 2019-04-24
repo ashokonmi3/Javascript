@@ -33,7 +33,7 @@
 // console.log(myArray[3]);
 
 // myArray[3]="scala";
-// var myArray=["java","Python","javascript","scala"];
+var myArray=["java","Python","javascript","scala"];
 
 // console.log(myArray[3]);
 
@@ -53,7 +53,7 @@
 // console.log(arr.length);
 // arr.length=2
 // console.log(arr);
-// arr[arr.length]="python"
+// // arr[arr.length]="python"
 // arr[3]="python"
 // console.log(arr);
 
@@ -80,7 +80,7 @@
 // console.log(myArry1)
 // console.log(x);
 
-// var s =myArry1.join(' ');
+// var s =myArry1.join('****');
 // console.log(s);
 
 // delete myArry1[0];
@@ -95,6 +95,7 @@
 
 
 // in operator (index)
+// var myArr=['a','b','c']
 // console.log(0 in myArr);
 // console.log(10 in myArr);
 
@@ -110,12 +111,12 @@
 // arr1.push('x');
 // console.log(arr1);
 
-// var a=[,,'c'];
-// var b =[undefined,undefined,'c'];
+var a=[,,'c'];
+var b =[undefined,undefined,'c'];
 // console.log(a.length);
 // console.log(b.length);
 // console.log(0 in a);
-// console.log(a[2])
+// console.log(a[1])
 // console.log(0 in b);
 // for (var i=0; i<a.length;i++)
 
@@ -124,9 +125,9 @@
 // };
 // var b =[undefined,undefined,'c'];
 
-// console.log(b[0])
+// // console.log(b[0])
 
-// for (var i=0; i<b.length;i++)    3<3
+// for (var i=0; i<b.length;i++) 3<3
 // {console.log(b[i])           //console.log(b[2])
 // };
 
@@ -184,21 +185,20 @@
 // console.log(myArry3);
 
 // var myArry4=myArry1.concat(myArry2,myArry3);
-// console.log(myArry4);
+// // console.log(myArry4);
 
 
 // slice(start, end)  it will print from starting index to ending index-1
 
-var myArry1=new Array(23,"java","C++","python","dotnet","ASP");
+// var myArry1=new Array(23,"java","C++","python","dotnet","ASP");
 
 
-// console.log(myArry1.slice(0,2));
+// console.log(myArry1.slice(0,2));// ending index is exclusive
 // console.log(myArry1.slice(0,5));
 // console.log(myArry1.slice(2,5));
-// console.log(myArry1.slice(0,2));
 // console.log(myArry1.slice(0,3));
 
-// var myArry2=myArry1.slice(1);
+// var myArry2=myArry1.slice(1);// if we dont give ending index it will give everythng till end
 // console.log(myArry2);
 
 // console.log(myArry1.slice(4));
@@ -216,6 +216,7 @@ var myArry1=new Array(23,"java","C++","python","dotnet","ASP");
 // var myArry1=new Array("java","C++","python","dotnet","ASP");
 
 
+// console.log([-0,+0].indexOf(-0));
 
 
 // Assignment

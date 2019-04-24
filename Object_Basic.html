@@ -1,0 +1,167 @@
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<p>Creating a JavaScript Variable.</p>
+
+<p id="demo"></p>
+
+<script>
+var car = "Fiat";
+document.getElementById("demo").innerHTML = car;
+</script>
+
+</body>
+</html> -->
+ -->
+<!-- Object Properties -->
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<p>Creating a JavaScript Object.</p>
+
+<p id="demo"></p>
+
+<script>
+var car = {type:"Fiat", model:"500", color:"white"};
+// document.getElementById("demo").innerHTML = car.type;
+// document.getElementById("demo").innerHTML = car.model;
+document.getElementById("demo").innerHTML = car.color;
+
+</script>
+
+</body>
+ -->
+<!-- Another Example -->
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<p>Creating a JavaScript Object.</p>
+
+<p id="demo"></p>
+
+<script>
+var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+
+document.getElementById("demo").innerHTML =
+person.firstName + " is " + person.age + " years old.";
+</script>
+
+</body>
+</html>
+ -->
+<!-- Accessing Properties -->
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<p>
+There are two different ways to access an object property: 
+</p>
+<p>You can use person.property or person["property"].</p>
+
+<p id="demo"></p>
+
+<script>
+var person = {
+    "firstName": "John",
+    "lastName" : "Doe",
+    "id"       :  5566
+    //"1":"one" //Invalid it  wont work
+};
+// document.getElementById("demo").innerHTML =
+// person.firstName + " " + person.lastName;
+
+document.getElementById("demo").innerHTML =
+person["firstName"] + " " + person["lastName"];
+
+var propertyName= "firstName";
+console.log(person[propertyName]);
+
+//Use the [] when the property is taken out from the object and assigned to some other variable
+//otherwise directly we can access the property
+// . notation is provide optimizatrion but [] does not because engine does not know what is coming
+// . notation is faster thatn [] brackets
+// Prefered use . notation
+</script>
+
+</body>
+</html>
+ --><!-- </html> -->
+
+<!-- Antother way to access the properties -->
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<p>
+There are two different ways to access an object property: 
+</p>
+<p>You can use person.property or person["property"].</p>
+
+<p id="demo"></p>
+
+<script>
+var person = {
+    firstName: "John",
+    lastName : "Doe",
+    id       :  5566
+};
+document.getElementById("demo").innerHTML =
+person["firstName"] + " " + person["lastName"];
+
+var person = {
+    firstName: "John",
+    lastName : "Doe",
+    id       :  5566
+   
+};
+
+
+
+</script>
+
+</body>
+</html>
+ -->
+
+<!-- ///////Nested object -->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>
+There are two different ways to access an object property: 
+</p>
+<p>You can use person.property or person["property"].</p>
+
+<p id="demo"></p>
+
+<script>
+var person = {
+    firstName: "John",
+    lastName : "Doe",
+    id       :  5566,
+    middlename:null
+    objprop:{innerProp:"Inner Property"}
+};
+// document.getElementById("demo").innerHTML =
+// person["firstName"] + " " + person["lastName"];
+
+document.getElementById("demo").innerHTML = person.objprop;
+console.log(person.objprop);
+console.log(person.objprop.innerProp);
+console.log(person.objprop["innerProp"]);
+console.log(person.objprop);
+
+console.log(person);
+
+</script>
+
+</body>
+</html>

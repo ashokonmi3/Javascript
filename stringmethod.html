@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+document.getElementById("demo").innerHTML = txt.length;
+</script>
+
+</body>
+</html> -->
+
+
+
+<!-- Finding the string in a string
+The indexOf() method returns the index of (the position of) the 
+first occurrence of a specified text in a string:
+Both the indexOf(), and the lastIndexOf() methods return -1 if the text is not found.
+
+ -->
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<p id="p1">Please locate where 'locate' occurs!.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var str = document.getElementById("p1").innerHTML;
+    var pos = str.indexOf("locate");
+    document.getElementById("demo").innerHTML = pos;
+}
+</script>
+
+</body>
+</html>
+
+ -->
+<!-- The lastIndexOf() method returns the index of the last occurrence of a specified text in a string: -->
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<p id="p1">Please locate where 'locate' occurs!.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var str = document.getElementById("p1").innerHTML;
+    // var pos = str.lastIndexOf("\'locate\'");
+    var pos = str.lastIndexOf("locate");
+    var pos = str.lastIndexOf("Python");
+
+    document.getElementById("demo").innerHTML = pos;
+}
+</script>
+
+</body>
+</html>
+
+ -->
+
+
+<!-- difference is that search accept regular expressions. -->
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<p id="p1">Please locate where 'locate' occurs!.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var str = document.getElementById("p1").innerHTML;
+    var pos = str.search("locate");
+    document.getElementById("demo").innerHTML = pos;
+}
+</script>
+
+</body>
+</html>
+
+ -->
+
+<!-- Slicing
+slice(start, end)
+substring(start, end)
+substr(start, length) -->
+
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<p>The slice() method extract a part of a string
+and returns the extracted parts in a new string:</p>
+
+<p id="demo"></p>
+
+<script>
+var str = "Java, Python, Compiler";
+// document.getElementById("demo").innerHTML = str.slice(-12,-6);
+// document.getElementById("demo").innerHTML = str.slice(7);
+// document.getElementById("demo").innerHTML = str.slice(7,13);
+// document.getElementById("demo").innerHTML = str.slice(-12);
+
+// substring can not take the negative value
+// document.getElementById("demo").innerHTML = str.substr(7,6);
+// substr() is similar to slice().
+
+// The difference is that the second parameter specifies the length of the extracted part.
+
+</script>
+
+</body>
+</html>
+
+ -->
+<!-- Replace a string -->
+<!-- The replace() method can also take a regular expression as the search value.
+
+By default, the replace() function replaces only the first match. To replace all matches, use a regular expression with a g flag (for global match):
+ -->
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<p>Replace "Python" used in  "Django" webdevlopment framework:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo">Please visit Django framework!</p>
+
+<script>
+function myFunction() {
+    var str = document.getElementById("demo").innerHTML; 
+    var txt = str.replace("Django","Python");
+    document.getElementById("demo").innerHTML = txt;
+}
+</script>
+
+</body>
+</html>
+ -->
+<!-- Converting upper case -->
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<p>Convert string to upper case:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo">Hello World!</p>
+
+<script>
+function myFunction() {
+    var text = document.getElementById("demo").innerHTML;
+    document.getElementById("demo").innerHTML = text.toUpperCase();
+    // document.getElementById("demo").innerHTML = text.toLowerCase();
+
+}
+</script>
+
+
+ --><!-- Concatation -->
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<p>The concat() method joins two or more strings:</p>
+
+<p id="demo"></p>
+
+<script>
+var text1 = "Hello";
+var text2 = "World!";
+document.getElementById("demo").innerHTML = 
+text1.concat(" ",text2);
+</script>
+
+
+
+
+</body>
+</html>
+</body>
+</html>
+ --><!-- All string methods return a new string. They don't modify the original string.
+Formally said: Strings are immutable: Strings cannot be changed, only replaced.
+ -->
+
+<!-- Character at -->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>The charAt() method returns the character at a given position in a string:</p>
+
+<p id="demo"></p>
+
+<script>
+var str = "HELLO WORLD";
+// document.getElementById("demo").innerHTML = str.charAt(0);
+document.getElementById("demo").innerHTML = str.charCodeAt(0);
+
+</script>
+</body>
+</html>

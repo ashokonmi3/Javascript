@@ -104,13 +104,13 @@
 // printGreeting("harshan");
 // console.log(name);
 //================================
-// function f(){
-// 	console.log(bar);
-// 	var bar="abc";
-// 	console.log(bar);
-// }
+function f(){
+	console.log(bar);
+	var bar="abc";
+	console.log(bar);
+}
 
-// f();
+f();
 // console.log(a);
 //=============================
 

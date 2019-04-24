@@ -1,0 +1,233 @@
+
+cons
+
+<!-- 64 bit precision, not integers its numbers -->
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<p>Integers are considered accurate up to 15 digits.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var x = 999999999999999;
+    var y = 9999999999999999;
+    document.getElementById("demo").innerHTML = x + "<br>" + y;
+// Integers (numbers without a period or exponent notation) are considered accurate up to 15 digits.
+
+
+}
+</script>
+
+</body>
+</html>
+
+ -->
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<p>The toString() method can output numbers as base 16 (hex), base 8 (octal), or base 2 (binary).</p>
+
+<p id="demo"></p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+    var myNumber = 128;
+    document.getElementById("demo").innerHTML = "128 = " + 
+    myNumber + " Decimal, " +
+    myNumber.toString(16) + " Hexadecimal, " +
+    myNumber.toString(8) + " Octal, " +
+    myNumber.toString(2) + " Binary."
+}
+</script>
+
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<p>Infinity is returned if you calculate a number outside the largest possible number.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var myNumber = 2; 
+    var txt = "";
+    while (myNumber != Infinity) {
+        myNumber = myNumber * myNumber;
+        txt = txt + myNumber + "<br>";
+    }
+    document.getElementById("demo").innerHTML = txt;
+}
+</script>
+
+</body>
+</html>
+
+ -->
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<p>Infinity is returned if you calculate a number outside the largest possible number.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var myNumber = 2; 
+    var txt = "";
+    while (myNumber != Infinity) {
+        myNumber = myNumber * myNumber;
+        txt = txt + myNumber + "<br>";
+    }
+    document.getElementById("demo").innerHTML = txt;
+    document.getElementById("demo").innerHTML = typeof Infinity;
+
+}
+</script>
+
+</body>
+
+
+ -->
+<!-- NAN -->
+<!-- <!DOCTYPE html>
+<html>
+<body>
+<p>A number divided by a non-numeric string becomes NaN (Not a Number):</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = 100 / "Apple";
+document.getElementById("demo").innerHTML = typeof NaN;
+
+</script>
+
+</body>
+</html>
+
+ --><!-- </html> -->
+
+
+
+
+<!-- Numbers Can be Objects -->
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+<p id="demo"></p>
+
+<script>
+var x = 123;
+var y = new Number(123);
+
+document.getElementById("demo").innerHTML = typeof x + "<br>" + typeof y;
+</script>
+
+</body>
+</html>
+
+ -->
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<p>Never create numbers as objects.</p>
+<p>Numbers and objects cannot be safely compared.</p>
+
+<p id="demo"></p>
+
+<script>
+var x = new Number(500);              // x is a number
+var y = new Number(500);  // y is an object
+var z = 500;              // x is a number
+var a= 500; 
+// document.getElementById("demo").innerHTML = (x===z);
+document.getElementById("demo").innerHTML = (a===z);
+
+</script>
+
+</body>
+</html>
+
+ -->
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<p>Never create numbers as objects.</p>
+<p>Numbers and objects cannot be safely compared.</p>
+
+<p id="demo"></p>
+
+<script>
+var x = 500;              // x is a number
+var y = new Number(500);  // y is an object
+document.getElementById("demo").innerHTML = (x===y);
+</script>
+
+</body>
+</html>
+
+
+ -->
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<p>Never create numbers as objects.</p>
+<p>JavaScript objects cannot be compared.</p>
+
+<p id="demo"></p>
+
+<script>
+var x = new Number(500);  // x is an object
+var y = new Number(500);  // y is an object
+document.getElementById("demo").innerHTML = (x==y);
+</script>
+
+</body>
+</html>
+ -->
+
+
+<!--  <!DOCTYPE html>
+<html>
+<body>
+
+<p>The toFixed() method rounds a number to a given number of digits.</p>
+<p>For working with money, toFixed(2) is perfect.</p>
+
+<p id="demo"></p>
+
+<script>
+var x = 9.456;
+document.getElementById("demo").innerHTML =
+    x.toFixed(0) + "<br>" +
+    x.toFixed(2) + "<br>" +
+    x.toFixed(4) + "<br>" +
+    x.toFixed(6);
+</script>
+
+</body>
+</html>
+ -->

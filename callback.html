@@ -1,0 +1,108 @@
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<p>A call back function </p>
+
+<button type="button" onclick="myFunction()">Click Me!</button>
+
+<p id="demo"></p>
+
+<script>
+var x= function() {
+	console.log(" I am called from inside a function")
+}
+var y = function(callback){
+	console.log("i am called outside");
+	callback();
+	console.log("i am called after callback");
+
+}    
+
+y(x);
+
+</script>
+
+</body>
+</html>
+ -->
+
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<p>A call back function </p>
+
+<button type="button" onclick="calc(2,3,'mul')">Click Me!</button>
+
+<p id="demo"></p>
+
+<script>
+
+var calc= function (num1,num2,calcType){
+	if (calcType==="add")
+	{
+			document.getElementById("demo").innerHTML =  num1+ num2;
+
+	} 
+	else if (calcType==="mul")
+	{
+			document.getElementById("demo").innerHTML =  num1* num2;
+        }
+};
+
+</script>
+
+</body>
+</html>
+ -->
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>A call back function </p>
+
+<button type="button" onclick="calc(2,3,add)">Click Me!</button>
+
+<p id="demo"></p>
+
+<script>
+
+var add= function (a,b){
+	document.getElementById("demo").innerHTML =  a+ b;
+
+	};
+var whatever= function(a,b)
+	{
+			document.getElementById("demo").innerHTML =  'do whatever u want ';
+        };
+
+var multiply= function(a,b)
+	{
+			document.getElementById("demo").innerHTML =  a* b;
+        };
+
+var calc= function(num1,num2,callback){
+	if(typeof callback === "function")
+		{ 	callback(num1,num2);
+        }
+        else 
+        	{	document.getElementById("demo").innerHTML =  "enter corect";
+}
+
+};
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+

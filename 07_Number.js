@@ -20,7 +20,7 @@
 // console.log(123 .toString());
 // console.log(123.0.toString());
 // console.log(123..toString());
-// 
+// // 
 // console.log(Number(''));
 // console.log(Number('1233'));
 // console.log(Number(false));
@@ -33,7 +33,7 @@
 
 // console.log(parseFloat("10.3"));
 
-// console.log(parseFloat(true));
+// // console.log(parseFloat(true));
 // console.log("34 35 33")
 // console.log(parseFloat("he is  33 year old"))
 // console.log(parseFloat("40 he is  33 year old"))
@@ -123,9 +123,9 @@
 // console.log(Infinity/Infinity);
 // var x=Infinity;
 // console.log(x===Infinity);
-
+// 
 // console.log(isFinite(Infinity));
-
+// 
 // console.log(isFinite(NaN));
 
 
@@ -139,8 +139,6 @@
 // console.log(+0==-0);
 
 
-// console.log([-0,+0].indexOf(-0));
-// console.log([-0,+0].indexOf(-0));
 // console.log(3/-0);
 
 // console.log(3/0);
@@ -169,7 +167,7 @@
 
 
 // console.log(Number.MAX_SAFE_INTEGER);
-// console.log(Number.MIN_SAFE_INTEGER);
+//  console.log(Number.MIN_SAFE_INTEGER);
 
 // console.log(Math.floor(3.9));
 
@@ -181,10 +179,11 @@
 // console.log(Math.round(3.9));
 // console.log(Math.round(-3.9));
 
-x=10;
-// console.log(x++);
+// x=10;
+// console.log(x++);// first print and than increment
+// console.log(x);
 
-// console.log(++x);
+// console.log(++x); //increment first and than print
 
 // console.log(x--);
 // console.log(--x);
@@ -199,7 +198,7 @@ function isOdd(n){
 	}
 }
 
-isOdd(-5);
+isOdd(10);
 
 //  55           ÷         9           =           6           and           1
 

@@ -146,13 +146,18 @@ s='hello world';
 
 // alert( 'a' > 'Z' ); // tru
 
+// console.log( "a".codePointAt(0) ); // 122
+// console.log( "b".codePointAt(0) ); // 122
 
-console.log( "zsd".codePointAt(0) ); // 122
-console.log( "Z".codePointAt(0) ); // 9
-console.log(String.fromCodePoint(65, 90))
+// console.log( "A".codePointAt(0) ); // 122
+// console.log( "B".codePointAt(0) ); // 122
+
+// console.log( "zsd".codePointAt(0) ); // 122
+// console.log( "Z".codePointAt(0) ); // 9
+// console.log(String.fromCodePoint(65, 66))
 
 
-// console.log('a'.localeCompare('a')); // -2 or -1 (or some other negative value)
+// console.log('b'.localeCompare('t')); // -2 or -1 (or some other negative value)
 
 // // Alphabetically the word "check" comes after "against" yielding a positive value
 // console.log('check'.localeCompare('against')); // 2 or 1 (or some other positive value)
@@ -162,11 +167,13 @@ console.log(String.fromCodePoint(65, 90))
 
 // st="javascript"
 // console.log(st.length);
+// console.log(typeof st);
+
 // console.log(st);
 
 // st1 = new String("hello world again");
 // console.log(typeof st1);
-// console.log(st.length);
+// console.log(st1.length);
 
 
 // st1 = new String(123);
@@ -196,31 +203,10 @@ console.log(String.fromCodePoint(65, 90))
 
 // console.log("java"+1+30)
 // console.log(1+30+"java"+1+30)
-// console.log(1+30+"java"+1+30)
-
-// var a = {9,8,2,7}
-// for (var i = 0; i < a.length; i++} {
-// 	for (var j = 0; j < a.length; j++) {
-// 		if (a[j] > a[j+1]) swap(a[j], a[j+1])
 
 
-// var a = [9,8,2,7]
-// for (var i = 0; i < a.length; i++) {
-//     for (var j = 0; j < a.length; j++) {
-//         if (a[j] > a[j+1]) {
-//             var temp = a[j]
-//             a[j] = a[j+1]
-//             a[j+1] = temp
-//         }
-//     }
-// }
-
-// for (var i = 0; i < a.length; i++) {
-
-// console.log(a[i]);
-// }
-// // split
-// console.log("abcdedf".split('a'));
+ // split
+// console.log("abcdedf".split('d'));
 // console.log("abcdedf adf asdf".split(' '));
 // console.log("abcdedf adf asdf".split('f'));
 

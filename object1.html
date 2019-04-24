@@ -1,0 +1,378 @@
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<p>Creating a JavaScript Object.</p>
+
+<p id="demo"></p>
+
+<script>
+var car = {type:"Fiat", model:"500", color:"white"};
+document.getElementById("demo").innerHTML = car.type;
+</script>
+
+</body>
+</html>
+ -->
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<p>Creating a JavaScript Object.</p>
+
+<p id="demo"></p>
+
+<script>
+var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+
+document.getElementById("demo").innerHTML =
+person.firstName + " is " + person.age + " years old.";
+</script>
+
+</body>
+</html>
+ -->
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var person = new Object();
+person.firstName = "John";
+person.lastName = "Doe";
+person.age = 50;
+person.eyeColor = "blue"; 
+
+document.getElementById("demo").innerHTML =
+person.firstName + " is " + person.age + " years old.";
+</script>
+
+</body>
+</html> -->
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+function person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+}
+
+var myFather = new person("John", "Doe", 50, "blue");
+var myMother = new person("Sally", "Rally", 48, "green");
+
+document.getElementById("demo").innerHTML =
+"My father is " + myFather.firstName + ". My mother is " + myMother.age; 
+</script>
+
+</body>
+</html>
+
+
+ -->
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var x1 = new Object();   // A new Object object
+var x2 = new String();   // A new String object
+var x3 = new Number();   // A new Number object
+var x4 = new Boolean();  // A new Boolean object
+var x5 = new Array();    // A new Array object
+var x6 = new RegExp();   // A new RegExp object
+var x7 = new Function(); // A new Function object
+var x8 = new Date();     // A new Date object
+
+document.getElementById("demo").innerHTML =
+"x1: " + typeof x1 + "<br>" +
+"x2: " + typeof x2 + "<br>" +
+"x3: " + typeof x3 + "<br>" +
+"x4: " + typeof x4 + "<br>" +
+"x5: " + typeof x5 + "<br>" +
+"x6: " + typeof x6 + "<br>" +
+"x7: " + typeof x7 + "<br>" +
+"x8: " + typeof x8 + "<br>";
+</script>
+
+<p>There is no need to use String(), Number(), Boolean(), Array(), and RegExp()</p>
+
+</body>
+</html>
+ -->
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var x1 = {};
+var x2 = "";
+var x3 = 0;
+var x4 = false;
+var x5 = [];
+var x6 = /()/;
+var x7 = function(){};
+
+document.getElementById("demo").innerHTML =
+"x1: " + typeof x1 + "<br>" +
+"x2: " + typeof x2 + "<br>" +
+"x3: " + typeof x3 + "<br>" +
+"x4: " + typeof x4 + "<br>" +
+"x5: " + typeof x5 + "<br>" +
+"x6: " + typeof x6 + "<br>" +
+"x7: " + typeof x7 + "<br>";
+</script>
+
+</body>
+</html>
+ -->
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var txt = "";
+var person = {fname:"John", lname:"Doe", age:25}; 
+var x;
+for (x in person) {
+    txt += person[x] + " ";
+}
+document.getElementById("demo").innerHTML = txt;
+</script>
+
+</body>
+</html>
+ -->
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<p>You can add new properties to existing objects.</p>
+
+<p id="demo"></p>
+
+<script>
+var person = {
+    firstname:"John",
+    lastname:"Doe",
+    age:50,
+    eyecolor:"blue"
+};
+person.nationality = "English";
+document.getElementById("demo").innerHTML =
+person.firstname + " is " + person.nationality + ".";
+</script>
+
+</body>
+</html>
+ -->
+
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<p>You can delete object properties.</p>
+
+<p id="demo"></p>
+
+<script>
+var person = {
+    firstname:"John",
+    lastname:"Doe",
+    age:50,
+    eyecolor:"blue"
+};
+delete person.age;
+document.getElementById("demo").innerHTML =
+person.firstname + " is " + person.age + " years old.";
+</script>
+
+</body>
+</html>
+ -->
+
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<p>Creating and using an object method.</p>
+
+<p>A method is actually a function definition stored as a property value.</p>
+
+<p id="demo"></p>
+
+<script>
+var person = {
+    firstName: "John",
+    lastName : "Doe",
+    id       : 5566,
+    fullName : function() {
+       return this.firstName + " " + this.lastName;
+    }
+};
+
+document.getElementById("demo").innerHTML = person.fullName();
+</script>
+</body>
+</html> -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<p>An object method is a function definition stored as a property value.</p>
+<p>If you access it without (), it will return the function definition:</p>
+
+<p id="demo"></p>
+
+<script>
+var person = {
+    firstName: "John",
+    lastName : "Doe",
+    id       : 5566,
+    fullName : function() {
+       return this.firstName + " " + this.lastName;
+    }
+};
+
+document.getElementById("demo").innerHTML = person.fullName;
+</script>
+</body>
+</html>
+ -->
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+function person(firstName,lastName,age,eyeColor) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+    this.eyeColor = eyeColor;
+    this.changeName = function (name) {
+        this.lastName = name;
+    }
+}
+var myMother = new person("Sally","Rally",48,"green");
+myMother.changeName("Doe");
+document.getElementById("demo").innerHTML =
+"My mother's last name is " + myMother.lastName;
+</script>
+
+</body>
+</html>
+ -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+function Person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+}
+
+var myFather = new Person("John", "Doe", 50, "blue");
+var myMother = new Person("Sally", "Rally", 48, "green");
+
+document.getElementById("demo").innerHTML =
+"My father is " + myFather.age + ". My mother is " + myMother.age; 
+</script>
+
+</body>
+</html>
+ -->
+
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+function Person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+}
+Person.prototype.nationality = "English";
+
+var myFather = new Person("John", "Doe", 50, "blue");
+document.getElementById("demo").innerHTML =
+"My father is " + myFather.nationality; 
+</script>
+
+</body>
+</html>
+ -->
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+function Person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+}
+Person.prototype.name = function() {
+    return this.firstName + " " + this.lastName
+};
+
+var myFather = new Person("John", "Doe", 50, "blue");
+document.getElementById("demo").innerHTML =
+"My father is " + myFather.name(); 
+</script>
+
+</body>
+</html>
+ -->
+
+
+

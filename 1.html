@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<table id="outside">
+    <tr><td id="t1">one</td></tr>
+    <tr><td id="t2">two</td></tr>
+</table>
+
+<script>
+
+function modifyText(new_text) {
+  var t2 = document.getElementById("t2");
+  t2.firstChild.nodeValue = new_text;    
+}
+ 
+ // Add event listener to table with an arrow function -->
+var el = document.getElementById("outside");
+el.addEventListener("click", () => { modifyText("four"); }, false);
+</script>
+
+
+</body>
+</html>

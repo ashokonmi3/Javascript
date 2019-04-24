@@ -1,0 +1,112 @@
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Functions</h2>
+
+<p>This example calls a function which performs a calculation, and returns the result:</p>
+
+<p id="demo"></p>
+
+<script>
+function myFunction(p1, p2) {
+    var c =p1*p2
+    document.getElementById("demo").innerHTML = c;
+    // return p1 * p2;
+}
+myFunction(4, 3);
+// var c= myFunction(4, 3);
+// document.getElementById("demo").innerHTML = c;
+</script>
+
+</body>
+</html>
+ -->
+
+<!-- Function Returns -->
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Functions</h2>
+
+<p>This example calls a function which performs a calculation and returns the result:</p>
+
+<p id="demo"></p>
+
+<script>
+function myFunction(a, b) {
+    return a * b;
+}
+document.getElementById("demo").innerHTML = myFunction(4, 3);
+</script>
+
+</body>
+</html>
+ -->
+
+
+<!-- Another Example -->
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Functions</h2>
+
+<p>This example calls a function to convert from Fahrenheit to Celsius:</p>
+<p id="demo"></p>
+
+<script>
+function toCelsius(f) {
+    return (5/9) * (f-32);
+}
+document.getElementById("demo").innerHTML = toCelsius(77);
+</script>
+
+</body>
+</html>
+ -->
+
+<!-- Another Example -->
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Functions</h2>
+
+<p>Accessing a function without () will return the function definition instead of the function result:</p>
+<p id="demo"></p>
+
+<script>
+function toCelsius(f) {
+    return (5/9) * (f-32);
+}
+document.getElementById("demo").innerHTML = toCelsius;
+</script>
+
+</body>
+</html>
+
+ -->
+<!-- Function as variable -->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+"The temperature is " + toCelsius(77) + " Celsius";
+
+function toCelsius(fahrenheit) {
+    return (5/9) * (fahrenheit-32);
+} 
+</script>
+
+</body>
+</html>
+

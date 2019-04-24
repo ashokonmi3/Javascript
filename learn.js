@@ -1,0 +1,10 @@
+<html>
+
+   <head>
+      <script type="text/javascript" src="filename.js" ></script>
+   </head>
+   
+   <body>
+      .......
+   </body>
+</html>

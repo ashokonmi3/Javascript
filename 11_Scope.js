@@ -48,11 +48,11 @@
 // LHS(write)=RHS(read)
 // reading a and writing to b
 //===============================
-// function greet(name){//name is in function scope and we are doing write operation on it by assigning value ashok
-// 	console.log(name);//read operation on ashok
-// }
+function greet(name){//name is in function scope and we are doing write operation on it by assigning value ashok
+	console.log(name);//read operation on ashok
+}
 
-// greet("ashok");
+greet("ashok");
 // 
 // No LHS and RHS but still read and write is happening
 // 

@@ -1,0 +1,35 @@
+<!-- When adding a number and a string, JavaScript will treat the number as a string. -->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>When adding a number and a string, JavaScript will treat the number as a string.</p>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<script>
+// var x = 16 + "Volvo";
+// document.getElementById("demo").innerHTML = x;
+
+// var x = "16" + "Volvo";
+// document.getElementById("demo").innerHTML = x;
+
+// JavaScript evaluates expressions from left to right. Different sequences can produce different results
+
+var x = 16 + 4 + "Volvo";
+var y= "Volvo" + 16 + 4;
+var z= 12+16+"Volvo" + 16+12;
+
+document.getElementById("demo").innerHTML = x;
+document.getElementById("demo1").innerHTML = y;
+document.getElementById("demo1").innerHTML = z;
+
+// var x = "Volvo" + 16 + 4;
+// document.getElementById("demo").innerHTML = x;
+
+
+</script>
+
+</body>
+</html>

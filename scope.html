@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>The local variable carName cannot be accessed from code outside the function:</p>
+
+<p id="demo"></p>
+
+<script>
+// myFunction();
+// document.getElementById("demo").innerHTML =
+// "The type of language is " + typeof language;
+
+// function myFunction() {
+//     var language = "Python";
+// }
+// global variable
+// var language = "Python";
+// myFunction();
+
+// function myFunction() {
+//     document.getElementById("demo").innerHTML =
+//     "I can display " + language;
+// //     
+// }
+
+
+// If you assign a value to a variable that has not been declared,
+// it will automatically become a GLOBAL variable:
+myFunction();
+
+// code here can use carName as a global variable
+document.getElementById("demo").innerHTML = "I can display " + carName;
+
+function myFunction() {
+    var  carName = "Volvo";
+}
+
+</script>
+
+</body>
+</html>

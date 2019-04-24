@@ -1,0 +1,47 @@
+ <!DOCTYPE html>
+<html>
+<body>
+
+<p>A call back function </p>
+
+<button type="button" onclick="myFunction()">Click Me!</button>
+
+<p id="demo"></p>
+
+<script>
+// var som = new Date().getDay()
+// var weekDay;
+// Switch(som)
+var day;
+switch (new Date().getDay()) {
+    case 0:
+        day = "-----";
+        break;
+    case 1:
+        day = "Monday";
+        break;
+    case 2:
+        day = "Tuesday";
+        break;
+    case 3:
+        day = "Wednesday";
+        break;
+    case 4:
+        day = "Thursday";
+        break;
+    case 5:
+        day = "-----!-";
+        break;
+    case  6:
+        day = "Saturday";
+}
+document.getElementById("demo").innerHTML = "Today is " + day;
+
+document.write("switch case return day as ", weekDay)
+
+
+
+</script>
+
+</body>
+</html>
