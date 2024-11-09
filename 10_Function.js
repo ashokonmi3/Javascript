@@ -1,547 +1,262 @@
-// Functions
+// ========================
+// What is a Function in JavaScript?
+// Functions are reusable blocks of code designed to perform specific tasks. They allow us to execute the same code at multiple points in a program, making it easier to manage, debug, and maintain.
+// Functions are important for modular programming, enabling code reusability and reducing redundancy.
+// ========================
 
-// function showMessage(){
+// ===============
+// Basic Function Example
+// A simple function that prints a message to the console.
+// ===============
 
-// 	console.log("Hello");
-// 		console.log("Hello");
-
-// 	console.log("Hello");
-
-// 	console.log("Hello");
-
-
+// function showMessage() {
+//     console.log("Hello");
+//     console.log("Hello");
+//     console.log("Hello");
 // }
+// showMessage(); // Call the function
+// showMessage(); // Call the function again
 
-// showMessage();
+// ========================
+// Function with Parameters
+// Function that calculates interest based on parameters passed.
+// ========================
 
-// showMessage();
-// showMessage();
-// showMessage();
-
-// function calculateinterest(amount, duration, rateofinterest){
-// // function calculateinterest(){
-
-// 	interest= amount*duration*rateofinterest/100
-// 	console.log(" interest calculation")
-// 	console.log(interest)
-
+// function calculateInterest(amount, duration, rateOfInterest) {
+//     "use strict";
+//     let interest = (amount * duration * rateOfInterest) / 100;
+//     console.log("Interest Calculation:", interest);
 // }
+// calculateInterest(10000, 12, 5);
+// calculateInterest(102000, 16, 4);
 
-// calculateinterest(10000,12,5)
-// calculateinterest(102000,16,4)
-// calculateinterest()
+// ========================
+// Function with Parameters and Variables
+// Display different messages based on the input.
+// ========================
 
-
-// function showMessage(abc){
-// 	console.log(abc);
+// function showMessage(abc) {
+//     console.log(abc);
 // }
-
 // showMessage("python");
 // showMessage("java");
 // showMessage("javascript");
-// showMessage(1);
 
-// subject="python"
-// showMessage(subject);
-// 
+// ========================
+// Function with Multiple Parameters
+// Displays two strings in reverse order of parameters.
+// ========================
 
-// function showMessage(string){
-// 	console.log("The Subject is " +string);
+// function displayStrings(string1, string2) {
+//     console.log(string2, string1);
+// }
+// displayStrings("python", "selenium");
+
+// ========================
+// Function with Return Value
+// Function that calculates area and returns the value for further calculations.
+// ========================
+
+// function calculateArea(x) {
+//     return x * 2;
+// }
+// let y = calculateArea(10);
+// console.log("Price is " + (y * 100));
+
+// ========================
+// Types of Functions
+// 1. Regular Functions
+// 2. Constructor Functions (like `new Date()`)
+// 3. Function Methods (functions as object properties)
+// ========================
+
+// Regular Function Example
+// function add(x, y) {
+//     return x + y;
+// }
+// console.log(add(3, 4));
+
+// ========================
+// Function Expressions
+// Assigning functions to variables allows us to store and reuse them.
+// ========================
+
+// var functionVariable = function (x, y) {
+//     return x + y + 100;
+// };
+// console.log(functionVariable(34, 4));
+
+// ========================
+// Hoisting in JavaScript
+// Functions are hoisted, so they can be called before declaration.
+// Hoisting works partially for variables but fully for function declarations.
+// ========================
+
+// console.log(exampleVar); // Output: undefined
+// var exampleVar = 10;
+// sayHello(); // Output: "Hello!"
+
+// function sayHello() {
+//     var a =10
+//     console.log("Hello!");
 // }
 
-// showMessage("python");
+// console.log(meLet)
+// let mylet=10
+// sayHello(); // Output: "Hello!"
+// console.log(meLet)
+// console.log(exampleVar)
 
-// showMessage("java");
-// showMessage("javascript");
-// showMessage("scala");
 
-// function showMessage(string1,string2){
-// 	console.log( string2 , string1);
+
+
+// compilation
+// Hoised Declaration
+// var exampleVar =10
+// function sayHello
+// let mylet=10
+
+
+// execution phase
+// undefined
+// hello
+// undefined
+// 10
+// 10
+// -------
+
+
+
+// ========================
+// Function Parameters vs Arguments
+// Parameters are placeholders in function definitions; arguments are values passed when calling the function.
+// ========================
+
+// function helloWorld(param1, param2) {
+//     console.log(param1 + " " + param2);
 // }
+// helloWorld("hello", "world");
 
-// showMessage("python","selenium");
-// showMessage("java","selenium");
-// showMessage("javascript","selenium");
-// showMessage("scala","selenium");
+// ========================
+// Calling Function from Another Function
+// ========================
 
+// var greet = function () {
+//     console.log("hello");
+// };
+// greet(); // Call greet function
 
-// function id(x){
-// 	area=x*2
-//     return area;
+// function outerFunction() {
+//     greet();
 // }
+// outerFunction(); // Calls greet inside another function
 
+// // ========================
+// // Passing Function as Argument
+// // ========================
 
-
-// y= id(10)
-// console.log("price is "+(y*100))
-//     z=id(20)
-
-// x=id(40)
-// x=id(100)
-// console.log(y);
-
-// console.log(z);
-
-
-
-
-// var y = id(10);
-// var y = id(100);
-// 
-// console.log(y);
-
-
-
-
-
-// 
-// Three main role of the functions
-// 1) Non method function (normal function)
-//  example
-//  function id(x){
-// 	return x;
-// }
-
-// 2) Constructor
-// new Date()
-// var myarray= new Array()
-
-
-
-// function vs method
-// when a function is property of an object it called method
-
-// obj.method()
-
-// Parameter vs Argument
-// function helloworld(st1,st2){//parmeters
-// console.log(st1+st2);
-// }
-
-// helloworld("hello","world");//arguments
-
-// Defining a function
-// 1) using a function expression
-
-// // // =========================
-// function add (x,y){
-// 	return x+y;
-// }
-
-// var z = add(3,4);
-// console.log(typeof z);
-// console.log(z);
-
-// console.log(typeof add);
-
-//############################
-
-// var a = function(){
-// 	console.log("function variable")
-// }
-
-// a()
-// 
-// var functionVariable = function (x,y){
-// 	console.log(x+y);
-//     return x+y;
+// var greetByName = function (name) {
+//     console.log("Hello " + name);
 // };
 
-// // functionVariable(34,4)
-// // var res=functionVariable(34,4)
-// // console.log(res)
-
-// // console.log(typeof functionVariable);
-// // // add(3,5)
-// var z=functionVariable(3,4)
-// functionVariable(3,4);
-// console.log(z);
-
-// ====================================
-
-// function add(x,y){
-// 	return x+y
-// }
-
-// add(3,4)
-// y=add(3,4)
-// console.log(y);
-
-// x=add(2,3)
-// console.log(add(2,3));
-// console.log(x);
-
-// console.log(typeof add);
-// done till here for raja
-// ==================================
-// var add=function(x,y){
-// 	return x+y;
-//  }
-
-// console.log(add instanceof Function);
-
-// ===================================
-// // hoisting
-
-// function foo(){
-// 	console.log("hello World");
-// }
-
-// foo();
-// // -------------
-
-// foo();
-// function foo(){
-// 	console.log("hello World");
-// }
-
-// console.log(a)
-// a=10
-// //hoisting is applicable for functions only
-// var foo;
-// // foo();
-// foo=function(){
-// 	console.log("hello world");
+// var executeFunction = function (fn, name) {
+//     fn(name); // greetByName("Python")
 // };
+// executeFunction(greetByName, "Python");
 
-// foo();
-
-// Hoisting is performed for functions , and partially for variable 
-// in above code the foo is a variable so exeuction will throw an error
-// The function declaration has 2 advantage over function variable
-// 1) they are hoisted , so you can call them before they appear
-// 2) They have a name
-
-// ########### parameters in function
-
-// function sayHello(name, timeofDay){
-// console.log("hello " + name);
-
-// console.log("Time is " +timeofDay);
-// }
-
-// sayHello("Ashok", "afternoon");
-// sayHello("Ashok");
-
-
-// var a=10;
-// if(!a){
-// 	console.log(a)
-// }
-
-// else{
-// 		console.log("parameter missing")
-
-// }
-
-// function sayHello(mandatory, optional){
-// 	if (!mandatory){
-// 		throw new Error("Missing parameter:mandatory");
-// 		console.log("parameter missing")
-// 	}
-// 	else{
-// 	console.log("hello " + optional);
-//      console.log("Time is " +mandatory);	
-// 	}
-// }
-
-// sayHello(mandatory='',"ashok");
-// 
-// sayHello('',"ashok");
-// if(!optional){
-
-// }
-
-// function sayHello(mandatory, optional){
-// 	if (!optional){
-// 		// throw new Error("Missing parameter:mandatory");
-// 		optional="ashok"
-// 		console.log("parameter missing")
-// 	}
-//     console.log(mandatory+optional);
-
-// }
-
-// sayHello("hello","varun");
-// sayHello("hello");
-
-
-
-//As javascript does not handle the parameter , we need to provide check
-//in out code for mandatory optional or default parameters
-//
-//Calling a function from function
-
-// var f=function(){
-// 	console.log("hello");
-// };
-
-// f()
-
-
-// function a(){
-// f()
-// }
-
-// a()
-
-
-// var executor= function(f1){
-// f1();
-// console.log(f1)
-// };
-// 
-// executor("javascript")
-
-// executor(f);
-
-// ================================
-// var f= function(name){
-// 	console.log("hello " +name );
-
-// };
-
-// f("python")
-
-// var executor=function(fn,name){
-// 	fn(name);//f("python")
-		// console.log("hello " +name +fn );
-
-// }
-// executor("datascience","python ");
-
-
-// executor(f,"python");
-// =======================================
-
-// var myObj={ testProp: true};
-
-// myObj.name="ashok"
-// myObj.surname="sharma"
-
-// myObj.myMethod= function(){
-// 	console.log("Function in object");
-// }
-
-// console.log (myObj);
-// console.log (myObj.name);
-
-// myObj.myMethod();
-// =====================
-// var person = {
-//     "firstName": "ashok",
-//     "lastName": "sharma",
-//     getFullName: function() {
-//         console.log (person.firstName + " " + person.lastName)
-//                // return (person.firstName + " " + person.lastName)
-
-//     }
-// }
-// var fullName=person.getFullName();
-// console.log(fullName)
-// person.getFullName();
-// =============================
-// var person = {
-//     "firstName": "ashok",
-//     "lastName": "sharma",
-//     getFullName: function() {
-//         return person.firstName + " " + person.lastName// here person is used so other object will also use the person only
-//         // return firstName + " " + lastName
-
-//     }
-// }
-// // var fullName=person.getFullName();
-// // console.log(fullName);
-
-// var person2=person;
-// // console.log(person2);
-
-// person={};
-// console.log(person)
-// // console.log(person2);
-// var person2 = {
-//     "firstName": "ashok",
-//     "lastName": "sharma",
-//     getFullName: function() {
-//         return person.firstName + " " + person.lastName// here person is used so other object will also use the person only
-//         // return firstName + " " + lastName
-
-//     }
-// }
-
-
-// var fullNamePerson2 = person2.getFullName();
-// console.log(person2.firstName);
-// console.log(person2.lastName);
-// console.log(fullNamePerson2);
-
-// -----------This operator
-// var person = {
-//     "firstName": "ashok",
-//     "lastName": "sharma",
-//     getFullName: function() {
-//         return this.firstName + " " + this.lastName
-//     }
-// }
-// var person2=person;
-// var person2 = {
-//     "firstName": "ashok",
-//     "lastName": "sharma",
-//     getFullName: function() {
-//         return this.firstName + " " + this.lastName
-//         // return person2.firstName + " " + person2.lastName
-
-//     }
-// }
-
-// person={};
-// var fullNamePerson2=person2.getFullName();
-// console.log(fullNamePerson2);
-// ================================================
+// // ========================
+// // Functions as Object Properties (Methods)
+// // ========================
 
 // var person = {
-//     "firstName": "ashok",
-//     "lastName": "sharma",
-//     "getFullName": function() {
-//         return this.firstName + " " + this.lastName
+//     firstName: "Ashok",
+//     lastName: "Sharma",
+//     getFullName: function () {
+//         return this.firstName + " " + this.lastName;
 //     },
-//     "address":{"street":"1st cross",
-//                 "state":"karnataka"},
-//     "city":"bangalore"}
-
-// var fullName=person.getFullName();
-// console.log(fullName);
-
-// var person2=person;
-// person={};
-
+// };
 // console.log(person.getFullName());
 
-// isFromState("karnataka");
+// // ========================
+// // Function Arguments Object
+// // Allows access to all arguments passed to the function.
+// // ========================
 
+function argTest() {
+    console.log(arguments); // Shows all arguments passed
+    console.log(arguments.length); // Shows argument count
+}
+argTest(1, "java", "selenium", "python");
 
-// var person = {
-//     "firstName": "ashok",
-//     "lastName": "sharma",
-//     "getFullName": function () {
-//         return this.firstName + " " + this.lastName
-//     },
-//     "address": {
-//         "street": "1st cross",
-//         "state": "karnataka",
-//         "city": "bangalore",},
-//     "isFromState": function (stateName) {
-//         return(this.address.state === stateName); 
-//     }
-// }
-
-
-
-// var fullName=person.getFullName();
-// console.log(fullName);
-// var person2 = person;
-// person = {};
-// console.log(person2.getFullName());
-// console.log(person2.isFromState("andhra"));
-// console.log(person2.isFromState("karnataka"));
-
-// =====================================
-
-
-
-// function myFunction(a,b, c, d, e){
-//      console.log(arguments);
-
-// 	return arguments.length;
-// }
-
-// var paramCount=myFunction(2,3,100, "python","java");
-// console.log(paramCount);
-
-// ====================
-// function argTest(){
-// 	console.log(arguments);
-//     console.log(arguments.length);
-
-// }
-// argTest(1,"java","selenium","python","javaScript");
-
-
-// =====================
-// function myFunction(a,b, c, d, e){
-//      console.log(arguments);
-
-// 	return arguments.length;
-// }
-// var txt= myFunction.toString();
-// console.log(txt);
-
-// =======================
-// function args(a,b,c,d){
-// 	console.log(arguments);
-// 	return a+b+c+d;
-// }
-
-// var x =args(11,2,3,4)
-// console.log(x);
-
-
-// done for RAJA
-// -------------------------
-// function logArgs(){
-// 	for (var i=0;i<arguments.length;i++){
-// 		console.log(i+'. '+arguments[i]);
-// 	}
-
-// }
-// logArgs("hello","world");
-// ----------------
+// // ========================
+// // Using Arguments to Find Maximum
+// // ========================
 
 // function findMax() {
-//     var max = -Infinity;
-//     for(var i = 0; i < arguments.length; i++){
+//     let max = -Infinity;
+//     for (let i = 0; i < arguments.length; i++) {
 //         if (arguments[i] > max) {
 //             max = arguments[i];
 //         }
 //     }
 //     return max;
 // }
+// console.log(findMax(1, 123, 500, 115, 44, 88));
 
-// x= findMax(1,123,500,115,44,88);
-// console.log(x);
+// // ========================
+// // Function with Default Parameters
+// // ========================
 
-// =========================
-
-// function sumAll() {
-//     var sum = 0;
-//     for(var i = 0; i < arguments.length; i++){
-//         sum = sum + arguments[i];
-//     }
-//     return sum;
+// function showMessageWithDefaults(from, text = "no text given") {
+//     console.log(from + ": " + text);
 // }
-// x= sumAll(1,123,500,115,44,88);
-// console.log(x);
+// showMessageWithDefaults("Ann");
 
-// ==================
-// function(){
-// 	var a =10;
-// 	var b =20;
-//     console.log(a+b);
+// // ========================
+// // Arrow Functions
+// // Shorthand syntax for functions, commonly used for simpler functions.
+// // ========================
+
+// let hello = () => "Hello World!";
+// console.log(hello());
+
+// let personalizedHello = (name) => "Hello " + name + "!";
+// console.log(personalizedHello("Developer"));
+
+// // ========================
+// // Questions:
+// // ========================
+// // Q1: What is the difference between a function declaration and a function expression?
+// // A1: Function declarations are hoisted, meaning they can be called before they are defined. Function expressions, however, are not hoisted and are assigned to variables.
+// // Example:
+// function declarationExample() {
+//     return "I am a declaration";
 // }
+// let expressionExample = function () {
+//     return "I am an expression";
+// };
+// console.log(declarationExample());
+// console.log(expressionExample());
 
-// fn();
-// ----------------------------
-(function(){
-	var a =10;
-	var b =20;
-    console.log(a+b);
-})();
+// // Q2: How does the `this` keyword work in a JavaScript function?
+// // A2: `this` refers to the object that calls the function. In the global scope, `this` refers to the global object; in methods, `this` refers to the object itself.
+// // Example:
+// let obj = {
+//     name: "John",
+//     showName: function () {
+//         console.log(this.name);
+//     },
+// };
+// obj.showName(); // Outputs: John
 
-// Hoising is applicable for functions only
-// f()
-// function f() {
-//     console.log(bar);  // undefined
-//     var bar = 'abc';
-//     console.log(bar);  // abc
+// // Q3: Explain `arguments` in JavaScript functions.
+// // A3: The `arguments` object is an array-like object accessible inside functions, containing all arguments passed to the function.
+// // Example:
+// function showArgs() {
+//     console.log(arguments);
 // }
-// f();
+// showArgs("arg1", "arg2");
+
+// ========================
+// End of Content
+// ========================
