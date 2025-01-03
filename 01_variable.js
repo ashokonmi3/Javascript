@@ -88,18 +88,18 @@
 // 1. Variable Declaration and Initialization
 // ===========================
 
-// Declaring and initializing a variable with "var"
-// var value;         // Declaration
-// value = 20;        // Definition
-// console.log(value); // Output: 20
+// // Declaring and initializing a variable with "var"
+var value;         // Declaration
+value = 20;        // Definition
+console.log(value); // Output: 20
 
 // Another example
-// var value = 45;
-// console.log(value); // Output: 45
+var value = 45;
+console.log(value); // Output: 45
 
 // // // Changing the variable's value
-// value = "JavaScript";
-// console.log(value); // Output: "JavaScript"
+value = "JavaScript";
+console.log(value); // Output: "JavaScript"
 
 // // ===========================
 // // 2. Number Data Type (64-bit values)
@@ -216,6 +216,8 @@
 
 // dynamicVar = false;
 // console.log(typeof dynamicVar); // Output: "boolean"
+// ==================
+
 
 // // ===========================
 // // Summary of Data Types
@@ -255,7 +257,7 @@
 // undefinedVar = 50; // ReferenceError: undefinedVar is not defined
 
 // "use strict";
-var eval = 100;
+// var eval = 100;
 // function var eval
 
 
@@ -302,16 +304,26 @@ var eval = 100;
 // ===========================
 // Scope of var and let 
 // ===========================
-if (true) {
-    var x = 10;
-    let y = 20;
-    console.log(y);
+// if (true) {
+//     var x = 10;
+//     let y = 20;
+//     console.log(y);
 
-}
+// }
 
-console.log(x); // 10 (accessible because `var` is function-scoped or globally scoped)
-console.log(y); // ReferenceError: y is not defined (because `let` is block-scoped)
+// console.log(x); // 10 (accessible because `var` is function-scoped or globally scoped)
+// console.log(y); // ReferenceError: y is not defined (because `let` is block-scoped)
 
+
+/*
+Feature                  var                          let
+------------------------------------------------------------------------
+Scope                    Function-scoped             Block-scoped
+Hoisting                 Hoisted as undefined        Hoisted, but not initialized (TDZ)
+Re-declaration           Allowed                     Not allowed
+Global Object Property   Becomes global property     Does not become global property
+Temporal Dead Zone (TDZ) No                          Yes
+*/
 
 // ==============
 // 1. No Need to Declare Variable Type

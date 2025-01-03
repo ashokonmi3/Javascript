@@ -1,5 +1,5 @@
 // ===============
-//  Introduction to Hoisting in JavaScript
+// Introduction to Hoisting in JavaScript
 // Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their scope before code execution. 
 // This means you can use variables and functions before declaring them in your code.
 // Hoisting makes it easier to structure code as functions and variables can be referenced before their actual declaration, 
@@ -13,8 +13,8 @@
 // However, only the declaration is hoisted, not the initialization.
 // ===============
 
-console.log(x); // Output: undefined (because `x` is hoisted, but not its value)
-var x = 10;
+// console.log(x); // Output: undefined (because `x` is hoisted, but not its value)
+// var x = 10;
 
 // The code above is interpreted by JavaScript as:
 /*
@@ -25,12 +25,12 @@ x = 10;
 
 // Variables declared with `let` and `const` are not hoisted in the same way and will result in a ReferenceError if accessed before declaration.
 
-try {
-    console.log(y); // ReferenceError (no hoisting for `let` and `const`)
-    let y = 20;
-} catch (error) {
-    console.log(error); // Output: ReferenceError: Cannot access 'y' before initialization
-}
+// try {
+//     console.log(y); // ReferenceError (no hoisting for `let` and `const`)
+//     let y = 20;
+// } catch (error) {
+//     console.log(error); // Output: ReferenceError: Cannot access 'y' before initialization
+// }
 
 // ===============
 // Function Hoisting
@@ -38,21 +38,21 @@ try {
 // Function expressions (using `var`, `let`, or `const`) are not fully hoisted in the same way.
 // ===============
 
-myFunction(); // Output: "Hello from myFunction!" - works because the function declaration is hoisted
+// myFunction(); // Output: "Hello from myFunction!" - works because the function declaration is hoisted
 
-function myFunction() {
-    console.log("Hello from myFunction!");
-}
+// function myFunction() {
+//     console.log("Hello from myFunction!");
+// }
 
-try {
-    myFunctionExpression(); // TypeError: myFunctionExpression is not a function
-} catch (error) {
-    console.log(error);
-}
+// try {
+//     myFunctionExpression(); // TypeError: myFunctionExpression is not a function
+// } catch (error) {
+//     console.log(error);
+// }
 
-var myFunctionExpression = function () {
-    console.log("Hello from myFunctionExpression!");
-};
+// var myFunctionExpression = function () {
+//     console.log("Hello from myFunctionExpression!");
+// };
 
 // Explanation:
 // In the case of `var` function expressions, only the variable is hoisted, not the assignment.
@@ -63,12 +63,12 @@ var myFunctionExpression = function () {
 // Variables declared with `let` and `const` are hoisted but in a "temporal dead zone" (TDZ), meaning they can't be accessed before declaration.
 // ===============
 
-try {
-    console.log(z); // ReferenceError due to TDZ
-    const z = 30;
-} catch (error) {
-    console.log(error); // Output: ReferenceError: Cannot access 'z' before initialization
-}
+// try {
+//     console.log(z); // ReferenceError due to TDZ
+//     const z = 30;
+// } catch (error) {
+//     console.log(error); // Output: ReferenceError: Cannot access 'z' before initialization
+// }
 
 // Explanation:
 // Variables `let` and `const` are hoisted, but unlike `var`, accessing them before their declaration throws an error.
@@ -79,26 +79,67 @@ try {
 // In strict mode, variables must be declared before they are used, which affects hoisting behavior.
 // ===============
 
-"use strict";
+// "use strict";
 
-try {
-    myName = "Ashok"; // ReferenceError: myName is not defined
-    console.log(myName);
-} catch (error) {
-    console.log(error);
-}
+// try {
+//     myName = "Ashok"; // ReferenceError: myName is not defined
+//     console.log(myName);
+// } catch (error) {
+//     console.log(error);
+// }
 
-// "use strict" inside functions only affects the scope of that function
-function myStrictFunction() {
-    "use strict";
-    try {
-        undeclaredVariable = 10; // ReferenceError due to strict mode
-    } catch (error) {
-        console.log(error);
-    }
-}
+// // "use strict" inside functions only affects the scope of that function
+// function myStrictFunction() {
+//     "use strict";
+//     try {
+//         undeclaredVariable = 10; // ReferenceError due to strict mode
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
 
-myStrictFunction();
+// myStrictFunction();
+// =================
+
+// ========================
+// Hoisting in JavaScript
+// Functions are hoisted, so they can be called before declaration.
+// Hoisting works partially for variables but fully for function declarations.
+// ========================
+
+// console.log(exampleVar); // Output: undefined
+// var exampleVar = 10;
+// sayHello(); // Output: "Hello!"
+
+// function sayHello() {
+//     var a =10
+//     console.log("Hello!");
+// }
+
+// console.log(meLet)
+// let mylet=10
+// sayHello(); // Output: "Hello!"
+// console.log(meLet)
+// console.log(exampleVar)
+
+
+
+
+// compilation
+// Hoised Declaration
+// var exampleVar =10
+// function sayHello
+// let mylet=10
+
+
+// execution phase
+// undefined
+// hello
+// undefined
+// 10
+// 10
+// -------
+
 
 // ===============
 // Interview Questions on Hoisting in JavaScript

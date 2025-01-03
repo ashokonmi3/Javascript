@@ -86,45 +86,6 @@
 // };
 // console.log(functionVariable(34, 4));
 
-// ========================
-// Hoisting in JavaScript
-// Functions are hoisted, so they can be called before declaration.
-// Hoisting works partially for variables but fully for function declarations.
-// ========================
-
-// console.log(exampleVar); // Output: undefined
-// var exampleVar = 10;
-// sayHello(); // Output: "Hello!"
-
-// function sayHello() {
-//     var a =10
-//     console.log("Hello!");
-// }
-
-// console.log(meLet)
-// let mylet=10
-// sayHello(); // Output: "Hello!"
-// console.log(meLet)
-// console.log(exampleVar)
-
-
-
-
-// compilation
-// Hoised Declaration
-// var exampleVar =10
-// function sayHello
-// let mylet=10
-
-
-// execution phase
-// undefined
-// hello
-// undefined
-// 10
-// 10
-// -------
-
 
 
 // ========================

@@ -166,6 +166,16 @@
 
 // console.log("abcdedf".split('d')); // Output: [ 'abc', 'ef' ]
 // console.log("abcdedf adf asdf".split(' ')); // Output: [ 'abcdedf', 'adf', 'asdf' ]
+// =================
+let url = "https://example.com/?name=John Doe";
+
+// Encoding
+let encoded = encodeURIComponent(url);
+console.log(encoded); // Encodes special characters
+
+// Decoding
+let decoded = decodeURIComponent(encoded);
+console.log(decoded); // Decodes back to original
 
 // // ===============
 // // Reverse a String
