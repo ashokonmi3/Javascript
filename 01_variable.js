@@ -89,17 +89,17 @@
 // ===========================
 
 // // Declaring and initializing a variable with "var"
-var value;         // Declaration
-value = 20;        // Definition
-console.log(value); // Output: 20
+// var value;         // Declaration
+// value = 20;        // Definition
+// console.log(value); // Output: 20
 
-// Another example
-var value = 45;
-console.log(value); // Output: 45
+// // Another example
+// var value = 45;
+// console.log(value); // Output: 45
 
-// // // Changing the variable's value
-value = "JavaScript";
-console.log(value); // Output: "JavaScript"
+// // // // Changing the variable's value
+// value = "JavaScript";
+// console.log(value); // Output: "JavaScript"
 
 // // ===========================
 // // 2. Number Data Type (64-bit values)
@@ -137,7 +137,7 @@ console.log(value); // Output: "JavaScript"
 // var f;
 // console.log(f); // Output: undefined
 
-// // // "Null" is an assignment value that represents "no value" or "nothing"
+// // // // "Null" is an assignment value that represents "no value" or "nothing"
 // var g = null;
 // console.log(g); // Output: null
 
@@ -191,7 +191,7 @@ console.log(value); // Output: "JavaScript"
 // var strictVar = 10;
 // console.log(strictVar); // Output: 10
 
-// // Uncommenting the following line would cause an error in strict mode
+// // // Uncommenting the following line would cause an error in strict mode
 // strictAssignment = 20; // ReferenceError: strictAssignment is not defined
 // console.log(strictAssignment); // Output: 10
 
@@ -267,10 +267,10 @@ console.log(value); // Output: "JavaScript"
 
 // const PI = 3.14159; // A constant for the value of PI
 
-// // Trying to reassign a const variable will cause an error
+// // // Trying to reassign a const variable will cause an error
 // PI = 3.14; // ❌ Error: Assignment to constant variable
 
-// // Use const for values that should not change
+// // // Use const for values that should not change
 // const BASE_URL = "https://api.example.com";
 // console.log(BASE_URL);
 
@@ -304,15 +304,15 @@ console.log(value); // Output: "JavaScript"
 // ===========================
 // Scope of var and let 
 // ===========================
-// if (true) {
-//     var x = 10;
-//     let y = 20;
-//     console.log(y);
+if (true) {
+    var x = 10;
+    let y = 20;
+    console.log(y);
 
-// }
+}
 
-// console.log(x); // 10 (accessible because `var` is function-scoped or globally scoped)
-// console.log(y); // ReferenceError: y is not defined (because `let` is block-scoped)
+console.log(x); // 10 (accessible because `var` is function-scoped or globally scoped)
+console.log(y); // ReferenceError: y is not defined (because `let` is block-scoped)
 
 
 /*
