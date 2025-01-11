@@ -23,39 +23,39 @@
 
 // myAsyncFunction(); // Call the async function
 // ==================
-function bakeCake() {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve("Cake is ready!");
-        }, 2000);
-    });
-}
+// function bakeCake() {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             resolve("Cake is ready!");
+//         }, 2000);
+//     });
+// }
 
-function makeCoffee() {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve("Coffee is ready!");
-        }, 1500);
-    });
-}
+// function makeCoffee() {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             resolve("Coffee is ready!");
+//         }, 1500);
+//     });
+// }
 
-async function prepareBreakfast() {
-    try {
-        console.log("Start baking cake...");
-        const cakeMessage = await bakeCake();  // Waits for cake to be done
-        console.log(cakeMessage);  // Prints cake status
+// async function prepareBreakfast() {
+//     try {
+//         console.log("Start baking cake...");
+//         const cakeMessage = await bakeCake();  // Waits for cake to be done
+//         console.log(cakeMessage);  // Prints cake status
 
-        console.log("Start making coffee...");
-        const coffeeMessage = await makeCoffee();  // Waits for coffee to be done
-        console.log(coffeeMessage);  // Prints coffee status
-    } catch (error) {
-        console.log(error);
-    }
-}
+//         console.log("Start making coffee...");
+//         const coffeeMessage = await makeCoffee();  // Waits for coffee to be done
+//         console.log(coffeeMessage);  // Prints coffee status
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
 
-console.log("Start preparing breakfast!");
-prepareBreakfast();
-console.log("While breakfast is being prepared, I can do other things.");
+// console.log("Start preparing breakfast!");
+// prepareBreakfast();
+// console.log("While breakfast is being prepared, I can do other things.");
 
 
 
@@ -64,22 +64,22 @@ console.log("While breakfast is being prepared, I can do other things.");
 // Async/Await allows us to handle multiple asynchronous operations one after another, ensuring they are completed in order.
 // ===============
 
-// async function handleMultipleOperations() {
-//     console.log("Starting async operations");
+async function handleMultipleOperations() {
+    console.log("Starting async operations");
 
-//     const result1 = await new Promise(resolve => setTimeout(() => resolve("First operation complete"), 1000));
-//     console.log(result1);
+    const result1 = await new Promise(resolve => setTimeout(() => resolve("First operation complete"), 1000));
+    console.log(result1);
 
-//     const result2 = await new Promise(resolve => setTimeout(() => resolve("Second operation complete"), 1000));
-//     console.log(result2);
+    const result2 = await new Promise(resolve => setTimeout(() => resolve("Second operation complete"), 1000));
+    console.log(result2);
 
-//     const result3 = await new Promise(resolve => setTimeout(() => resolve("Third operation complete"), 1000));
-//     console.log(result3);
+    const result3 = await new Promise(resolve => setTimeout(() => resolve("Third operation complete"), 1000));
+    console.log(result3);
 
-//     console.log("All async operations complete");
-// }
+    console.log("All async operations complete");
+}
 
-// handleMultipleOperations(); // Calling function to handle multiple async operations
+handleMultipleOperations(); // Calling function to handle multiple async operations
 
 // =====================
 // Handling Multiple Async Operations Concurrently

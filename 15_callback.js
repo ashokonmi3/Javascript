@@ -43,8 +43,9 @@
 //     console.log("I am called after callback");
 // };
 
-// y(x); // Output: I am called outside
-//     I am called from inside a function
+// y(x); 
+// Output: I am called outside
+// I am called from inside a function
 // I am called after callback
 
 // ===============================
@@ -89,8 +90,10 @@
 //     console.log("Data received:", data);
 // }
 
-// fetchData(displayData); // Output: Fetching data...
-// //         (after 2 seconds) Data received: { id: 1, name: "Alice" }
+// fetchData(displayData); 
+
+// Output: Fetching data...
+//         (after 2 seconds) Data received: { id: 1, name: "Alice" }
 
 // ===============================
 
@@ -104,7 +107,8 @@
 // // ===============================
 
 // // Callback Functions with Error Handling
-// // It's common to use callbacks for operations with error handling (like reading files or making HTTP requests).
+// // It's common to use callbacks for operations with error handling
+//  (like reading files or making HTTP requests).
 
 // function fetchDataWithErrorHandling(callback) {
 //     let errorOccurred = false; // Simulating an error condition
@@ -161,6 +165,27 @@
 //         console.log(result2); // Output: 13 (5*2 = 10 + 3 = 13)
 //     });
 // });
+// ===============
+// Simulate ordering a pizza with a callback
+function orderPizza(callback) {
+    console.log("Ordering pizza...");
+    
+    // Simulate a delay for pizza preparation using setTimeout
+    setTimeout(() => {
+        console.log("Pizza is ready!");
+        callback(); // Call the callback function when pizza is ready
+    }, 3000); // 3 seconds delay
+}
+
+// Define a callback function
+function eatPizza() {
+    console.log("Eating the pizza now!");
+}
+
+// Place an order and pass the callback function
+orderPizza(eatPizza);
+
+console.log("Doing other things while waiting for the pizza...");
 
 // // ===============================
 
@@ -195,31 +220,31 @@
 
 // // Example of Callback Hell
 
-function firstFunction(callback) {
-    setTimeout(() => {
-        console.log("First function executed");
-        callback();
-    }, 1000);
-}
+// function firstFunction(callback) {
+//     setTimeout(() => {
+//         console.log("First function executed");
+//         callback();
+//     }, 1000);
+// }
 
-function secondFunction(callback) {
-    setTimeout(() => {
-        console.log("Second function executed");
-        callback();
-    }, 1000);
-}
+// function secondFunction(callback) {
+//     setTimeout(() => {
+//         console.log("Second function executed");
+//         callback();
+//     }, 1000);
+// }
 
-function thirdFunction() {
-    setTimeout(() => {
-        console.log("Third function executed");
-    }, 1000);
-}
+// function thirdFunction() {
+//     setTimeout(() => {
+//         console.log("Third function executed");
+//     }, 1000);
+// }
 
-firstFunction(function () {
-    secondFunction(function () {
-        thirdFunction();
-    });
-});
+// firstFunction(function () {
+//     secondFunction(function () {
+//         thirdFunction();
+//     });
+// });
 
 // // Output:
 // // First function executed

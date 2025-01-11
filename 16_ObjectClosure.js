@@ -7,13 +7,17 @@
 // myObj.foo="value";
 
 // console.log(myObj.foo);
-// 
-// we can use . operator to access property of any object
+ 
+// // we can use . operator to access property of any object
+
 // myObj.foo="hello";
 // console.log(myObj.foo);
 // we can change property any time
 // we can add property any where freely
 // 
+
+// ==========================
+
 // var myObj={
 // 	foo:"value",
 // 	age:30,
@@ -28,7 +32,7 @@
 // console.log(myObj);
 // console.log(myObj.foo);
 // console.log(myObj["foo"]);
-
+// =========================
 // var emp1={};
 // emp1.firstName="ashok";
 // emp1.lastName="sharma";
@@ -40,7 +44,7 @@
 // emp2.lastName="s";
 // emp2.gender="M";
 // emp2.designation="developer";
-
+// ======================
 // function createEmployeeObject(firstName,lastName,gender,designation){
 //    var emp={};
 //    emp.firstName=firstName;
@@ -48,21 +52,18 @@
 //    emp.gender=gender;
 //    emp.designation=designation;
 //    return emp;
-//    console.log(emp.firstName)
+
 // }
 
 // var emp1=createEmployeeObject("ashok","sharma","M","Manager");
 // console.log(emp1.firstName)
 // var emp2=createEmployeeObject("harshan","s","M","developer");
-
 // console.log(emp2);
-// new 
+
+
 // ==============================================
 // If we have to create 1000 objects 
 // first line (initialize object) and last line (return object) is common in above object
-
-
-
 // JAva script provide a shortcut to avoid the 2 lines using constructor mode
 
 // adding new keyword in front of function call we can create a function as constructor
@@ -76,7 +77,7 @@
 //    this.lastName=lastName;
 //    this.gender=gender;
 //    this.designation=designation;
-         // return this;  //this line also javascript will add
+//         //  return this;  //this line also javascript will add
 // }
 
 // var  emp1=new Employee("ashok","sharma","M","Manager");
@@ -96,38 +97,38 @@
 // --------------------
 //second  without constructor
 
-function createBicycle(cadence,speed,gear){
-	var newBicycle={};
-	newBicycle.cadence=cadence;
-	newBicycle.speed=speed;
-	newBicycle.gear=gear;
-	return newBicycle;
-}
-
-
+// function createBicycle(cadence,speed,gear){
+// 	var newBicycle={};
+// 	newBicycle.cadence=cadence;
+// 	newBicycle.speed=speed;
+// 	newBicycle.gear=gear;
+// 	return newBicycle;
 // }
 
-var bicycle1=createBicycle(30, 4, 2);
 
-var bicycle2=createBicycle(40, 3, 4);
+// // }
+
+// var bicycle1=createBicycle(30, 4, 2);
+
+// var bicycle2=createBicycle(40, 3, 4);
 // /----------------------------
 
 // 3) using constructor
-function Bicycle(cadence,speed,gear){
-	// var newBicycle={};
-	this.cadence=cadence;
-	this.speed=speed;
-	this.gear=gear;
-	// return newBicycle;
+// function Bicycle(cadence,speed,gear){
+// 	// var newBicycle={};
+// 	this.cadence=cadence;
+// 	this.speed=speed;
+// 	this.gear=gear;
+// 	// return newBicycle;
 
-}
+// }
 
 
 // }
 
-var bicycle1=new Bicycle(30, 4, 2);
+// var bicycle1=new Bicycle(30, 4, 2);
 
-var bicycle2=new Bicycle(40, 3, 4);
+// var bicycle2=new Bicycle(40, 3, 4);
 // this is a constructor in normal function mode
 // constructor is starts with capital letter
 
@@ -145,7 +146,7 @@ var bicycle2=new Bicycle(40, 3, 4);
 
 // console.log(bicycle1);
 // Bicycle1 will be undefined as we are not returning anything 
-
+// ===================
 // normal function with new
 // function Bicycle(cadence,speed,gear){
 // 	// var this={}provided by javascript
@@ -205,18 +206,18 @@ var bicycle2=new Bicycle(40, 3, 4);
 // 	console.log(this);
 // }
 // foo();
-
+// // ==========================
 
 // 2) 
 // var obj={prop:"this is object itself"};
 // obj.foo=function(){
 // 		console.log("hello");
-// 	console.log(this);
-// // 
+// 	console.log(this); //In a method, this refers to the object that is calling the method.
+ 
 // }
 
 // obj.foo();
-
+// =====================
 // 3) new keyword, this will be empty object
 // 
 
@@ -231,8 +232,6 @@ var bicycle2=new Bicycle(40, 3, 4);
 
 // 
 //====================================== 
-
-
 // createBicycle
 // function Bicycle(cadence,speed,gear,tyrePressure){
 // 	this.cadence=cadence;
@@ -240,13 +239,13 @@ var bicycle2=new Bicycle(40, 3, 4);
 // 	this.gear=gear;
 // 	this.tyrePressure=tyrePressure;
 // 	this.inflateTires=function(){
-// 		this.tyrePressure+=3;
+// 	this.tyrePressure+=3;
 // 	}
 // }
 
 // var bicycle1= new Bicycle(50,34,5,25);
 // bicycle1.inflateTires();
-// // console.log(bicycle1);
+// console.log(bicycle1);
 
 // var bicycle2=new Bicycle(30,32,4,30)
 // bicycle2.inflateTires();
@@ -262,6 +261,8 @@ var bicycle2=new Bicycle(40, 3, 4);
 // mike.inflateTires=bicycle1.inflateTires;
 // mike.inflateTires();// mike does not have tyrepressure property 
 // so this will not work
+// ======================
+
 // how to make it generric
 
 // 4th way
@@ -270,32 +271,46 @@ var bicycle2=new Bicycle(40, 3, 4);
 // }
 // foo.call();
 // foo();
+// ================
+function Bicycle(cadence,speed,gear,tyrePressure){
+	this.cadence=cadence;
+	this.speed=speed;
+	this.gear=gear;
+	this.tyrePressure=tyrePressure;
+	this.inflateTires=function(){
+		this.tyrePressure+=3;
+	}
+}
 
-// function Bicycle(cadence,speed,gear,tyrePressure){
-// 	this.cadence=cadence;
-// 	this.speed=speed;
-// 	this.gear=gear;
-// 	this.tyrePressure=tyrePressure;
-// 	this.inflateTires=function(){
-// 		this.tyrePressure+=3;
-// 	}
-// }
-
-// var bicycle1= new Bicycle(50,34,5,25);
-// bicycle1.inflateTires();
-// console.log(bicycle1);
-
-// var bicycle2=new Bicycle(30,32,4,30)
-// bicycle2.inflateTires();
-// console.log(bicycle2.tyrePressure);
-
-// function Mechanic(name){
-// 	this.name=name;
-// }
-
-// var mech= new Mechanic("ashok")
-// mech.inflateTires=bicycle1.inflateTires;
-// mech.inflateTires.call(bicycle1);
+var bicycle1= new Bicycle(50,34,5,25);
+bicycle1.inflateTires();
+console.log(bicycle1);
 
 
 
+
+function Mechanic(name){
+	this.name=name;
+}
+
+var mech= new Mechanic("ashok")
+mech.inflateTires=bicycle1.inflateTires;
+mech.inflateTires.call(bicycle1);
+
+console.log(bicycle1);
+
+
+// call is a method of JavaScript functions that allows you to invoke a function with an explicit this context.
+// Normally, this inside a method refers to the object it was called on. However, with call, you can specify any object to be the this value when calling the function.
+// call is useful when you want to execute a method on a different object without permanently changing the method’s association.
+// It provides flexibility in how and where methods can be applied, allowing for dynamic binding of this.
+// Example Illustration:
+// Here’s a step-by-step simulation:
+
+// mech.inflateTires references bicycle1.inflateTires.
+// mech.inflateTires.call(bicycle1) is called.
+// Inside inflateTires, this is bicycle1.
+// bicycle1.tyrePressure is incremented by 3.
+// Final State:
+// bicycle1.tyrePressure is updated to 31.
+// mech still has a reference to inflateTires, but no direct changes are made to mech since this was explicitly set to bicycle1.

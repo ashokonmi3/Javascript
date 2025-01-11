@@ -1,13 +1,15 @@
 // ===============
 // Introduction to JavaScript Promises
-// Promises in JavaScript are used for handling asynchronous operations. They provide a cleaner alternative to callbacks and help in managing multiple asynchronous tasks more effectively.
+// Promises in JavaScript are used for handling asynchronous operations. 
+// They provide a cleaner alternative to callbacks and help in managing multiple asynchronous tasks more effectively.
 // A Promise is a proxy for a value that will be provided in the future. It allows you to attach handlers for success (`.then()`) or failure (`.catch()`).
 // Promises help avoid "callback hell" (nested callbacks) by allowing asynchronous code to be written in a more readable way.
 // ===============
 
 // ===============
 // Why Promises Are Needed
-// Promises are needed for asynchronous operations because they allow for a better structure and error handling in asynchronous code. Without promises, you would have to deal with callback functions, which can become hard to manage and debug in large applications.
+// Promises are needed for asynchronous operations because they allow for a better structure and error handling
+//  in asynchronous code. Without promises, you would have to deal with callback functions, which can become hard to manage and debug in large applications.
 // Promises provide the following benefits:
 // 1. Handling of asynchronous code in a more organized way.
 // 2. Error handling with `.catch()`.
@@ -17,8 +19,10 @@
 
 // ===============
 // Basic Promise Example
-// Creating a new Promise. The Promise constructor takes an executor function which is provided with two functions: resolve and reject.
-// The resolve function is called when the asynchronous operation is successful, while the reject function is called if there's an error or failure.
+// Creating a new Promise. The Promise constructor takes an executor function which is provided with two functions: 
+// resolve and reject.
+// The resolve function is called when the asynchronous operation is successful,
+//  while the reject function is called if there's an error or failure.
 // ===============
 
 // console.log("Before promise");
@@ -46,7 +50,7 @@
 // ===============
 // Promise with Throwing Error
 // You can throw errors inside a promise's `.then()` and catch them using `.catch()`. This ensures that errors are handled gracefully in an asynchronous chain.
-// ===============
+//-----------------
 
 // const promiseWithError = new Promise((resolve, reject) => {
 //     resolve("Start of promise chain");
@@ -58,44 +62,44 @@
 // });
 // ==========================
 // Imagine a Promise that checks if a cake is ready
-let cakePromise = new Promise(function (resolve, reject) {
-    let isCakeReady = false;  // Imagine it's checking if the cake is ready
+// let cakePromise = new Promise(function (resolve, reject) {
+//     let isCakeReady = false;  // Imagine it's checking if the cake is ready
 
-    console.log("Baking the cake...");  // This will print first
+//     console.log("Baking the cake...");  // This will print first
 
-    // Simulate a long task (e.g., baking) using setTimeout
-    setTimeout(function () {
-        if (isCakeReady) {
-            resolve("The cake is ready!");  // Promise fulfilled
-        } else {
-            reject("The cake is not ready!");  // Promise rejected
-        }
-    }, 2000);  // Wait for 2 seconds before checking cake status
-});
+//     // Simulate a long task (e.g., baking) using setTimeout
+//     setTimeout(function () {
+//         if (isCakeReady) {
+//             resolve("The cake is ready!");  // Promise fulfilled
+//         } else {
+//             reject("The cake is not ready!");  // Promise rejected
+//         }
+//     }, 2000);  // Wait for 2 seconds before checking cake status
+// });
 
-// This part of the code executes right away, even though the promise is still pending
-console.log("This runs while the cake is still baking...");
+// // This part of the code executes right away, even though the promise is still pending
+// console.log("This runs while the cake is still baking...");
 
-cakePromise
-    .then(function (result) {
-        console.log(result);  // If the promise is fulfilled, show this message
-    })
-    .catch(function (error) {
-        console.log(error);  // If the promise is rejected, show this message
-    });
+// cakePromise
+//     .then(function (result) {
+//         console.log(result);  // If the promise is fulfilled, show this message
+//     })
+//     .catch(function (error) {
+//         console.log(error);  // If the promise is rejected, show this message
+//     });
 
-// Rest of the program continues to run without waiting for the promise to settle
-console.log("This runs immediately after the promise, before the cake is done.");
+// // Rest of the program continues to run without waiting for the promise to settle
+// console.log("This runs immediately after the promise, before the cake is done.");
 
-// More code running in parallel
-setTimeout(function () {
-    console.log("This happens 3 seconds later.");
-}, 3000);
+// // More code running in parallel
+// setTimeout(function () {
+//     console.log("This happens 3 seconds later.");
+// }, 3000);
 
-// Example of non-blocking async function using setTimeout
-setTimeout(function () {
-    console.log("Another task runs independently.");
-}, 1000);
+// // Example of non-blocking async function using setTimeout
+// setTimeout(function () {
+//     console.log("Another task runs independently.");
+// }, 1000);
 // ===============
 // Chaining Promises
 // Promises can be chained using `.then()`. This allows you to handle multiple asynchronous operations in sequence, one after the other.
@@ -118,7 +122,8 @@ setTimeout(function () {
 
 // ===============
 // Using Multiple Promises with Promise.all()
-// Promise.all() is useful when you want to execute multiple promises in parallel and wait for all of them to complete. If any promise rejects, the entire chain will be rejected.
+// Promise.all() is useful when you want to execute multiple promises in parallel and wait for all of them to complete.
+//  If any promise rejects, the entire chain will be rejected.
 // ===============
 
 // const recordVideoOne = new Promise(function (resolve, reject) {
@@ -155,26 +160,26 @@ setTimeout(function () {
 // Example of Using Promises with Asynchronous Operations (Simulating an API Call)
 // ===============
 
-// function fetchData() {
-//     return new Promise((resolve, reject) => {
-//         setTimeout(() => {
-//             const data = { name: "John", age: 30 };
-//             resolve(data);
-//         }, 2000);
-//     });
-// }
+function fetchData() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const data = { name: "John", age: 30 };
+            resolve(data);
+        }, 2000);
+    });
+}
 
-// fetchData()
-//     .then((data) => {
-//         console.log("Data fetched:", data); // { name: "John", age: 30 }
-//         return data.name; // Pass result to the next `.then()`
-//     })
-//     .then((name) => {
-//         console.log("Name is:", name);
-//     })
-//     .catch((error) => {
-//         console.log("Error:", error);
-//     });
+fetchData()
+    .then((data) => {
+        console.log("Data fetched:", data); // { name: "John", age: 30 }
+        return data.name; // Pass result to the next `.then()`
+    })
+    .then((name) => {
+        console.log("Name is:", name);
+    })
+    .catch((error) => {
+        console.log("Error:", error);
+    });
 
 // ===============
 // Example of Promise.all with Error Handling

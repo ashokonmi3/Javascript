@@ -19,7 +19,7 @@
 // var result3 = 5 + 2 + "3";
 // console.log(result3); // "73" - Numbers 5 and 2 add up to 7 first, then concatenate with "3".
 
-// // Explicit String Conversion using String()
+// // // Explicit String Conversion using String()
 // var value = 100;
 // var convertedToString = String(value);
 // console.log(convertedToString); // "100"

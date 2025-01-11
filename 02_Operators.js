@@ -10,8 +10,8 @@
 
 // Add and assign (+=)
 // var a = 10;
-// // a += 5;  // a = a + 5, now a = 15
-// // console.log(a);  // Output: 15
+// a += 5;  // a = a + 5, now a = 15
+// console.log(a);  // Output: 15
 
 // // Subtract and assign (-=)
 // a -= 5;  // a = a - 5, now a = 10
@@ -61,13 +61,13 @@
 // Infinity (positive infinity)
 // console.log(1 / 0);  // Output: Infinity
 
-// // Negative Infinity
+// // // Negative Infinity
 // console.log(-1 / 0); // Output: -Infinity
 
-// // NaN (Not-a-Number)
+// // // NaN (Not-a-Number)
 // console.log("not a number" / 2);  // Output: NaN
 
-// // Checking if a value is NaN
+// // // Checking if a value is NaN
 // console.log(isNaN("hello"));  // Output: true (because "hello" is not a number)
 // console.log(isNaN(123));  // Output: false (because 123 is a number)
 
@@ -103,8 +103,8 @@
 
 // console.log("JavaScript" + " " + "is awesome!");  // Output: JavaScript is awesome!
 
-// // Adding numbers to strings
-// console.log("The answer is " + 42);  // Output: The answer is 42
+// // // Adding numbers to strings
+//  console.log("The answer is " + 42);  // Output: The answer is 42
 
 // ===============================
 // 6. Logical Operators
