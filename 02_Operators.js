@@ -3,25 +3,25 @@
 // ===============================
 // 1. Assignment Operators
 // ===============================
-
 // Basic Assignment
+
 // var x = 1;  // Assign 1 to variable x
 // console.log(x);  // Output: 1
 
-// Add and assign (+=)
+// // Add and assign (+=)
 // var a = 10;
 // a += 5;  // a = a + 5, now a = 15
 // console.log(a);  // Output: 15
 
-// // Subtract and assign (-=)
+// // // Subtract and assign (-=)
 // a -= 5;  // a = a - 5, now a = 10
 // console.log(a);  // Output: 10
 
-// // Multiply and assign (*=)
+// // // Multiply and assign (*=)
 // a *= 2;  // a = a * 2, now a = 20
 // console.log(a);  // Output: 20
 
-// // Divide and assign (/=)
+// // // Divide and assign (/=)
 // a /= 4;  // a = a / 4, now a = 5
 // console.log(a);  // Output: 5
 
@@ -29,23 +29,9 @@
 // // 2. Arithmetic Operators
 // // ===============================
 
-// Addition
-// var sum = 5 + 3;
-// console.log(sum);  // Output: 8
 
-// // Subtraction
-// var diff = 8 - 3;
-// console.log(diff);  // Output: 5
 
-// // Multiplication
-// var product = 2 * 4;
-// console.log(product);  // Output: 8
-
-// // Division
-// var quotient = 8 / 2;
-// console.log(quotient);  // Output: 4
-
-// // Modulo (remainder)
+// Modulo (remainder)
 // console.log(5 % 2);  // Output: 1 (remainder of 5 divided by 2)
 // console.log(8 % 3);  // Output: 2 (remainder of 8 divided by 3)
 // console.log(6 % 3);  // Output: 0 (no remainder)
@@ -58,7 +44,7 @@
 // 3. Special Numeric Values
 // ===============================
 
-// Infinity (positive infinity)
+// // Infinity (positive infinity)
 // console.log(1 / 0);  // Output: Infinity
 
 // // // Negative Infinity
@@ -79,18 +65,32 @@
 // var counter = 2;
 // counter++;  // counter = counter + 1
 // console.log(counter);  // Output: 3
-
-// // Post-increment: assign first, then increment
+// ---------------
+// Post-increment: assign first, then increment
 // var a = 1;
 // var b = a++;  // Assign a to b first, then increment a
 // console.log(b);  // Output: 1 (value of a before increment)
 // console.log(a);  // Output: 2 (value of a after increment)
-
+// -----------------------
+// console.log("preincrement")
+// var c = 1;
+// var d = ++c;  // Assign a to b first, then increment a
+// console.log(c);  // Output: 1 (value of a before increment)
+// console.log(d);  // Output: 2 (value of a after increment)
+// ------------------
+// a=10;
+// console.log(++a);
+// console.log(a);
+// -----------------
+// a=10;
+// console.log(a++);
+// console.log(a);
+// ------------------------
 // // Pre-decrement: decrement before assignment
 // var c = 3;
 // --c;  // c = c - 1
 // console.log(c);  // Output: 2
-
+// ----------------
 // // Post-decrement: assign first, then decrement
 // var d = 3;
 // var e = d--;  // Assign d to e first, then decrement d
@@ -103,33 +103,32 @@
 
 // console.log("JavaScript" + " " + "is awesome!");  // Output: JavaScript is awesome!
 
-// // // Adding numbers to strings
 //  console.log("The answer is " + 42);  // Output: The answer is 42
 
 // ===============================
 // 6. Logical Operators
 // ===============================
+// Logical OR (||)
 
-// // Logical OR (||)
 // var x = true || false;  // true OR false is true
 // console.log(x);  // Output: true
 
-// var y = 'abc' || 123;  // 'abc' is truthy, so it's returned
+// var y = 'abc' || 123;  // 'abc' is truthy, so it's returned, returns first truthy value
 // console.log(y);  // Output: 'abc'
 
 // var z = false || 'def';  // false is falsy, so 'def' is returned
 // console.log(z);  // Output: 'def'
-
-// // Logical AND (&&)
+// --------------------
+// Logical AND (&&)
 // var a = true && false;  // true AND false is false
 // console.log(a);  // Output: false
 
 // var b = false && "abc";  // false AND anything is false
 // console.log(b);  // Output: false
 
-// var c = 'abc' && 123;  // 'abc' and 123 are truthy, so 123 is returned
+// var c = 'abc' && 123;  // 'abc' and 123 are truthy, so 123 is returned - last truthy value
 // console.log(c);  // Output: 123
-
+// -------------------------
 // // Logical NOT (!)
 // var d = !true;  // NOT true is false
 // console.log(d);  // Output: false
@@ -138,22 +137,14 @@
 // console.log(e);  // Output: true
 
 // ===============================
-// 7. Constant Values with const
-// ===============================
-
-// // Using const to declare a constant
-// const PI = 3.141592653589793;
-// console.log(PI);  // Output: 3.141592653589793
-
-// // Attempting to modify a constant will give an error
-// PI = 3.14;  // Error: Assignment to constant variable.
-
-// ===============================
 // 8. Ternary Operator (Conditional Operator)
-// ===============================
-
 // Syntax: condition ? expr1 : expr2;
+// ===============================
 // var age = 18;
+// var message = (age >= 18) ? "You are an adult." : "You are a minor.";
+// console.log(message);  // Output: You are an adult.
+// ---------------
+// var age = 8;
 // var message = (age >= 18) ? "You are an adult." : "You are a minor.";
 // console.log(message);  // Output: You are an adult.
 

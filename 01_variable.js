@@ -87,8 +87,7 @@
 // ===========================
 // 1. Variable Declaration and Initialization
 // ===========================
-
-// // Declaring and initializing a variable with "var"
+// Declaring and initializing a variable with "var"
 // var value;         // Declaration
 // value = 20;        // Definition
 // console.log(value); // Output: 20
@@ -116,34 +115,35 @@
 // console.log(c);    // Output: 10.5
 
 
-// // ===========================
-// // 3. String Data Type
-// // ===========================
+//===========================
+//  3. String Data Type
+//===========================
+// Sequence of Unicode characters (16-bit)
 
-// // Sequence of Unicode characters (16-bit)
 // var d = "Hello";
 // var e = "true";  // This is a string, not a boolean
 // console.log(d);  // Output: "Hello"
 // console.log(e);  // Output: "true"
 
-// // Note: JavaScript does not have a separate character type
-// // A character is simply a string of length 1
+// Note: JavaScript does not have a separate character type
+// A character is simply a string of length 1
 
-// // ===========================
-// // 4. Undefined and Null
-// // ===========================
+//===========================
+// 4. Undefined and Null
+//===========================
+// "Undefined" means a variable has been declared but not assigned a value
 
-// // "Undefined" means a variable has been declared but not assigned a value
 // var f;
 // console.log(f); // Output: undefined
 
-// // // // "Null" is an assignment value that represents "no value" or "nothing"
+//  // "Null" is an assignment value that represents "no value" or "nothing"
+
 // var g = null;
 // console.log(g); // Output: null
 
-// // Difference between undefined and null:
-// // - Undefined means the variable is declared but has no value assigned.
-// // - Null is an intentional assignment of "no value."
+// Difference between undefined and null:
+// - Undefined means the variable is declared but has no value assigned.
+// - Null is an intentional assignment of "no value."
 
 // // Example use case: middle name that may or may not exist
 // var middleName = null; // Represents the absence of a middle name
@@ -191,7 +191,7 @@
 // var strictVar = 10;
 // console.log(strictVar); // Output: 10
 
-// // // Uncommenting the following line would cause an error in strict mode
+// // // // Uncommenting the following line would cause an error in strict mode
 // strictAssignment = 20; // ReferenceError: strictAssignment is not defined
 // console.log(strictAssignment); // Output: 10
 
@@ -200,8 +200,13 @@
 // // ===========================
 
 // // Without "use strict", JavaScript allows accidental global variables
+// // "use strict";
 // accidentalGlobal = 15;
 // console.log(accidentalGlobal); // Output: 15
+// "use strict";// will not work
+
+// strictVar = 10;
+// console.log(strictVar); // Output: 10
 
 // // ===========================
 // // 8. Dynamic Typing
@@ -217,48 +222,6 @@
 // dynamicVar = false;
 // console.log(typeof dynamicVar); // Output: "boolean"
 // ==================
-
-
-// // ===========================
-// // Summary of Data Types
-// // ===========================
-
-// // JavaScript primitive types include:
-// // - Number
-// // - String
-// // - Boolean
-// // - Undefined
-// // - Null
-// // - Symbol (not shown here but used for unique identifiers)
-
-// // Example of each type
-// var exampleNumber = 42;
-// var exampleString = "Example";
-// var exampleBoolean = true;
-// var exampleUndefined;
-// var exampleNull = null;
-
-// // // Checking types
-// console.log(typeof exampleNumber);     // Output: "number"
-// console.log(typeof exampleString);     // Output: "string"
-// console.log(typeof exampleBoolean);    // Output: "boolean"
-// console.log(typeof exampleUndefined);  // Output: "undefined"
-// console.log(typeof exampleNull);       // Output: "object" (null is of type "object" in JavaScript)
-
-// // ===========================
-// // Additional Example with "use strict"
-// // ===========================
-
-// "use strict";
-// var definedVar = 100;
-// console.log(definedVar); // Output: 100
-
-// // // Uncommenting the following would result in an error:
-// undefinedVar = 50; // ReferenceError: undefinedVar is not defined
-
-// "use strict";
-// var eval = 100;
-// function var eval
 
 
 // ===========================
@@ -284,9 +247,11 @@
 // var hoistedVar = "I'm hoisted!";
 // console.log(hoistedVar); // Output: "I'm hoisted!"
 
-// // // Note: "let" and "const" are not hoisted in the same way as "var"; using them before declaration will cause an error
+// Note: "let" and "const" are not hoisted in the same way as "var"; using them before declaration will cause an error
+
 // console.log(b); // ReferenceError: Cannot access 'b' before initialization
 // let b = 10;
+
 // Hoisting
 // // var: Variables declared with var are hoisted to the top of their scope, meaning they are moved to the top of the function or global scope and are initialized with undefined.However, they are only assigned a value when the code reaches their actual line of assignment.
 // // let: Variables declared with let are also hoisted, but they are not initialized.Accessing a let variable before its declaration results in a ReferenceError due to the temporal dead zone(the period between the beginning of the block and the declaration line).
@@ -295,26 +260,31 @@
 // // ===========================
 // // Redeclaration of var and let
 // // ===========================
-// var name = "Alice";
-// var name = "Bob"; // No error, `name` is re-declared and re-assigned
-// console.log(name); // "Bob"
-
+// var userName = "Alice";
+// var userName = "Bob"; // No error, `name` is re-declared and re-assigned
+// console.log(userName); // "Bob"
+// =================
 // let age = 25;
 // let age = 30; // SyntaxError: Identifier 'age' has already been declared
+// console.log(age); // "Bob"
+// ==============
+
+// let age = 30; // SyntaxError: Identifier 'age' has already been declared
+// age=100;
+// console.log(age);
+
 // ===========================
 // Scope of var and let 
 // ===========================
 if (true) {
     var x = 10;
     let y = 20;
-    console.log(y);
-
+    console.log("inside function y value " +y);
 }
-
 console.log(x); // 10 (accessible because `var` is function-scoped or globally scoped)
 console.log(y); // ReferenceError: y is not defined (because `let` is block-scoped)
 
-
+// ============
 /*
 Feature                  var                          let
 ------------------------------------------------------------------------

@@ -11,15 +11,15 @@
 
 // var result1 = "Hello" + " " + "World";
 // console.log(result1); // "Hello World"
+// -----------------
+// Mixing Numbers and Strings in Concatenation
 
-// // Mixing Numbers and Strings in Concatenation
-// var result2 = "5" + 2 + 3;
-// console.log(result2); // "523" - Number 2 and 3 are coerced into strings and concatenated.
+// var result2 = 
+// console.log("5" + 2 + 3); // "523" - Number 2 and 3 are coerced into strings and concatenated.
+// console.log(5 + 2 + "3"); // "523" - Number 2 and 3 are coerced into strings and concatenated.
 
-// var result3 = 5 + 2 + "3";
-// console.log(result3); // "73" - Numbers 5 and 2 add up to 7 first, then concatenate with "3".
-
-// // // Explicit String Conversion using String()
+// --------------------------
+ // Explicit String Conversion using String()
 // var value = 100;
 // var convertedToString = String(value);
 // console.log(convertedToString); // "100"
@@ -50,11 +50,9 @@
 // console.log(Boolean("")); // false
 // console.log(Boolean(undefined)); // false
 // console.log(Boolean(null)); // false
-
-// // Explicit Boolean Conversion
-// var someValue = "hello";
-// var isTruthy = Boolean(someValue);
-// console.log(isTruthy); // true - Non-empty strings are truthy values.
+// console.log(Boolean("hello")); // true
+// console.log(Boolean(1)); // true
+// console.log(Boolean(10.0)); // true
 
 // ============================================
 // Examples of Type Coercion in Expressions
@@ -80,10 +78,10 @@
 // ============================================
 // == allows type coercion, while === checks both value and type without coercion.
 
-// var a = 10;
-// var b = "10";
-// console.log(a == b); // true - Values are coerced and found equal.
-// console.log(a === b); // false - Types (number and string) are different, so no coercion occurs.
+var a = 10;
+var b = "10";
+console.log(a == b); // true - Values are coerced and found equal.
+console.log("a === b " + (a === b)); // false - Types (number and string) are different, so no coercion occurs.
 
 // console.log(null == undefined); // true - Special case where null and undefined are loosely equal.
 // console.log(null === undefined); // false - Strict equality checks type and value, which differ here.
@@ -92,18 +90,18 @@
 // Comparison Operators and Type Coercion
 // ============================================
 
-console.log(2 > 1);  // true - Both numbers, direct comparison.
-console.log(2 == 1); // false - No type coercion needed.
-console.log(2 != 1); // true - No type coercion needed.
+// console.log(2 > 1);  // true - Both numbers, direct comparison.
+// console.log(2 == 1); // false - No type coercion needed.
+// console.log(2 != 1); // true - No type coercion needed.
 
-console.log('2' > 1); // true - '2' coerced to number 2.
-console.log('01' == 1); // true - '01' coerced to number 1.
-console.log(true == 1); // true - true coerced to number 1.
-console.log(false == 0); // true - false coerced to number 0.
+// console.log('2' > 1); // true - '2' coerced to number 2.
+// console.log('01' == 1); // true - '01' coerced to number 1.
+// console.log(true == 1); // true - true coerced to number 1.
+// console.log(false == 0); // true - false coerced to number 0.
 
-console.log(0 === false); // false - Different types: number and boolean.
-console.log(null === undefined); // false - Strict comparison with different types.
-console.log(null == undefined); // true - Loose comparison treats them as equal.
+// console.log(0 === false); // false - Different types: number and boolean.
+// console.log(null === undefined); // false - Strict comparison with different types.
+// console.log(null == undefined); // true - Loose comparison treats them as equal.
 
 // // ============================================
 // // Summary and Best Practices
