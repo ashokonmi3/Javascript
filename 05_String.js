@@ -13,20 +13,29 @@
 // Template Literals
 // Template literals are enclosed in backticks (``) and can span multiple lines.
 // ===============
+// '' `` ~
+// var str1= 'this is to learn 
+// string '
+// // var str1= "this is to learn 
+// string "
 
-// var str = `write
-// over multiple lines`;
-// console.log(str);  // Output: write
+// var str = `write over multiple
+// lines`;
+// console.log(str);
+// s1=str.replace(/\n/g,' ') 
 // // over multiple lines
-// console.log(str == 'write over multiple lines'); // true
+// console.log(s1 == 'write over multiple lines'); // true
+// -------------------
+// Alternative concatenation using + operator
+// str = 'written over multiple lines'; // true
 
-// // Alternative concatenation using + operator
 // var str2 = 'written ' +
 //     'over ' +
 //     'multiple ' +
 //     'lines';
 
 // console.log(str2);  // Output: written over multiple lines
+// console.log(str == str2); // true
 
 // ===============
 // String Type
@@ -110,11 +119,14 @@
 // String Slicing Methods
 // The slice() method extracts a section of a string and returns it as a new string.
 // ===============
-
+// a b c d e d           f    g   g
+// 0 1 2 3 4 5 6 7 8
+//-9  -8  -7  -6 -5 -4  -3   -2  -1
 // console.log("abcdedfgg".slice(2));  // Output: cdefgg
 // console.log("abcdedfgg".slice(1, 6));  // Output: bcde
 // console.log("abcdedfgg".slice(-2));  // Output: gg
 // console.log("abcdedfgg".slice(1, 4));  // Output: bcd
+// console.log("abcdedfgg".slice(6, 1));  // no out put
 
 // ===============
 // Substring Method
@@ -127,6 +139,7 @@
 // console.log(str.substring(2, 6)); // Output: ring
 // console.log(str.substring(6, 2)); // Output: ring  substring() treats the indices as positions where the substring starts and ends, it automatically swaps the indices if the startIndex is greater than endIndex.
 // console.log(str.substring(5, 1)); // Output: tring
+// console.log(str.substring(-5, 1)); // negative is treated as zero
 
 // ===============
 // Comparing Strings
@@ -167,15 +180,15 @@
 // console.log("abcdedf".split('d')); // Output: [ 'abc', 'ef' ]
 // console.log("abcdedf adf asdf".split(' ')); // Output: [ 'abcdedf', 'adf', 'asdf' ]
 // =================
-let url = "https://example.com/?name=John Doe";
+// let url = "https://example.com/?name=John Doe";
 
-// Encoding
-let encoded = encodeURIComponent(url);
-console.log(encoded); // Encodes special characters
+// // Encoding
+// let encoded = encodeURIComponent(url);
+// console.log(encoded); // Encodes special characters
 
-// Decoding
-let decoded = decodeURIComponent(encoded);
-console.log(decoded); // Decodes back to original
+// // Decoding
+// let decoded = decodeURIComponent(encoded);
+// console.log(decoded); // Decodes back to original
 
 // // ===============
 // // Reverse a String

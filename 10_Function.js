@@ -105,7 +105,6 @@
 // var greet = function () {
 //     console.log("hello");
 // };
-// greet(); // Call greet function
 
 // function outerFunction() {
 //     greet();
@@ -143,11 +142,11 @@
 // // Allows access to all arguments passed to the function.
 // // ========================
 
-function argTest() {
-    console.log(arguments); // Shows all arguments passed
-    console.log(arguments.length); // Shows argument count
-}
-argTest(1, "java", "selenium", "python");
+// function argTest() {
+//     console.log(arguments); // Shows all arguments passed
+//     console.log(arguments.length); // Shows argument count
+// }
+// argTest(1, "java", "selenium", "python");
 
 // // ========================
 // // Using Arguments to Find Maximum
@@ -172,17 +171,19 @@ argTest(1, "java", "selenium", "python");
 //     console.log(from + ": " + text);
 // }
 // showMessageWithDefaults("Ann");
+// showMessageWithDefaults("Ann", "javascript learning");
+
 
 // // ========================
 // // Arrow Functions
 // // Shorthand syntax for functions, commonly used for simpler functions.
 // // ========================
 
-// let hello = () => "Hello World!";
-// console.log(hello());
+let hello = () => "Hello World!";
+console.log(hello());
 
-// let personalizedHello = (name) => "Hello " + name + "!";
-// console.log(personalizedHello("Developer"));
+let personalizedHello = (name) => "Hello " + name + "!";
+console.log(personalizedHello("Developer"));
 
 // // ========================
 // // Questions:

@@ -19,14 +19,15 @@
 
 // var myObj = {};  // Empty object created
 // console.log(myObj); // Output: {}
-
+// // ---------------
 // myObj.prop = "hello"; // Adding property dynamically
 // console.log(myObj); // Output: { prop: "hello" }
 
 // myObj.prop2 = 123;
 // console.log(myObj.prop); // Output: "hello"
 // console.log("The number property is " + myObj.prop2); // Output: The number property is 123
-
+// console.log(myObj); // Output: { prop: "hello" }
+// -----------------------
 
 // array = ["Thor" , " Marvels", "Avegners" ]
 //            0           1          2
@@ -58,7 +59,7 @@
 // };
 
 // console.log(myObjLiteral);
-
+// =============================
 // // Example of a person object
 // var person = {
 //   firstName: "John",
@@ -71,8 +72,8 @@
 // console.log(person.age); // Accessing property with dot notation
 // console.log(person["firstName"]); // Accessing property with bracket notation
 
-// // Accessing Non-Existent Properties
-// console.log("Property that does not exist: " + person.prop3); // Output: undefined
+// console.log("Property that does not exist: " + person.prop3); // Accessing Non-Existent Properties
+
 
 // ====================
 // Modifying and Adding Properties
@@ -85,7 +86,7 @@
 // console.log(car);
 
 // // Attempting to reassign a const object
-// // car = { type: "Volvo", model: "EX60", color: "red" }; // ERROR: Assignment to constant variable
+// car = { type: "Volvo", model: "EX60", color: "red" }; // ERROR: Assignment to constant variable
 
 // // ====================
 // // Summary: Object
@@ -118,6 +119,7 @@
 
 // // Dot notation is preferred for simplicity and readability when the property name is valid.
 
+// ===========================
 
 // var myObj = {};
 
@@ -134,8 +136,8 @@
 // // // Adding another property with a reserved word as a name
 // myObj["default"] = "Physics";
 // console.log(myObj["default"]); // Output: "Physics"
-
-// // // Adding a property with a name that starts with a number, which requires bracket notation
+// console.log(myObj.default);
+// // // // Adding a property with a name that starts with a number, which requires bracket notation
 // myObj["123name"] = "Reserved Example";
 // console.log(myObj["123name"]); // Output: "Reserved Example"
 
@@ -154,7 +156,7 @@
 
 // console.log(nestedObj.objProp.innerProp); // Accessing nested property
 
-// Adding new nested properties
+// // Adding new nested properties
 // nestedObj.objProp.additionalProp = "Additional Inner Property";
 // console.log(nestedObj.objProp.additionalProp);
 

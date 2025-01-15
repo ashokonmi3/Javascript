@@ -29,12 +29,12 @@
 // var emptyArray1 = [];             // Using literal notation (most common)
 // var emptyArray2 = new Array();    // Using the Array constructor
 // console.log(emptyArray1, emptyArray2);  // Output: [], []
-
+// --------------
 // // // Array with Specific Size
 // var arrayWithSize = new Array(10);
 // console.log(arrayWithSize.length);  // Output: 10
-
-// // Array with Initial Values
+// ---------------
+// Array with Initial Values
 // var languages = ["JavaScript", "Python", "Java"];
 // console.log(languages);             // Output: ["JavaScript", "Python", "Java"]
 
@@ -43,11 +43,11 @@
 // console.log(languages[2]);  // Access the third element: "Java"
 // console.log(languages[3]);  // Access an undefined index: undefined
 
-// // Adding Elements to an Array
+// // // Adding Elements to an Array
 // languages[3] = "Ruby";
 // console.log(languages);   // Output: ["JavaScript", "Python", "Java", "Ruby"]
 
-// // Checking if a Variable is an Array
+// // // Checking if a Variable is an Array
 // console.log(Array.isArray(languages));  // Output: true
 // console.log(Array.isArray("Java"));     // Output: false
 
@@ -60,11 +60,11 @@
 // var arr = ['a', 'b', 'c', 'd'];
 // console.log(arr.length);  // Output: 4
 
-// // // Setting a New Length (Truncating the Array)
+// // // // Setting a New Length (Truncating the Array)
 // arr.length = 2;
 // console.log(arr);         // Output: ['a', 'b']
 
-// // // Adding an Element to the End
+// // // // Adding an Element to the End
 // arr[arr.length] = 'e'; //arr[2]
 // console.log(arr);         // Output: ['a', 'b', 'e']
 
@@ -76,17 +76,19 @@
 // var arr = ['a', 'b', 'c', 'd'];
 // arr.push('f');
 // console.log(arr);  // Output: ['a', 'b', 'e', 'f']
-
+// -----------------------
 // pop(): Removes the last element and returns it
 // var lastElement = arr.pop();
 // console.log(lastElement);  // Output: 'f'
 // console.log(arr);          // Output: ['a', 'b', 'e']
 
 // // // unshift(): Adds an element to the beginning of the array
+// var arr = ['a', 'b', 'c', 'd'];
 // arr.unshift('z');
 // console.log(arr);  // Output: ['z', 'a', 'b', 'e']
-
+// -------------------
 // // shift(): Removes the first element and returns it
+// var arr = ['a', 'b', 'c', 'd'];
 // var firstElement = arr.shift();
 // console.log(firstElement);  // Output: 'z'
 // console.log(arr);           // Output: ['a', 'b', 'e']
@@ -97,17 +99,20 @@
 
 // // splice(): Can add, remove, or replace elements at a specific position
 // var fruits = ["Banana", "Orange", "Apple", "Mango"];
-
-// // At position 2, add 2 new elements
+// // // // At position 2, add 2 new elements
 // fruits.splice(2, 0, "Lemon", "Kiwi");
 // console.log(fruits);  // Output: ["Banana", "Orange", "Lemon", "Kiwi", "Apple", "Mango"]
 
+// -------------------
 // // At position 3, replace 1 element with 1 new element
-// fruits.splice(3, 1, "Peach");
-// console.log(fruits);  // Output: ["Banana", "Orange", "Lemon", "Peach", "Apple", "Mango"]
-
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(3, 1, "Peach");
+console.log(fruits);  // Output: ["Banana", "Orange", "Lemon", "Peach", "Apple", "Mango"]
+// ----------------
 // // slice(): Returns a shallow copy of a portion of an array into a new array
-// var someFruits = fruits.slice(1, 4);
+
+// var fruits = ["Banana", "Orange", "Apple", "Mango"];
+// var someFruits = fruits.slice(1, 3);
 // console.log(someFruits);  // Output: ["Orange", "Lemon", "Peach"]
 
 // // ===============
@@ -116,14 +121,14 @@
 
 // var numbers = [5, 2, 9, 1, 5, 6];
 
-// // sort(): Sorts the elements of an array in place and returns the array
+// // // sort(): Sorts the elements of an array in place and returns the array
 // numbers.sort()
 // console.log(numbers)
-// // // reverse(): Reverses the elements of an array in place
+// // // // reverse(): Reverses the elements of an array in place
 // numbers.reverse();
 // console.log(numbers);  // Output: [9, 6, 5, 5, 2, 1]
 
-// // // indexOf(): Returns the first index at which a given element is found
+// // // // indexOf(): Returns the first index at which a given element is found
 // console.log(numbers.indexOf(5));  // Output: 2
 
 // ===============
@@ -132,20 +137,20 @@
 // ===============
 
 // Using a for loop
-var arrayItems = ["A", "B", "C"];
+// var arrayItems = ["A", "B", "C"];
 // for (var i = 0; i < arrayItems.length; i++) {
 //   console.log(arrayItems[i]);
 // }
 
 // // Using forEach()
-arrayItems.forEach(function (item) {
-  console.log(item);
-});
+// arrayItems.forEach(function (item) {
+//   console.log(item);
+// });
 
 // // Using for...of loop
-for (let item of arrayItems) {
-  console.log(item);
-}
+// for (let item of arrayItems) {
+//   console.log(item);
+// }
 
 // ===============
 //  Interview Questions and Answers on Arrays

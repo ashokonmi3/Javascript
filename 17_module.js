@@ -1,23 +1,23 @@
 // myGlobalVariable is now a globally accessible variable.
 // You can access it from anywhere in your Node.js application using global.myGlobalVariable.
 
-global.myGlobalVariable = "Hello, global world!";
+// global.myGlobalVariable = "Hello, global world!";
 // ================================
 
-export const exportGlobalVariable = "Hello, world!";
+// export const exportGlobalVariable = "Hello, world!";
 
-// myModule.js
+// // myModule.js
 
-// Named exports
-export const myVar = 10;
-export const myFunction = () => {
-    console.log('This is my function.');
-};
+// // Named exports
+// export const myVar = 10;
+// export const myFunction = () => {
+//     console.log('This is my function.');
+// };
 
-export const anotherVar = 20;
-export function anotherFunction() {
-    console.log('This is another function.');
-}
+// export const anotherVar = 20;
+// export function anotherFunction() {
+//     console.log('This is another function.');
+// }
 // ==================
 
 // Export single object.js

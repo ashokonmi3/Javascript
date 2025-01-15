@@ -55,12 +55,14 @@
 //   x--; // Decreases x by 1 each iteration
 // }
 // Output: 5, 4, 3, 2, 1, 0
-
+// =========================
 // // Example: Simple Counter
 // let i = 0;
 // while (i < 3) {
-//   console.log(i); // Output current value of i
-//   i++; // Increase i by 1 in each iteration
+// //   console.log(${i}\r); // Output current value of i
+// process.stdout.write(`i value ${i}`)  ;
+
+// i++; // Increase i by 1 in each iteration
 // }
 // // Output: 0, 1, 2
 
@@ -103,7 +105,7 @@
 //   console.log(l); // Outputs value of l from 5 to 0
 // }
 // Output: 5, 4, 3, 2, 1, 0
-
+// -----------------
 // Variable Scope Example
 // let m = 0;
 // for (m = 0; m < 3; m++) {
@@ -145,6 +147,8 @@
 //   console.log(x); // Prints each color in the array
 // }
 // Output: red, green, blue
+
+
 
 // ===============
 //  Break Statement

@@ -7,7 +7,7 @@
 
 // // ============================
 // // Prompt user for input and validate the year
-// var year = prompt('In which year was ECMAScript-2015 specification published?', '');
+// var year = 2016;
 // if (year == 2015) {
 //     console.log("Correct! ECMAScript-2015 was published in 2015.");
 // } else {
@@ -88,7 +88,7 @@
 // } else {
 //     console.log('The office is open.');
 // }
-
+// ==============================
 // Example with OR and weekend
 // var hour = 21;
 // var isWeekend = false;
@@ -139,21 +139,21 @@
 // } else {
 //     console.log("values are not equal");
 // }
-
+// -----------------------
 // var a = "";
 // if (a) {
 //     console.log("values are equal");
 // } else {
 //     console.log("values are not equal"); // This will print because a is falsy
 // }
-
+// --------------------------
 // var a; // undefined
 // if (a) {
 //     console.log("values are equal");
 // } else {
 //     console.log("values are not equal"); // This will print because a is falsy
 // }
-
+// ----------------------
 // var a = null;
 // if (a) {
 //     console.log("values are equal");
@@ -169,7 +169,7 @@
 // } else {
 //     console.log("values are not equal");
 // }
-
+// -------------------
 // var a = false;
 // if (a) {
 //     console.log("values are equal");
@@ -180,7 +180,6 @@
 // ============================
 // Undefined values
 // var a = "undefined";
-// // var a = undefined;
 // if (a) {
 //     console.log("values are equal"); // This will print because a is a string
 // } else {
@@ -190,16 +189,16 @@
 // ============================
 // Example with multiple conditions combined
 // ============================
-// var year = 2024;
-// var a = 10;
-// var b = 100;
-// if (year < 2015 && a == 10 && b == 20) {
-//     console.log("Too early...");
-// } else if (year > 2015) {
-//     console.log("Too late");
-// } else {
-//     console.log("Exactly!");
-// }
+var year = 2024;
+var a = 10;
+var b = 100;
+if (year < 2015 && a == 10 && b == 20) { // < , ==,&& ||   , false && true && false
+    console.log("Too early...");
+} else if (year > 2015) {
+    console.log("Too late");
+} else {
+    console.log("Exactly!");
+}
 
 // // ============================
 // // Interview Questions

@@ -2,13 +2,13 @@
 
 // var myObj={};
 
-// console.log(myObj);
+// // console.log(myObj);
 
-// myObj.foo="value";
+// // myObj.foo="value";
 
-// console.log(myObj.foo);
+// // console.log(myObj.foo);
  
-// // we can use . operator to access property of any object
+// // // we can use . operator to access property of any object
 
 // myObj.foo="hello";
 // console.log(myObj.foo);
@@ -89,11 +89,11 @@
 
 // Creating bicycle object diff way
 // first
-// var bicycle={
-// 	"cadence":50,
-// 	"speed":20,
-// 	"gear":4
-// };
+var bicycle={
+	"cadence":50,
+	"speed":20,
+	"gear":4
+};
 // --------------------
 //second  without constructor
 
@@ -104,9 +104,6 @@
 // 	newBicycle.gear=gear;
 // 	return newBicycle;
 // }
-
-
-// // }
 
 // var bicycle1=createBicycle(30, 4, 2);
 
@@ -123,12 +120,12 @@
 
 // }
 
-
-// }
-
 // var bicycle1=new Bicycle(30, 4, 2);
 
 // var bicycle2=new Bicycle(40, 3, 4);
+// console.log(bicycle1);
+// console.log(bicycle2);
+
 // this is a constructor in normal function mode
 // constructor is starts with capital letter
 
@@ -189,7 +186,7 @@
 // }
 
 // new foo();
-// // 
+ 
 // ----------------------
 
 // 4th way later
@@ -201,11 +198,13 @@
 
 // 1) normal execution: this refrencec points to global object
 // this refers to global object
+
 // function foo(){
 // 	console.log("hello");
 // 	console.log(this);
 // }
 // foo();
+
 // // ==========================
 
 // 2) 
@@ -272,32 +271,32 @@
 // foo.call();
 // foo();
 // ================
-function Bicycle(cadence,speed,gear,tyrePressure){
-	this.cadence=cadence;
-	this.speed=speed;
-	this.gear=gear;
-	this.tyrePressure=tyrePressure;
-	this.inflateTires=function(){
-		this.tyrePressure+=3;
-	}
-}
+// function Bicycle(cadence,speed,gear,tyrePressure){
+// 	this.cadence=cadence;
+// 	this.speed=speed;
+// 	this.gear=gear;
+// 	this.tyrePressure=tyrePressure;
+// 	this.inflateTires=function(){
+// 		this.tyrePressure+=3;
+// 	}
+// }
 
-var bicycle1= new Bicycle(50,34,5,25);
-bicycle1.inflateTires();
-console.log(bicycle1);
-
-
+// var bicycle1= new Bicycle(50,34,5,25);
+// bicycle1.inflateTires();
+// console.log(bicycle1);
 
 
-function Mechanic(name){
-	this.name=name;
-}
 
-var mech= new Mechanic("ashok")
-mech.inflateTires=bicycle1.inflateTires;
-mech.inflateTires.call(bicycle1);
 
-console.log(bicycle1);
+// function Mechanic(name){
+// 	this.name=name;
+// }
+
+// var mech= new Mechanic("ashok")
+// mech.inflateTires=bicycle1.inflateTires;
+// mech.inflateTires.call(bicycle1);
+
+// console.log(bicycle1);
 
 
 // call is a method of JavaScript functions that allows you to invoke a function with an explicit this context.

@@ -1,21 +1,27 @@
 // 1. Compiler - Based Languages(e.g., C, C++, Java)
 // What is a Compiler - Based Language ?
 
-//In compiler - based languages, the code is converted into machine code or a lower - level language before it runs.This conversion happens once and produces an executable file.
-// This is a two - step process: writing the source code and then compiling it into an executable form.The resulting machine code file can be executed independently, without requiring the source code or the compiler.
+//In compiler - based languages, the code is converted into machine code or a lower - 
+// level language before it runs.This conversion happens once and produces an executable file.
+// This is a two - step process: writing the source code and then compiling it into an
+//  executable form.The resulting machine code file can be executed independently, 
+// without requiring the source code or the compiler.
 // Compilation Process:
 
 // Preprocessing: The source code is first preprocessed, where macros are expanded, and include files are added(e.g., in C and C++).This step handles any directives(like #include, #define).
-//     Compilation: The preprocessed code is then converted to machine code.
-//     Assembly: The compiled code may be converted to assembly language, which is then assembled into an object file.
-//     Linking: The final step links all object files and libraries, producing the final executable.
+//  Compilation: The preprocessed code is then converted to machine code.
+//   Assembly: The compiled code may be converted to assembly language, which is then assembled into an object file.
+//   Linking: The final step links all object files and libraries, producing the final executable.
 // Example Languages: C, C++, Java(with JVM - based compilation and bytecode generation).
 
 // 2. Interpreter - Based Languages(e.g., JavaScript, Python)
 // What is an Interpreter - Based Language ?
-//In interpreter - based languages, there is no separate compilation phase.Instead, the code is executed line by line at runtime.
-// This approach doesn't create intermediate files (like bytecode or object code), making it different from compiler-based languages.
-// Because it interprets each line as it’s executed, it can make changes and test them quickly, though it can be slower than a fully compiled language for large programs.
+//In interpreter - based languages, there is no separate compilation phase.
+// Instead, the code is executed line by line at runtime.
+// This approach doesn't create intermediate files (like bytecode or object code),
+//  making it different from compiler-based languages.
+// Because it interprets each line as it’s executed, it can make changes and test them quickly,
+//  though it can be slower than a fully compiled language for large programs.
 // Execution Process:
 
 // Each line of code is interpreted and executed immediately without creating an intermediate machine code file.
@@ -297,7 +303,11 @@ Temporal Dead Zone (TDZ) No                          Yes
 
 // ==============
 // 1. No Need to Declare Variable Type
-// In JavaScript, there is no need to declare the type of a variable when it is created.JavaScript is a dynamically typed language, meaning the type of a variable is determined at runtime based on the value assigned to it.This is different from statically typed languages like Java or C++, where the type of a variable must be explicitly declared.
+// In JavaScript, there is no need to declare the type of a variable when it is created.
+// JavaScript is a dynamically typed language, meaning the type of a variable is determined at 
+// runtime based on the value assigned to it.
+// This is different from statically typed languages like Java or C++, where the type
+//  of a variable must be explicitly declared.
 
 // In JavaScript, you can assign any type of value (string, number, boolean, etc.) to a variable, and the language will infer its type automatically.This provides flexibility but can lead to bugs if the variable's type changes unexpectedly during runtime.
 

@@ -44,10 +44,6 @@
 // };
 
 // y(x); 
-// Output: I am called outside
-// I am called from inside a function
-// I am called after callback
-
 // ===============================
 
 // Callback Example with Calculator
@@ -83,7 +79,7 @@
 //     setTimeout(() => {
 //         const data = { id: 1, name: "Alice" };
 //         callback(data); // Call the callback with the fetched data
-//     }, 2000); // Simulate a 2-second delay
+//     }, 10000); // Simulate a 2-second delay
 // }
 
 // function displayData(data) {
@@ -185,7 +181,12 @@ function eatPizza() {
 // Place an order and pass the callback function
 orderPizza(eatPizza);
 
-console.log("Doing other things while waiting for the pizza...");
+console.log("Doing other things while waiting for the pizza...task1");
+console.log("Doing other things while waiting for the pizza...task2");
+console.log("Doing other things while waiting for the pizza...task3");
+console.log("Doing other things while waiting for the pizza...task4");
+console.log("Doing other things while waiting for the pizza...task5");
+console.log("Doing other things while waiting for the pizza...task6");
 
 // // ===============================
 

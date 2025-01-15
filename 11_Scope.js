@@ -93,20 +93,20 @@
 // //  If not found in the global scope, a `ReferenceError` is thrown.
 // // ========================
 
-// var globalVar = "global";
+var globalVar = "global";
 
-// function firstFunction() {
-//   var localVar = "local";
+function firstFunction() {
+  var localVar = "local";
 
-//   function secondFunction() {
-//     console.log(globalVar);  // Output: "global" (found in global scope)
-//     console.log(localVar);    // Output: "local" (found in outer scope, i.e., firstFunction)
-//   }
+  function secondFunction() {
+    console.log(globalVar);  // Output: "global" (found in global scope)
+    console.log(localVar);    // Output: "local" (found in outer scope, i.e., firstFunction)
+  }
 
-//   secondFunction();
-// }
+  secondFunction();
+}
 
-// firstFunction();
+firstFunction();
 
 // ========================
 //  Interview Questions and Answers
