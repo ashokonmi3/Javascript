@@ -203,3 +203,28 @@
 // }
 // console.log(p);  // Output: gnirts a si siht
 // // ===============
+// Assignment
+
+// 6. Find the Length of a String
+// Write a function that takes a string as input and returns its length.
+
+// 7. Count Vowels in a String
+// Write a function that counts how many vowels(a, e, i, o, u) are in a given string.
+
+// Make sure to handle both lowercase and uppercase letters.
+// 8. Check Palindrome
+// Write a function that checks if a given string is a palindrome.
+
+// A palindrome is a word that reads the same forwards and backwards(e.g., "madam").
+//     Return "Palindrome" if the string is a palindrome, otherwise return "Not Palindrome".
+// 9. Convert a String to Lowercase or Uppercase
+// Write a function that takes a string and converts it to either all lowercase or all uppercase, based on user input.
+
+// If the user provides the argument "lower", convert the string to lowercase.
+// If the user provides the argument "upper", convert the string to uppercase.
+// 10. Check if a Number is Divisible by 3 and 5
+// Write a function that takes a number and checks if it is divisible by both 3 and 5.
+
+// If it is divisible by both, return "Divisible by 3 and 5".
+// If it is divisible by only one, return "Divisible by 3" or "Divisible by 5".
+// If it is divisible by neither, return "Not Divisible by 3 or 5".

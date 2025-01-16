@@ -371,4 +371,20 @@ switch (amount) {
 
 // // 4. How can we use the logical AND (&&) and OR (||) operators in if-else conditions?
 // // Answer: The logical AND operator returns true if both conditions are true, while the OR operator returns true if at least one condition is true. These operators can be used in conditions to combine multiple checks.
+// ====================
+// Assignment
+// 1. Check if a Number is Positive, Negative, or Zero
+// Write a function that checks if a given number is positive, negative, or zero.
+// If the number is greater than 0, return "Positive".
+// If the number is less than 0, return "Negative".
+// If the number is equal to 0, return "Zero".
+// -------------------
+// 2. Check Even or Odd
+// Write a function that takes a number as input and returns "Even" if the number is even, and "Odd" if the number is odd.
+// -------------------
+// 3. Check Vowel or Consonant
+// Write a function that checks if a given character(single letter) is a vowel or consonant.
+
+//     Return "Vowel" if the character is one of a, e, i, o, u(case -insensitive).
+//         Otherwise, return "Consonant".
 
