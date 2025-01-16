@@ -159,7 +159,7 @@
 // ===========================
 // 5. Boolean Data Type
 // ===========================
-
+string s ="c";
 // var isAvailable = true;
 // var isComplete = false;
 // console.log(isAvailable); // Output: true

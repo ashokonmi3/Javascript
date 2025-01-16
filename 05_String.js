@@ -14,15 +14,15 @@
 // Template literals are enclosed in backticks (``) and can span multiple lines.
 // ===============
 // '' `` ~
-// var str1= 'this is to learn 
+// var str1= 'this is to learn
 // string '
-// // var str1= "this is to learn 
+// // var str1= "this is to learn
 // string "
 
-// var str = `write over multiple
+// // var str = `write over multiple
 // lines`;
 // console.log(str);
-// s1=str.replace(/\n/g,' ') 
+// s1=str.replace(/\n/g,' ')
 // // over multiple lines
 // console.log(s1 == 'write over multiple lines'); // true
 // -------------------
@@ -51,10 +51,11 @@
 // ===============
 // A b c
 // 0 1 2
+// No negative indexing
 // console.log('Abc'.charAt(1));  // Output: b
 // console.log('abc'.charAt(0));  // Output: a
 
-// // String indexing using array-like syntax (returns a string, not a character)
+// // // String indexing using array-like syntax (returns a string, not a character)
 // console.log('Abc'[0]); // Output: A
 // console.log('abc'[1]); // Output: b
 
@@ -104,8 +105,8 @@
 // console.log("Hello".includes("Bye")); // false
 
 // // The optional second argument of str.includes is the position to start searching from:
-// console.log("Midget".includes("id")); // true
-// console.log("Midget".includes("id", 3)); // false, from position 3 there is no "id"
+// console.log("Widget".includes("id")); // true
+// console.log("Widget".includes("id", 3)); // false, from position 3 there is no "id"
 
 // ===============
 // StartsWith and EndsWith Methods
@@ -114,7 +115,8 @@
 
 // console.log("Widget".startsWith("Wid")); // true, "Widget" starts with "Wid"
 // console.log("Widget".endsWith("get"));   // true, "Widget" ends with "get"
-
+// ctrl + f5
+// ctrl +/
 // ===============
 // String Slicing Methods
 // The slice() method extracts a section of a string and returns it as a new string.
@@ -126,12 +128,12 @@
 // console.log("abcdedfgg".slice(1, 6));  // Output: bcde
 // console.log("abcdedfgg".slice(-2));  // Output: gg
 // console.log("abcdedfgg".slice(1, 4));  // Output: bcd
-// console.log("abcdedfgg".slice(6, 1));  // no out put
+// console.log("abcdedfgg".slice(6, 1));  // no out put always left to right
 
 // ===============
 // Substring Method
 // The substring() method extracts characters from a string between two specified indices.
-// Swaps start and end values if start > end	
+// Swaps start and end values if start > end
 // ===============
 // s t r i n g i f y
 // 0 1 2 3 4 5 6 7 8
@@ -146,7 +148,7 @@
 // Strings in JavaScript are compared lexicographically, character by character.
 // ===============
 
-// console.log("a".codePointAt(0)); // Output: 97
+// console.log("abc".codePointAt(0)); // Output: 97
 // console.log("A".codePointAt(0)); // Output: 65
 
 // ===============
@@ -156,7 +158,6 @@
 
 // console.log(String(123));  // Output: '123'
 // console.log(String(4.5));  // Output: '4.5'
-// console.log(String({ prop: 123, prop1: "abc" }));  // Output: '[object Object]'
 
 // ===============
 // String Concatenation

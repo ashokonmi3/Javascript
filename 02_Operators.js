@@ -3,7 +3,9 @@
 // ===============================
 // 1. Assignment Operators
 // ===============================
-// Basic Assignment
+// Basic Assignment 
+// ctrl + /
+// execution --. ctrl+ f5
 
 // var x = 1;  // Assign 1 to variable x
 // console.log(x);  // Output: 1
@@ -29,9 +31,9 @@
 // // 2. Arithmetic Operators
 // // ===============================
 
-
-
 // Modulo (remainder)
+// a=5;
+// console.log(a%5);
 // console.log(5 % 2);  // Output: 1 (remainder of 5 divided by 2)
 // console.log(8 % 3);  // Output: 2 (remainder of 8 divided by 3)
 // console.log(6 % 3);  // Output: 0 (no remainder)
@@ -75,14 +77,14 @@
 // console.log("preincrement")
 // var c = 1;
 // var d = ++c;  // Assign a to b first, then increment a
-// console.log(c);  // Output: 1 (value of a before increment)
+// console.log(c);  // Output: 2 (value of a before increment)
 // console.log(d);  // Output: 2 (value of a after increment)
 // ------------------
-// a=10;
+// a = 10;
 // console.log(++a);
 // console.log(a);
-// -----------------
-// a=10;
+// // -----------------
+// a = 10;
 // console.log(a++);
 // console.log(a);
 // ------------------------
@@ -103,7 +105,7 @@
 
 // console.log("JavaScript" + " " + "is awesome!");  // Output: JavaScript is awesome!
 
-//  console.log("The answer is " + 42);  // Output: The answer is 42
+// console.log("The answer is " + 42);  // Output: The answer is 42
 
 // ===============================
 // 6. Logical Operators

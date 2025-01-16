@@ -4,6 +4,12 @@
 //     console.log("That's correct!"); // If condition is true, this block runs.
 //     console.log("You're so smart!");
 // }
+// ===================
+// var year = 2016;
+// if (year == 2015) {
+//     console.log("That's correct!"); // If condition is true, this block runs.
+//     console.log("You're so smart!");
+// }
 
 // // ============================
 // // Prompt user for input and validate the year
@@ -24,6 +30,19 @@
 // } else {
 //     console.log('Exactly!');  // Runs if year is exactly 2015
 // }
+// =================
+
+// var year = 2015;
+// if (year < 2018) {
+//     console.log('Too early...');  // Runs if year is before 2015
+// } else if (year == 2015) {
+//     console.log('Too late');  // Runs if year is after 2015
+// } else {
+//     console.log('Exactly!');  // Runs if year is exactly 2015
+// }
+
+
+
 
 // ============================
 // Checking access based on age
@@ -52,7 +71,7 @@
 
 // // ============================
 // // Same logic using if-else statements for age categories
-// var age = 181;
+// var age = 18;
 // if (age < 3) {
 //     message = 'Hi, baby!';
 // } else if (age < 18) {
@@ -67,12 +86,12 @@
 // // ============================
 // // Logical Operators
 
-// // OR Operator (||)
+// // // OR Operator (||)
 // console.log(true || true);   // true
 // console.log(false || true);  // true
 // console.log(true || false);  // true
 // console.log(false || false); // false
-
+// --------------------------
 // // // Example with falsy values
 // if (0 || 0) {
 //     console.log('truthy!');
@@ -104,7 +123,7 @@
 // console.log(false && true);  // false
 // console.log(true && false);  // false
 // console.log(false && false); // false
-
+// ----------------
 // // // Example with AND operator to check exact time
 // var hour = 12;
 // var minute = 30;
@@ -126,8 +145,9 @@
 // var x = true;
 // console.log(!x); // false (NOT true is false)
 
-// console.log(!"non-empty string"); // false (string is truthy, NOT makes it false)
+// console.log(!"ss"); // false (string is truthy, NOT makes it false)
 // console.log(!!null); // false (double NOT converts null to boolean)
+// console.log(!!!null); // false (double NOT converts null to boolean)
 
 // ============================
 // Falsy values in JavaScript (falsy values include: 0, "", null, undefined, NaN, false)
@@ -189,16 +209,153 @@
 // ============================
 // Example with multiple conditions combined
 // ============================
-var year = 2024;
-var a = 10;
-var b = 100;
-if (year < 2015 && a == 10 && b == 20) { // < , ==,&& ||   , false && true && false
-    console.log("Too early...");
-} else if (year > 2015) {
-    console.log("Too late");
-} else {
-    console.log("Exactly!");
+// var year = 2024;
+// var a = 10;
+// var b = 100;
+// if (year < 2015 && a == 10 && b == 20) { // < , ==,&& ||   , false && true && false
+//     console.log("Too early...");
+// } else if (year == 2015) {
+//     console.log("Too late");
+// } else {
+//     console.log("Exactly!");
+// }
+// =======
+
+// let day = "Sunday";
+
+// switch (day) {
+//     case "Monday":
+//         console.log("Start of the work week.");
+//         break;
+//     case "Tuesday":
+//         console.log("Second day of the work week.");
+//         break;
+//     case "Wednesday":
+//         console.log("Midweek");
+//         break;
+//     case "Thursday":
+//         console.log("Almost Friday.");
+//         break;
+//     case "Friday":
+//         console.log("End of the work week.");
+//         break;
+//     default:
+//         console.log("It's the weekend!");
+// }
+// ===================
+
+// let role = "admin";
+
+// switch (role) {
+//     case "admin":
+//         console.log("Full access granted.");
+//         break;
+//     case "editor":
+//         console.log("Access to edit content.");
+//         break;
+//     case "viewer":
+//         console.log("View only access.");
+//         break;
+//     default:
+//         console.log("No access granted.");
+// }
+// ===========================
+// let statusCode = 404;
+
+// switch (statusCode) {
+//     case 200:
+//         console.log("OK: The request was successful.");
+//         break;
+//     case 201:
+//         console.log("Created: The request was successful and a resource was created.");
+//         break;
+//     case 400:
+//         console.log("Bad Request: The request could not be understood or was missing required parameters.");
+//         break;
+//     case 404:
+//         console.log("Not Found: Resource could not be found.");
+//         break;
+//     case 500:
+//         console.log("Internal Server Error: An error occurred on the server.");
+//         break;
+//     default:
+//         console.log("Unknown status code.");
+// }
+// =======================
+// let month = "August";
+
+// switch (month) {
+//     case "December":
+//     case "January":
+//     case "February":
+//         console.log("Winter");
+//         break;
+//     case "March":
+//     case "April":
+//     case "May":
+//         console.log("Spring");
+//         break;
+//     case "June":
+//     case "July":
+//     case "August":
+//         console.log("Summer");
+//         break;
+//     case "September":
+//     case "October":
+//     case "November":
+//         console.log("Autumn");
+//         break;
+//     default:
+//         console.log("Unknown month.");
+// }
+// ================
+// let trafficLight = "red";
+
+// switch (trafficLight) {
+//     case "red":
+//         console.log("Stop");
+//     case "yellow":
+//         console.log("Ready");
+
+//     case "green":
+//         console.log("Go");
+//         break;
+//     default:
+//         console.log("Invalid traffic light signal.");
+// }
+// ================
+// let value = 3.14159;
+
+// switch (true) {
+//     case value === Math.PI:
+//         console.log("The value is approximately Pi.");
+//         break;
+//     case value > 3 && value < 3.2:
+//         console.log("The value is greater than 3 but less than 3.2.");
+//         break;
+//     case value > 2 && value < 3:
+//         console.log("The value is between 2 and 3.");
+//         break;
+//     default:
+//         console.log("Unknown range.");
+// }
+// ================
+let amount = 99.99;
+
+switch (amount) {
+    case 99.99:
+        console.log("The price is $99.99.");
+        break;
+    case 49.99:
+        console.log("The price is $49.99.");
+        break;
+    case 19.99:
+        console.log("The price is $19.99.");
+        break;
+    default:
+        console.log("Price not listed.");
 }
+
 
 // // ============================
 // // Interview Questions
