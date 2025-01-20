@@ -44,33 +44,33 @@
 // ===============
 
 // ===============
-//  While Loop 
+//  While Loop
 // A 'while' loop repeats code as long as the condition specified remains true.
 // Syntax: while (condition) { statement }
 // ===============
 
 // let x = 5;// initialization
 // while (x >= 0) {
-//   console.log(x); // Prints current value of x
-//   x--; // Decreases x by 1 each iteration
+//     console.log(x); // Prints current value of x
+//     x--; // Decreases x by 1 each iteration
 // }
 // Output: 5, 4, 3, 2, 1, 0
 // =========================
 // // Example: Simple Counter
 // let i = 0;
 // while (i < 3) {
-// //   console.log(${i}\r); // Output current value of i
-// process.stdout.write(`i value ${i}`)  ;
+//     console.log(i); // Output current value of i
+//     // process.stdout.write(`i value ${i}`);
 
-// i++; // Increase i by 1 in each iteration
+//     i++; // Increase i by 1 in each iteration
 // }
 // // Output: 0, 1, 2
-
+// --------------------
 // // Edge Case: Loop ending at 1
 // let count = 3;
 // while (count) { // Runs until count is falsy (0)
-//   console.log(count);
-//   count--;
+//     console.log(count);
+//     count--;
 // }
 // // Output: 3, 2, 1
 
@@ -82,12 +82,13 @@
 
 // let j = 10;
 // do {
-//   console.log(j); // Outputs current value of j
-//   j++;
+//     console.log(j); // Outputs current value of j
+//     j++;
 // } while (j < 3); // Runs at least once, as condition is checked after loop body
 // Output: 10
 
-// Interview Note: Use 'do...while' for cases where code must run at least once regardless of the condition.
+// Interview Note: Use 'do...while' for cases where code must
+// run at least once regardless of the condition.
 
 // ===============
 //  For Loop
@@ -96,23 +97,34 @@
 // ===============
 
 // for (let k = 0; k < 3; k++) {
-//   console.log(k); // Prints value of k in each iteration
+//     console.log(k); // Prints value of k in each iteration
 // }
 // // Output: 0, 1, 2
 
 // Example: Counting down with for loop
 // for (let l = 5; l >= 0; l--) {
-//   console.log(l); // Outputs value of l from 5 to 0
+//     console.log(l); // Outputs value of l from 5 to 0
 // }
 // Output: 5, 4, 3, 2, 1, 0
 // -----------------
 // Variable Scope Example
 // let m = 0;
 // for (m = 0; m < 3; m++) {
-//   console.log(m); // Outputs value of m within loop
+//     console.log(m); // Outputs value of m within loop
 // }
 // console.log("Outside loop:", m); // Shows m is still accessible outside
 // // Output: 0, 1, 2, Outside loop: 3
+// -----------------------------
+// for (let m = 0; m < 3; m++) {
+//     console.log(m); // Outputs value of m within loop
+// }
+// console.log("Outside loop:", m); // Shows m is still accessible outside
+// =======================
+
+// for (var m = 0; m < 3; m++) {
+//     console.log(m); // Outputs value of m within loop
+// }
+// console.log("Outside loop:", m); // Shows m is still accessible outside
 
 // ===============
 //  Infinite Loop
@@ -144,7 +156,8 @@
 
 // let colors = ["red", "green", "blue"];
 // for (let x of colors) {
-//   console.log(x); // Prints each color in the array
+//     console.log(x); // Pr
+//     // ints each color in the array
 // }
 // Output: red, green, blue
 
@@ -156,8 +169,8 @@
 // ===============
 
 // for (let n = 0; n < 10; n++) {
-//   if (n === 3) break; // Exits loop when n is 3
-//   console.log(n);
+//     if (n === 3) break; // Exits loop when n is 3
+//     console.log(n);
 // }
 // console.log("I am outside the loop");
 
@@ -169,10 +182,16 @@
 // ===============
 
 // for (let p = 0; p < 5; p++) {
-//   if (p === 2) continue; // Skips when p is 2
-//   console.log(p);
+//     if (p === 2) continue; // Skips when p is 2
+//     console.log(p);
 // }
 // Output: 0, 1, 3, 4
+
+// var s = 2;
+// var s1= '2';
+// console.log(2 === '2');
+// console.log(2 == '2');
+
 
 // ===============
 //  Switch Statement in Loops
@@ -180,18 +199,18 @@
 // ===============
 
 // for (let day = 0; day < 3; day++) {
-//   let text;
-//   switch (day) {
-//     case 0:
-//       text = "Today is Sunday";
-//       break;
-//     case 1:
-//       text = "Today is Monday";
-//       break;
-//     default:
-//       text = "Another weekday";
-//   }
-//   console.log(text);
+//     let text;
+//     switch (day) {
+//         case 0:
+//             text = "Today is Sunday";
+//             break;
+//         case 1:
+//             text = "Today is Monday";
+//             break;
+//         default:
+//             text = "Another weekday";
+//     }
+//     console.log(text);
 // }
 // Output: Today is Sunday, Today is Monday, Another weekday
 
@@ -211,6 +230,19 @@
 //   }
 // }
 // Output: 1 2 3 4 5 6 7 8 9
+// ======================
+
+// var str = "hello world"
+// for (var i = 0; i < str.length; i++) {
+//     console.log(str[i]);
+// }
+
+// var str = "hello world"
+// for (var ch of str) {
+//     console.log(ch);
+// }
+
+
 
 // ===============
 //  Interview Questions with Answers
@@ -240,8 +272,8 @@
 // - 'continue' skips the current iteration and proceeds to the next one.
 
 // for (let i = 1; i <= 5; i++) {
-//   if (i === 3) continue; // Skips when i = 3
-//   console.log(i);
+//     if (i === 3) continue; // Skips when i = 3
+//     console.log(i);
 // } // Output: 1, 2, 4, 5
 
 // for (let i = 1; i <= 5; i++) {

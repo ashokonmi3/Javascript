@@ -221,7 +221,7 @@
 // }
 // =======
 
-// let day = "Sunday";
+// let day = "Monday";
 
 // switch (day) {
 //     case "Monday":
@@ -340,22 +340,68 @@
 //         console.log("Unknown range.");
 // }
 // ================
-let amount = 99.99;
+// let amount = 99.99;
 
-switch (amount) {
-    case 99.99:
-        console.log("The price is $99.99.");
-        break;
-    case 49.99:
-        console.log("The price is $49.99.");
-        break;
-    case 19.99:
-        console.log("The price is $19.99.");
-        break;
-    default:
-        console.log("Price not listed.");
-}
+// switch (amount) {
+//     case 99.99:
+//         console.log("The price is $99.99.");
+//         break;
+//     case 49.99:
+//         console.log("The price is $49.99.");
+//         break;
+//     case 19.99:
+//         console.log("The price is $19.99.");
+//         break;
+//     default:
+//         console.log("Price not listed.");
+// }
+// =============
+// var age = 89;
+// if (age < 18) {
+//     console.log("Minor");
+// } else if (age >= 18 && age <= 64) {
+//     console.log("Adult");
+// } else if (age >= 65) {
+//     console.log("Senior");
+// } else {
+//     console.log("Default age");
+// }
+// ==========================
+// const readline = require('readline');
 
+// const rl = readline.createInterface({
+//     input: process.stdin,
+//     output: process.stdout
+// });
+
+// rl.question('Enter the student\'s score: ', (input) => {
+//     const score = parseInt(input, 10);
+// ===================
+// Write a program that takes a student's score as input and outputs
+// their grade based on the following criteria:
+
+// A: 90 and above
+// B: 80 - 89
+// C: 70 - 79
+// D: 60 - 69
+// F: Below 60
+// ===============
+// var score = 90;
+
+// if (score >= 90) {
+//     console.log('Grade: A');
+// } else if (score >= 80) {
+//     console.log('Grade: B');
+// } else if (score >= 70) {
+//     console.log('Grade: C');
+// } else if (score >= 60) {
+//     console.log('Grade: D');
+// } else {
+//     console.log('Grade: F');
+// }
+
+//     rl.close();
+// });
 
 // // ============================
 // // Interview Questions

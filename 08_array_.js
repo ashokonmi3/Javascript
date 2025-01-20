@@ -29,7 +29,7 @@
 // var emptyArray1 = [];             // Using literal notation (most common)
 // var emptyArray2 = new Array();    // Using the Array constructor
 // console.log(emptyArray1, emptyArray2);  // Output: [], []
-// --------------
+// // --------------
 // // // Array with Specific Size
 // var arrayWithSize = new Array(10);
 // console.log(arrayWithSize.length);  // Output: 10
@@ -38,16 +38,16 @@
 // var languages = ["JavaScript", "Python", "Java"];
 // console.log(languages);             // Output: ["JavaScript", "Python", "Java"]
 
-// // // Accessing Elements
+// // // // Accessing Elements
 // console.log(languages[0]);  // Access the first element: "JavaScript"
 // console.log(languages[2]);  // Access the third element: "Java"
 // console.log(languages[3]);  // Access an undefined index: undefined
 
-// // // Adding Elements to an Array
+// // // // Adding Elements to an Array
 // languages[3] = "Ruby";
 // console.log(languages);   // Output: ["JavaScript", "Python", "Java", "Ruby"]
 
-// // // Checking if a Variable is an Array
+// // // // Checking if a Variable is an Array
 // console.log(Array.isArray(languages));  // Output: true
 // console.log(Array.isArray("Java"));     // Output: false
 
@@ -64,7 +64,7 @@
 // arr.length = 2;
 // console.log(arr);         // Output: ['a', 'b']
 
-// // // // Adding an Element to the End
+// // // // // Adding an Element to the End
 // arr[arr.length] = 'e'; //arr[2]
 // console.log(arr);         // Output: ['a', 'b', 'e']
 
@@ -76,12 +76,14 @@
 // var arr = ['a', 'b', 'c', 'd'];
 // arr.push('f');
 // console.log(arr);  // Output: ['a', 'b', 'e', 'f']
-// -----------------------
+// // -----------------------
 // pop(): Removes the last element and returns it
+// var arr = ['a', 'b', 'c', 'd'];
+
 // var lastElement = arr.pop();
 // console.log(lastElement);  // Output: 'f'
 // console.log(arr);          // Output: ['a', 'b', 'e']
-
+// ==============================
 // // // unshift(): Adds an element to the beginning of the array
 // var arr = ['a', 'b', 'c', 'd'];
 // arr.unshift('z');
@@ -105,9 +107,9 @@
 
 // -------------------
 // // At position 3, replace 1 element with 1 new element
-var fruits = ["Banana", "Orange", "Apple", "Mango"];
-fruits.splice(3, 1, "Peach");
-console.log(fruits);  // Output: ["Banana", "Orange", "Lemon", "Peach", "Apple", "Mango"]
+// var fruits = ["Banana", "Orange", "Apple", "Mango"];
+// fruits.splice(3, 1, "Peach");
+// console.log(fruits);  // Output: ["Banana", "Orange", "Lemon", "Peach", "Apple", "Mango"]
 // ----------------
 // // slice(): Returns a shallow copy of a portion of an array into a new array
 
@@ -137,20 +139,22 @@ console.log(fruits);  // Output: ["Banana", "Orange", "Lemon", "Peach", "Apple",
 // ===============
 
 // Using a for loop
-// var arrayItems = ["A", "B", "C"];
+var arrayItems = ["A", "B", "C"];
 // for (var i = 0; i < arrayItems.length; i++) {
-//   console.log(arrayItems[i]);
+//     console.log(arrayItems[i]);
 // }
-
-// // Using forEach()
-// arrayItems.forEach(function (item) {
-//   console.log(item);
-// });
 
 // // Using for...of loop
 // for (let item of arrayItems) {
-//   console.log(item);
+//     console.log(item);
 // }
+
+// // Using forEach()
+arrayItems.forEach(function (item) {
+    console.log(item);
+});
+
+
 
 // ===============
 //  Interview Questions and Answers on Arrays
