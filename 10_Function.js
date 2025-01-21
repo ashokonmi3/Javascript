@@ -119,6 +119,9 @@
 //     console.log("Hello " + name);
 // };
 
+// // greetByName("python");
+// // greetByName(5);
+
 // var executeFunction = function (fn, name) {
 //     fn(name); // greetByName("Python")
 // };
@@ -179,8 +182,8 @@
 // // Shorthand syntax for functions, commonly used for simpler functions.
 // // ========================
 
-let hello = () => "Hello World!";
-console.log(hello());
+// let hello = () => "Hello World!";
+// console.log(hello());
 
 let personalizedHello = (name) => "Hello " + name + "!";
 console.log(personalizedHello("Developer"));

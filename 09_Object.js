@@ -1,7 +1,7 @@
 // ====================
 // Introduction to Objects in JavaScript
-// JavaScript is an object-oriented language, but unlike many OOP languages, it is prototype-based, not class-based. 
-// Objects are collections of properties, where each property has a key-value pair. They are crucial for structuring data and creating modular, 
+// JavaScript is an object-oriented language, but unlike many OOP languages, it is prototype-based, not class-based.
+// Objects are collections of properties, where each property has a key-value pair. They are crucial for structuring data and creating modular,
 // reusable code in JavaScript. Objects allow storing related data and functionality together, making the code more organized and intuitive.
 // ====================
 
@@ -19,19 +19,19 @@
 
 // var myObj = {};  // Empty object created
 // console.log(myObj); // Output: {}
-// // ---------------
-// myObj.prop = "hello"; // Adding property dynamically
+// // // ---------------
+// myObj.prop1 = "hello"; // Adding property dynamically
 // console.log(myObj); // Output: { prop: "hello" }
 
 // myObj.prop2 = 123;
-// console.log(myObj.prop); // Output: "hello"
 // console.log("The number property is " + myObj.prop2); // Output: The number property is 123
 // console.log(myObj); // Output: { prop: "hello" }
+
 // -----------------------
 
-// array = ["Thor" , " Marvels", "Avegners" ]
-//            0           1          2
-//           "Name"    "Studio"     "Movie"
+// array = ["Thor", " Marvels", "Avegners"]
+//         0          1          2
+//       "Name"    "Studio"     "Movie"
 
 // array = ["Avangers", " Marvels", "Thor"]
 //           "Movie"     "Studio"   "Name"
@@ -52,20 +52,20 @@
 // ====================
 
 // var myObjLiteral = {
-//   prop1: "hello",
-//   prop2: 123,
-//   prop3: true,
-//   a: false
+//     prop1: "hello",
+//     prop2: 123,
+//     boolProp2: true,
+//     boolProp1: false
 // };
 
 // console.log(myObjLiteral);
 // =============================
 // // Example of a person object
 // var person = {
-//   firstName: "John",
-//   lastName: "Doe",
-//   age: 50,
-//   eyeColor: "blue"
+//     firstName: "John",
+//     lastName: "Doe",
+//     age: 50,
+//     eyeColor: "blue"
 // };
 
 // console.log(person);
@@ -88,28 +88,27 @@
 // // Attempting to reassign a const object
 // car = { type: "Volvo", model: "EX60", color: "red" }; // ERROR: Assignment to constant variable
 
-// // ====================
-// // Summary: Object
-// // 1) Free-form: Not bound to a class.
-// // 2) Object literal notation: `{}` is used to create objects.
-// // 3) Properties can be added, modified, or deleted dynamically.
-// // 4) Methods can also be added as properties to objects.
-// // ====================
+// ====================
+// Summary: Object
+// 1) Free-form: Not bound to a class.
+// 2) Object literal notation: `{}` is used to create objects.
+// 3) Properties can be added, modified, or deleted dynamically.
+// 4) Methods can also be added as properties to objects.
+// ====================
 
-// // ====================
-// // When to Use Dot Notation (.) vs Bracket Notation []
-// // ====================
-
+// ====================
+// When to Use Dot Notation (.) vs Bracket Notation []
+//----------------------
 // Use bracket notation when:
 // - The property name is a reserved word.
 // - The property name starts with a number.
 // - The property name is dynamic (stored in a variable).
-
+// ----------------------
 // var myObjDynamic = {
-//   prop: "hello",
-//   prop1: 123,
-//   prop2: true,
-//   1: "javascript" // Key is a number, so must use bracket notation to access.
+//     prop: "hello",
+//     prop1: 123,
+//     prop2: true,
+//     1: "javascript" // Key is a number, so must use bracket notation to access.
 // };
 
 // console.log("Accessing property with bracket notation: " + myObjDynamic[1]);
@@ -121,25 +120,39 @@
 
 // ===========================
 
-// var myObj = {};
 
 // // // Using a reserved word as a property name
 // // // Here, "class" is a reserved word in JavaScript, so we cannot use dot notation to access it.
+// var myObj = {};
 // myObj["class"] = "Mathematics";
 
-// // // Accessing the reserved word property with bracket notation
+// // // // Accessing the reserved word property with bracket notation
 // console.log(myObj["class"]); // Output: "Mathematics"
 
-// // // Attempting to access the "class" property using dot notation would result in a syntax error:
-// console.log(myObj.class); // SyntaxError: Unexpected token 'class'
+// // // // Attempting to access the "class" property using dot notation would result in a syntax error:
+// console.log(myObj.class); // may or may not work 'class'
 
-// // // Adding another property with a reserved word as a name
-// myObj["default"] = "Physics";
-// console.log(myObj["default"]); // Output: "Physics"
-// console.log(myObj.default);
-// // // // Adding a property with a name that starts with a number, which requires bracket notation
+// // // // Adding another property with a reserved word as a name
+// myObj["length"] = "Physics";
+// console.log(myObj["length"]); // Output: "Physics"
+// console.log(myObj.length);// may or may not work
+
+// // // // // Adding a property with a name that starts with a number, which requires bracket notation
 // myObj["123name"] = "Reserved Example";
 // console.log(myObj["123name"]); // Output: "Reserved Example"
+
+// ================
+// "use strict";
+// const obj = {
+//     class: 'Math',
+//     return: 'Homework',
+//     function: 'Science'
+// };
+
+// console.log(obj.class);// obj['class']
+// console.log(obj.return); obj['return']
+// console.log(obj.function); obj['function']
+
 
 // // ====================
 // // Nested Objects
@@ -147,16 +160,16 @@
 // // ====================
 
 // var nestedObj = {
-//   "prop": "hello",
-//   "objProp": {
-//     "innerProp": "Inner Property",
-//     "newInner": "new inner property"
-//   }
+//     "prop": "hello",
+//     "objProp": {
+//         "innerProp": "Inner Property",
+//         "newInner": "new inner property"
+//     }
 // };
 
 // console.log(nestedObj.objProp.innerProp); // Accessing nested property
 
-// // Adding new nested properties
+// // // Adding new nested properties
 // nestedObj.objProp.additionalProp = "Additional Inner Property";
 // console.log(nestedObj.objProp.additionalProp);
 
@@ -166,9 +179,9 @@
 // ====================
 
 // var personWithAge = {
-//   name: "Ashok",
-//   surname: "Sharma",
-//   age: 25
+//     name: "Ashok",
+//     surname: "Sharma",
+//     age: 25
 // };
 
 // delete personWithAge.age;

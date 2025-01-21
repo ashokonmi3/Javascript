@@ -35,17 +35,17 @@
 // console.log(arrayWithSize.length);  // Output: 10
 // ---------------
 // Array with Initial Values
-// var languages = ["JavaScript", "Python", "Java"];
-// console.log(languages);             // Output: ["JavaScript", "Python", "Java"]
+var languages = ["JavaScript", "Python", "Java"];
+console.log(languages);             // Output: ["JavaScript", "Python", "Java"]
 
 // // // // Accessing Elements
-// console.log(languages[0]);  // Access the first element: "JavaScript"
-// console.log(languages[2]);  // Access the third element: "Java"
+console.log(languages[0]);  // Access the first element: "JavaScript"
+console.log(languages[2]);  // Access the third element: "Java"
 // console.log(languages[3]);  // Access an undefined index: undefined
 
 // // // // Adding Elements to an Array
-// languages[3] = "Ruby";
-// console.log(languages);   // Output: ["JavaScript", "Python", "Java", "Ruby"]
+languages[3] = "Ruby";
+console.log(languages);   // Output: ["JavaScript", "Python", "Java", "Ruby"]
 
 // // // // Checking if a Variable is an Array
 // console.log(Array.isArray(languages));  // Output: true
@@ -131,7 +131,10 @@
 // console.log(numbers);  // Output: [9, 6, 5, 5, 2, 1]
 
 // // // // indexOf(): Returns the first index at which a given element is found
-// console.log(numbers.indexOf(5));  // Output: 2
+//             0   1 2  3  4  5 
+var numbers = [5, 2, 9, 1, 5, 6];
+
+console.log(numbers.indexOf(6));  // Output: 2
 
 // ===============
 //  Array Iteration
@@ -150,9 +153,9 @@ var arrayItems = ["A", "B", "C"];
 // }
 
 // // Using forEach()
-arrayItems.forEach(function (item) {
-    console.log(item);
-});
+// arrayItems.forEach(function (item) {
+//     console.log(item);
+// });
 
 
 
