@@ -23,6 +23,14 @@
 // console.log(jsn);
 // console.log(typeof jsn);
 
+// jsn1 = '{"name":"harshan","age":20,"isCaptain":true,"sports":["football","volleyball"],"wife":null}'
+
+// const parsedData = JSON.parse(jsn1);
+// console.log(parsedData);
+// console.log(typeof parsedData);
+
+// ======================
+
 // Objects
 // Arrays
 // string
@@ -249,23 +257,28 @@
 // //  allowing you to read from, write to, and manipulate files and directories.
 // ---------------------------
 // // Sample data to write to a JSON file
-// const fs = require('fs');
+const fs = require('fs');
+// Object ---> json string --> wrote to file
 
+// json file --> read data --> convert to java script object
 // const data = {
 //   name: "John Doe",
 //   age: 30,
 //   city: "New York",
 //   skills: ["Python", "Machine Learning", "Automation"]
 // };
+// filedata = JSON.stringify(data, null, 4);
+
+// fs.writeFileSync('24_abc.json', filedata);
 
 // // // // Write data to a JSON file
 // fs.writeFileSync('24_data.json', JSON.stringify(data, null, 4));
 // console.log("Data written to file successfully.");
 
 // // // // Read data from the JSON file
-// const jsonData = fs.readFileSync('24_data.json', 'utf8');
-// const parsedData = JSON.parse(jsonData);
-// console.log("Data read from file:", parsedData);
+const jsonData = fs.readFileSync('24_data.json', 'utf8');
+const parsedData = JSON.parse(jsonData);
+console.log("Data read from file:", parsedData);
 
 // // =================
 // const fs = require('fs');

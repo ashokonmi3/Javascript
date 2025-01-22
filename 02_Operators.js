@@ -139,14 +139,14 @@
 // var a = true && false;  // true AND false is false
 // console.log(a);  // Output: false
 
-var b = false && "abc";  // false AND anything is false
-console.log(b);  // Output: false
+// var b = false && "abc";  // false AND anything is false
+// console.log(b);  // Output: false
 
 // var c = 'abc' && 123;  // 'abc' and 123 are truthy, so 123 is returned - last truthy value
 // console.log(c);  // Output: 123
 
-// var c = 123 && 'abc';  // 'abc' and 123 are truthy, so 123 is returned - last truthy value
-// console.log(c);  // Output: 123
+var c = 123 && 'abc';  // 'abc' and 123 are truthy, so 123 is returned - last truthy value
+console.log(c);  // Output: 123
 
 // -------------------------
 // // Logical NOT (!)
