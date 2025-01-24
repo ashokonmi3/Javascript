@@ -139,10 +139,10 @@
 // ===============
 
 // Using a for loop
-var arrayItems = ["A", "B", "C"];
-// for (var i = 0; i < arrayItems.length; i++) {
-//     console.log(arrayItems[i]);
-// }
+// var arrayItems = ["A", "B", "C"];
+// // for (var i = 0; i < arrayItems.length; i++) {
+// //     console.log(arrayItems[i]);
+// // }
 
 // // Using for...of loop
 // for (let item of arrayItems) {
@@ -150,9 +150,16 @@ var arrayItems = ["A", "B", "C"];
 // }
 
 // // Using forEach()
-arrayItems.forEach(function (item) {
-    console.log(item);
-});
+// arrayItems.forEach(function (item) {
+//     console.log(item);
+// });
+
+// const colors = ["Red","Green", "Blue" , "magneta"];
+// for(const color of colors){
+// }
+// console.log(colors);
+// console.log(colors.length);
+
 
 
 

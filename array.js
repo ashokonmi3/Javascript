@@ -3,7 +3,7 @@ var arr1 = [1, 2, 3]; // array of numbers
 // const arr3 = [[1, 2, 3], ["one", 2, "three"]]; // array containing arrays
 // document.write("<br>");
 
-document.write(arr1[0]);
+// document.write(arr1[0]);
 // document.write("<br>");
 
 // document.write(arr2[0]);
@@ -20,16 +20,16 @@ document.write(arr1[0]);
 // document.write("<br>");
 // document.write(arr3[1].length);
 
-var arr5 = [1, 2, 3];
-arr5.push("6"); // new length of the array
-document.write(arr5);
+// var arr5 = [1, 2, 3];
+// arr5.push("6"); // new length of the array
+// document.write(arr5);
 // arr5.pop();// return elemement
 // document.write("<br>");
 // document.write(arr5);
  // returns "e"; arr is now ["b", "c", "d"]
 // document.write("<br>");
-arr5.unshift("a");// new length of the array
-document.write(arr5);
+// arr5.unshift("a");// new length of the array
+// document.write(arr5);
 //  // returns 4; arr is now ["a", "b", "c", "d"]
 // arr5.shift();//return elemement
 // document.write("<br>");
@@ -63,3 +63,15 @@ document.write(arr5);
 // rev_arr.reverse();
 // document.write("<br>");
 // document.write(rev_arr);
+
+const readline = require('readline');
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+rl.question('Please enter your name: ', (name) => {
+    console.log(`Hello, ${name}!`);
+    rl.close();
+});

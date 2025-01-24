@@ -217,6 +217,36 @@
 // console.log(Boolean("Hello"));  // Output: true (truthy value)
 // console.log(Boolean(""));  // Output: false (falsy value)
 // console.log(Boolean(null));  // Output: false (falsy
+// ==================
+// user input 
+// command to execute node 02_Operators.js
+// const readline = require('readline');
+
+// const rl = readline.createInterface({
+//     input: process.stdin,
+//     output: process.stdout
+// });
+
+// rl.question('Please enter your name: ', (name) => {
+//     console.log(`Hello, ${name}!`);
+//     rl.close();
+// });
+// ===============
+// Multiple input
+const readline = require('readline');
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+rl.question('Enter your name: ', (name) => {
+    rl.question('Enter your age: ', (age) => {
+        console.log(`Hello, ${name}. You are ${age} years old.`);
+        rl.close();
+    });
+});
+
 
 // // =============================
 // // Mathematical Operations in JavaScript: A Safe Approach

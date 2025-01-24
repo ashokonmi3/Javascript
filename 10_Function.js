@@ -179,11 +179,11 @@
 // // Shorthand syntax for functions, commonly used for simpler functions.
 // // ========================
 
-let hello = () => "Hello World!";
-console.log(hello());
+// let hello = () => "Hello World!";
+// console.log(hello());
 
-let personalizedHello = (name) => "Hello " + name + "!";
-console.log(personalizedHello("Developer"));
+// let personalizedHello = (name) => "Hello " + name + "!";
+// console.log(personalizedHello("Developer"));
 
 // // ========================
 // // Questions:
