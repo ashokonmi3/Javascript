@@ -237,5 +237,50 @@
 //   age: 35
 // };
 
+// ===========
+// var obj = {
+//   foo: 'foo',
+//   toJSON: function() {
+//     return 'bar';
+//   }
+// };
+// console.log(JSON.stringify(obj));        // '"bar"'
+// console.log(JSON.stringify({ x: obj })); // '{"x":"bar"}'
 
+// ================
+//  var obj2 = {
+//     foo: 'foo',
+//     toJSON: function(key) {
+//       if (key === '') {
+//         return 'bar only';
+//       } else {
+//         return 'bar in ' + key;
+//       }
+//     }
+//   };
+  
+//   console.log(JSON.stringify(obj2));         // '"bar only"'
+//   console.log(JSON.stringify({ x: obj2 }));  // '{ "x":"bar in x"}'
+//   console.log(JSON.stringify([obj2, obj2]));
+// ====================
+// JSON string
+const jsonString = `
+{
+   "name": "Alice",
+   "age": 22,
+   "active": true,
+   "courses": ["Math", "Physics"]
+}
+`;
+const jsonSt1ring = 
+{
+   "name": "Alice",
+   "age": 22,
+   "active": true,
+   "courses": ["Math", "Physics"]
+};
+// // Convert JSON string to JavaScript ob
+// string--> object
+const jsObject = JSON.parse(jsonString);
 
+console.log(jsObject);

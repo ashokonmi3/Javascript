@@ -252,6 +252,14 @@
 //     }
 // }
 
+// table from 1to 10
+for (let i = 1; i <= 10; i++) {
+    let row = ''; // Initialize an empty row
+    for (let j = 1; j <= 5; j++) {
+      row += (i * j) + ' '; // Append the product to the row with a space
+    }
+    console.log(row.trim()); // Print the row and trim trailing space
+  }
 
 // ===============
 //  Interview Questions with Answers
