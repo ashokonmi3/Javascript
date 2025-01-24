@@ -125,6 +125,12 @@
 //     console.log(m); // Outputs value of m within loop
 // }
 // console.log("Outside loop:", m); // Shows m is still accessible outside
+// ====================
+let m;
+for (m = 1; m <= 5; m++) {
+    console.log("inner" + m)
+}
+console.log("Outer" + m);
 
 // ===============
 //  Infinite Loop

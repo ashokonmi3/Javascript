@@ -119,6 +119,9 @@
 //     console.log("Hello " + name);
 // };
 
+// // greetByName("python");
+// // greetByName(5);
+
 // var executeFunction = function (fn, name) {
 //     fn(name); // greetByName("Python")
 // };

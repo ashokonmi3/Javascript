@@ -205,6 +205,36 @@
 // } else {
 //     console.log("value not equal");
 // }
+// ============
+// var year = 2016;
+// if (year = 2015) {
+//     console.log("This code run");
+// }
+// else {
+//     console.log("This code run in else");
+// }
+// =================
+// if (0 || 1) {
+//     console.log(false)
+// }
+// else {
+//     console.log(true)
+// }
+// ====================
+let number = 0;
+if (number > 0) {
+    console.log("Number is Positive");
+}
+else if (number < 0) {
+    console.log("Number is Negetive")
+}
+else if (Number == 0) {
+    console.log("Number is equal to zero");
+}
+else {
+    console.log("This is not a Numbner")
+}
+
 
 // ============================
 // Example with multiple conditions combined

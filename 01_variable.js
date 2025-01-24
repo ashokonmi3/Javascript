@@ -159,7 +159,7 @@
 // ===========================
 // 5. Boolean Data Type
 // ===========================
-string s ="c";
+// string s = "c";
 // var isAvailable = true;
 // var isComplete = false;
 // console.log(isAvailable); // Output: true
@@ -261,7 +261,37 @@ string s ="c";
 // Hoisting
 // // var: Variables declared with var are hoisted to the top of their scope, meaning they are moved to the top of the function or global scope and are initialized with undefined.However, they are only assigned a value when the code reaches their actual line of assignment.
 // // let: Variables declared with let are also hoisted, but they are not initialized.Accessing a let variable before its declaration results in a ReferenceError due to the temporal dead zone(the period between the beginning of the block and the declaration line).
+// ========================
+// User input
+const readline = require('readline');
 
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+rl.question('Please enter your name: ', (name) => {
+    console.log(`Hello, ${name}!`);
+    rl.close();
+});
+// -----------------
+// Multiline input
+// const readline = require('readline');
+
+// const rl = readline.createInterface({
+//     input: process.stdin,
+//     output: process.stdout
+// });
+
+// rl.question('Enter your name: ', (name) => {
+//     rl.question('Enter your age: ', (age) => {
+//         console.log(`Hello, ${name}. You are ${age} years old.`);
+//         rl.close();
+//     });
+// });
+
+// Execution
+// node.\01_variable.js
 
 // // ===========================
 // // Redeclaration of var and let
@@ -280,15 +310,15 @@ string s ="c";
 // console.log(age);
 
 // ===========================
-// Scope of var and let 
+// Scope of var and let
 // ===========================
-if (true) {
-    var x = 10;
-    let y = 20;
-    console.log("inside function y value " +y);
-}
-console.log(x); // 10 (accessible because `var` is function-scoped or globally scoped)
-console.log(y); // ReferenceError: y is not defined (because `let` is block-scoped)
+// if (true) {
+//     var x = 10;
+//     let y = 20;
+//     console.log("inside function y value " +y);
+// }
+// console.log(x); // 10 (accessible because `var` is function-scoped or globally scoped)
+// console.log(y); // ReferenceError: y is not defined (because `let` is block-scoped)
 
 // ============
 /*
@@ -304,7 +334,7 @@ Temporal Dead Zone (TDZ) No                          Yes
 // ==============
 // 1. No Need to Declare Variable Type
 // In JavaScript, there is no need to declare the type of a variable when it is created.
-// JavaScript is a dynamically typed language, meaning the type of a variable is determined at 
+// JavaScript is a dynamically typed language, meaning the type of a variable is determined at
 // runtime based on the value assigned to it.
 // This is different from statically typed languages like Java or C++, where the type
 //  of a variable must be explicitly declared.

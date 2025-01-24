@@ -120,6 +120,20 @@
 
 // var z = false || 'def';  // false is falsy, so 'def' is returned
 // console.log(z);  // Output: 'def'
+
+// var n = 123 || true;
+// console.log(n);
+
+// var n = true || 123;
+// console.log(n);
+
+// var n = 123 || false;
+// console.log(n);
+
+// var n = false || 123;
+// console.log(n);
+
+
 // --------------------
 // Logical AND (&&)
 // var a = true && false;  // true AND false is false
@@ -130,6 +144,10 @@
 
 // var c = 'abc' && 123;  // 'abc' and 123 are truthy, so 123 is returned - last truthy value
 // console.log(c);  // Output: 123
+
+var c = 123 && 'abc';  // 'abc' and 123 are truthy, so 123 is returned - last truthy value
+console.log(c);  // Output: 123
+
 // -------------------------
 // // Logical NOT (!)
 // var d = !true;  // NOT true is false
