@@ -1,5 +1,6 @@
 // Operators
-// Many operators are known to us from school. They are addition +, a multiplication *, a subtraction - and so on.
+// Many operators are known to us from school. 
+// They are addition +, a multiplication *, a subtraction - and so on.
 // ===============================
 // 1. Assignment Operators
 // ===============================
@@ -268,32 +269,53 @@ rl.question('Enter your name: ', (name) => {
 
 // // =============================
 // // Mathematical Operations in JavaScript: A Safe Approach
-// // JavaScript handles mathematical operations in a way that prevents the script from crashing, even when encountering unexpected scenarios like dividing by zero or operating on non - numeric strings.Instead of throwing errors, JavaScript handles these situations by returning special values, allowing the script to continue running.
+// // JavaScript handles mathematical operations in a way that prevents the script from crashing,
+//  even when encountering unexpected scenarios like dividing by zero or operating on
+// non - numeric strings.
+// Instead of throwing errors, JavaScript handles these situations by returning special values,
+// allowing the script to continue running.
 
 // // Key Points on Safe Mathematical Operations
 // // Division by Zero:
 
-// // Unlike many other languages, dividing a number by zero in JavaScript doesn't result in a runtime error. Instead, it produces Infinity or -Infinity depending on the sign of the numerator. If both the numerator and denominator are zero, JavaScript returns NaN (Not a Number).
+// // Unlike many other languages, dividing a number by zero in
+// JavaScript doesn't result in a runtime error.
+//  Instead, it produces Infinity or -Infinity depending on the sign of the numerator.
+// If both the numerator and denominator are zero, JavaScript returns NaN (Not a Number).
 // // This behavior ensures that JavaScript doesn't "die" or crash due to such an operation.
 // // Arithmetic with Non - Numeric Strings:
 
-// // When performing operations on strings that are not numbers, JavaScript tries to convert the strings into numbers.If it can’t convert the string to a number, the result is NaN(Not a Number).
+// // When performing operations on strings that are not numbers,
+//  JavaScript tries to convert the strings into numbers.
+// If it can’t convert the string to a number, the result is NaN(Not a Number).
 // // For example, adding a number to a string will result in string concatenation, but subtracting or multiplying a string with a number will cause type coercion where the string is attempted to be converted into a number.If the conversion fails(like trying to subtract a non - numeric string), it results in NaN.
 // //     NaN(Not a Number):
 
-// // NaN is a special value that indicates an operation has failed to produce a valid number.This typically occurs when trying to perform an arithmetic operation that doesn't make sense mathematically, such as subtracting a string that cannot be converted into a number.
-// // It’s important to remember that NaN is not equal to itself.This means that you can't use simple equality checks to detect NaN; instead, you should use the isNaN() function to determine if a value is NaN.
+// // NaN is a special value that indicates an operation has failed to produce a valid number.
+// This typically occurs when trying to perform an arithmetic operation that doesn't make
+// sense mathematically, such as subtracting a string that cannot be converted into a number.
+// // It’s important to remember that NaN is not equal to itself.
+// This means that you can't use simple equality checks to detect NaN; instead, you should use the isNaN() function to determine if a value is NaN.
 // // Infinity and - Infinity:
 
-// // JavaScript defines Infinity and - Infinity as special numeric values.These values represent numbers that are larger or smaller than the largest or smallest number JavaScript can represent.
+// // JavaScript defines Infinity and - Infinity as special numeric values.
+// These values represent numbers that are larger or smaller than the largest or smallest number
+// JavaScript can represent.
 // // For example, operations that exceed the numerical bounds of JavaScript's number range (such as multiplying large numbers) will return Infinity. Similarly, dividing by zero produces Infinity or -Infinity, depending on the sign.
 // // Zero in Arithmetic Operations:
 
-// // Zero is a valid number in JavaScript, and you can perform mathematical operations with zero without causing errors.Multiplying or dividing by zero works as expected (multiplying by zero results in zero, and dividing zero by any number results in zero).However, dividing any non - zero number by zero will give you Infinity or - Infinity.
+// // Zero is a valid number in JavaScript, and you can perform mathematical
+//  operations with zero without causing errors.Multiplying or dividing by zero works as expected (multiplying by zero results in zero, and dividing zero by any number results in zero).However, dividing any non - zero number by zero will give you Infinity or - Infinity.
 // // Implicit Type Coercion:
 
-// // JavaScript is known for type coercion, meaning it automatically converts one type into another when necessary.For example, when performing arithmetic operations on a string and a number, JavaScript will attempt to convert the string into a number.If the string is not a valid number, the result will be NaN.
-// //     However, when performing operations like addition with a number and a string, JavaScript treats the number as a string and concatenates the two values instead of performing numeric addition.
+// // JavaScript is known for type coercion,
+// meaning it automatically converts one type into another when necessary.
+// For example, when performing arithmetic operations on a string and a number,
+// JavaScript will attempt to convert the string into a number.
+// If the string is not a valid number, the result will be NaN.
+// //     However, when performing operations like addition with a number and a string,
+// JavaScript treats the number as a string and concatenates the two values instead of
+// performing numeric addition.
 // // Why This Is Safe in JavaScript
 // // The key concept here is that JavaScript doesn't let mathematical operations cause fatal errors or stop script execution. Instead of throwing exceptions or halting the program, JavaScript provides special values (such as NaN, Infinity, and -Infinity) that allow the script to continue running. This ensures that issues like invalid operations or unexpected inputs don't cause the entire program to fail.
 
@@ -306,4 +328,6 @@ rl.question('Enter your name: ', (name) => {
 // //     Summary:
 // // Mathematical operations in JavaScript are "safe" because JavaScript won’t crash the script for invalid operations.Instead, it returns Infinity, -Infinity, or NaN, allowing the script to continue.
 // // JavaScript implicitly coerces types when necessary, which can lead to unexpected results but prevents runtime errors.
-// //     NaN, Infinity, and - Infinity are special values that represent invalid results or values out of range, which allow JavaScript to gracefully handle unusual scenarios without failing.
+// //     NaN, Infinity, and - Infinity are special values that represent
+// invalid results or values out of range,
+// which allow JavaScript to gracefully handle unusual scenarios without failing.

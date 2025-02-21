@@ -107,7 +107,8 @@ console.log(null == undefined); // true - Loose comparison treats them as equal.
 // // Summary and Best Practices
 // // ============================================
 // // - JavaScript is flexible with typing and allows implicit conversions.
-// // - Some values (0, false, undefined, null) are "falsy," meaning they convert to false in Boolean context.
+// // - Some values (0, false, undefined, null) are "falsy,"
+// meaning they convert to false in Boolean context.
 // // - Always use === (strict equality) for precise checks that require both value and type matching.
 
 // // ============================================

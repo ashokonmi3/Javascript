@@ -397,15 +397,16 @@ else {
 //     console.log("Default age");
 // }
 // ==========================
-// const readline = require('readline');
+const readline = require('readline');
 
-// const rl = readline.createInterface({
-//     input: process.stdin,
-//     output: process.stdout
-// });
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
 
-// rl.question('Enter the student\'s score: ', (input) => {
-//     const score = parseInt(input, 10);
+rl.question('Enter the student\'s score: ', (input) => {
+    const score = parseInt(input, 10);
+}
 // ===================
 // Write a program that takes a student's score as input and outputs
 // their grade based on the following criteria:

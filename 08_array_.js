@@ -1,6 +1,7 @@
 // ===============
 //  Introduction to Arrays in JavaScript
-// Arrays are a fundamental data structure in JavaScript that allow us to store and manage a collection of items.
+// Arrays are a fundamental data structure in JavaScript that allow us to store and 
+// manage a collection of items.
 // Each item (or element) is stored in a specific position, or index, which starts at 0.
 // Arrays enable us to group related data together and perform operations on them more efficiently.
 // ===============
@@ -123,7 +124,7 @@ console.log(languages);   // Output: ["JavaScript", "Python", "Java", "Ruby"]
 
 // var numbers = [5, 2, 9, 1, 5, 6];
 
-// // // sort(): Sorts the elements of an array in place and returns the array
+// // // sort(): Sorts the elements of an array in place and returns the array ALWASYS SORT in STRING FORM
 // numbers.sort()
 // console.log(numbers)
 // // // // reverse(): Reverses the elements of an array in place
@@ -156,7 +157,6 @@ console.log(numbers.indexOf(6));  // Output: 2
 // arrayItems.forEach(function (item) {
 //     console.log(item);
 // });
-<<<<<<< HEAD
 
 // const colors = ["Red","Green", "Blue" , "magneta"];
 // for(const color of colors){
@@ -164,11 +164,13 @@ console.log(numbers.indexOf(6));  // Output: 2
 // console.log(colors);
 // console.log(colors.length);
 
-=======
->>>>>>> 08bd51ece39a0444cea1f407231c1fbaad5ab65a
 
 
+var arr = [[100, 12, 3, 14], [1, 2, 3], [4, 5, 6]];
 
+arr.forEach(element => {
+    console.log(element);
+});
 // ===============
 //  Interview Questions and Answers on Arrays
 // ===============
