@@ -99,61 +99,95 @@
 // ====================
 // When to Use Dot Notation (.) vs Bracket Notation []
 //----------------------
-// Use bracket notation when:
-// - The property name is a reserved word.
-// - The property name starts with a number.
-// - The property name is dynamic (stored in a variable).
-// ----------------------
-// var myObjDynamic = {
-//     prop: "hello",
-//     prop1: 123,
-//     prop2: true,
-//     1: "javascript" // Key is a number, so must use bracket notation to access.
+// 1. Using Dot Notation (.)
+// ✅ Use dot notation when the property name is a valid identifier (i.e., it follows variable naming rules).
+// The property name must not contain spaces, special characters (except _ and $), or start with a number.
+// The property name must be known at the time of coding (not dynamic).
+
+// let person = {
+//     name: "John",
+//     age: 30
 // };
 
-// console.log("Accessing property with bracket notation: " + myObjDynamic[1]);
+// console.log(person.name);  // ✅ "John"
+// console.log(person.age);   // ✅ 30
+// ------------------------
+// 2. Using Bracket Notation ([])
+// ✅ Use bracket notation when:
 
-// var dynamicProp = "prop1";
-// console.log(myObjDynamic[dynamicProp]); // Accessing with variable
+// The property name is a string with special characters, spaces, or starts with a number.
+// The property name is stored in a variable (dynamic access).
+// The property name is a number (like in arrays or objects with numeric keys).
 
-// // Dot notation is preferred for simplicity and readability when the property name is valid.
+// let user = {
+//     "first name": "Alice",
+//     "last-name": "Doe",
+//     "@score": 100
+// };
 
-// ===========================
+// console.log(user["first name"]);  // ✅ "Alice"
+// console.log(user["last-name"]);   // ✅ "Doe"
+// console.log(user["@score"]);      // ✅ 100
+// -------------------
+// Dynamic property access
+// let key = "age";
+// let person = { name: "John", age: 30 };
 
+// console.log(person[key]);  // ✅ 30 (equivalent to person.age)
+// -----------------
+// let obj = { 1: "one", 2: "two" };
 
-// // // Using a reserved word as a property name
-// // // Here, "class" is a reserved word in JavaScript, so we cannot use dot notation to access it.
-// var myObj = {};
-// myObj["class"] = "Mathematics";
+// console.log(obj[1]);   // ✅ "one"
+// console.log(obj["2"]); // ✅ "two" (JavaScript converts "2" to a number)
+// ---------------------------
+// ❌ Using Dot Notation (Throws Error)
+// let user = {
+//     "first name": "Alice"
+// };
 
-// // // // Accessing the reserved word property with bracket notation
-// console.log(myObj["class"]); // Output: "Mathematics"
+// console.log(user.first name);  // ❌ SyntaxError: Unexpected identifier
+// console.log(user["first name"]);  // ✅ "Alice"
+// --------------------
+// let obj = {
+//     "last-name": "Doe",
+//     "@score": 100
+// };
 
-// // // // Attempting to access the "class" property using dot notation would result in a syntax error:
-// console.log(myObj.class); // may or may not work 'class'
+// // console.log(obj.last - name);  // ❌ ReferenceError: name is not defined
+// // console.log(obj.@score);     // ❌ SyntaxError: Unexpected token '@'
 
-// // // // Adding another property with a reserved word as a name
-// myObj["length"] = "Physics";
-// console.log(myObj["length"]); // Output: "Physics"
-// console.log(myObj.length);// may or may not work
+// console.log(obj["last-name"]);  // ✅ "Doe"
+// console.log(obj["@score"]);     // ✅ 100
+// --------------------
+// 3. Property Name Starting with a Number
 
-// // // // // Adding a property with a name that starts with a number, which requires bracket notation
-// myObj["123name"] = "Reserved Example";
-// console.log(myObj["123name"]); // Output: "Reserved Example"
+// var data = {
+//     1value: "Hello"
+// };
+
+// console.log(data.1value);  // ❌ SyntaxError: Unexpected number
+// ---------------
+// let key = "age";
+// let person = { name: "John", age: 30 };
+
+// console.log(person.key);  // ❌ undefined (looks for a property literally named "key")
+// -----------------
+// let obj = { 1: "one", 2: "two" };
+
+// console.log(obj.1);  // ❌ SyntaxError: Unexpected number
+
+// console.log(obj[1]);   // ✅ "one"
+// console.log(obj["2"]); // ✅ "two" (JavaScript converts "2" to a number)
 
 // ================
-// "use strict";
-// const obj = {
-//     class: 'Math',
-//     return: 'Homework',
-//     function: 'Science'
-// };
 
-// console.log(obj.class);// obj['class']
-// console.log(obj.return); obj['return']
-// console.log(obj.function); obj['function']
-
-
+// Case                                      Use .   Use []
+// -----------------------------------------  ------  ------
+// Simple, valid identifier property          ✅      ❌
+// Property name with spaces or special characters ❌ ✅
+// Property name starts with a number         ❌      ✅
+// Property name stored in a variable (dynamic access) ❌ ✅
+// Numeric keys (like array indices)          ❌      ✅
 // // ====================
 // // Nested Objects
 // // Objects can contain other objects as properties, creating a structure of nested objects.

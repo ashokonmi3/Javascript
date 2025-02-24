@@ -11,7 +11,7 @@
 //     function inner() {
 //         console.log(a); // accessing global variable
 //         console.log(b); // accessing outer function's variable
-//         // console.log(a + b + c);
+
 //     }
 //     inner(); // calling inner function within outer
 // }
@@ -35,7 +35,8 @@
 // ========================
 
 // // Explanation of Closure:
-// // - `outer()` defines a local variable `b` and an inner function `inner()`, which accesses both `a` (from global scope) and `b` (from outer scope).
+// // - `outer()` defines a local variable `b` and an inner function `inner()`, 
+// which accesses both `a` (from global scope) and `b` (from outer scope).
 // // - When `inner()` is returned and invoked outside `outer()`, it still "remembers" the lexical environment where it was defined. Hence, `a` and `b` are accessible even though `outer()` has finished executing.
 
 
@@ -61,9 +62,9 @@
 // var innerFn2 = outer(); // new closure with a fresh b (but 'a' is still modified globally)
 // innerFn2(); // outputs 12 (modified 'a') and 21 (new b)
 
-// // Important note: Even though we invoke `outer()` multiple times, 
+// // Important note: Even though we invoke `outer()` multiple times,
 // the global variable `a` is modified globally.
-// // Each closure remembers its own `b` value, 
+// // Each closure remembers its own `b` value,
 // but the global variable `a` is shared across all closures.
 // =======================
 
@@ -73,31 +74,32 @@
 // */
 // var i = 10;
 // setTimeout(function () {
-//     console.log(i); 
+//     console.log(i);
 // }, 10000);
 // =====================
 
-
 // for (var i = 0; i < 5; i++) {
-//     console.log(i); 
+//     console.log(i);
 
 //     setTimeout(function () {
 //         console.log("settimeout " + i); // prints 5, 5, 5, 5, 5 due to closure in asynchronous callback
 //     }, 1000);
 // }
-// console.log(i); 
-
+// console.log(i);
+// using var inside a loop with setTimeout leads to an issue because var has function scope, 
+// not block scope. So when the setTimeout executes after 1 second, the loop has already completed,
+//  and i will have the final value (5), which results in logging 5 five times.
 // ======================
 
 
 // // Correcting this using a closure to capture the current value of `i`
-// for (var i = 0; i < 5; i++) {
-//     (function (currentValue) {
-//         setTimeout(function () {
-//             console.log(currentValue); // prints 0, 1, 2, 3, 4
-//         }, 1000);
-//     })(i);
-// }
+for (var i = 0; i < 5; i++) {
+    (function (currentValue) {
+        setTimeout(function () {
+            console.log(currentValue); // prints 0, 1, 2, 3, 4
+        }, 1000);
+    })(i);
+}
 
 
 // // ===============
@@ -139,29 +141,29 @@
 // // This can be useful in situations where you want to hide internal data and only expose a controlled API.
 // // ===============
 
-function counter() {
-    var count = 0; // private variable
+// function counter() {
+//     var count = 0; // private variable
 
-    return {
-        increment: function () {
-            count++; // incrementing count
-            return count;
-        },
-        decrement: function () {
-            count--; // decrementing count
-            return count;
-        },
-        getCount: function () {
-            return count; // exposing the current count value
-        }
-    };
-}
+//     return {
+//         increment: function () {
+//             count++; // incrementing count
+//             return count;
+//         },
+//         decrement: function () {
+//             count--; // decrementing count
+//             return count;
+//         },
+//         getCount: function () {
+//             return count; // exposing the current count value
+//         }
+//     };
+// }
 
-var myCounter = counter();
-console.log(myCounter.increment()); // prints 1
-console.log(myCounter.increment()); // prints 2
-console.log(myCounter.decrement()); // prints 1
-console.log(myCounter.getCount()); // prints 1 (private variable 'count' is encapsulated)
+// var myCounter = counter();
+// console.log(myCounter.increment()); // prints 1
+// console.log(myCounter.increment()); // prints 2
+// console.log(myCounter.decrement()); // prints 1
+// console.log(myCounter.getCount()); // prints 1 (private variable 'count' is encapsulated)
 
 
 // /*

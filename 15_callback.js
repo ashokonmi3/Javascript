@@ -165,7 +165,7 @@
 // Simulate ordering a pizza with a callback
 function orderPizza(callback) {
     console.log("Ordering pizza...");
-    
+
     // Simulate a delay for pizza preparation using setTimeout
     setTimeout(() => {
         console.log("Pizza is ready!");
@@ -173,12 +173,12 @@ function orderPizza(callback) {
     }, 3000); // 3 seconds delay
 }
 
-// Define a callback function
+// // Define a callback function
 function eatPizza() {
     console.log("Eating the pizza now!");
 }
 
-// Place an order and pass the callback function
+// // Place an order and pass the callback function
 orderPizza(eatPizza);
 
 console.log("Doing other things while waiting for the pizza...task1");

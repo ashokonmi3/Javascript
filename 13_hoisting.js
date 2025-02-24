@@ -1,12 +1,17 @@
 // ===============
 // Introduction to Hoisting in JavaScript
-// Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their scope before code execution. 
+// Hoisting is a JavaScript mechanism where variables and function declarations are 
+// moved to the top of their scope before code execution. 
 // This means you can use variables and functions before declaring them in your code.
-// Hoisting makes it easier to structure code as functions and variables can be referenced before their actual declaration, 
-// though it can sometimes lead to confusion. Understanding hoisting is crucial for debugging and optimizing code flow, 
+// Hoisting makes it easier to structure code as functions and variables can be referenced before 
+// their actual declaration, 
+// though it can sometimes lead to confusion. Understanding hoisting is crucial for debugging and 
+// optimizing code flow, 
 // as it clarifies why certain code runs without errors even if declared later in the script.
 // What is Hoisting?
-// In JavaScript, hoisting is the behavior where variable and function declarations are moved to the top of their containing scope during the execution phase. This means that you can use variables and functions before you actually declare them in your code.
+// In JavaScript, hoisting is the behavior where variable and function declarations
+//  are moved to the top of their containing scope during the execution phase.
+//  This means that you can use variables and functions before you actually declare them in your code.
 
 // Key Points to Understand:
 // Declarations are Hoisted, Not Initializations:
@@ -23,15 +28,36 @@
 // However, only the declaration is hoisted, not the initialization.
 // ===============
 
-// console.log(x); // Output: undefined (because `x` is hoisted, but not its value)
-// var x = 10;
+// console.log(x); //error // read operation
+// ---------------
 
+// console.log(x); // Output: undefined (because `x` is hoisted, but not its value)
+// var x = 10; // write operation
+// IF you do write with out declaration its fine but if yu do read without it will be error
+// --------------
 // The code above is interpreted by JavaScript as:
 /*
 var x;
 console.log(x); // undefined
 x = 10;
 */
+// =====================
+// a = 10;
+// console.log(b);
+// c++;
+// var a;
+// var b;
+// var c;
+// =============
+// var a;
+// var b;
+// var c;
+// a = 10;
+// console.log(b);
+// c++;
+// ================
+
+
 
 // Variables declared with `let` and `const` are not hoisted in the same way and will result in a ReferenceError if accessed before declaration.
 
@@ -70,7 +96,8 @@ x = 10;
 
 // ===============
 // Hoisting with `let` and `const`
-// Variables declared with `let` and `const` are hoisted but in a "temporal dead zone" (TDZ), meaning they can't be accessed before declaration.
+// Variables declared with `let` and `const` are hoisted but in 
+// a "temporal dead zone" (TDZ), meaning they can't be accessed before declaration.
 // ===============
 
 // try {
@@ -117,14 +144,14 @@ x = 10;
 // Hoisting works partially for variables but fully for function declarations.
 // ========================
 
-// console.log(exampleVar); // Output: undefined
-// var exampleVar = 10;
-// sayHello(); // Output: "Hello!"
+console.log(exampleVar); // Output: undefined
+var exampleVar = 10;
+sayHello(); // Output: "Hello!"
 
-// function sayHello() {
-//     var a =10
-//     console.log("Hello!");
-// }
+function sayHello() {
+    var a = 10
+    console.log("Hello!");
+}
 
 // console.log(meLet)
 // let mylet=10
@@ -150,7 +177,9 @@ x = 10;
 // 10
 // -------
 
-
+// ✅ Hoisting makes JavaScript code more flexible, readable, and organized.
+// ✅ It allows calling functions before they are defined, reducing order dependencies.
+// ✅ Helps avoid unnecessary errors related to using variables before declaration.
 // ===============
 // Interview Questions on Hoisting in JavaScript
 // Q1: Explain hoisting in JavaScript.

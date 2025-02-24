@@ -2,11 +2,11 @@
 
 // var myObj={};
 
-// // console.log(myObj);
+// console.log(myObj);
 
-// // myObj.foo="value";
+// myObj.foo="value";
 
-// // console.log(myObj.foo);
+// console.log(myObj.foo);
  
 // // // we can use . operator to access property of any object
 
@@ -89,11 +89,11 @@
 
 // Creating bicycle object diff way
 // first
-var bicycle={
-	"cadence":50,
-	"speed":20,
-	"gear":4
-};
+// var bicycle={
+// 	"cadence":50,
+// 	"speed":20,
+// 	"gear":4
+// };
 // --------------------
 //second  without constructor
 
