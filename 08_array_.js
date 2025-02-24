@@ -164,7 +164,11 @@ console.log(numbers.indexOf(6));  // Output: 2
 // console.log(colors);
 // console.log(colors.length);
 
+const arr1 = [1, 2, 3];
+const arr2 = [...arr1];
 
+console.log(arr1);
+console.log(arr2);
 
 var arr = [[100, 12, 3, 14], [1, 2, 3], [4, 5, 6]];
 

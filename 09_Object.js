@@ -229,7 +229,29 @@
 // var str = "hello world";
 // console.log(typeof str); // Output: string
 // console.log(str.length); // Accessing property of String wrapper object
+// ===================
+// Cloning of object shallow copy
+var original = { prop1: "value1", prop2: { inner: "innervalue" } };
 
+var shallowCopy = { ...original }; // spread operator
+shallowCopy.prop2.inner = "modified";
+console.log(original.prop2.inner);
+
+shallowCopy.prop1 = "modified";
+console.log(original.prop1);
+// ===============================
+// Deep copy : JSON.parse(JSON.stringify())
+
+// var original = { prop1: "value1", prop2: { inner: "innervalue" } };
+
+// var deepCopy = JSON.parse(JSON.stringify(original));
+// console.log(deepCopy);
+
+// deepCopy.prop2.inner = "modified";
+// console.log(original.prop2.inner);
+
+// deepCopy.prop1 = "modified";
+// console.log(original.prop1);
 // // ====================
 // // Questions on JavaScript Objects
 // // ====================
