@@ -19,7 +19,7 @@
 
 // var myObj = {};  // Empty object created
 // console.log(myObj); // Output: {}
-// // // ---------------
+// // // // ---------------
 // myObj.prop1 = "hello"; // Adding property dynamically
 // console.log(myObj); // Output: { prop: "hello" }
 
@@ -85,7 +85,7 @@
 // car.owner = "Johnson"; // Adding a new property
 // console.log(car);
 
-// // Attempting to reassign a const object
+// // // Attempting to reassign a const object
 // car = { type: "Volvo", model: "EX60", color: "red" }; // ERROR: Assignment to constant variable
 
 // ====================
@@ -134,7 +134,7 @@
 // let person = { name: "John", age: 30 };
 
 // console.log(person[key]);  // ✅ 30 (equivalent to person.age)
-// -----------------
+// // -----------------
 // let obj = { 1: "one", 2: "two" };
 
 // console.log(obj[1]);   // ✅ "one"

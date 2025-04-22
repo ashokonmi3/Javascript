@@ -1,15 +1,15 @@
 
-// console.log(1/x);
+// console.log(1 / x);
 // console.log("exception not handeled")
 
-// try{
+// try {
 
-// console.log(" This is exception handling try block");
-// console.log(1/x);
+// 	console.log(" This is exception handling try block");
+// 	console.log(1 / x);
 // }
 
-// catch(e){
-// console.log(" This is exception handling catch block");
+// catch (e) {
+// 	console.log(" This is exception handling catch block");
 // }
 
 // console.log("exception  handeled")
@@ -21,7 +21,7 @@
 // catch(e){
 // 	console.log(" I am in catch")
 // }
-// 
+//
 //Synchronus
 
 // try{
@@ -45,23 +45,23 @@
 // console.log(1/x);
 
 
-try{
+// try{
 
-console.log(" This is exception handling try block");
-// console.log(1/x);
-console.log(1/4);
+// console.log(" This is exception handling try block");
+// // console.log(1/x);
+// console.log(1/4);
 
-}
+// }
 
-catch(err){
-console.log(" This is exception handling catch block");
-console.log(err.name);
-console.log(err.message);
-}
+// catch(err){
+// console.log(" This is exception handling catch block");
+// console.log(err.name);
+// console.log(err.message);
+// }
 
-finally{
-	console.log(" i am inside finally")
-}
+// finally{
+// 	console.log(" i am inside finally")
+// }
 
 
 

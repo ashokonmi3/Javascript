@@ -7,8 +7,8 @@
 // myObj.foo="value";
 
 // console.log(myObj.foo);
- 
-// // // we can use . operator to access property of any object
+
+// // // // we can use . operator to access property of any object
 
 // myObj.foo="hello";
 // console.log(myObj.foo);
@@ -32,7 +32,7 @@
 // console.log(myObj);
 // console.log(myObj.foo);
 // console.log(myObj["foo"]);
-// =========================
+// // =========================
 // var emp1={};
 // emp1.firstName="ashok";
 // emp1.lastName="sharma";
@@ -186,7 +186,7 @@
 // }
 
 // new foo();
- 
+
 // ----------------------
 
 // 4th way later
@@ -208,17 +208,17 @@
 // // ==========================
 
 // 2) 
-// var obj={prop:"this is object itself"};
-// obj.foo=function(){
-// 		console.log("hello");
-// 	console.log(this); //In a method, this refers to the object that is calling the method.
- 
+// var obj = { prop: "this is object itself" };
+// obj.foo = function () {
+//     console.log("hello");
+//     console.log(this); //In a method, this refers to the object that is calling the method.
+
 // }
 
 // obj.foo();
 // =====================
 // 3) new keyword, this will be empty object
-// 
+//
 
 // function foo(){
 // 	//var this={}
@@ -229,8 +229,8 @@
 
 // new foo();
 
-// 
-//====================================== 
+//
+//======================================
 // createBicycle
 // function Bicycle(cadence,speed,gear,tyrePressure){
 // 	this.cadence=cadence;
@@ -258,7 +258,7 @@
 
 // var mech= new Mechanic("ashok")
 // mike.inflateTires=bicycle1.inflateTires;
-// mike.inflateTires();// mike does not have tyrepressure property 
+// mike.inflateTires();// mike does not have tyrepressure property
 // so this will not work
 // ======================
 

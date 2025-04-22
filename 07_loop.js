@@ -128,7 +128,7 @@
 // ====================
 let m;
 for (m = 1; m <= 5; m++) {
-    console.log("inner" + m)
+  console.log("inner" + m)
 }
 console.log("Outer" + m);
 
@@ -160,11 +160,11 @@ console.log("Outer" + m);
 // Syntax: for (value of iterable) { statement }
 // ===============
 
-// let colors = ["red", "green", "blue"];
-// for (let x of colors) {
-//     console.log(x); // Pr
-//     // ints each color in the array
-// }
+let colors = ["red", "green", "blue"];
+for (let x of colors) {
+  console.log(x); // Pr
+  // ints each color in the array
+}
 // Output: red, green, blue
 
 
@@ -252,7 +252,7 @@ console.log("Outer" + m);
 
 
 // for(let i = 1 ; i<=10; i++){
-    
+
 //     for(let j =1 ;j<=10; j++){
 //         ;
 //     }
@@ -260,12 +260,12 @@ console.log("Outer" + m);
 
 // table from 1to 10
 for (let i = 1; i <= 10; i++) {
-    let row = ''; // Initialize an empty row
-    for (let j = 1; j <= 5; j++) {
-      row += (i * j) + ' '; // Append the product to the row with a space
-    }
-    console.log(row.trim()); // Print the row and trim trailing space
+  let row = ''; // Initialize an empty row
+  for (let j = 1; j <= 5; j++) {
+    row += (i * j) + ' '; // Append the product to the row with a space
   }
+  console.log(row.trim()); // Print the row and trim trailing space
+}
 
 // ===============
 //  Interview Questions with Answers

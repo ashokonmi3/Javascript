@@ -1,4 +1,4 @@
-require('./17_module'); // Ensure this file loads the global config first
+// require('./17_module'); // Ensure this file loads the global config first
 // console.log(global.myGlobalVariable); // Outputs: "Hello, world!"
 // =============================
 
@@ -15,15 +15,15 @@ require('./17_module'); // Ensure this file loads the global config first
 // =======================
 // =======================
 
-import { myVar, myFunction, anotherVar, anotherFunction } from './17_module.js';
+// import { myVar, myFunction, anotherVar, anotherFunction } from './17_module.js';
 
-console.log(myVar);  // 10
-myFunction();        // "This is my function."
-console.log(anotherVar);  // 20
-anotherFunction();  // "This is another function."
+// console.log(myVar);  // 10
+// myFunction();        // "This is my function."
+// console.log(anotherVar);  // 20
+// anotherFunction();  // "This is another function."
 // ========================
-// import myModule from './17_module.js';
-// console.log(myModule.myVarObj);          // 10
-// myModule.myFunctionObj();                // "This is my function."
-// console.log(myModule.anotherVarObj);     // 20
-// myModule.anotherFunctionObj();           // "This is another function."
+import myModule from './17_module.js';
+console.log(myModule.myVarObj);          // 10
+myModule.myFunctionObj();                // "This is my function."
+console.log(myModule.anotherVarObj);     // 20
+myModule.anotherFunctionObj();           // "This is another function."

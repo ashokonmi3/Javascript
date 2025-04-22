@@ -6,9 +6,9 @@
 
 // export const exportGlobalVariable = "Hello, world!";
 
-// // myModule.js
+// // // myModule.js
 
-// // Named exports
+// // // Named exports
 // export const myVar = 10;
 // export const myFunction = () => {
 //     console.log('This is my function.');

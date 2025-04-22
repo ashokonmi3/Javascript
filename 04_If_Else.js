@@ -1,9 +1,9 @@
 // // Basic if-else statement example
-// var year = 2015;
-// if (year == 2015) {
-//     console.log("That's correct!"); // If condition is true, this block runs.
-//     console.log("You're so smart!");
-// }
+var year = 2015;
+if (year == 2015) {
+    console.log("That's correct!"); // If condition is true, this block runs.
+    console.log("You're so smart!");
+}
 // ===================
 // var year = 2016;
 // if (year == 2015) {
@@ -119,10 +119,10 @@
 
 // // ============================
 // // AND Operator (&&)
-// console.log(true && true);   // true
-// console.log(false && true);  // false
-// console.log(true && false);  // false
-// console.log(false && false); // false
+console.log(true && true);   // true
+console.log(false && true);  // false
+console.log(true && false);  // false
+console.log(false && false); // false
 // ----------------
 // // // Example with AND operator to check exact time
 // var hour = 12;
@@ -221,19 +221,19 @@
 //     console.log(true)
 // }
 // ====================
-let number = 0;
-if (number > 0) {
-    console.log("Number is Positive");
-}
-else if (number < 0) {
-    console.log("Number is Negetive")
-}
-else if (Number == 0) {
-    console.log("Number is equal to zero");
-}
-else {
-    console.log("This is not a Numbner")
-}
+// let number = 0;
+// if (number > 0) {
+//     console.log("Number is Positive");
+// }
+// else if (number < 0) {
+//     console.log("Number is Negetive")
+// }
+// else if (Number == 0) {
+//     console.log("Number is equal to zero");
+// }
+// else {
+//     console.log("This is not a Numbner")
+// }
 
 
 // ============================
@@ -397,16 +397,16 @@ else {
 //     console.log("Default age");
 // }
 // ==========================
-const readline = require('readline');
+// const readline = require('readline');
 
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
+// const rl = readline.createInterface({
+//     input: process.stdin,
+//     output: process.stdout
+// });
 
-rl.question('Enter the student\'s score: ', (input) => {
-    const score = parseInt(input, 10);
-}
+// rl.question('Enter the student\'s score: ', (input) => {
+//     const score = parseInt(input, 10);
+// }
 // ===================
 // Write a program that takes a student's score as input and outputs
 // their grade based on the following criteria:

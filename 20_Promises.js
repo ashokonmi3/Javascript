@@ -9,7 +9,8 @@
 // ===============
 // Why Promises Are Needed
 // Promises are needed for asynchronous operations because they allow for a better structure and error handling
-//  in asynchronous code. Without promises, you would have to deal with callback functions, which can become hard to manage and debug in large applications.
+//  in asynchronous code. Without promises, you would have to deal with callback functions, which can become hard to manage and
+//  debug in large applications.
 // Promises provide the following benefits:
 // 1. Handling of asynchronous code in a more organized way.
 // 2. Error handling with `.catch()`.
@@ -25,26 +26,48 @@
 //  while the reject function is called if there's an error or failure.
 // ===============
 
-// console.log("Before promise");
+let juiceOrder = new Promise((resolve, reject) => {
+    let isShopOpen = true;
 
-// var myPromise = new Promise(function (resolve, reject) {
-//     let isSuccess = true; // Simulating success or failure
-//     if (isSuccess) {
-//         resolve("Operation was successful");
-//     } else {
-//         reject("Operation failed");
-//     }
-// });
+    setTimeout(() => {
+        if (isShopOpen) {
+            resolve("Juice is delivered! 🥤");
+        } else {
+            reject("Sorry, shop is closed.");
+        }
+    }, 2000); // Wait 2 seconds
+});
 
-// myPromise
-//     .then(function (message) {
-//         console.log(message); // Handles success case
-//     })
-//     .catch(function (message) {
-//         console.log(message); // Handles error case
-//     });
+juiceOrder
+    .then((message) => {
+        console.log("Success:", message);
+    })
+    .catch((error) => {
+        console.log("Failure:", error);
+    });
+// ======================  
 
-// console.log("After promise");
+
+console.log("Before promise");
+
+var myPromise = new Promise(function (resolve, reject) {
+    let isSuccess = true; // Simulating success or failure
+    if (isSuccess) {
+        resolve("Operation was successful");
+    } else {
+        reject("Operation failed");
+    }
+});
+
+myPromise
+    .then(function (message) {
+        console.log(message); // Handles success case
+    })
+    .catch(function (message) {
+        console.log(message); // Handles error case
+    });
+
+console.log("After promise");
 
 
 // ===============
@@ -62,6 +85,8 @@
 // });
 // ==========================
 // Imagine a Promise that checks if a cake is ready
+// console.log("This runs before promise...");
+
 // let cakePromise = new Promise(function (resolve, reject) {
 //     let isCakeReady = false;  // Imagine it's checking if the cake is ready
 
@@ -186,16 +211,16 @@
 // If one of the promises fails, the entire `Promise.all()` chain will fail, but you can catch the error.
 // ===============
 
-// const promiseOne = new Promise((resolve, reject) => setTimeout(resolve, 1000, "Task 1 completed"));
-// const promiseTwo = new Promise((resolve, reject) => setTimeout(reject, 1500, "Task 2 failed"));
+const promiseOne = new Promise((resolve, reject) => setTimeout(resolve, 1000, "Task 1 completed"));
+const promiseTwo = new Promise((resolve, reject) => setTimeout(reject, 1500, "Task 2 failed"));
 
-// Promise.all([promiseOne, promiseTwo])
-//     .then((messages) => {
-//         console.log(messages); // This won't be executed as promiseTwo rejects
-//     })
-//     .catch((error) => {
-//         console.log("Error caught:", error); // "Task 2 failed"
-//     });
+Promise.all([promiseOne, promiseTwo])
+    .then((messages) => {
+        console.log(messages); // This won't be executed as promiseTwo rejects
+    })
+    .catch((error) => {
+        console.log("Error caught:", error); // "Task 2 failed"
+    });
 // ===========================
 
 
@@ -203,7 +228,8 @@
 // ===============
 //  Questions on JavaScript Promises
 // 1. What is a promise in JavaScript, and how does it work?
-// A promise in JavaScript represents the result of an asynchronous operation. It can either be resolved (fulfilled) or rejected, and you can handle these results using `.then()` and `.catch()`.
+// A promise in JavaScript represents the result of an asynchronous operation. It can either be resolved (fulfilled) or rejected,
+// and you can handle these results using `.then()` and `.catch()`.
 
 // 2. What are `resolve`, `reject`, and `finally` used for in a promise?
 // - `resolve`: Used to indicate that the asynchronous operation was successful and provide the result.
@@ -211,7 +237,8 @@
 // - `finally`: Used to execute code regardless of whether the promise was resolved or rejected.
 
 // 3. How does `Promise.all()` work?
-// `Promise.all()` takes an array of promises and returns a new promise that resolves when all of the promises in the array resolve. If any promise rejects, the returned promise is rejected.
+// `Promise.all()` takes an array of promises and returns a new promise that resolves when all of the promises in the array resolve.
+//  If any promise rejects, the returned promise is rejected.
 
 
 // 4. What is the difference between `Promise.all()` and `Promise.race()`?

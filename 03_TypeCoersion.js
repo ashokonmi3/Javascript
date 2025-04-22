@@ -15,8 +15,8 @@
 // Mixing Numbers and Strings in Concatenation
 
 // // var result2 =
-// console.log("5" + 2 + 3); // "523" - Number 2 and 3 are coerced into strings and concatenated.
-// console.log(5 + 2 + "3"); // "73" - Number 2 and 3 are coerced into strings and concatenated.
+console.log("5" + 2 + 3); // "523" - Number 2 and 3 are coerced into strings and concatenated.
+console.log(5 + 2 + "3"); // "73" - Number 2 and 3 are coerced into strings and concatenated.
 // // console.log("hello" + true);
 // --------------------------
 // Explicit String Conversion using String()
@@ -58,20 +58,20 @@
 // Examples of Type Coercion in Expressions
 // ============================================
 
-// var x = 5 + '2' + 3;
-// console.log(x); // "523" - First coerces numbers into strings for concatenation.
+var x = 5 + '2' + 3;
+console.log(x); // "523" - First coerces numbers into strings for concatenation.
 
-// var y = 5 + 2 + '3';
-// console.log(y); // "73" - Adds numbers first, then coerces result to string for concatenation.
+var y = 5 + 2 + '3';
+console.log(y); // "73" - Adds numbers first, then coerces result to string for concatenation.
 
-// var z = '10' - 5;
-// console.log(z); // 5 - '10' is converted to 10 to perform subtraction.
+var z = '10' - 5;
+console.log(z); // 5 - '10' is converted to 10 to perform subtraction.
 
-// // Use of "+" operator with strings and numbers
-// console.log('1' + 2); // "12" - Number coerced to string.
-// console.log(2 + '1'); // "21" - Number coerced to string.
-// console.log(2 - '1'); // 1 - String '1' coerced to number for subtraction.
-// console.log('6' / '2'); // 3 - Both strings are coerced to numbers for division.
+// Use of "+" operator with strings and numbers
+console.log('1' + 2); // "12" - Number coerced to string.
+console.log(2 + '1'); // "21" - Number coerced to string.
+console.log(2 - '1'); // 1 - String '1' coerced to number for subtraction.
+console.log('6' / '2'); // 3 - Both strings are coerced to numbers for division.
 
 // ============================================
 // Equality (==) vs. Strict Equality (===)

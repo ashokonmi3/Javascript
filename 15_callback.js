@@ -43,7 +43,7 @@
 //     console.log("I am called after callback");
 // };
 
-// y(x); 
+// y(x);
 // ===============================
 
 // Callback Example with Calculator
@@ -78,15 +78,15 @@
 
 //     setTimeout(() => {
 //         const data = { id: 1, name: "Alice" };
-//         callback(data); // Call the callback with the fetched data
-//     }, 10000); // Simulate a 2-second delay
+//         callback(data); // displaydata(data) Call the callback with the fetched data
+//     }, 10000); // Simulate a 10-second delay
 // }
 
-// function displayData(data) {
-//     console.log("Data received:", data);
+// function displayData(mydata) {
+//     console.log("Data received:", mydata);
 // }
 
-// fetchData(displayData); 
+// fetchData(displayData);
 
 // Output: Fetching data...
 //         (after 2 seconds) Data received: { id: 1, name: "Alice" }
@@ -118,13 +118,15 @@
 //     }, 2000);
 // }
 
-// fetchDataWithErrorHandling(function (error, data) {
+// function myerror(error, data) {
 //     if (error) {
 //         console.log(error); // Output: Error: Failed to fetch data
 //     } else {
 //         console.log("Data received:", data); // Output: Data received: { id: 2, name: "Bob" }
 //     }
-// });
+//     fetchDataWithErrorHandling(myerror)
+
+
 
 // ===============================
 
@@ -170,7 +172,7 @@ function orderPizza(callback) {
     setTimeout(() => {
         console.log("Pizza is ready!");
         callback(); // Call the callback function when pizza is ready
-    }, 3000); // 3 seconds delay
+    }, 5000); // 3 seconds delay
 }
 
 // // Define a callback function

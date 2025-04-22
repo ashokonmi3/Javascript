@@ -98,11 +98,11 @@
 // value = 20;        // Definition
 // console.log(value); // Output: 20
 
-// // Another example
+// // // Another example
 // var value = 45;
 // console.log(value); // Output: 45
 
-// // // // Changing the variable's value
+// // // // // Changing the variable's value
 // value = "JavaScript";
 // console.log(value); // Output: "JavaScript"
 
@@ -142,7 +142,7 @@
 // var f;
 // console.log(f); // Output: undefined
 
-//  // "Null" is an assignment value that represents "no value" or "nothing"
+// //  // "Null" is an assignment value that represents "no value" or "nothing"
 
 // var g = null;
 // console.log(g); // Output: null
@@ -202,7 +202,7 @@
 // console.log(strictAssignment); // Output: 10
 
 // // ===========================
-// // Example Without Strict Mode
+// // Example Without Strict Modeṇ
 // // ===========================
 
 // // Without "use strict", JavaScript allows accidental global variables
@@ -236,7 +236,7 @@
 
 // const PI = 3.14159; // A constant for the value of PI
 
-// // // Trying to reassign a const variable will cause an error
+// // // // Trying to reassign a const variable will cause an error
 // PI = 3.14; // ❌ Error: Assignment to constant variable
 
 // // // Use const for values that should not change
@@ -248,10 +248,10 @@
 // // ===========================
 // // JavaScript moves variable declarations to the top of their scope (hoisting)
 // // Only declarations are hoisted, not initializations
-
-// console.log(hoistedVar); // Output: undefined (variable declared but not initialized yet)
-// var hoistedVar = "I'm hoisted!";
-// console.log(hoistedVar); // Output: "I'm hoisted!"
+// var hoistedVar
+console.log(hoistedVar); // Output: undefined (variable declared but not initialized yet)
+var hoistedVar = "I'm hoisted!";
+console.log(hoistedVar); // Output: "I'm hoisted!"
 
 // Note: "let" and "const" are not hoisted in the same way as "var"; using them before declaration will cause an error
 
@@ -263,17 +263,17 @@
 // // let: Variables declared with let are also hoisted, but they are not initialized.Accessing a let variable before its declaration results in a ReferenceError due to the temporal dead zone(the period between the beginning of the block and the declaration line).
 // ========================
 // User input
-const readline = require('readline');
+// const readline = require('readline');
 
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
+// const rl = readline.createInterface({
+//     input: process.stdin,
+//     output: process.stdout
+// });
 
-rl.question('Please enter your name: ', (name) => {
-    console.log(`Hello, ${name}!`);
-    rl.close();
-});
+// rl.question('Please enter your name: ', (name) => {
+//     console.log(`Hello, ${name}!`);
+//     rl.close();
+// });
 // -----------------
 // Multiline input
 // const readline = require('readline');
@@ -295,7 +295,7 @@ rl.question('Please enter your name: ', (name) => {
 
 // // ===========================
 // // Redeclaration of var and let
-// // ===========================
+// // // ===========================
 // var userName = "Alice";
 // var userName = "Bob"; // No error, `name` is re-declared and re-assigned
 // console.log(userName); // "Bob"
@@ -312,13 +312,13 @@ rl.question('Please enter your name: ', (name) => {
 // ===========================
 // Scope of var and let
 // ===========================
-// if (true) {
-//     var x = 10;
-//     let y = 20;
-//     console.log("inside function y value " +y);
-// }
-// console.log(x); // 10 (accessible because `var` is function-scoped or globally scoped)
-// console.log(y); // ReferenceError: y is not defined (because `let` is block-scoped)
+if (true) {
+    var x = 10;
+    let y = 20;
+    console.log("inside function y value " + y);
+}
+console.log(x); // 10 (accessible because `var` is function-scoped or globally scoped)
+console.log(y); // ReferenceError: y is not defined (because `let` is block-scoped)
 
 // ============
 /*

@@ -108,9 +108,9 @@ console.log(languages);   // Output: ["JavaScript", "Python", "Java", "Ruby"]
 
 // -------------------
 // // At position 3, replace 1 element with 1 new element
-// var fruits = ["Banana", "Orange", "Apple", "Mango"];
-// fruits.splice(3, 1, "Peach");
-// console.log(fruits);  // Output: ["Banana", "Orange", "Lemon", "Peach", "Apple", "Mango"]
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(3, 1, "Peach");
+console.log(fruits);  // Output: ["Banana", "Orange", "Lemon", "Peach", "Apple", "Mango"]
 // ----------------
 // // slice(): Returns a shallow copy of a portion of an array into a new array
 
@@ -149,9 +149,9 @@ console.log(numbers.indexOf(6));  // Output: 2
 // // }
 
 // // Using for...of loop
-// for (let item of arrayItems) {
-//     console.log(item);
-// }
+for (let item of arrayItems) {
+    console.log(item);
+}
 
 // // Using forEach()
 // arrayItems.forEach(function (item) {
@@ -164,11 +164,11 @@ console.log(numbers.indexOf(6));  // Output: 2
 // console.log(colors);
 // console.log(colors.length);
 
-const arr1 = [1, 2, 3];
-const arr2 = [...arr1];
+// const arr1 = [1, 2, 3];
+// const arr2 = [...arr1];
 
-console.log(arr1);
-console.log(arr2);
+// console.log(arr1);
+// console.log(arr2);
 
 var arr = [[100, 12, 3, 14], [1, 2, 3], [4, 5, 6]];
 

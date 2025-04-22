@@ -1,7 +1,8 @@
 // ===============
 // Introduction to Async/Await 
 // Async and Await are used to simplify working with asynchronous code in JavaScript, making it easier to work with promises. 
-// The main benefit of async/await is that it allows you to write asynchronous code that looks and behaves like synchronous code, 
+// The main benefit of async/await is that it allows you to write asynchronous code that looks and behaves like synchronous code,
+
 // making it easier to read and manage.
 //  ===============
 // Asynchronous Version with Parallel Execution
@@ -22,6 +23,7 @@
 // }
 
 // myAsyncFunction(); // Call the async function
+
 // ==================
 // function bakeCake() {
 //     return new Promise((resolve) => {
@@ -64,22 +66,23 @@
 // Async/Await allows us to handle multiple asynchronous operations one after another, ensuring they are completed in order.
 // ===============
 
-async function handleMultipleOperations() {
-    console.log("Starting async operations");
+// async function handleMultipleOperations() {
+//     console.log("Starting async operations");
 
-    const result1 = await new Promise(resolve => setTimeout(() => resolve("First operation complete"), 1000));
-    console.log(result1);
+//     const result1 = await new Promise(resolve => setTimeout(() => resolve("First operation complete"), 1000));
+//     console.log(result1);
 
-    const result2 = await new Promise(resolve => setTimeout(() => resolve("Second operation complete"), 1000));
-    console.log(result2);
+//     const result2 = await new Promise(resolve => setTimeout(() => resolve("Second operation complete"), 1000));
+//     console.log(result2);
 
-    const result3 = await new Promise(resolve => setTimeout(() => resolve("Third operation complete"), 1000));
-    console.log(result3);
+//     const result3 = await new Promise(resolve => setTimeout(() => resolve("Third operation complete"), 1000));
+//     console.log(result3);
 
-    console.log("All async operations complete");
-}
+//     console.log("All async operations complete");
+// }
 
-handleMultipleOperations(); // Calling function to handle multiple async operations
+// handleMultipleOperations(); // Calling function to handle multiple async operations
+// console.log("While promise is being resolved , I can do other things.");
 
 // =====================
 // Handling Multiple Async Operations Concurrently

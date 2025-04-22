@@ -11,7 +11,7 @@
 // var x = 1;  // Assign 1 to variable x
 // console.log(x);  // Output: 1
 
-// // Add and assign (+=)
+// // // Add and assign (+=)
 // var a = 10;
 // a += 5;  // a = a + 5, now a = 15
 // console.log(a);  // Output: 15
@@ -69,7 +69,7 @@
 // counter++;  // counter = counter + 1
 // console.log(counter);  // Output: 3
 // ---------------
-// Post-increment: assign first, then increment
+// // Post-increment: assign first, then increment
 // var a = 1;
 // var b = a++;  // Assign a to b first, then increment a
 // console.log(b);  // Output: 1 (value of a before increment)
@@ -80,7 +80,7 @@
 // var d = ++c;  // Assign a to b first, then increment a
 // console.log(c);  // Output: 2 (value of a before increment)
 // console.log(d);  // Output: 2 (value of a after increment)
-// ------------------
+// // ------------------
 // a = 10;
 // console.log(++a);
 // console.log(a);
@@ -106,7 +106,7 @@
 
 // console.log("JavaScript" + " " + "is awesome!");  // Output: JavaScript is awesome!
 
-// console.log("The answer is " + 42);  // Output: The answer is 42
+console.log("The answer is " + 42);  // Output: The answer is 42
 
 // ===============================
 // 6. Logical Operators
@@ -146,8 +146,8 @@
 // var c = 'abc' && 123;  // 'abc' and 123 are truthy, so 123 is returned - last truthy value
 // console.log(c);  // Output: 123
 
-var c = 123 && 'abc';  // 'abc' and 123 are truthy, so 123 is returned - last truthy value
-console.log(c);  // Output: 123
+// var c = 123 && 'abc';  // 'abc' and 123 are truthy, so 123 is returned - last truthy value
+// console.log(c);  // Output: 123
 
 // -------------------------
 // // Logical NOT (!)
@@ -200,8 +200,8 @@ console.log(c);  // Output: 123
 // // == (loose equality) compares values with type coercion. It converts operands to the same type before comparing them.
 // // === (strict equality) compares both values and types without type coercion.
 
-// console.log(5 == "5");  // Output: true (because '5' is coerced to number)
-// console.log(5 === "5");  // Output: false (because types are different)
+console.log(5 == "5");  // Output: true (because '5' is coerced to number)
+console.log(5 === "5");  // Output: false (because types are different)
 
 // // Q2: What is the purpose of the typeof operator in JavaScript?
 // // Answer: typeof is used to check the type of a variable.
@@ -237,7 +237,7 @@ console.log(c);  // Output: 123
 // console.log(Boolean(""));  // Output: false (falsy value)
 // console.log(Boolean(null));  // Output: false (falsy
 // ==================
-// user input 
+// user input
 // command to execute node 02_Operators.js
 // const readline = require('readline');
 
@@ -252,19 +252,19 @@ console.log(c);  // Output: 123
 // });
 // ===============
 // Multiple input
-const readline = require('readline');
+// const readline = require('readline');
 
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
+// const rl = readline.createInterface({
+//     input: process.stdin,
+//     output: process.stdout
+// });
 
-rl.question('Enter your name: ', (name) => {
-    rl.question('Enter your age: ', (age) => {
-        console.log(`Hello, ${name}. You are ${age} years old.`);
-        rl.close();
-    });
-});
+// rl.question('Enter your name: ', (name) => {
+//     rl.question('Enter your age: ', (age) => {
+//         console.log(`Hello, ${name}. You are ${age} years old.`);
+//         rl.close();
+//     });
+// });
 
 
 // // =============================
