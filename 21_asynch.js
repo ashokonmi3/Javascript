@@ -1,13 +1,32 @@
 // ===============
-// Introduction to Async/Await 
-// Async and Await are used to simplify working with asynchronous code in JavaScript, making it easier to work with promises. 
-// The main benefit of async/await is that it allows you to write asynchronous code that looks and behaves like synchronous code,
+// Introduction to Async/Await
+// Async and Await are used to simplify working with asynchronous code in JavaScript, making it easier to work with promises.
+// The main benefit of async/await is that it allows you to write asynchronous code that looks and behaves like
+//  synchronous code,
 
 // making it easier to read and manage.
 //  ===============
 // Asynchronous Version with Parallel Execution
 // Both loops will run asynchronously, printing numbers in parallel with async/await
 // ===============
+
+// function getPizza() {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             resolve("🍕 Pizza is here!");
+//         }, 3000); // 3-second delay
+//     });
+// }
+
+// async function dinnerTime() {
+//     console.log("Ordering pizza...");
+//     const pizza = await getPizza();
+//     console.log(pizza);
+//     console.log("Eating dinner.");
+// }
+
+// dinnerTime();
+// ===========================================
 
 // Basic example of Async/Await:
 // async function myAsyncFunction() {
@@ -140,24 +159,24 @@
 // }
 
 // delayExecution(); // Call function with delay
-
+// ===============
 // Using async/await with setInterval to repeat an operation at intervals
-// async function repeatOperation() {
-//     let count = 0;
+async function repeatOperation() {
+    let count = 0;
 
-//     const intervalId = setInterval(async () => {
-//         count++;
-//         console.log(`Operation count: ${count}`);
+    const intervalId = setInterval(async () => {
+        count++;
+        console.log(`Operation count: ${count}`);
 
-//         if (count === 5) {
-//             clearInterval(intervalId); // Stop the interval after 5 operations
-//             console.log("Finished repeating operations");
-//         }
+        if (count === 5) {
+            clearInterval(intervalId); // Stop the interval after 5 operations
+            console.log("Finished repeating operations");
+        }
 
-//     }, 1000); // Repeat every second
-// }
+    }, 1000); // Repeat every second
+}
 
-// repeatOperation(); // Call function with setInterval
+repeatOperation(); // Call function with setInterval
 
 // =====================
 // Interview Questions on Async/Await

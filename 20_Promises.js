@@ -1,6 +1,6 @@
 // ===============
 // Introduction to JavaScript Promises
-// Promises in JavaScript are used for handling asynchronous operations. 
+// Promises in JavaScript are used for handling asynchronous operations.
 // They provide a cleaner alternative to callbacks and help in managing multiple asynchronous tasks more effectively.
 // A Promise is a proxy for a value that will be provided in the future. It allows you to attach handlers for success (`.then()`) or failure (`.catch()`).
 // Promises help avoid "callback hell" (nested callbacks) by allowing asynchronous code to be written in a more readable way.
@@ -20,54 +20,54 @@
 
 // ===============
 // Basic Promise Example
-// Creating a new Promise. The Promise constructor takes an executor function which is provided with two functions: 
+// Creating a new Promise. The Promise constructor takes an executor function which is provided with two functions:
 // resolve and reject.
 // The resolve function is called when the asynchronous operation is successful,
 //  while the reject function is called if there's an error or failure.
 // ===============
 
-let juiceOrder = new Promise((resolve, reject) => {
-    let isShopOpen = true;
+// let juiceOrder = new Promise((resolve, reject) => {
+//     let isShopOpen = true;
 
-    setTimeout(() => {
-        if (isShopOpen) {
-            resolve("Juice is delivered! 🥤");
-        } else {
-            reject("Sorry, shop is closed.");
-        }
-    }, 2000); // Wait 2 seconds
-});
+//     setTimeout(() => {
+//         if (isShopOpen) {
+//             resolve("Juice is delivered! 🥤");
+//         } else {
+//             reject("Sorry, shop is closed.");
+//         }
+//     }, 2000); // Wait 2 seconds
+// });
 
-juiceOrder
-    .then((message) => {
-        console.log("Success:", message);
-    })
-    .catch((error) => {
-        console.log("Failure:", error);
-    });
-// ======================  
+// juiceOrder
+//     .then((message) => {
+//         console.log("Success:", message);
+//     })
+//     .catch((error) => {
+//         console.log("Failure:", error);
+//     });
+// ======================
 
 
-console.log("Before promise");
+// console.log("Before promise");
 
-var myPromise = new Promise(function (resolve, reject) {
-    let isSuccess = true; // Simulating success or failure
-    if (isSuccess) {
-        resolve("Operation was successful");
-    } else {
-        reject("Operation failed");
-    }
-});
+// var myPromise = new Promise(function (resolve, reject) {
+//     let isSuccess = true; // Simulating success or failure
+//     if (isSuccess) {
+//         resolve("Operation was successful");
+//     } else {
+//         reject("Operation failed");
+//     }
+// });
 
-myPromise
-    .then(function (message) {
-        console.log(message); // Handles success case
-    })
-    .catch(function (message) {
-        console.log(message); // Handles error case
-    });
+// myPromise
+//     .then(function (message) {
+//         console.log(message); // Handles success case
+//     })
+//     .catch(function (message) {
+//         console.log(message); // Handles error case
+//     });
 
-console.log("After promise");
+// console.log("After promise");
 
 
 // ===============
@@ -127,7 +127,8 @@ console.log("After promise");
 // }, 1000);
 // ===============
 // Chaining Promises
-// Promises can be chained using `.then()`. This allows you to handle multiple asynchronous operations in sequence, one after the other.
+// Promises can be chained using `.then()`. This allows you to handle multiple asynchronous operations in
+// sequence, one after the other.
 // ===============
 
 // const step1 = new Promise((resolve) => resolve("Step 1 complete"));
@@ -211,16 +212,16 @@ console.log("After promise");
 // If one of the promises fails, the entire `Promise.all()` chain will fail, but you can catch the error.
 // ===============
 
-const promiseOne = new Promise((resolve, reject) => setTimeout(resolve, 1000, "Task 1 completed"));
-const promiseTwo = new Promise((resolve, reject) => setTimeout(reject, 1500, "Task 2 failed"));
+// const promiseOne = new Promise((resolve, reject) => setTimeout(resolve, 1000, "Task 1 completed"));
+// const promiseTwo = new Promise((resolve, reject) => setTimeout(reject, 1500, "Task 2 failed"));
 
-Promise.all([promiseOne, promiseTwo])
-    .then((messages) => {
-        console.log(messages); // This won't be executed as promiseTwo rejects
-    })
-    .catch((error) => {
-        console.log("Error caught:", error); // "Task 2 failed"
-    });
+// Promise.all([promiseOne, promiseTwo])
+//     .then((messages) => {
+//         console.log(messages); // This won't be executed as promiseTwo rejects
+//     })
+//     .catch((error) => {
+//         console.log("Error caught:", error); // "Task 2 failed"
+//     });
 // ===========================
 
 
