@@ -66,7 +66,7 @@
 // }
 // // Output: 0, 1, 2
 // --------------------
-// // Edge Case: Loop ending at 1
+// // // Edge Case: Loop ending at 1
 // let count = 3;
 // while (count) { // Runs until count is falsy (0)
 //     console.log(count);
@@ -125,12 +125,13 @@
 //     console.log(m); // Outputs value of m within loop
 // }
 // console.log("Outside loop:", m); // Shows m is still accessible outside
+
 // ====================
-let m;
-for (m = 1; m <= 5; m++) {
-  console.log("inner" + m)
-}
-console.log("Outer" + m);
+// let m;
+// for (m = 1; m <= 5; m++) {
+//   console.log("inner" + m)
+// }
+// console.log("Outer" + m);
 
 // ===============
 //  Infinite Loop
@@ -160,11 +161,11 @@ console.log("Outer" + m);
 // Syntax: for (value of iterable) { statement }
 // ===============
 
-let colors = ["red", "green", "blue"];
-for (let x of colors) {
-  console.log(x); // Pr
-  // ints each color in the array
-}
+// let colors = ["red", "green", "blue"];
+// for (let x of colors) {
+//   console.log(x); // Pr
+//   // ints each color in the array
+// }
 // Output: red, green, blue
 
 
@@ -259,13 +260,13 @@ for (let x of colors) {
 // }
 
 // table from 1to 10
-for (let i = 1; i <= 10; i++) {
-  let row = ''; // Initialize an empty row
-  for (let j = 1; j <= 5; j++) {
-    row += (i * j) + ' '; // Append the product to the row with a space
-  }
-  console.log(row.trim()); // Print the row and trim trailing space
-}
+// for (let i = 1; i <= 10; i++) {
+//   let row = ''; // Initialize an empty row
+//   for (let j = 1; j <= 5; j++) {
+//     row += (i * j) + ' '; // Append the product to the row with a space
+//   }
+//   console.log(row.trim()); // Print the row and trim trailing space
+// }
 
 // ===============
 //  Interview Questions with Answers

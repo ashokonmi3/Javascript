@@ -1,7 +1,9 @@
 // ===============
 // Closure in JavaScript 
-// A closure is a function that "remembers" its lexical environment even when the function is executed outside that environment. It has access to the outer function's variables and parameters even after the outer function has finished executing.
-// Closure is important because it allows for data encapsulation, the creation of private variables, and more flexible coding patterns like modules and callbacks.
+// A closure is a function that "remembers" its lexical environment even when the function is executed outside that environment. 
+// It has access to the outer function's variables and parameters even after the outer function has finished executing.
+// Closure is important because it allows for data encapsulation, the creation of private variables, 
+// and more flexible coding patterns like modules and callbacks.
 // ===============
 
 // // Example 1: Basic Closure
@@ -91,15 +93,21 @@
 //  and i will have the final value (5), which results in logging 5 five times.
 // ======================
 
+// for (let i = 0; i < 5; i++) {
+//     setTimeout(() => {
+//         console.log(i);
+//     }, 1000);
+// }
+
 
 // // Correcting this using a closure to capture the current value of `i`
-for (var i = 0; i < 5; i++) {
-    (function (currentValue) {
-        setTimeout(function () {
-            console.log(currentValue); // prints 0, 1, 2, 3, 4
-        }, 1000);
-    })(i);
-}
+// for (var i = 0; i < 5; i++) {
+//     (function (currentValue) {
+//         setTimeout(function () {
+//             console.log(currentValue); // prints 0, 1, 2, 3, 4
+//         }, 1000);
+//     })(i);
+// }
 
 
 // // ===============
@@ -128,6 +136,8 @@ for (var i = 0; i < 5; i++) {
 // var person = createPerson();
 // console.log(person.getFirstName()); // prints "John"
 // person.setFirstName("Jane");
+// console.log(createPerson.firstName);
+
 // console.log(person.getFirstName()); // prints "Jane"
 
 // // Explanation:
@@ -141,42 +151,42 @@ for (var i = 0; i < 5; i++) {
 // // This can be useful in situations where you want to hide internal data and only expose a controlled API.
 // // ===============
 
-// function counter() {
-//     var count = 0; // private variable
+function counter() {
+    var count = 0; // private variable
 
-//     return {
-//         increment: function () {
-//             count++; // incrementing count
-//             return count;
-//         },
-//         decrement: function () {
-//             count--; // decrementing count
-//             return count;
-//         },
-//         getCount: function () {
-//             return count; // exposing the current count value
-//         }
-//     };
-// }
+    return {
+        increment: function () {
+            count++; // incrementing count
+            return count;
+        },
+        decrement: function () {
+            count--; // decrementing count
+            return count;
+        },
+        getCount: function () {
+            return count; // exposing the current count value
+        }
+    };
+}
 
-// var myCounter = counter();
-// console.log(myCounter.increment()); // prints 1
-// console.log(myCounter.increment()); // prints 2
-// console.log(myCounter.decrement()); // prints 1
-// console.log(myCounter.getCount()); // prints 1 (private variable 'count' is encapsulated)
+var myCounter = counter();
+console.log(myCounter.increment()); // prints 1
+console.log(myCounter.increment()); // prints 2
+console.log(myCounter.decrement()); // prints 1
+console.log(myCounter.getCount()); // prints 1 (private variable 'count' is encapsulated)
 
 
 // /*
 // Example 5: Closure in Loops
 // - Closures can also be used in loops to remember values at the time the closure was created.
 // */
-for (var i = 0; i < 3; i++) {
-    (function (index) {
-        setTimeout(function () {
-            console.log(index); // prints 0, 1, 2 (remembered index value at closure creation)
-        }, 1000);
-    })(i);
-}
+// for (var i = 0; i < 3; i++) {
+//     (function (index) {
+//         setTimeout(function () {
+//             console.log(index); // prints 0, 1, 2 (remembered index value at closure creation)
+//         }, 1000);
+//     })(i);
+// }
 
 // // Explanation:
 // // - By using the immediately invoked function expression (IIFE), we capture the current value of `i` at the time of the closure creation.

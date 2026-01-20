@@ -44,10 +44,10 @@
 // if (true) {
 //   let c = 30; // `c` is block-scoped, only accessible within this `if` block
 //   var d = 50;
-//   console.log(c); // Output: 30
+//   console.log("inside the function Let c "+c);// Output: 30
+//   console.log("inside the function var d " + d);
 // }
-// console.log(d); // Error: c is not defined (as c is block-scoped)
-
+// console.log(d); // 
 // console.log(c); // Error: c is not defined (as c is block-scoped)
 
 // // ========================
@@ -61,7 +61,7 @@
 //   console.log(d); // Output: 40
 // })();
 
-// // abc()
+// // // abc()
 // console.log(d); // Error: d is not defined (as d is only accessible within the IIFE)
 
 // // ========================
@@ -97,20 +97,20 @@
 // //  If not found in the global scope, a `ReferenceError` is thrown.
 // // ========================
 
-// var globalVar = "global";
+var globalVar = "global";
 
-// function firstFunction() {
-//   var localVar = "local";
+function firstFunction() {
+  var localVar = "local";
 
-//   function secondFunction() {
-//     console.log(globalVar);  // Output: "global" (found in global scope)
-//     console.log(localVar);    // Output: "local" (found in outer scope, i.e., firstFunction)
-//   }
+  function secondFunction() {
+    console.log(globalVar);  // Output: "global" (found in global scope)
+    console.log(localVar);    // Output: "local" (found in outer scope, i.e., firstFunction)
+  }
 
-//   secondFunction();
-// }
+  secondFunction();
+}
 
-// firstFunction();
+firstFunction();
 
 // ========================
 //  Interview Questions and Answers

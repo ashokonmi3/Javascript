@@ -26,13 +26,15 @@
 //     "use strict";
 //     let interest = (amount * duration * rateOfInterest) / 100;
 //     console.log("Interest Calculation:", interest);
+//     // intereest =10;
 // }
 // calculateInterest(10000, 12, 5);
 // calculateInterest(102000, 16, 4);
-
+// interest=10;
+// console.log(interest)
 // ========================
 // Function with Parameters and Variables
-// Display different messages based on the input.
+// Display different messages based on the input.s
 // ========================
 
 // function showMessage(abc) {
@@ -185,8 +187,8 @@
 // let hello = () => "Hello World!";
 // console.log(hello());
 
-let personalizedHello = (name) => "Hello " + name + "!";
-console.log(personalizedHello("Developer"));
+// let personalizedHello = (name) => "Hello " + name + "!";
+// console.log(personalizedHello("Developer"));
 
 // // ========================
 // // Questions:

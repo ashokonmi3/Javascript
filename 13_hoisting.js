@@ -30,11 +30,11 @@
 
 // console.log(x); //error // read operation
 // ---------------
-// var x; internally this will happened
+// var x; //internally this will happened
 
 // console.log(x); // Output: undefined (because `x` is hoisted, but not its value)
 // var x = 10; // write operation
-// IF you do write with out declaration its fine but if yu do read without it will be error
+// IF you do wriste with out declaration its fine but if yu do read without it will be error
 // --------------
 // The code above is interpreted by JavaScript as:
 /*
@@ -59,9 +59,13 @@ x = 10;
 // ================
 
 
-
 // Variables declared with `let` and `const` are not hoisted in the same way and will result in a
 // ReferenceError if accessed before declaration.
+
+// console.log(y); // ReferenceError (no hoisting for `let` and `const`)
+// let y = 20;
+
+
 
 // try {
 //     console.log(y); // ReferenceError (no hoisting for `let` and `const`)
@@ -119,12 +123,10 @@ x = 10;
 // ===============
 
 // "use strict";
-// try {
-//     myName = "Ashok"; // ReferenceError: myName is not defined
-//     console.log(myName);
-// } catch (error) {
-//     console.log(error);
-// }
+//  myName = "Ashok"; // ReferenceError: myName is not defined
+//   console.log(myName);
+
+
 
 // // "use strict" inside functions only affects the scope of that function
 // function myStrictFunction() {
@@ -136,7 +138,20 @@ x = 10;
 //     }
 // }
 
-// myStrictFunction();
+
+// function myStrictFunction() {
+//     "use strict";
+//         undeclaredVariable = 10; // ReferenceError due to strict mode
+//         console.log(undeclaredVariable);
+//     }
+
+
+// // myStrictFunction();
+
+// variable = 10; // ReferenceError due to strict mode
+// console.log(variable);
+
+
 // =================
 
 // ========================

@@ -161,22 +161,22 @@
 // delayExecution(); // Call function with delay
 // ===============
 // Using async/await with setInterval to repeat an operation at intervals
-async function repeatOperation() {
-    let count = 0;
+// async function repeatOperation() {
+//     let count = 0;
 
-    const intervalId = setInterval(async () => {
-        count++;
-        console.log(`Operation count: ${count}`);
+//     const intervalId = setInterval(async () => {
+//         count++;
+//         console.log(`Operation count: ${count}`);
 
-        if (count === 5) {
-            clearInterval(intervalId); // Stop the interval after 5 operations
-            console.log("Finished repeating operations");
-        }
+//         if (count === 5) {
+//             clearInterval(intervalId); // Stop the interval after 5 operations
+//             console.log("Finished repeating operations");
+//         }
 
-    }, 1000); // Repeat every second
-}
+//     }, 1000); // Repeat every second
+// }
 
-repeatOperation(); // Call function with setInterval
+// repeatOperation(); // Call function with setInterval
 
 // =====================
 // Interview Questions on Async/Await

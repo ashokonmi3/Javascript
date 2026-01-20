@@ -100,7 +100,7 @@
 
 // const dog = new Dog('Buddy');
 // dog.speak(); // Output: Buddy barks.
-// =====================
+// // =====================
 class Vehicle {
     startEngine() {
         console.log('Engine started');

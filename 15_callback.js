@@ -107,7 +107,7 @@
 //  (like reading files or making HTTP requests).
 
 // function fetchDataWithErrorHandling(callback) {
-//     let errorOccurred = false; // Simulating an error condition
+//     let errorOccurred = true; // Simulating an error condition
 //     setTimeout(() => {
 //         if (errorOccurred) {
 //             callback("Error: Failed to fetch data");
@@ -124,7 +124,8 @@
 //     } else {
 //         console.log("Data received:", data); // Output: Data received: { id: 2, name: "Bob" }
 //     }
-//     fetchDataWithErrorHandling(myerror)
+// }
+// fetchDataWithErrorHandling(myerror)
 
 
 
@@ -164,7 +165,7 @@
 //     });
 // });
 // ===============
-// Simulate ordering a pizza with a callback
+// // Simulate ordering a pizza with a callback
 function orderPizza(callback) {
     console.log("Ordering pizza...");
 

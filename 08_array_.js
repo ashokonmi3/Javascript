@@ -36,19 +36,19 @@
 // console.log(arrayWithSize.length);  // Output: 10
 // ---------------
 // Array with Initial Values
-var languages = ["JavaScript", "Python", "Java"];
-console.log(languages);             // Output: ["JavaScript", "Python", "Java"]
+// var languages = ["JavaScript", "Python", "Java"];
+// // console.log(languages);             // Output: ["JavaScript", "Python", "Java"]
 
-// // // // Accessing Elements
-console.log(languages[0]);  // Access the first element: "JavaScript"
-console.log(languages[2]);  // Access the third element: "Java"
-// console.log(languages[3]);  // Access an undefined index: undefined
+// // // // // // // Accessing Elements
+// // console.log(languages[0]);  // Access the first element: "JavaScript"
+// // console.log(languages[2]);  // Access the third element: "Java"
+// // console.log(languages[3]);  // Access an undefined index: undefined
 
-// // // // Adding Elements to an Array
-languages[3] = "Ruby";
-console.log(languages);   // Output: ["JavaScript", "Python", "Java", "Ruby"]
+// // // // // // Adding Elements to an Array
+// languages[3] = "Ruby";
+// console.log(languages);   // Output: ["JavaScript", "Python", "Java", "Ruby"]
 
-// // // // Checking if a Variable is an Array
+// // // // // Checking if a Variable is an Array
 // console.log(Array.isArray(languages));  // Output: true
 // console.log(Array.isArray("Java"));     // Output: false
 
@@ -102,15 +102,15 @@ console.log(languages);   // Output: ["JavaScript", "Python", "Java", "Ruby"]
 
 // // splice(): Can add, remove, or replace elements at a specific position
 // var fruits = ["Banana", "Orange", "Apple", "Mango"];
-// // // // At position 2, add 2 new elements
+// // // // // At position 2, add 2 new elements
 // fruits.splice(2, 0, "Lemon", "Kiwi");
 // console.log(fruits);  // Output: ["Banana", "Orange", "Lemon", "Kiwi", "Apple", "Mango"]
 
 // -------------------
 // // At position 3, replace 1 element with 1 new element
-var fruits = ["Banana", "Orange", "Apple", "Mango"];
-fruits.splice(3, 1, "Peach");
-console.log(fruits);  // Output: ["Banana", "Orange", "Lemon", "Peach", "Apple", "Mango"]
+// var fruits = ["Banana", "Orange", "Apple", "Mango"];
+// fruits.splice(3, 1, "Peach");
+// console.log(fruits);  // Output: ["Banana", "Orange", "Lemon", "Peach", "Apple", "Mango"]
 // ----------------
 // // slice(): Returns a shallow copy of a portion of an array into a new array
 
@@ -131,11 +131,11 @@ console.log(fruits);  // Output: ["Banana", "Orange", "Lemon", "Peach", "Apple",
 // numbers.reverse();
 // console.log(numbers);  // Output: [9, 6, 5, 5, 2, 1]
 
-// // // // indexOf(): Returns the first index at which a given element is found
-//             0   1 2  3  4  5 
-var numbers = [5, 2, 9, 1, 5, 6];
+// // // indexOf(): Returns the first index at which a given element is found
+            // 0   1 2  3  4  5 
+// var numbers = [5, 2, 9, 1, 5, 6];
 
-console.log(numbers.indexOf(6));  // Output: 2
+// console.log(numbers.indexOf(6));  // Output: 2
 
 // ===============
 //  Array Iteration
@@ -148,10 +148,10 @@ console.log(numbers.indexOf(6));  // Output: 2
 // //     console.log(arrayItems[i]);
 // // }
 
-// // Using for...of loop
-for (let item of arrayItems) {
-    console.log(item);
-}
+// // // Using for...of loop
+// for (let item of arrayItems) {
+//     console.log(item);
+// }
 
 // // Using forEach()
 // arrayItems.forEach(function (item) {
@@ -159,8 +159,8 @@ for (let item of arrayItems) {
 // });
 
 // const colors = ["Red","Green", "Blue" , "magneta"];
-// for(const color of colors){
-// }
+// // for(const color of colors){
+// // }
 // console.log(colors);
 // console.log(colors.length);
 

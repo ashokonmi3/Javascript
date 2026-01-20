@@ -104,7 +104,7 @@
 // console.log("Widget with id".includes("Widget")); // true
 // console.log("Hello".includes("Bye")); // false
 
-// // The optional second argument of str.includes is the position to start searching from:
+// // // The optional second argument of str.includes is the position to start searching from:
 // console.log("Widget".includes("id")); // true
 // console.log("Widget".includes("id", 3)); // false, from position 3 there is no "id"
 

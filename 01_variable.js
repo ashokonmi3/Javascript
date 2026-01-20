@@ -102,7 +102,7 @@
 // var value = 45;
 // console.log(value); // Output: 45
 
-// // // // // Changing the variable's value
+// // // // // // Changing the variable's value
 // value = "JavaScript";
 // console.log(value); // Output: "JavaScript"
 
@@ -110,7 +110,7 @@
 // // 2. Number Data Type (64-bit values)
 // // ===========================
 
-// var a = 10;        // Integer number
+var a = 10;        // Integer number
 // console.log(a);    // Output: 10
 
 // var b = 20;        // Another integer number
@@ -142,7 +142,7 @@
 // var f;
 // console.log(f); // Output: undefined
 
-// //  // "Null" is an assignment value that represents "no value" or "nothing"
+// // //  // "Null" is an assignment value that represents "no value" or "nothing"
 
 // var g = null;
 // console.log(g); // Output: null
@@ -197,7 +197,8 @@
 // var strictVar = 10;
 // console.log(strictVar); // Output: 10
 
-// // // // Uncommenting the following line would cause an error in strict mode
+// // // // // Uncommenting the following line would cause an error in strict mode
+// "use strict";
 // strictAssignment = 20; // ReferenceError: strictAssignment is not defined
 // console.log(strictAssignment); // Output: 10
 
@@ -206,7 +207,7 @@
 // // ===========================
 
 // // Without "use strict", JavaScript allows accidental global variables
-// // "use strict";
+// "use strict";
 // accidentalGlobal = 15;
 // console.log(accidentalGlobal); // Output: 15
 // "use strict";// will not work
@@ -236,10 +237,10 @@
 
 // const PI = 3.14159; // A constant for the value of PI
 
-// // // // Trying to reassign a const variable will cause an error
+// // // // // Trying to reassign a const variable will cause an error
 // PI = 3.14; // ❌ Error: Assignment to constant variable
 
-// // // Use const for values that should not change
+// // // // Use const for values that should not change
 // const BASE_URL = "https://api.example.com";
 // console.log(BASE_URL);
 
@@ -249,11 +250,11 @@
 // // JavaScript moves variable declarations to the top of their scope (hoisting)
 // // Only declarations are hoisted, not initializations
 // var hoistedVar
-console.log(hoistedVar); // Output: undefined (variable declared but not initialized yet)
-var hoistedVar = "I'm hoisted!";
-console.log(hoistedVar); // Output: "I'm hoisted!"
+// console.log(hoistedVar); // Output: undefined (variable declared but not initialized yet)
+// var hoistedVar = "I'm hoisted!";
+// console.log(hoistedVar); // Output: "I'm hoisted!"
 
-// Note: "let" and "const" are not hoisted in the same way as "var"; using them before declaration will cause an error
+// // Note: "let" and "const" are not hoisted in the same way as "var"; using them before declaration will cause an error
 
 // console.log(b); // ReferenceError: Cannot access 'b' before initialization
 // let b = 10;
@@ -299,7 +300,7 @@ console.log(hoistedVar); // Output: "I'm hoisted!"
 // var userName = "Alice";
 // var userName = "Bob"; // No error, `name` is re-declared and re-assigned
 // console.log(userName); // "Bob"
-// =================
+// // =================
 // let age = 25;
 // let age = 30; // SyntaxError: Identifier 'age' has already been declared
 // console.log(age); // "Bob"

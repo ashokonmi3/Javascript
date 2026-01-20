@@ -8,7 +8,7 @@
 
 // console.log(myObj.foo);
 
-// // // // we can use . operator to access property of any object
+// // // // // we can use . operator to access property of any object
 
 // myObj.foo="hello";
 // console.log(myObj.foo);
@@ -130,7 +130,7 @@
 // constructor is starts with capital letter
 
 // ==========================================
-// constructor without new 
+// constructor without new we will get undefined
 // function Bicycle(cadence,speed,gear){
 // 	// var this={}; 
 // 	this.cadence=cadence;
@@ -231,6 +231,24 @@
 
 //
 //======================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // createBicycle
 // function Bicycle(cadence,speed,gear,tyrePressure){
 // 	this.cadence=cadence;

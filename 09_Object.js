@@ -19,7 +19,7 @@
 
 // var myObj = {};  // Empty object created
 // console.log(myObj); // Output: {}
-// // // // ---------------
+// // // // // ---------------
 // myObj.prop1 = "hello"; // Adding property dynamically
 // console.log(myObj); // Output: { prop: "hello" }
 
@@ -128,6 +128,8 @@
 // console.log(user["first name"]);  // ✅ "Alice"
 // console.log(user["last-name"]);   // ✅ "Doe"
 // console.log(user["@score"]);      // ✅ 100
+// // console.log(user.first name);  // ✅ "Alice"
+
 // -------------------
 // Dynamic property access
 // let key = "age";
@@ -153,8 +155,8 @@
 //     "@score": 100
 // };
 
-// // console.log(obj.last - name);  // ❌ ReferenceError: name is not defined
-// // console.log(obj.@score);     // ❌ SyntaxError: Unexpected token '@'
+// console.log(obj.last - name);  // ❌ ReferenceError: name is not defined
+// console.log(obj.@score);     // ❌ SyntaxError: Unexpected token '@'
 
 // console.log(obj["last-name"]);  // ✅ "Doe"
 // console.log(obj["@score"]);     // ✅ 100
@@ -181,9 +183,9 @@
 
 // ================
 
-// Case                                      Use .   Use []
-// -----------------------------------------  ------  ------
-// Simple, valid identifier property          ✅      ❌
+// Case                                            Use .   Use []
+// -----------------------------------------      ------  ------
+// Simple, valid identifier property               ✅      ❌
 // Property name with spaces or special characters ❌ ✅
 // Property name starts with a number         ❌      ✅
 // Property name stored in a variable (dynamic access) ❌ ✅
@@ -231,14 +233,14 @@
 // console.log(str.length); // Accessing property of String wrapper object
 // ===================
 // Cloning of object shallow copy
-var original = { prop1: "value1", prop2: { inner: "innervalue" } };
+// var original = { prop1: "value1", prop2: { inner: "innervalue" } };
 
-var shallowCopy = { ...original }; // spread operator
-shallowCopy.prop2.inner = "modified";
-console.log(original.prop2.inner);
+// var shallowCopy = { ...original }; // spread operator
+// shallowCopy.prop2.inner = "modified";
+// console.log(original.prop2.inner);
 
-shallowCopy.prop1 = "modified";
-console.log(original.prop1);
+// shallowCopy.prop1 = "modified";
+// console.log(original.prop1);
 // ===============================
 // Deep copy : JSON.parse(JSON.stringify())
 

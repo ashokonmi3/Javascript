@@ -331,3 +331,35 @@ console.log(5 === "5");  // Output: false (because types are different)
 // //     NaN, Infinity, and - Infinity are special values that represent
 // invalid results or values out of range,
 // which allow JavaScript to gracefully handle unusual scenarios without failing.
+
+// ======================
+
+// Assignment 1 — Primitive Data Types
+
+// Create six variables — one each for Number, String, Boolean, undefined, null, and Symbol.
+// Print their values and types using console.log() and typeof.
+
+// Assignment 2 — Loose Typing
+
+// Declare a variable called info.
+// Assign it a number first, then a string, then a boolean.
+// After each assignment, print its value and type.
+
+// Assignment 3 — Hoisting with var and let
+
+// Write code to test how var and let behave when accessed before declaration.
+// Observe the difference and comment your findings.
+
+// Assignment 4 — Strict Mode
+
+// Write two small programs:
+
+// Without "use strict", assign a value to an undeclared variable.
+
+// Then enable "use strict" and try the same.
+// Record and explain the difference in behavior.
+
+// Assignment 5 — var vs let Scope
+
+// Write a small program with a block ({}) that declares a variable using var and another using let.
+// Print both inside and outside the block to observe the scope difference.

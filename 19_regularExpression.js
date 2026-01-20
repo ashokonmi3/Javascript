@@ -7,33 +7,32 @@
 // var regexp = /love/;
 // console.log(str.search(regexp));
 
-
+// --------------------------
 // var str= "what you want to search?"
 // var regexp= new RegExp("what");
 
 // console.log(str.search(regexp))
 
-
+// =========================
 
 // flags
 //i flag
 // var str= "I love JavaScript!";
-// // console.log(str.search(/love/));
-// console.log(str.search(/LOVE/));
-// console.log(str.search(/LOVE/i));
-
+// console.log(str.search(/love/));
+// console.log(str.search(/LOVE/)); // -1 for not match
+// console.log(str.search(/LOVE/i)); // i for ignore case
+// ================
 // var str= " A drop of ink may make a million think";
 // console.log(str.search(/a/i));
-//imp search always looks for first match
-
+// imp search always looks for first match
+// ----------------
 // var str= "Fame is the thirst of youth";
 // var result = str.match(/fame/i);
 // console.log(result[0]);
 // console.log(result.index);
 // console.log(result.input);
-
+// ----------------
 // var str= "JavaScript is a programming language";
-// var result= str.match(/JAVA(SCRIPT)/i);
 
 // var result= str.match(/(JAVA)(SCRIPT)/i);
 // console.log(result[0]); // this is whole match
@@ -42,7 +41,7 @@
 // console.log(result[2]);
 // console.log(result.index);//
 // console.log(result.input);
-
+// ========================
 //g flag
 // returns an array of all matches
 
@@ -51,34 +50,36 @@
 // console.log(result);
 
 // var result= str.match(/hi/ig);
-
-// // var result= str.match(/ho/ig);
-
 // console.log(result);
 
+// var result= str.match(/ho/ig);
+
+// console.log(result);
+// ===================
 // split
 
 // console.log('12-34-45'.split('-'));
 
 // console.log('12-34-45'.split(/-/));
-
+// ========================
 //replace
 // console.log('12-34-45'.replace('-',':'));
 
-// console.log('12-34-45'.replace(/-/g,':'));
-
+// console.log('12-34-45'.replace(/-/g,':'));// replace all -
+// ==================
 // var str = " Ashok , Ashok sharma and Ashok gupta";
-// console.log(str.replace(/Ashok/g, 'Mr.$&'));
+// console.log(str.replace(/Ashok/g, 'Mr.$&')); //& will represent each value
 
 // var str = "Ashok Sharma"
 // console.log(str.replace(/(Ashok) (Sharma)/, '$2,$1'))
 
-// var i = 0;
-// console.log("HI-Hi-hi".replace(/hi/gi,function(){
-//     return ++i;
-// }));
 
-
+// ==========================
+// When you pass a function as the second argument to replace(), JavaScript automatically calls it with these parameters:
+//
+//str	The matched substring (the text that matched the regex)
+//offset	The position (index) where the match starts in the original string
+//s	The entire original string being searched
 
 // function replacer(str,offset,s){
 //     console.log('Found '+str+ ' at position '+offset+ ' in string ' +s);
@@ -88,16 +89,17 @@
 
 // var result="HI-Hi-hi".replace(/hi/gi,replacer);
 // console.log('Result:' +result);
-
+// =====================
 //test function
 //the test method looks for any match and returns true/false
+
 // var str= " i love JavaScript"
 // console.log(/Love/.test(str));
 
-//Exec
-//
+// ===================
+//Exec- returns array of all match and detailed return
+// //
 // var str= " A lot about w3cschool at https://w3cschool.com"
-
 // var regexp= /W3C(SCHOOL)/ig;
 // var matchOne=regexp.exec(str);
 // console.log(matchOne[0]);
@@ -117,9 +119,9 @@
 // regexp.lastIndex=30;
 // var match= regexp.exec(str);
 // console.log(match.index);
+// =======================
+//Y flag- strict search from the last index
 
-//Y flag
-//
 // var str= "I love JavaScript";
 // var reg= /javascript/iy;
 // console.log(reg.lastIndex);//last index is 0 first time by default
@@ -132,75 +134,31 @@
 // var regexp = /love/;
 // console.log( str.search(regexp) ); // 2
 
-
-
-// var search = prompt("What you want to search?", "love");
-// var regexp = new RegExp(search);
-
-// // find whatever the user wants
-// console.log( "I love JavaScript".search(regexp));
-
-
-// var str = "A drop of ink may make a million think";
-
-// console.log( str.search( /a/i ) );
-
-
-
-// var str = "Fame is the thirst of youth";
-
-// var result = str.match( /fame/i );
-
-// console.log( result[0] );    // Fame (the match)
-// console.log( result.index ); // 0 (at the zero position)
-// console.log( result.input ); //
-// var str = "HO-Ho-ho!";
-
-// var result = str.match( /ho/ig );
-
-// console.log( result ); 
-
-
-
-// var str = "John Doe, John Smith and John Bull.";
-// console.log(str.replace(/John/g, 'Mr.$&'));
-// console.log(str.replace(/John/g, 'Mr.$&'));
-
-
-
-// var str = "John Smith";
-// console.log(str.replace(/(John) (Smith)/, '$2, $1')) // Smith, John
-
-// console.log("\d\.\d"); // d.d
-
+// ======================
 // characer classes
+
+// \d means a character from 0 to 9
+// \s a space symbol, icludes spaces tabs new line
+// \w letter of english or a digit or a underscore
+
 // var str= "+7(901)-34343-34-675";
 // var reg=/\d/
 // console.log(str.match(reg));
 
 // var reg=/\d/g
 // console.log(str.match(reg));
-
-// \d means a character from 0 to 9
-// \s a space symbol, icludes spaces tabs new line
-// \w letter of english or a digit or a underscore
-
-// \d\s\w
-
-// 1 A
-
+// ==================
 // var str= "CSS4 is cool"
 // console.log(str.match(/CSS\d/));
 
 // console.log("I love HTML5".match(/\w\w\w\w\d/));
-
+// ============
 // Word boundary\b
+// a word character (A–Z, a–z, 0–9, _)
+// and
 
+// a non-word character (space, punctuation, or string boundary)
 // \b- it denotes the word boundary
-
-
-
-
 
 // console.log("Hello, Java!".match(/\bJava\b/));
 // console.log("Hello, JavaScript!".match(/\bJava\b/));
@@ -229,7 +187,7 @@
 
 // console.log("1 - 5".match(/\d\s-\s\d/));
 
-
+// =================
 // dot character--- "." any character except new line
 
 
@@ -244,7 +202,7 @@
 // console.log(st.match(/\d\d.\d\d/));
 // console.log(st.match(/\d\d.\d\d/g));
 // .\d\d.\d\d.
-
+// ====================
 //Escaping character \
 //
 // [\^$.|?* +()]
@@ -320,7 +278,7 @@
 // console.log("should i write color or colour".match(/colou?r/g))
 
 // * zero or more
-// console.log("100101".match(/\d0*/g))
+console.log("100101".match(/\d0*/g))
 
 // console.log("hello!...how goes?....".match(/\.{3,}/g))
 // console.log("color:#121212; background-color:#AA00ef".match(/^#[a-f0-9]{6}/ig))
@@ -359,11 +317,11 @@
 // var str= "He said: \"she is one!\".";
 // console.log(str.match(/['"](.*?)['"]/g))
 
-console.log('a "witch" and her "broom" is one'.match(/".+"/g));
+// console.log('a "witch" and her "broom" is one'.match(/".+"/g));
 
-console.log('a "witch" and her "broom" is one'.match(/".+?"/g));
+// console.log('a "witch" and her "broom" is one'.match(/".+?"/g));
 
-regex.com  
+// regex.com  
 
 // <\d!-\d- <;!DOCTYPE html>
 // <html>

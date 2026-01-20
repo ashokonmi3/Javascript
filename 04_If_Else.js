@@ -1,9 +1,9 @@
 // // Basic if-else statement example
-var year = 2015;
-if (year == 2015) {
-    console.log("That's correct!"); // If condition is true, this block runs.
-    console.log("You're so smart!");
-}
+// var year = 2015;
+// if (year == 2015) {
+//     console.log("That's correct!"); // If condition is true, this block runs.
+//     console.log("You're so smart!");
+// }
 // ===================
 // var year = 2016;
 // if (year == 2015) {
@@ -40,9 +40,6 @@ if (year == 2015) {
 // } else {
 //     console.log('Exactly!');  // Runs if year is exactly 2015
 // }
-
-
-
 
 // ============================
 // Checking access based on age
@@ -100,7 +97,7 @@ if (year == 2015) {
 // }
 
 // ============================
-// Using OR (||) operator with real-life example
+// // Using OR (||) operator with real-life example
 // var hour = 21; // Time of the day
 // if (hour < 10 || hour > 18) {
 //     console.log('The office is closed.'); // The office is closed if before 10 or after 18
@@ -119,10 +116,10 @@ if (year == 2015) {
 
 // // ============================
 // // AND Operator (&&)
-console.log(true && true);   // true
-console.log(false && true);  // false
-console.log(true && false);  // false
-console.log(false && false); // false
+// console.log(true && true);   // true
+// console.log(false && true);  // false
+// console.log(true && false);  // false
+// console.log(false && false); // false
 // ----------------
 // // // Example with AND operator to check exact time
 // var hour = 12;
@@ -369,7 +366,7 @@ console.log(false && false); // false
 //     default:
 //         console.log("Unknown range.");
 // }
-// ================
+// // ================
 // let amount = 99.99;
 
 // switch (amount) {

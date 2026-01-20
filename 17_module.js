@@ -3,9 +3,10 @@
 
 // global.myGlobalVariable = "Hello, global world!";
 // ================================
-
+// 2
 // export const exportGlobalVariable = "Hello, world!";
-
+// ===============
+//3
 // // // myModule.js
 
 // // // Named exports
@@ -19,7 +20,7 @@
 //     console.log('This is another function.');
 // }
 // ==================
-
+// 4
 // Export single object.js
 
 const myVarObj = 10;

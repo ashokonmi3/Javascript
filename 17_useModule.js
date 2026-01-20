@@ -1,7 +1,8 @@
+// 1
 // require('./17_module'); // Ensure this file loads the global config first
 // console.log(global.myGlobalVariable); // Outputs: "Hello, world!"
 // =============================
-
+//2
 // import { exportGlobalVariable } from './17_module.js';
 // console.log(exportGlobalVariable); // Outputs: "Hello, world!"
 // =========================
@@ -14,7 +15,7 @@
 
 // =======================
 // =======================
-
+// 3
 // import { myVar, myFunction, anotherVar, anotherFunction } from './17_module.js';
 
 // console.log(myVar);  // 10

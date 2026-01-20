@@ -51,7 +51,7 @@
 // console.log(parseFloat("34 35 33"));// Output: 34, parsing stops at the first non-digit character
 // console.log(parseFloat("he is 33"));// Output: NaN, starts with a non-number
 
-// // Handling parseFloat() with null or empty string
+// // // Handling parseFloat() with null or empty string
 // console.log(parseFloat(null));      // Output: NaN
 // console.log(parseFloat(''));        // Output: NaN
 
@@ -92,17 +92,17 @@
 // // JavaScript provides several methods to round numbers to the nearest integer or to the closest lower/higher number.
 // // ===============
 
-// console.log(Math.floor(3.9));  // Output: 3, rounds down to the nearest integer
-// console.log(Math.floor(-3.9)); // Output: -4, rounds down to the nearest integer
+console.log(Math.floor(3.9));  // Output: 3, rounds down to the nearest integer
+console.log(Math.floor(-3.9)); // Output: -4, rounds down to the nearest integer
 
-// console.log(Math.ceil(3.9));   // Output: 4, rounds up to the nearest integer
-// console.log(Math.ceil(-3.9));  // Output: -3, rounds up to the nearest integer
+console.log(Math.ceil(3.9));   // Output: 4, rounds up to the nearest integer
+console.log(Math.ceil(-3.9));  // Output: -3, rounds up to the nearest integer
 
-// console.log(Math.round(3.9));  // Output: 4, rounds to the nearest integer
-// console.log(Math.round(-3.9)); // Output: -4, rounds to the nearest integer
+console.log(Math.round(3.9));  // Output: 4, rounds to the nearest integer
+console.log(Math.round(-3.9)); // Output: -4, rounds to the nearest integer
 
-// console.log(Math.round(3.1));  // Output: 3, rounds to the nearest integer
-// console.log(Math.round(-3.1)); // Output: -3, rounds to the nearest integer
+console.log(Math.round(3.1));  // Output: 3, rounds to the nearest integer
+console.log(Math.round(-3.1)); // Output: -3, rounds to the nearest integer
 
 // ===============
 // Questions on Numbers in JavaScript
