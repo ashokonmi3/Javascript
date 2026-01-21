@@ -170,11 +170,26 @@
 // console.log(arr1);
 // console.log(arr2);
 
-var arr = [[100, 12, 3, 14], [1, 2, 3], [4, 5, 6]];
+// var arr = [[100, 12, 3, 14], [1, 2, 3], [4, 5, 6]];
 
-arr.forEach(element => {
-    console.log(element);
-});
+// arr.forEach(element => {
+//     console.log(element);
+// });
+
+// -----------
+//  For...Of Loop (for arrays or iterables)
+// Loops through values of an iterable like arrays or strings
+// Syntax: for (value of iterable) { statement }
+// ===============
+
+// let colors = ["red", "green", "blue"];
+// for (let x of colors) {
+//   console.log(x); // Pr
+//   // ints each color in the array
+// }
+// Output: red, green, blue
+
+
 // ===============
 //  Interview Questions and Answers on Arrays
 // ===============

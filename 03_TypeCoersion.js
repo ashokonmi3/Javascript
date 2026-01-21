@@ -90,18 +90,18 @@
 // Comparison Operators and Type Coercion
 // ============================================
 
-console.log(2 > 1);  // true - Both numbers, direct comparison.
-console.log(2 == 1); // false - No type coercion needed.
-console.log(2 != 1); // true - No type coercion needed.
+// console.log(2 > 1);  // true - Both numbers, direct comparison.
+// console.log(2 == 1); // false - No type coercion needed.
+// console.log(2 != 1); // true - No type coercion needed.
 
-console.log('2' > 1); // true - '2' coerced to number 2.
-console.log('01' == 1); // true - '01' coerced to number 1.
-console.log(true == 1); // true - true coerced to number 1.
-console.log(false == 0); // true - false coerced to number 0.
+// console.log('2' > 1); // true - '2' coerced to number 2.
+// console.log('01' == 1); // true - '01' coerced to number 1.
+// console.log(true == 1); // true - true coerced to number 1.
+// console.log(false == 0); // true - false coerced to number 0.
 
-console.log(0 === false); // false - Different types: number and boolean.
-console.log(null === undefined); // false - Strict comparison with different types.
-console.log(null == undefined); // true - Loose comparison treats them as equal.
+// console.log(0 === false); // false - Different types: number and boolean.
+// console.log(null === undefined); // false - Strict comparison with different types.
+// console.log(null == undefined); // true - Loose comparison treats them as equal.
 
 // // ============================================
 // // Summary and Best Practices

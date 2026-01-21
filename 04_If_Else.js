@@ -145,7 +145,8 @@
 // console.log(!"ss"); // false (string is truthy, NOT makes it false)
 // console.log(!!null); // false (double NOT converts null to boolean)
 // console.log(!!!null); // false (double NOT converts null to boolean)
-
+// !!true
+// !false
 // ============================
 // Falsy values in JavaScript (falsy values include: 0, "", null, undefined, NaN, false)
 // ============================
@@ -310,7 +311,6 @@
 // }
 // =======================
 // let month = "August";
-
 // switch (month) {
 //     case "December":
 //     case "January":
@@ -394,6 +394,23 @@
 //     console.log("Default age");
 // }
 // ==========================
+// User input - we can not run this code directly
+// command to execute node 02_Operators.js
+// ===================================
+
+const readline = require("readline");
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+rl.question("Enter your name: ", function(name) {
+  console.log("Hello", name);
+  rl.close();
+});
+// ----------------------
+// Integer input
 // const readline = require('readline');
 
 // const rl = readline.createInterface({
@@ -404,6 +421,23 @@
 // rl.question('Enter the student\'s score: ', (input) => {
 //     const score = parseInt(input, 10);
 // }
+
+// -------------------
+// Multiple input
+// const readline = require('readline');
+
+// const rl = readline.createInterface({
+//     input: process.stdin,
+//     output: process.stdout
+// });
+
+// rl.question('Enter your name: ', (name) => {
+//     rl.question('Enter your age: ', (age) => {
+//         console.log(`Hello, ${name}. You are ${age} years old.`);
+//         rl.close();
+//     });
+// });
+
 // ===================
 // Write a program that takes a student's score as input and outputs
 // their grade based on the following criteria:
@@ -458,7 +492,6 @@
 // -------------------
 // 3. Check Vowel or Consonant
 // Write a function that checks if a given character(single letter) is a vowel or consonant.
-
-//     Return "Vowel" if the character is one of a, e, i, o, u(case -insensitive).
-//         Otherwise, return "Consonant".
+// Return "Vowel" if the character is one of a, e, i, o, u(case -insensitive).
+// Otherwise, return "Consonant".
 

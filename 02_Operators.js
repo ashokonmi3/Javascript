@@ -16,15 +16,15 @@
 // a += 5;  // a = a + 5, now a = 15
 // console.log(a);  // Output: 15
 
-// // // Subtract and assign (-=)
+// // // // Subtract and assign (-=)
 // a -= 5;  // a = a - 5, now a = 10
 // console.log(a);  // Output: 10
 
-// // // Multiply and assign (*=)
+// // // // Multiply and assign (*=)
 // a *= 2;  // a = a * 2, now a = 20
 // console.log(a);  // Output: 20
 
-// // // Divide and assign (/=)
+// // // // Divide and assign (/=)
 // a /= 4;  // a = a / 4, now a = 5
 // console.log(a);  // Output: 5
 
@@ -32,12 +32,14 @@
 // // 2. Arithmetic Operators
 // // ===============================
 
-// Modulo (remainder)
-// a=5;
+// Modulos (remainder)
+a=5;
 // console.log(a%5);
 // console.log(5 % 2);  // Output: 1 (remainder of 5 divided by 2)
 // console.log(8 % 3);  // Output: 2 (remainder of 8 divided by 3)
 // console.log(6 % 3);  // Output: 0 (no remainder)
+// console.log(6 % 30);  // Output: 0 (no remainder)
+// console.log(8 % 13);  // Output: 2 (remainder of 8 divided by 3)
 
 // // Exponentiation (**)
 // console.log(2 ** 3);  // Output: 8 (2 raised to the power of 3)
@@ -106,7 +108,7 @@
 
 // console.log("JavaScript" + " " + "is awesome!");  // Output: JavaScript is awesome!
 
-console.log("The answer is " + 42);  // Output: The answer is 42
+// console.log("The answer is " + 42);  // Output: The answer is 42
 
 // ===============================
 // 6. Logical Operators
@@ -200,8 +202,8 @@ console.log("The answer is " + 42);  // Output: The answer is 42
 // // == (loose equality) compares values with type coercion. It converts operands to the same type before comparing them.
 // // === (strict equality) compares both values and types without type coercion.
 
-console.log(5 == "5");  // Output: true (because '5' is coerced to number)
-console.log(5 === "5");  // Output: false (because types are different)
+// console.log(5 == "5");  // Output: true (because '5' is coerced to number)
+// console.log(5 === "5");  // Output: false (because types are different)
 
 // // Q2: What is the purpose of the typeof operator in JavaScript?
 // // Answer: typeof is used to check the type of a variable.
@@ -237,34 +239,6 @@ console.log(5 === "5");  // Output: false (because types are different)
 // console.log(Boolean(""));  // Output: false (falsy value)
 // console.log(Boolean(null));  // Output: false (falsy
 // ==================
-// user input
-// command to execute node 02_Operators.js
-// const readline = require('readline');
-
-// const rl = readline.createInterface({
-//     input: process.stdin,
-//     output: process.stdout
-// });
-
-// rl.question('Please enter your name: ', (name) => {
-//     console.log(`Hello, ${name}!`);
-//     rl.close();
-// });
-// ===============
-// Multiple input
-// const readline = require('readline');
-
-// const rl = readline.createInterface({
-//     input: process.stdin,
-//     output: process.stdout
-// });
-
-// rl.question('Enter your name: ', (name) => {
-//     rl.question('Enter your age: ', (age) => {
-//         console.log(`Hello, ${name}. You are ${age} years old.`);
-//         rl.close();
-//     });
-// });
 
 
 // // =============================

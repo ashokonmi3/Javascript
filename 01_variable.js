@@ -193,14 +193,14 @@ var a = 10;        // Integer number
 // // "use strict"; enforces stricter parsing and error handling
 // // Prevents accidental usage of undeclared variables
 
-// "use strict";
-// var strictVar = 10;
-// console.log(strictVar); // Output: 10
+"use strict";
+var strictVar = 10;
+console.log(strictVar); // Output: 10
 
 // // // // // Uncommenting the following line would cause an error in strict mode
 // "use strict";
-// strictAssignment = 20; // ReferenceError: strictAssignment is not defined
-// console.log(strictAssignment); // Output: 10
+strictAssignment2 = 20; // ReferenceError: strictAssignment is not defined
+console.log(strictAssignment2); // Output: 10
 
 // // ===========================
 // // Example Without Strict Modeṇ
@@ -313,13 +313,13 @@ var a = 10;        // Integer number
 // ===========================
 // Scope of var and let
 // ===========================
-if (true) {
-    var x = 10;
-    let y = 20;
-    console.log("inside function y value " + y);
-}
-console.log(x); // 10 (accessible because `var` is function-scoped or globally scoped)
-console.log(y); // ReferenceError: y is not defined (because `let` is block-scoped)
+// if (true) {
+//     var x = 10;
+//     let y = 20;
+//     console.log("inside function y value " + y);
+// }
+// console.log(x); // 10 (accessible because `var` is function-scoped or globally scoped)
+// console.log(y); // ReferenceError: y is not defined (because `let` is block-scoped)
 
 // ============
 /*
