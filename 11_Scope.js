@@ -1,4 +1,4 @@
-```js
+
 /************************************************************
  * JAVASCRIPT SCOPE
  * CONCEPTS AND READING NOTES WITH EXAMPLES
@@ -165,7 +165,7 @@ LEXICAL SCOPE (STATIC SCOPING)
 */
 
 // function outerFunction() {
-//   var f = 60; // scoped to outerFunction
+//   let f = 60; // scoped to outerFunction
 
 //   function innerFunction() {
 //     console.log(f); // Output: 60 (inner can access outer variables)
@@ -194,20 +194,20 @@ SCOPE CHAIN AND VARIABLE LOOKUP
 - If not found in global scope, JavaScript throws ReferenceError.
 */
 
-var globalVar = "global";
+// var globalVar = "global";
 
-function firstFunction() {
-  var localVar = "local";
+// function firstFunction() {
+//   var localVar = "local";
 
-  function secondFunction() {
-    console.log(globalVar);  // Output: "global" (found in global scope)
-    console.log(localVar);   // Output: "local" (found in firstFunction scope)
-  }
+//   function secondFunction() {
+//     console.log(globalVar);  // Output: "global" (found in global scope)
+//     console.log(localVar);   // Output: "local" (found in firstFunction scope)
+//   }
 
-  secondFunction();
-}
+//   secondFunction();
+// }
 
-firstFunction();
+// firstFunction();
 
 /*
 Common bug warning:
@@ -222,11 +222,13 @@ STRICT MODE AND ACCIDENTAL GLOBALS
 ------------------------------------------------------------
 - In strict mode, assigning to an undeclared variable throws an error.
 - This helps prevent accidental global variables.
+- this will work only non-strict-compatible Node version or environment.
 */
 
 // "use strict";
 // function testStrict() {
 //   accidental = 10; // ReferenceError in strict mode
+//   console.log(accidental);
 // }
 // testStrict();
 
@@ -254,9 +256,6 @@ VAR, LET, CONST AND SCOPE DIFFERENCES
 // let y = 2;
 // const z = 3;
 
-/*
-Example showing block scope:
-*/
 
 // if (true) {
 //   var a = 10;   // accessible outside the block if not inside a function
@@ -312,4 +311,3 @@ SUMMARY
 END OF JAVASCRIPT SCOPE CONTENT
 ------------------------------------------------------------
 */
-```
