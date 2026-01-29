@@ -250,17 +250,215 @@
 // ===============================
 // Deep copy : JSON.parse(JSON.stringify())
 
-var original = { prop1: "value1", prop2: { inner: "innervalue" } };
-var deepCopy = JSON.parse(JSON.stringify(original));
-console.log( "deepCopy");
-console.log( deepCopy);
-deepCopy.prop2.inner = "modified";
-console.log(original.prop2.inner);
-console.log( "original");
-console.log( original);
-deepCopy.prop1 = "modified";
-console.log( "original");
-console.log(original.prop1);
+// var original = { prop1: "value1", prop2: { inner: "innervalue" } };
+// var deepCopy = JSON.parse(JSON.stringify(original));
+// console.log( "deepCopy");
+// console.log( deepCopy);
+// deepCopy.prop2.inner = "modified";
+// console.log(original.prop2.inner);
+// console.log( "original");
+// console.log( original);
+// deepCopy.prop1 = "modified";
+// console.log( "original");
+// console.log(original.prop1);
+// =============================
+/*******************************************************
+ * JAVASCRIPT – LOOPS ON OBJECTS
+ *  *******************************************************/
+
+/*
+👉 IMPORTANT CONCEPT
+- Objects store data in key : value pairs
+- Arrays are indexed (0,1,2...)
+- Objects are NOT indexed → normal for-loop does NOT work directly
+*/
+
+const employee = {
+  empId: 101,
+  name: "Amit",
+  role: "Developer",
+  salary: 75000,
+  location: "Bangalore"
+};
+
+/*
+=====================================================
+1️⃣ for...in LOOP  (MOST COMMON FOR OBJECTS)
+=====================================================
+- Loops through KEYS of an object
+- Best for simple object iteration
+*/
+
+console.log("---- for...in loop ----");
+
+for (let key in employee) {
+  console.log(key, ":", employee[key]);
+}
+
+/*
+🧠 Point:
+- key → property name (string)
+- employee[key] → value
+- Dot notation (employee.key) ❌ will NOT work here
+*/
+
+
+/*
+=====================================================
+2️⃣ Object.keys() + for loop
+=====================================================
+- Object.keys() returns an ARRAY of keys
+- Useful when you want index control
+*/
+
+console.log("---- Object.keys() ----");
+
+const keys = Object.keys(employee);
+
+for (let i = 0; i < keys.length; i++) {
+  console.log(keys[i], ":", employee[keys[i]]);
+}
+
+/*
+🧠 Point:
+- keys = ["empId","name","role","salary","location"]
+- Very useful when combining with conditions
+*/
+
+
+/*
+=====================================================
+3️⃣ Object.values() + for...of
+=====================================================
+- Returns only VALUES
+- Use when keys are NOT required
+*/
+
+console.log("---- Object.values() ----");
+
+const values = Object.values(employee);
+
+for (let value of values) {
+  console.log(value);
+}
+
+
+/*
+=====================================================
+4️⃣ Object.entries()  ⭐ MOST POWERFUL
+=====================================================
+- Returns [key, value] pairs
+- Best for real-world applications
+*/
+
+console.log("---- Object.entries() ----");
+
+for (let [key, value] of Object.entries(employee)) {
+  console.log(`${key} => ${value}`);
+}
+
+/*
+🧠 Tip:
+- Preferred in modern JavaScript
+- Very readable & interview-friendly
+*/
+
+
+/*
+=====================================================
+5️⃣ CONDITIONAL LOGIC WHILE LOOPING OBJECT
+=====================================================
+Example: Find salary-related properties
+*/
+
+console.log("---- Conditional Logic ----");
+
+for (let key in employee) {
+  if (key === "salary") {
+    console.log("Salary Found:", employee[key]);
+  }
+}
+
+
+/*
+=====================================================
+6️⃣ LOOPING NESTED OBJECT
+=====================================================
+*/
+
+const student = {
+  id: 1,
+  name: "Riya",
+  marks: {
+    math: 85,
+    science: 90,
+    english: 78
+  }
+};
+
+console.log("---- Nested Object ----");
+
+for (let subject in student.marks) {
+  console.log(subject, ":", student.marks[subject]);
+}
+
+/*
+🧠 Tip:
+- First access inner object
+- Then loop on it separately
+*/
+
+
+/*
+=====================================================
+7️⃣ OBJECT INSIDE ARRAY (REAL  SCENARIO)
+=====================================================
+*/
+
+const employees = [
+  { id: 1, name: "Amit", role: "Dev" },
+  { id: 2, name: "Neha", role: "Tester" },
+  { id: 3, name: "Rahul", role: "Manager" }
+];
+
+console.log("---- Object inside Array ----");
+
+for (let emp of employees) {
+  for (let key in emp) {
+    console.log(key, ":", emp[key]);
+  }
+  console.log("------");
+}
+
+
+/*
+=====================================================
+❌ COMMON MISTAKES
+=====================================================
+
+❌ employee.forEach()   → forEach works on arrays, NOT objects
+❌ for (let i=0; i<employee.length; i++) → Objects have NO length
+❌ employee.key → Wrong inside loop
+
+✔ employee[key] → Correct
+*/
+
+
+/*
+=====================================================
+📌 QUICK INTERVIEW SUMMARY
+=====================================================
+
+1. for...in → basic object looping
+2. Object.keys() → keys only
+3. Object.values() → values only
+4. Object.entries() → key + value (BEST PRACTICE)
+5. Nested objects need nested loops
+*/
+
+
+
+
 // // ====================
 // // Questions on JavaScript Objects
 // // ====================

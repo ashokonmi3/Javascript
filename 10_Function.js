@@ -1,164 +1,240 @@
-// ========================
-// What is a Function in JavaScript?
-// Functions are reusable blocks of code designed to perform specific tasks. They allow us to execute the same code at multiple points in a program, making it easier to manage, debug, and maintain.
-// Functions are important for modular programming, enabling code reusability and reducing redundancy.
-// ========================
+/************************************************************
+ * JAVASCRIPT FUNCTIONS
+ * CONCEPTS AND READING NOTES WITH EXAMPLES
+ ************************************************************/
 
-// ===============
-// Basic Function Example
-// A simple function that prints a message to the console.
-// ===============
+/*
+------------------------------------------------------------
+WHAT IS A FUNCTION IN JAVASCRIPT?
+------------------------------------------------------------
+- A function is a block of code written to perform a specific task.
+- Functions allow the same logic to be reused multiple times.
+- Instead of repeating code, we define it once and call it whenever needed.
+- Functions help make programs easier to read, understand, and maintain.
+- Using functions supports modular programming by breaking large programs
+  into smaller logical parts.
+*/
+
+/*
+------------------------------------------------------------
+BASIC FUNCTION (NO PARAMETERS)
+------------------------------------------------------------
+- This function does not take any input values.
+- It simply executes the statements written inside it.
+- The function runs only when it is called.
+- The same function can be called multiple times.
+*/
 
 // function showMessage() {
 //     console.log("Hello");
-//     console.log("Hello");
-//     console.log("Hello");
+//     console.log("Welcome to JavaScript Functions");
 // }
-// showMessage(); // Call the function
-// showMessage(); // Call the function again
 
-// ========================
-// Function with Parameters
-// Function that calculates interest based on parameters passed.
-// ========================
+// /*
+// Calling the function multiple times executes the same code each time.
+// */
+
+// showMessage();
+// showMessage();
+
+
+/*
+------------------------------------------------------------
+FUNCTION WITH PARAMETERS
+------------------------------------------------------------
+- Parameters are variables listed in the function definition.
+- They receive values when the function is called.
+- Parameters make functions flexible and reusable.
+- The same function can behave differently for different inputs.
+*/
 
 // function calculateInterest(amount, duration, rateOfInterest) {
-//     "use strict";
+//     /*
+//     amount         represents the principal amount
+//     duration       represents the time period
+//     rateOfInterest represents the interest rate
+//     */
 //     let interest = (amount * duration * rateOfInterest) / 100;
-//     console.log("Interest Calculation:", interest);
-//     // intereest =10;
+//     console.log("Calculated Interest:", interest);
 // }
+
+// /*
+// Values passed during the function call are called arguments.
+// */
+
 // calculateInterest(10000, 12, 5);
-// calculateInterest(102000, 16, 4);
-// interest=10;
-// console.log(interest)
-// ========================
-// Function with Parameters and Variables
-// Display different messages based on the input.s
-// ========================
+// calculateInterest(50000, 10, 7);
 
-// function showMessage(abc) {
-//     console.log(abc);
-// }
-// showMessage("python");
-// showMessage("java");
-// showMessage("javascript");
 
-// ========================
-// Function with Multiple Parameters
-// Displays two strings in reverse order of parameters.
-// ========================
-
-// function displayStrings(string1, string2) {
-//     console.log(string2, string1);
-// }
-// displayStrings("python", "selenium");
-
-// ========================
-// Function with Return Value
-// Function that calculates area and returns the value for further calculations.
-// ========================
+/*
+------------------------------------------------------------
+FUNCTION WITH RETURN VALUE
+------------------------------------------------------------
+- return sends a value back to the place where the function was called.
+- After return is executed, the function stops running.
+- Returned values can be stored in variables.
+- Returned values can be reused in further calculations.
+*/
 
 // function calculateArea(x) {
 //     return x * 2;
 // }
-// let y = calculateArea(10);
-// console.log("Price is " + (y * 100));
 
-// ========================
-// Types of Functions
-// 1. Regular Functions
-// 2. Constructor Functions (like `new Date()`)
-// 3. Function Methods (functions as object properties)
-// ========================
+// /*
+// The returned value is stored in a variable.
+// */
 
-// Regular Function Example
-// function add(x, y) {
-//     return x + y;
+// let result = calculateArea(10);
+
+// /*
+// The stored value is reused in another calculation.
+// */
+
+// console.log("Final Price:", result * 100);
+
+
+/*
+------------------------------------------------------------
+FUNCTION WITH MULTIPLE PARAMETERS
+------------------------------------------------------------
+- A function can accept more than one parameter.
+- Parameters are separated using commas.
+- The order of arguments must match the order of parameters.
+*/
+
+// function displayStrings(str1, str2) {
+//     console.log(str2, str1);
 // }
+
+// displayStrings("JavaScript", "Learning");
+
+
+/*
+------------------------------------------------------------
+FUNCTION DECLARATION AND FUNCTION EXPRESSION
+------------------------------------------------------------
+
+Function Declaration:
+- Defined using the function keyword.
+- Can be called before its definition in the code.
+- JavaScript hoists function declarations.
+*/
+
+// function add(a, b) {
+//     return a + b;
+// }
+
 // console.log(add(3, 4));
 
-// ========================
-// Function Expressions
-// Assigning functions to variables allows us to store and reuse them.
-// ========================
+/*
+Function Expression:
+- A function assigned to a variable.
+- Cannot be called before it is defined.
+- Often used when functions are treated as values.
+*/
 
-// var functionVariable = function (x, y) {
-//     return x + y + 100;
+// let addExpression = function (a, b) {
+//     return a + b + 100;
 // };
-// console.log(functionVariable(34, 4));
+
+// console.log(addExpression(5, 5));
 
 
+/*
+------------------------------------------------------------
+CALLING ONE FUNCTION FROM ANOTHER FUNCTION
+------------------------------------------------------------
+- A function can call another function inside its body.
+- This helps break large logic into smaller, manageable parts.
+- Improves readability and reuse.
+*/
 
-// ========================
-// Function Parameters vs Arguments
-// Parameters are placeholders in function definitions; arguments are values passed when calling the function.
-// ========================
-
-// function helloWorld(param1, param2) {
-//     console.log(param1 + " " + param2);
+// function greet() {
+//     console.log("Hello");
 // }
-// helloWorld("hello", "world");
-
-// ========================
-// Calling Function from Another Function
-// ========================
-
-// var greet = function () {
-//     console.log("hello");
-// };
 
 // function outerFunction() {
 //     greet();
 // }
-// outerFunction(); // Calls greet inside another function
 
-// // ========================
-// // Passing Function as Argument
-// // ========================
+// outerFunction();
 
-// var greetByName = function (name) {
+
+/*
+------------------------------------------------------------
+PASSING FUNCTION AS AN ARGUMENT (CALLBACK FUNCTION)
+------------------------------------------------------------
+- Functions in JavaScript can be treated as values.
+- A function can be passed as an argument to another function.
+- This technique is widely used in events, timers, and asynchronous code.
+*/
+
+// function greetByName(name) {
 //     console.log("Hello " + name);
-// };
+// }
 
-// // greetByName("python");
-// // greetByName(5);
+// function executeFunction(fn, value) {
+//     fn(value);
+// }
 
-// var executeFunction = function (fn, name) {
-//     fn(name); // greetByName("Python")
-// };
-// executeFunction(greetByName, "Python");
+// executeFunction(greetByName, "Student");
 
-// // ========================
-// // Functions as Object Properties (Methods)
-// // ========================
 
-// var person = {
+/*
+------------------------------------------------------------
+FUNCTIONS AS OBJECT METHODS
+------------------------------------------------------------
+- When a function is stored as a property of an object, it is called a method.
+- Methods define the behavior of an object.
+- The keyword this refers to the object that owns the method.
+*/
+
+// let person = {
 //     firstName: "Ashok",
 //     lastName: "Sharma",
 //     getFullName: function () {
 //         return this.firstName + " " + this.lastName;
-//     },
+//     }
 // };
+
 // console.log(person.getFullName());
 
-// // ========================
-// // Function Arguments Object
-// // Allows access to all arguments passed to the function.
-// // ========================
 
-// function argTest() {
-//     console.log(arguments); // Shows all arguments passed
-//     console.log(arguments.length); // Shows argument count
+/*
+------------------------------------------------------------
+ARGUMENTS OBJECT
+------------------------------------------------------------
+- The arguments object is available inside all normal functions.
+- It contains all values passed to the function.
+- It behaves like an array but is not a real array.
+- Useful when the number of arguments is not fixed.
+*/
+
+// function showArguments() {
+//     console.log(arguments);
+//         console.log(arguments[0]);
+//         console.log(arguments[1]);
+//                 console.log(arguments[2]);
+
+
+//     console.log("Total arguments:", arguments.length);
 // }
-// argTest(1, "java", "selenium", "python");
 
-// // ========================
-// // Using Arguments to Find Maximum
-// // ========================
+// showArguments(10, "Java", "Python", true);
+
+
+/*
+------------------------------------------------------------
+USING ARGUMENTS TO FIND MAXIMUM VALUE
+------------------------------------------------------------
+- This example finds the largest value from the given inputs.
+- Each argument is compared one by one.
+- The highest value is returned.
+*/
 
 // function findMax() {
 //     let max = -Infinity;
+
 //     for (let i = 0; i < arguments.length; i++) {
 //         if (arguments[i] > max) {
 //             max = arguments[i];
@@ -166,64 +242,223 @@
 //     }
 //     return max;
 // }
-// console.log(findMax(1, 123, 500, 115, 44, 88));
 
-// // ========================
-// // Function with Default Parameters
-// // ========================
+// console.log("Maximum Value:", findMax(10, 200, 55, 999, 45));
 
-// function showMessageWithDefaults(from, text = "no text given") {
+
+/*
+------------------------------------------------------------
+DEFAULT PARAMETERS
+------------------------------------------------------------
+- Default values are used when arguments are not provided.
+- Helps avoid undefined values.
+- Makes functions safer and more predictable.
+*/
+
+// function showMessageWithDefaults(from, text = "No message provided") {
 //     console.log(from + ": " + text);
 // }
-// showMessageWithDefaults("Ann");
-// showMessageWithDefaults("Ann", "javascript learning");
+
+// showMessageWithDefaults("Admin");
+// showMessageWithDefaults("Admin", "Welcome Students");
 
 
-// // ========================
-// // Arrow Functions
-// // Shorthand syntax for functions, commonly used for simpler functions.
-// // ========================
+/*
+------------------------------------------------------------
+ARROW FUNCTIONS
+------------------------------------------------------------
+- Arrow functions provide a shorter syntax for writing functions.
+- Commonly used for simple operations and callbacks.
+- Arrow functions do not have their own this keyword.
+*/
 
 // let hello = () => "Hello World!";
 // console.log(hello());
 
-// let personalizedHello = (name) => "Hello " + name + "!";
-// console.log(personalizedHello("Developer"));
+// let greetUser = (name) => "Hello " + name;
+// console.log(greetUser("Developer"));
 
-// // ========================
-// // Questions:
-// // ========================
-// // Q1: What is the difference between a function declaration and a function expression?
-// // A1: Function declarations are hoisted, meaning they can be called before they are defined. Function expressions, however, are not hoisted and are assigned to variables.
-// // Example:
-// function declarationExample() {
-//     return "I am a declaration";
+
+/*
+------------------------------------------------------------
+FUNCTION HOISTING
+------------------------------------------------------------
+- Function declarations are hoisted to the top of their scope.
+- This allows functions to be called before they are defined.
+- Function expressions are not hoisted.
+*/
+
+// hoistedFunction();
+
+// function hoistedFunction() {
+//     console.log("This function works because of hoisting");
 // }
-// let expressionExample = function () {
-//     return "I am an expression";
-// };
-// console.log(declarationExample());
-// console.log(expressionExample());
 
-// // Q2: How does the `this` keyword work in a JavaScript function?
-// // A2: `this` refers to the object that calls the function. In the global scope, `this` refers to the global object; in methods, `this` refers to the object itself.
-// // Example:
-// let obj = {
-//     name: "John",
-//     showName: function () {
-//         console.log(this.name);
+/*
+The following would cause an error if uncommented:
+*/
+// notHoisted();
+// let notHoisted = function () {
+//     console.log("This will not work");
+// };
+
+/*
+------------------------------------------------------------
+FUNCTION SCOPE
+------------------------------------------------------------
+- Scope defines where variables can be accessed.
+- Variables declared inside a function have local scope.
+- Local variables cannot be accessed outside the function.
+*/
+
+// function scopeExample() {
+//     let localVariable = "I am local";
+//     console.log(localVariable);
+// }
+
+// scopeExample();
+// console.log(localVariable); // Error
+
+
+/*
+------------------------------------------------------------
+GLOBAL VS LOCAL VARIABLES
+------------------------------------------------------------
+- Variables declared outside functions are global.
+- Global variables can be accessed from anywhere.
+- Excessive use of globals can cause unexpected behavior.
+*/
+
+// let globalVariable = "I am global";
+
+// function accessGlobal() {
+//     console.log(globalVariable);
+// }
+
+// accessGlobal();
+
+
+/*
+------------------------------------------------------------
+REST PARAMETERS
+------------------------------------------------------------
+- Rest parameters collect multiple arguments into an array.
+- Written using three dots (...)
+- Easier and cleaner than using arguments.
+*/
+
+// function sumAll(...numbers) {
+//     let sum = 0;
+//     for (let value of numbers) {
+//         sum += value;
+//     }
+//     return sum;
+// }
+
+// console.log("Sum:", sumAll(10, 20, 30, 40));
+
+
+/*
+------------------------------------------------------------
+ARGUMENTS VS REST PARAMETERS
+------------------------------------------------------------
+- arguments is array-like, not a real array.
+- rest parameters are real arrays.
+- rest parameters work with arrow functions.
+- arguments do not work with arrow functions.
+*/
+
+
+/*
+------------------------------------------------------------
+ARROW FUNCTION AND this KEYWORD
+------------------------------------------------------------
+- Arrow functions do not have their own this.
+- They inherit this from the surrounding scope.
+*/
+
+// let user = {
+//     name: "Riya",
+//     normalFunction: function () {
+//         console.log("Normal Function:", this.name);
 //     },
+//     arrowFunction: () => {
+//         console.log("Arrow Function:", this.name);
+//     }
 // };
-// obj.showName(); // Outputs: John
 
-// // Q3: Explain `arguments` in JavaScript functions.
-// // A3: The `arguments` object is an array-like object accessible inside functions, containing all arguments passed to the function.
-// // Example:
-// function showArgs() {
-//     console.log(arguments);
+// user.normalFunction();
+// user.arrowFunction();
+
+
+/*
+------------------------------------------------------------
+PURE FUNCTION
+------------------------------------------------------------
+- A pure function always returns the same output
+  for the same input.
+- It does not modify external data.
+*/
+
+// function pureAdd(a, b) {
+//     return a + b;
 // }
-// showArgs("arg1", "arg2");
 
-// ========================
-// End of Content
-// ========================
+// console.log(pureAdd(2, 3));
+// console.log(pureAdd(2, 3));
+
+
+/*
+------------------------------------------------------------
+IMPURE FUNCTION
+------------------------------------------------------------
+- An impure function depends on or modifies external data.
+- Output may change even with the same input.
+*/
+
+// let count = 0;
+
+// function impureIncrement() {
+//     count++;
+//     return count;
+// }
+
+// console.log(impureIncrement());
+// console.log(impureIncrement());
+
+
+/*
+------------------------------------------------------------
+IMMEDIATELY INVOKED FUNCTION EXPRESSION (IIFE)
+------------------------------------------------------------
+- A function that runs immediately after it is defined.
+- Helps avoid polluting the global scope.
+*/
+
+(function () {
+    console.log("This function runs immediately");
+})();
+
+
+/*
+------------------------------------------------------------
+COMMON MISTAKES WITH FUNCTIONS
+------------------------------------------------------------
+- Forgetting to call the function using ()
+- Expecting a return value when only console.log is used
+- Using arrow functions when this is required
+- Overusing global variables
+*/
+
+
+/*
+------------------------------------------------------------
+FINAL NOTES
+------------------------------------------------------------
+- Functions are the foundation of JavaScript programming
+- Understanding functions is essential for learning:
+  callbacks, promises, async/await, and frameworks
+------------------------------------------------------------
+END OF JAVASCRIPT FUNCTIONS CONTENT
+------------------------------------------------------------
+*/
