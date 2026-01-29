@@ -222,6 +222,12 @@ const { stringify } = require("querystring");
 // for (let i = 0; i < str.length; i++) {
 //   console.log(i, str[i]);
 // }
+// =========
+
+// var str = "hello world"
+// for (var ch of str) {
+//     console.log(ch);
+// }
 
 // // ===============
 // // Reverse a String
@@ -244,8 +250,13 @@ const { stringify } = require("querystring");
 //     count++;
 //   }
 // }
-
 // console.log(count);
+
+console.log("a".includes("e"));//i = 0 
+console.log("aeiou".includes("e"));//i = 0 
+console.log("aeiou".includes("ae"));
+console.log("aeiou".includes("xi"));
+console.log("aeiou".includes("aeiou"));
 
 // // ===============
 // Assignment

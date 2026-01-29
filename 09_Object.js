@@ -19,7 +19,7 @@
 
 // var myObj = {};  // Empty object created
 // console.log(myObj); // Output: {}
-// // // // // ---------------
+
 // myObj.prop1 = "hello"; // Adding property dynamically
 // console.log(myObj); // Output: { prop: "hello" }
 
@@ -30,8 +30,8 @@
 // -----------------------
 
 // array = ["Thor", " Marvels", "Avegners"]
-//         0          1          2
-//       "Name"    "Studio"     "Movie"
+//          0          1          2
+//         "Name"    "Studio"     "Movie"
 
 // array = ["Avangers", " Marvels", "Thor"]
 //           "Movie"     "Studio"   "Name"
@@ -71,6 +71,7 @@
 // console.log(person);
 // console.log(person.age); // Accessing property with dot notation
 // console.log(person["firstName"]); // Accessing property with bracket notation
+// console.log(person.lastName); // Accessing property with bracket notation
 
 // console.log("Property that does not exist: " + person.prop3); // Accessing Non-Existent Properties
 
@@ -128,7 +129,7 @@
 // console.log(user["first name"]);  // ✅ "Alice"
 // console.log(user["last-name"]);   // ✅ "Doe"
 // console.log(user["@score"]);      // ✅ 100
-// // console.log(user.first name);  // ✅ "Alice"
+// console.log(user.first name);  // ✅ "Alice"
 
 // -------------------
 // Dynamic property access
@@ -183,13 +184,13 @@
 
 // ================
 
-// Case                                            Use .   Use []
-// -----------------------------------------      ------  ------
-// Simple, valid identifier property               ✅      ❌
-// Property name with spaces or special characters ❌ ✅
-// Property name starts with a number         ❌      ✅
-// Property name stored in a variable (dynamic access) ❌ ✅
-// Numeric keys (like array indices)          ❌      ✅
+// Case                                               Use .   Use []
+// -----------------------------------------         ------  ------
+// Simple, valid identifier property                   ✅      ❌
+// Property name with spaces or special characters     ❌      ✅
+// Property name starts with a number                  ❌      ✅
+// Property name stored in a variable (dynamic access) ❌      ✅
+// Numeric keys (like array indices)                   ❌      ✅
 // // ====================
 // // Nested Objects
 // // Objects can contain other objects as properties, creating a structure of nested objects.
@@ -233,27 +234,33 @@
 // console.log(str.length); // Accessing property of String wrapper object
 // ===================
 // Cloning of object shallow copy
+// the copy is created only for the first level of an object, nested objects will be shared beteween both copies
 // var original = { prop1: "value1", prop2: { inner: "innervalue" } };
 
 // var shallowCopy = { ...original }; // spread operator
+// // console.log("Original " + original);
+// // console.log("shallowCopy" + shallowCopy);
+
+
 // shallowCopy.prop2.inner = "modified";
-// console.log(original.prop2.inner);
+// console.log("Original " + original.prop2.inner);
 
 // shallowCopy.prop1 = "modified";
 // console.log(original.prop1);
 // ===============================
 // Deep copy : JSON.parse(JSON.stringify())
 
-// var original = { prop1: "value1", prop2: { inner: "innervalue" } };
-
-// var deepCopy = JSON.parse(JSON.stringify(original));
-// console.log(deepCopy);
-
-// deepCopy.prop2.inner = "modified";
-// console.log(original.prop2.inner);
-
-// deepCopy.prop1 = "modified";
-// console.log(original.prop1);
+var original = { prop1: "value1", prop2: { inner: "innervalue" } };
+var deepCopy = JSON.parse(JSON.stringify(original));
+console.log( "deepCopy");
+console.log( deepCopy);
+deepCopy.prop2.inner = "modified";
+console.log(original.prop2.inner);
+console.log( "original");
+console.log( original);
+deepCopy.prop1 = "modified";
+console.log( "original");
+console.log(original.prop1);
 // // ====================
 // // Questions on JavaScript Objects
 // // ====================

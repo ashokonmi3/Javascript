@@ -100,7 +100,7 @@
 //     console.log(k); // Prints value of k in each iteration
 // }
 // // Output: 0, 1, 2
-
+// -----------------
 // Example: Counting down with for loop
 // for (let l = 5; l >= 0; l--) {
 //     console.log(l); // Outputs value of l from 5 to 0
@@ -132,6 +132,159 @@
 //   console.log("inner" + m)
 // }
 // console.log("Outer" + m);
+// ===============================
+// JavaScript Loops – Single File
+// ===============================
+
+//-------------------
+// Print "javascript" 6 times
+// for (let i = 0; i <= 5; i++) {
+//   console.log("javascript");
+// }
+
+// //-------------------
+// //  Print "javascript : i"
+// for (let i = 0; i <= 10; i++) {
+//   console.log("javascript : " + i);
+// }
+
+// //-------------------
+// // Print 10 to 1
+// for (let i = 10; i >= 1; i--) {
+//   console.log(i);
+// }
+
+// -------------------
+// Print 1 to 10 except 7
+// for (let i = 1; i <= 10; i++) {
+//   if (i !== 7) {
+//     console.log(i);
+//   }
+// }
+// console.log("out of loop");
+
+//-------------------
+// Print 1 to 10 except 4 and 7
+// for (let i = 1; i <= 10; i++) {
+//   if (i !== 4 && i !== 7) {
+//     console.log(i);
+//   }
+// }
+
+//-------------------
+// Else condition example
+// for (let i = 1; i <= 10; i++) {
+//   if (i !== 4 && i !== 7) {
+//     console.log(i);
+//   } else {
+//     console.log("javascript " + i);
+//   }
+// }
+
+//-------------------
+// while loop (2 to 10)
+// let i = 2;
+// while (i <= 10) {
+//   console.log(i);
+//   i++;
+// }
+
+//-------------------
+// Print 10 to 1 using while
+// i = 10;
+// while (i >= 1) {
+//   console.log(i);
+//   i--;
+// }
+
+// //-------------------
+// // 9️⃣ do...while loop
+// i = 1000;
+// do {
+//   console.log("i value is : " + i);
+//   i++;
+// } while (i <= 10);
+
+// //-------------------
+// break example
+// for (let i = 1; i <= 10; i++) {
+//   if (i === 6) {
+//     console.log("this is inside break : javascript " + i);
+//     break;
+//   }
+//   console.log(i);
+// }
+// console.log("outside the loop");
+
+// -------------------
+// continue example
+// for (let i = 1; i <= 10; i++) {
+//   if (i === 7) continue;
+//   console.log(i);
+// }
+// console.log("outside the loop");
+
+// -------------------
+//  Fixed i with loop
+// let fixedI = 1;
+// for (let j = 1; j <= 3; j++) {
+//   console.log(fixedI + " " + j);
+// }
+
+
+// let fixedI = 2;
+// for (let j = 1; j <= 3; j++) {
+//   console.log(fixedI + " " + j);
+// }
+
+// let fixedI = 3;
+// for (let j = 1; j <= 3; j++) {
+//   console.log(fixedI + " " + j);
+// }
+
+
+// ------------------
+// Nested loops
+// for (let i = 0; i < 3; i++) {
+//   for (let j = 1; j <= 3; j++) {
+//     console.log(i + " " + j);
+//   }
+// }
+
+// //-------------------
+// // 1️⃣4️⃣ Loop labels
+// outerloop:
+// for (let i = 1; i <= 3; i++) {
+//   innerloop:
+//   for (let j = 1; j <= 3; j++) {
+//     if (i === 2 && j === 2) {
+//       break outerloop;
+//     }
+//     console.log(i + " " + j);
+//   }
+// }
+// console.log("i am outside of outerloop");
+
+// -------------------
+//  Star pattern
+// let n = 4;
+// for (let i = 1; i <= n; i++) {
+//   let row = "";
+//   for (let j = 1; j <= n; j++) {
+//     row += "*";
+//   }
+//   console.log(row);
+// }
+
+
+ //-------------------
+// for loop scope example
+// let ctr;
+// for (ctr = 0; ctr < 5; ++ctr) {
+//   console.log(ctr);
+// }
+// console.log(ctr); // accessible outside loop
+
 
 // ===============
 //  Infinite Loop
@@ -145,17 +298,6 @@
 // Loops through properties of an object
 // Syntax: for (key in object) { statement }
 // ===============
-
-// ===============
-
-
-
-
-
-
-
-
-
 
 // ===============
 //  Break Statement
@@ -192,49 +334,12 @@
 // Can be used to handle different cases within a loop
 // ===============
 
-// for (let day = 0; day < 3; day++) {
-//     let text;
-//     switch (day) {
-//         case 0:
-//             text = "Today is Sunday";
-//             break;
-//         case 1:
-//             text = "Today is Monday";
-//             break;
-//         default:
-//             text = "Another weekday";
-//     }
-//     console.log(text);
-// }
-// Output: Today is Sunday, Today is Monday, Another weekday
 
 // ===============
 //  Nested Loops
 // Loops inside other loops, useful for multidimensional data structures.
 // ===============
 
-// let matrix = [
-//   [1, 2, 3],
-//   [4, 5, 6],
-//   [7, 8, 9]
-// ];
-// for (let row = 0; row < matrix.length; row++) {
-//   for (let col = 0; col < matrix[row].length; col++) {
-//     console.log(matrix[row][col]);
-//   }
-// }
-// Output: 1 2 3 4 5 6 7 8 9
-// ======================
-
-// var str = "hello world"
-// for (var i = 0; i < str.length; i++) {
-//     console.log(str[i]);
-// }
-
-// var str = "hello world"
-// for (var ch of str) {
-//     console.log(ch);
-// }
 
 // ===========
 

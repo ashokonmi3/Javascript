@@ -398,17 +398,19 @@
 // command to execute node 02_Operators.js
 // ===================================
 
-const readline = require("readline");
+// const readline = require("readline");
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
+// const rl = readline.createInterface({
+//   input: process.stdin, //👉 process.stdin always reads input as a string (text).
+//   output: process.stdout
+// });
 
-rl.question("Enter your name: ", function(name) {
-  console.log("Hello", name);
-  rl.close();
-});
+// rl.question("Enter your name: ", function(name) {
+//   console.log("Hello", name);
+//   console.log("Type:", typeof name);
+
+//   rl.close();
+// });
 // ----------------------
 // Integer input
 // const readline = require('readline');
@@ -418,11 +420,34 @@ rl.question("Enter your name: ", function(name) {
 //     output: process.stdout
 // });
 
-// rl.question('Enter the student\'s score: ', (input) => {
-//     const score = parseInt(input, 10);
-// }
+// rl.question("Enter the student's score: ", (input) => {
+//     const score = Number(input);
+
+//     console.log("Score:", score);
+//     console.log("Type:", typeof score);
+
+//     rl.close();
+// });
 
 // -------------------
+
+const readline = require('readline');
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+rl.question("Enter the student's score: ", (input) => {
+    const score = parseFloat(input);
+
+    console.log("Score:", score);
+    console.log("Type:", typeof score);
+
+    rl.close();
+});
+
+
 // Multiple input
 // const readline = require('readline');
 

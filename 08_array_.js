@@ -37,18 +37,18 @@
 // ---------------
 // Array with Initial Values
 // var languages = ["JavaScript", "Python", "Java"];
-// // console.log(languages);             // Output: ["JavaScript", "Python", "Java"]
+// console.log(languages);             // Output: ["JavaScript", "Python", "Java"]
 
-// // // // // // // Accessing Elements
-// // console.log(languages[0]);  // Access the first element: "JavaScript"
-// // console.log(languages[2]);  // Access the third element: "Java"
-// // console.log(languages[3]);  // Access an undefined index: undefined
+// // Accessing Elements
+// console.log(languages[0]);  // Access the first element: "JavaScript"
+// console.log(languages[1]);  // Access the third element: "Java"
+// console.log(languages[2]);  // Access an undefined index: undefined
 
-// // // // // // Adding Elements to an Array
+// // // // // // // Adding Elements to an Array
 // languages[3] = "Ruby";
 // console.log(languages);   // Output: ["JavaScript", "Python", "Java", "Ruby"]
 
-// // // // // Checking if a Variable is an Array
+// // Checking if a Variable is an Array
 // console.log(Array.isArray(languages));  // Output: true
 // console.log(Array.isArray("Java"));     // Output: false
 
@@ -100,10 +100,10 @@
 //  Array Methods for Manipulating Elements
 // ===============
 
-// // splice(): Can add, remove, or replace elements at a specific position
+// splice(): Can add, remove, or replace elements at a specific position
 // var fruits = ["Banana", "Orange", "Apple", "Mango"];
-// // // // // At position 2, add 2 new elements
-// fruits.splice(2, 0, "Lemon", "Kiwi");
+// fruits.splice(2, 0, "Lemon", "Kiwi");// At position 2, add 2 new elements
+
 // console.log(fruits);  // Output: ["Banana", "Orange", "Lemon", "Kiwi", "Apple", "Mango"]
 
 // -------------------
@@ -121,18 +121,16 @@
 // // ===============
 // //  Array Methods for Searching and Sorting
 // // ===============
+// sort(): Sorts the elements of an array in place and returns the array ALWASYS SORT in STRING FORM
+// reverse(): Reverses the elements of an array in place
+// indexOf(): Returns the first index at which a given element is found
 
 // var numbers = [5, 2, 9, 1, 5, 6];
-
-// // // sort(): Sorts the elements of an array in place and returns the array ALWASYS SORT in STRING FORM
 // numbers.sort()
 // console.log(numbers)
-// // // // reverse(): Reverses the elements of an array in place
 // numbers.reverse();
 // console.log(numbers);  // Output: [9, 6, 5, 5, 2, 1]
 
-// // // indexOf(): Returns the first index at which a given element is found
-            // 0   1 2  3  4  5 
 // var numbers = [5, 2, 9, 1, 5, 6];
 
 // console.log(numbers.indexOf(6));  // Output: 2
@@ -144,11 +142,11 @@
 
 // Using a for loop
 // var arrayItems = ["A", "B", "C"];
-// // for (var i = 0; i < arrayItems.length; i++) {
-// //     console.log(arrayItems[i]);
-// // }
+// for (var i = 0; i < arrayItems.length; i++) {
+//     console.log(arrayItems[i]);
+// }
 
-// // // Using for...of loop
+// //  Using for...of loop
 // for (let item of arrayItems) {
 //     console.log(item);
 // }
@@ -157,7 +155,7 @@
 // arrayItems.forEach(function (item) {
 //     console.log(item);
 // });
-
+// ================
 // const colors = ["Red","Green", "Blue" , "magneta"];
 // // for(const color of colors){
 // // }
@@ -184,8 +182,8 @@
 
 // let colors = ["red", "green", "blue"];
 // for (let x of colors) {
-//   console.log(x); // Pr
-//   // ints each color in the array
+//   console.log(x); // // ints each color in the array
+  
 // }
 // Output: red, green, blue
 
