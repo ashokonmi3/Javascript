@@ -236,44 +236,44 @@ Callbacks can be nested to perform sequential tasks.
 
 // ---------------------
 
-function multiplyBy2(number, callback) {
-    console.log("multiplyBy2: Received number =", number);
+// function multiplyBy2(number, callback) {
+//     console.log("multiplyBy2: Received number =", number);
 
-    let result = number * 2;
-    console.log("multiplyBy2: After multiplication result =", result);
+//     let result = number * 2;
+//     console.log("multiplyBy2: After multiplication result =", result);
 
-    console.log("multiplyBy2: Sending result to callback...");
-    callback(result);
+//     console.log("multiplyBy2: Sending result to callback...");
+//     callback(result);
 
-    console.log("multiplyBy2: Callback finished\n");
-}
+//     console.log("multiplyBy2: Callback finished\n");
+// }
 
-function add3(number, callback) {
-    console.log("add3: Received number =", number);
+// function add3(number, callback) {
+//     console.log("add3: Received number =", number);
 
-    let result = number + 3;
-    console.log("add3: After addition result =", result);
+//     let result = number + 3;
+//     console.log("add3: After addition result =", result);
 
-    console.log("add3: Sending result to callback...");
-    callback(result);
+//     console.log("add3: Sending result to callback...");
+//     callback(result);
 
-    console.log("add3: Callback finished\n");
-}
+//     console.log("add3: Callback finished\n");
+// }
 
-console.log("Program Start\n");
+// console.log("Program Start\n");
 
-multiplyBy2(5, function (result1) {
-    console.log("Inside first callback (after multiplyBy2), result1 =", result1);
+// multiplyBy2(5, function (result1) {
+//     console.log("Inside first callback (after multiplyBy2), result1 =", result1);
 
-    add3(result1, function (result2) {
-        console.log("Inside second callback (after add3), result2 =", result2);
-        console.log("Final Output:", result2); // 13
-    });
+//     add3(result1, function (result2) {
+//         console.log("Inside second callback (after add3), result2 =", result2);
+//         console.log("Final Output:", result2); // 13
+//     });
 
-    console.log("Back inside first callback after calling add3");
-});
+//     console.log("Back inside first callback after calling add3");
+// });
 
-console.log("Program End (but async-style thinking still inside callbacks)");
+// console.log("Program End (but async-style thinking still inside callbacks)");
 
 
 
@@ -284,27 +284,27 @@ REAL-WORLD ANALOGY: ORDERING A PIZZA
 Demonstrates non-blocking behavior.
 */
 
-// function orderPizza(callback) {
-//     console.log("Ordering pizza...");
+function orderPizza(callback) {
+    console.log("Ordering pizza...");
 
-//     setTimeout(() => {
-//         console.log("Pizza is ready!");
-//         callback();
-//     }, 5000);
-// }
+    setTimeout(() => {
+        console.log("Pizza is ready!");
+        callback();
+    }, 5000);
+}
 
-// function eatPizza() {
-//     console.log("Eating the pizza now!");
-// }
+function eatPizza() {
+    console.log("Eating the pizza now!");
+}
 
-// orderPizza(eatPizza);
+orderPizza(eatPizza);
 
-// console.log("Doing other things while waiting... task1");
-// console.log("Doing other things while waiting... task2");
-// console.log("Doing other things while waiting... task3");
-// console.log("Doing other things while waiting... task4");
-// console.log("Doing other things while waiting... task5");
-// console.log("Doing other things while waiting... task6");
+console.log("Doing other things while waiting... task1");
+console.log("Doing other things while waiting... task2");
+console.log("Doing other things while waiting... task3");
+console.log("Doing other things while waiting... task4");
+console.log("Doing other things while waiting... task5");
+console.log("Doing other things while waiting... task6");
 
 
 /*
