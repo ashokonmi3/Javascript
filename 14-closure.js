@@ -97,26 +97,26 @@ CLOSURE WITH MODIFIED VARIABLES
 Closures can read and modify variables from outer scopes.
 */
 
-var a = 10;
+// var a = 10;
 
-function outer() {
-    var b = 20;
+// function outer() {
+//     var b = 20;
 
-    var inner = function () {
-        a++; // modifying global variable
-        b++; // modifying outer variable
-        console.log(a);
-        console.log(b);
-    };
+//     var inner = function () {
+//         a++; // modifying global variable
+//         b++; // modifying outer variable
+//         console.log(a);
+//         console.log(b);
+//     };
 
-    return inner;
-}
+//     return inner;
+// }
 
-var innerFn1 = outer();
-innerFn1(); // a = 11, b = 21
+// var innerFn1 = outer();
+// innerFn1(); // a = 11, b = 21
 
-var innerFn2 = outer();
-innerFn2(); // a = 12, b = 21
+// var innerFn2 = outer();
+// innerFn2(); // a = 12, b = 21
 
 /*
 Important notes:
@@ -133,11 +133,11 @@ CLOSURE IN ASYNCHRONOUS CODE
 Closures are heavily used in asynchronous programming.
 */
 
-var i = 10;
+// var i = 10;
 
-setTimeout(function () {
-    console.log(i);
-}, 1000);
+// setTimeout(function () {
+//     console.log(i);
+// }, 1000);
 
 /*
 The callback remembers `i` from its lexical scope.
@@ -152,15 +152,15 @@ Using var inside loops with asynchronous callbacks
 often causes unexpected results.
 */
 
-for (var i = 0; i < 5; i++) {
-    console.log(i);
+// for (var i = 0; i < 5; i++) {
+//     console.log(i);
 
-    setTimeout(function () {
-        console.log("setTimeout:", i);
-    }, 1000);
-}
+//     setTimeout(function () {
+//         console.log("setTimeout:", i);
+//     }, 1000);
+// }
 
-console.log(i);
+// console.log(i);
 
 /*
 Explanation:
@@ -178,11 +178,11 @@ SOLUTION USING let (BLOCK SCOPE)
 Each iteration gets its own `i`.
 */
 
-for (let i = 0; i < 5; i++) {
-    setTimeout(() => {
-        console.log(i);
-    }, 1000);
-}
+// for (let i = 0; i < 5; i++) {
+//     setTimeout(() => {
+//         console.log(i);
+//     }, 1000);
+// }
 
 /*
 Explanation:
@@ -199,13 +199,13 @@ SOLUTION USING CLOSURE (IIFE)
 Manually capturing the value using an IIFE.
 */
 
-for (var i = 0; i < 5; i++) {
-    (function (currentValue) {
-        setTimeout(function () {
-            console.log(currentValue);
-        }, 1000);
-    })(i);
-}
+// for (var i = 0; i < 5; i++) {
+//     (function (currentValue) {
+//         setTimeout(function () {
+//             console.log(currentValue);
+//         }, 1000);
+//     })(i);
+// }
 
 /*
 Explanation:
@@ -222,28 +222,28 @@ MODULE PATTERN USING CLOSURE
 Closures allow creation of private variables.
 */
 
-function createPerson() {
-    var firstName = "John";
-    var lastName = "Doe";
+// function createPerson() {
+//     var firstName = "John";
+//     var lastName = "Doe";
 
-    return {
-        getFirstName: function () {
-            return firstName;
-        },
-        getLastName: function () {
-            return lastName;
-        },
-        setFirstName: function (newName) {
-            firstName = newName;
-        }
-    };
-}
+//     return {
+//         getFirstName: function () {
+//             return firstName;
+//         },
+//         getLastName: function () {
+//             return lastName;
+//         },
+//         setFirstName: function (newName) {
+//             firstName = newName;
+//         }
+//     };
+// }
 
-var person = createPerson();
+// var person = createPerson();
 
-console.log(person.getFirstName()); // John
-person.setFirstName("Jane");
-console.log(person.getFirstName()); // Jane
+// console.log(person.getFirstName()); // John
+// person.setFirstName("Jane");
+// console.log(person.getFirstName()); // Jane
 
 /*
 Explanation:
@@ -300,13 +300,13 @@ CLOSURE IN LOOPS (ADDITIONAL EXAMPLE)
 Capturing loop values using closures.
 */
 
-for (var i = 0; i < 3; i++) {
-    (function (index) {
-        setTimeout(function () {
-            console.log(index);
-        }, 1000);
-    })(i);
-}
+// for (var i = 0; i < 3; i++) {
+//     (function (index) {
+//         setTimeout(function () {
+//             console.log(index);
+//         }, 1000);
+//     })(i);
+// }
 
 /*
 Explanation:
