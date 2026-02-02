@@ -24,8 +24,8 @@ There are two common ways to create RegExp:
 
 // regexp = new RegExp("pattern","flags")
 
-// regexp= /pattern/; // without any flags
-// regexp= /pattern/gmi; //with flags
+// // regexp= /pattern/; // without any flags
+// // regexp= /pattern/gmi; //with flags
 
 
 /*
@@ -78,9 +78,8 @@ IGNORE CASE FLAG: i
 // ================
 // var str= " A drop of ink may make a million think";
 // console.log(str.search(/a/i));
+
 // important: search always looks for the first match
-
-
 /*
 ------------------------------------------------------------
 match() RESULT DETAILS (WITHOUT g)
@@ -169,7 +168,7 @@ replace() WITH REGEX
 // ========================
 // replace
 
-// console.log('12-34-45'.replace('-',':'));
+// console.log('12-34-45'.replace('-',':'));// last occurance
 
 // console.log('12-34-45'.replace(/-/g,':')); // replace all -
 
@@ -232,11 +231,11 @@ exec() METHOD
 // ===================
 // Exec- returns array of match and detailed return
 
-// var str= " A lot about w3cschool at https://w3cschool.com"
-// var regexp= /W3C(SCHOOL)/ig;
+var str= " A lot about w3cschool at https://w3cschool.com"
+var regexp= /W3C(SCHOOL)/ig;
 
 // var matchOne=regexp.exec(str);
-// console.log(matchOne[0]);
+// console.log(matchOne[0]);// complete match
 // console.log(matchOne[1]);
 // console.log(matchOne.index);
 // console.log(matchOne.input);
@@ -268,10 +267,10 @@ STICKY FLAG: y
 
 // var str= "I love JavaScript";
 // var reg= /javascript/iy;
-// console.log(reg.lastIndex); // 0 by default
+// console.log(reg.lastIndex); // 0 by default javascript is not at 0 the location so we will get null here
 // console.log(str.match(reg));
 // reg.lastIndex=7;
-// console.log(str.match(reg));
+// console.log(str.match(reg)); // as javascript at 7th position we will get the match
 
 
 /*
@@ -323,14 +322,15 @@ WORD BOUNDARY: \b
 // ============
 // Word boundary \b
 
-// console.log("Hello, Java!".match(/\bJava\b/));
-// console.log("Hello, JavaScript!".match(/\bJava\b/));
-// console.log("Hello, JavaScript!".match(/\bHello\b/));
-// console.log("Hello, Java!".match(/\bJava\b/));
-// console.log("Hello, Java!".match(/\bHell\b/));
-// console.log("Hello, Java!".match(/\bHell\b/));
+// console.log("Hello, Java!".match(/\bJava\b/)); // space before java and special char after so match
+// console.log("Hello, JavaScript!".match(/\bJava\b/));// S after java so no match
+// console.log("Hello, JavaScript!".match(/\bHello\b/));//, after java so match
+// console.log("Hello, Java!".match(/\bJava\b/));//! after java so match
+// console.log("Hello, Java!".match(/\bHell\b/));// no match
+// console.log("Hello, Java!".match(/\bHell\b/));// no match
 
-// console.log("1 23 3456 78".match(/b\d\d\b/g)); // note: this pattern has "b" not "\b"
+// console.log("1 23 3456 78".match(/b\d\d\b/g)); // note: this pattern has "b" not "\b" so b followed by 2 digits
+// console.log("Hello, Javaa!".match(/Java\b/)); // space before java and special char after so match
 
 
 /*
@@ -409,7 +409,7 @@ Examples:
 
 // console.log("Java 8.0 g()".match(/g\(\)/))
 
-// console.log("1/2".match(/\d//\d/)); // note: this line has a syntax issue due to //
+// console.log("1/2".match(/\d\/\d/)); // note: this line has a syntax issue due to //
 
 
 /*
@@ -478,14 +478,14 @@ But escaping is still okay if it improves readability.
 
 // console.log("1 + 32 - 3".match(/[\-\(\)\.\^\+]/g))
 
-// console.log("JavaScript".match(/Java[^Script]/));
+// console.log("JavaScript".match(/Java[^Script]/));//null
 
 // console.log("JavaScript".match(/Java[^script]/));
 
 // var  st = "python at 09:44 java at 21-30 45a56"
 // console.log(st.match(/[0-9][0-9].[0-9][0-9]/g));
 
-// console.log(st.match(/[0-9][0-9][^0-9A-F][0-9][0-9]/g));
+// console.log(st.match(/[0-9][0-9][^0-9A-F][0-9][0-9]/g));// [^0-9A-F] A character that is NOT 0–9 and NOT A–F
 // console.log(st.match(/\d\d[:-]\d\d/g));
 
 
@@ -509,14 +509,14 @@ Quantifiers control how many times a pattern repeats.
 // console.log(" I am 12345 year old".match(/\d{5}/))
 // console.log(" i am not 142 but 1234 years old".match(/\d{3,5}/))
 
-// + one or more
+// // + one or more
 // console.log("+7(903)-1233-34-45".match(/\d+/g))
 
-// ? zero or one
+// // ? zero or one
 // console.log("should i write color or colour".match(/colou?r/g))
 
-// * zero or more
-console.log("100101".match(/\d0*/g))
+// // * zero or more
+// console.log("100000000000000000101".match(/\d0*/g))
 
 // console.log("hello!...how goes?....".match(/\.{3,}/g))
 // console.log("color:#121212; background-color:#AA00ef".match(/^#[a-f0-9]{6}/ig))
@@ -742,6 +742,107 @@ COMMON NOTES AND CONFUSION POINTS
 Regex can look confusing at first, but practice makes patterns familiar.
 */
 
+// ================= REGEX PRACTICE QUESTIONS + ANSWERS =================
+
+// 1. Write a regex for <a string that contains only digits>
+// Answer: /^\d+$/
+
+// 2. Write a regex for <a string that contains only alphabets>
+// Answer: /^[A-Za-z]+$/
+
+// 3. Write a regex for <a 10-digit mobile number>
+// Answer: /^\d{10}$/
+
+// 4. Write a regex for <a word that starts with capital letter>
+// Answer: /^[A-Z][a-zA-Z]*$/
+
+// 5. Write a regex for <a string that ends with ".com">
+// Answer: /\.com$/
+
+// 6. Write a regex for <a string that contains only letters and spaces>
+// Answer: /^[A-Za-z ]+$/
+
+// 7. Write a regex for <a number with exactly 4 digits>
+// Answer: /^\d{4}$/
+
+// 8. Write a regex for <a string that starts with "cat">
+// Answer: /^cat/
+
+// 9. Write a regex for <a string that ends with "ing">
+// Answer: /ing$/
+
+// 10. Write a regex for <a string that does NOT contain digits>
+// Answer: /^[^\d]*$/
+
+
+
+// ================= INTERMEDIATE =================
+
+// 11. Write a regex for <a valid email address>
+// Answer: /^[\w.-]+@[A-Za-z\d.-]+\.[A-Za-z]{2,}$/
+
+// 12. Write a regex for <a strong password (min 8 chars, 1 uppercase, 1 number, 1 special char)>
+// Answer: /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/
+
+// 13. Write a regex for <a date in format DD-MM-YYYY>
+// Answer: /^\d{2}-\d{2}-\d{4}$/
+
+// 14. Write a regex for <an IP address>
+// Answer: /^(\d{1,3}\.){3}\d{1,3}$/
+
+// 15. Write a regex for <a hexadecimal color code>
+// Answer: /^#([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/
+
+// 16. Write a regex for <a username between 5–15 characters (letters, numbers, underscore)>
+// Answer: /^[A-Za-z0-9_]{5,15}$/
+
+// 17. Write a regex for <a string that has at least one digit>
+// Answer: /.*\d.*/
+
+// 18. Write a regex for <a string that contains only lowercase letters>
+// Answer: /^[a-z]+$/
+
+// 19. Write a regex for <a string that starts and ends with same letter>
+// Answer: /^([A-Za-z]).*\1$/
+
+// 20. Write a regex for <repeated characters like "boook">
+// Answer: /(.)\1+/
+
+
+
+// ================= ADVANCED =================
+
+// 21. Write a regex for <extracting all URLs>
+// Answer: /(https?:\/\/[^\s]+)/g
+
+// 22. Write a regex for <removing extra spaces>
+// Answer: /\s+/g
+
+// 23. Write a regex for <duplicate words in a sentence>
+// Answer: /\b(\w+)\b.*\b\1\b/i
+
+// 24. Write a regex for <a palindrome of 3 characters>
+// Answer: /^(.)(.)\1$/
+
+// 25. Write a regex for <extracting hashtags>
+// Answer: /#\w+/g
+
+// 26. Write a regex for <matching numbers with decimal>
+// Answer: /^\d+(\.\d+)?$/
+
+// 27. Write a regex for <matching a word boundary for "cat">
+// Answer: /\bcat\b/
+
+// 28. Write a regex for <HTML tags>
+// Answer: /<[^>]*>/g
+
+// 29. Write a regex for <a string that contains only binary numbers>
+// Answer: /^[01]+$/
+
+// 30. Write a regex for <a string that contains at least one uppercase, lowercase, and digit>
+// Answer: /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).+$/
+
+// ================= END =================
 
 /*
 ------------------------------------------------------------
