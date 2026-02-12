@@ -173,9 +173,10 @@ function foo() {}
 8) hasOwnProperty, in, Object.getPrototypeOf
 9) Common mistakes and best practices
 
-
+Prototype is a way for one object to use properties of another object.
 A prototype is an internal reference object (linked via [[Prototype]]) that JavaScript uses to provide inheritance. 
 When a property or method is not found on an object, JavaScript looks for it in its prototype.
+Object.create(proto) creates a new object and sets its internal prototype to proto.
 ===============================================================================
 */
 
@@ -227,8 +228,9 @@ If we put methods on prototype, all objects share ONE function.
 2) __proto__ vs prototype (MOST IMPORTANT)
 ============================================================================= */
 
-// title("2) __proto__ vs prototype (MOST IMPORTANT difference)");
+// prototype - Belongs to function (used when creating objects)
 
+// proto - Belongs to object (points to its parent)
 /*
 ✅ obj.__proto__:
 - A *hidden internal link* (officially [[Prototype]])
@@ -243,18 +245,19 @@ new Fn() creates object o
 o.__proto__ === Fn.prototype
 */
 
-function Car(brand) {
-  this.brand = brand;
-}
+// function Car(brand) {
+//   this.brand = brand;
+// }
 
-console.log("Car.prototype is:", Car.prototype);
-const c1 = new Car("Tata");
+// console.log("Car.prototype is:", Car.prototype);
+// const c1 = new Car("Tata");
+// console.log("c1.__proto__ is:", c1.__proto__);
 
-console.log("c1.__proto__ === Car.prototype ?", c1.__proto__ === Car.prototype); // true
-console.log(
-  "Object.getPrototypeOf(c1) === Car.prototype ?",
-  Object.getPrototypeOf(c1) === Car.prototype,
-); // true
+// console.log("c1.__proto__ === Car.prototype ?", c1.__proto__ === Car.prototype); // true
+// console.log(
+//   "Object.getPrototypeOf(c1) === Car.prototype ?",
+//   Object.getPrototypeOf(c1) === Car.prototype,
+// ); // true
 
 // ✅ Note: __proto__ is legacy-ish but widely supported. Prefer Object.getPrototypeOf / setPrototypeOf
 
@@ -280,8 +283,8 @@ If not found => undefined
 // const child = Object.create(parent);
 // child.c = "I am child";
 
-// console.log("child.c:", child.c);   // own
-// console.log("child.p:", child.p);   // from parent prototype
+// console.log("child.c:", child.c); // own
+// console.log("child.p:", child.p); // from parent prototype
 // console.log("child.gp:", child.gp); // from grandParent prototype
 // console.log("child.xyz:", child.xyz); // undefined
 
@@ -343,7 +346,12 @@ If not found => undefined
 
 // title("6) Overriding (Shadowing) and Deleting properties");
 
-// const base = { role: "BaseRole", getRole() { return this.role; } };
+// const base = {
+//   role: "BaseRole",
+//   getRole() {
+//     return this.role;
+//   },
+// };
 // const emp = Object.create(base);
 
 // // emp inherits role from base
@@ -363,12 +371,28 @@ If not found => undefined
 ============================================================================= */
 
 // title("7) hasOwnProperty vs 'in' operator");
+// console.log("Object.create(proto) creates a new object and sets its internal prototype to proto.")
 
 // const aObj = Object.create({ inheritedX: 99 });
+
+// /* aboe line will do
+// aObj = {
+//    ownY: 10
+// }
+
+// aObj.__proto__ = { inheritedX: 99 }
+
+// aObj
+//  ├─ ownY: 10
+//  └─ __proto__ ──► { inheritedX: 99 }
+// */
 // aObj.ownY = 10;
 
 // console.log("aObj.hasOwnProperty('ownY'):", aObj.hasOwnProperty("ownY")); // true
-// console.log("aObj.hasOwnProperty('inheritedX'):", aObj.hasOwnProperty("inheritedX")); // false
+// console.log(
+//   "aObj.hasOwnProperty('inheritedX'):",
+//   aObj.hasOwnProperty("inheritedX"),
+// ); // false
 
 // console.log("'ownY' in aObj:", "ownY" in aObj); // true
 // console.log("'inheritedX' in aObj:", "inheritedX" in aObj); // true (because it searches prototype chain)
@@ -382,7 +406,7 @@ If not found => undefined
 // const animal = {
 //   speak() {
 //     return `${this.name} makes a sound`;
-//   }
+//   },
 // };
 
 // const dog = Object.create(animal);
@@ -392,52 +416,53 @@ If not found => undefined
 // };
 
 // console.log(dog.speak()); // from animal
-// console.log(dog.bark());  // own
+// console.log(dog.bark()); // own
 
-// console.log("dog.__proto__ === animal ?", Object.getPrototypeOf(dog) === animal);
+// console.log(
+//   "dog.__proto__ === animal ?",
+//   Object.getPrototypeOf(dog) === animal,
+// );
 
 /* =============================================================================
 9) Prototype-based inheritance using constructor functions
 ============================================================================= */
 
-// title("9) Inheritance with constructor functions (Parent -> Child)");
+function Animal(name) {
+  this.name = name;
+}
+Animal.prototype.speak = function () {
+  return `${this.name} makes a sound`;
+};
 
-// function Animal(name) {
-//   this.name = name;
-// }
-// Animal.prototype.speak = function () {
-//   return `${this.name} makes a sound`;
-// };
+function Dog(name, breed) {
+  // call parent constructor to set parent fields
+  Animal.call(this, name);
+  this.breed = breed;
+}
 
-// function Dog(name, breed) {
-//   // call parent constructor to set parent fields
-//   Animal.call(this, name);
-//   this.breed = breed;
-// }
+/*
+Important:
+Dog.prototype should inherit from Animal.prototype
+*/
+Dog.prototype = Object.create(Animal.prototype);
 
-// /*
-// Important:
-// Dog.prototype should inherit from Animal.prototype
-// */
-// Dog.prototype = Object.create(Animal.prototype);
+/*
+After above line, Dog.prototype.constructor is lost (points to Animal)
+So reset it:
+*/
+Dog.prototype.constructor = Dog;
 
-// /*
-// After above line, Dog.prototype.constructor is lost (points to Animal)
-// So reset it:
-// */
-// Dog.prototype.constructor = Dog;
+Dog.prototype.bark = function () {
+  return `${this.name} (${this.breed}) barks`;
+};
 
-// Dog.prototype.bark = function () {
-//   return `${this.name} (${this.breed}) barks`;
-// };
+const d1 = new Dog("Bruno", "Labrador");
 
-// const d1 = new Dog("Bruno", "Labrador");
-
-// console.log(d1.speak()); // from Animal.prototype
-// console.log(d1.bark());  // from Dog.prototype
-// console.log("d1 instanceof Dog?", d1 instanceof Dog);       // true
-// console.log("d1 instanceof Animal?", d1 instanceof Animal); // true
-// console.log("d1.constructor === Dog?", d1.constructor === Dog); // true
+console.log(d1.speak()); // from Animal.prototype
+console.log(d1.bark()); // from Dog.prototype
+console.log("d1 instanceof Dog?", d1 instanceof Dog); // true
+console.log("d1 instanceof Animal?", d1 instanceof Animal); // true
+console.log("d1.constructor === Dog?", d1.constructor === Dog); // true
 
 /* =============================================================================
 10) ES6 class is still prototype under the hood
