@@ -95,6 +95,7 @@
    ------------------------------------------------------------
    Methods are functions written inside class body.
    You call them using the object.
+   We dont need to use function keyword for function inside the class
 ============================================================ */
 
 // class Employee {
@@ -221,38 +222,31 @@ They LOOK like properties but WORK like functions.
 // console.log(u1.age); // GETTER runs
 
 //   /*
-//   ================= SETTER =================
-//   Definition:
-//   This method runs whenever we ASSIGN a value
-//   Example:
-      // u1.age = 25;   → this setter runs
+// ============================
+// Setting a value is must in setter otherwise we will get undefined value
+// ========================
+// class User {
+//   constructor() {
+//     console.log("constructor is called here "); // GETTER runs
 
-//   Purpose:
-//   To validate or control the value before storing it.
-//   */
-  // set age(value) {
+//     this.age = 0;  // Internal storage variable (not accessed directly outside)
+//           console.log("constructor completed");
+
+//   }
+
+//  set age(value) {
     
-  //   console.log("setter is called here "); // GETTER runs
+//     console.log("setter is called here "); // GETTER runs
 
-  //   if (value < 0) {
-  //     console.log("Age cannot be negative");
-  //     return;
-  //   }
+//     if (value < 0) {
+//       console.log("Age cannot be negative");
+//       return;
+//     }
 
-  //   // Store value in internal variable
-  //   this._age = value;
-  // }
+//     // Store value in internal variable
+//     // this._age = value;
+//   }
 
-//   /*
-//   ================= GETTER =================
-//   Definition:
-//   This method runs whenever we READ a property
-//   Example:
-//       console.log(u1.age);  → this getter runs
-
-//   Purpose:
-//   To safely return the stored value.
-//   */
 //   get age() {
 //     console.log("getter is called here "); // GETTER runs
 
@@ -260,51 +254,49 @@ They LOOK like properties but WORK like functions.
 //     return this._age;
 //   }
 // }
-
-// /* ================= USAGE ================= */
-
 // const u1 = new User();
 
 // u1.age = 25;         // SETTER runs
 // console.log(u1.age); // GETTER runs
 
+
 // ==========================
 
 
-class Rectangle {
-  constructor(width, height) {
-    this.width = width;   // uses setter
-    this.height = height; // uses setter
-  }
+// class Rectangle {
+//   constructor(width, height) {
+//     this.width = width;   // uses setter
+//     this.height = height; // uses setter
+//   }
 
-  // setter for width (validation)
-  set width(w) {
-    if (typeof w !== "number" || w <= 0) throw new Error("width must be positive number");
-    this._width = w;
-  }
+//   // setter for width (validation)
+//   set width(w) {
+//     if (typeof w !== "number" || w <= 0) throw new Error("width must be positive number");
+//     this._width = w;
+//   }
 
-  // getter for width
-  get width() {
-    return this._width;
-  }
+//   // getter for width
+//   get width() {
+//     return this._width;
+//   }
 
-  set height(h) {
-    if (typeof h !== "number" || h <= 0) throw new Error("height must be positive number");
-    this._height = h;
-  }
+//   set height(h) {
+//     if (typeof h !== "number" || h <= 0) throw new Error("height must be positive number");
+//     this._height = h;
+//   }
 
-  get height() {
-    return this._height;
-  }
+//   get height() {
+//     return this._height;
+//   }
 
-  // computed getter
-  get area() {
-    return this._width * this._height;
-  }
-}
+//   // computed getter
+//   get area() {
+//     return this._width * this._height;
+//   }
+// }
 
-const r1 = new Rectangle(5, 3);
-console.log("Width:", r1.width, "Height:", r1.height, "Area:", r1.area);
+// const r1 = new Rectangle(5, 3);
+// console.log("Width:", r1.width, "Height:", r1.height, "Area:", r1.area);
 
 /* NOTE:
    r1.area is not stored; it is computed each time you access it.
@@ -350,16 +342,17 @@ console.log("Width:", r1.width, "Height:", r1.height, "Area:", r1.area);
 // console.log("Owner:", b1.owner);
 // console.log("Balance via method:", b1.getBalance());
 
-// b1.#balance; // ❌ SyntaxError if you uncomment (true private)
+// // b1.#balance; // ❌ SyntaxError if you uncomment (true private)
 
-/* IMPORTANT NOTE:
-   Private fields are REAL privacy in JS (not just convention).
-*/
+// /* IMPORTANT NOTE:
+//    Private fields are REAL privacy in JS (not just convention).
+// */
 
 /* ============================================================
    STEP 7) STATIC PROPERTY (Static Variable)
    ------------------------------------------------------------
    Static properties belong to the class itself, NOT to objects.
+    Can be accessed throught the class only not object
    Used for shared data (same for all objects).
 ============================================================ */
 
@@ -519,34 +512,34 @@ In JS, encapsulation is commonly done using:
 /* -------------------------------------------
    Example 1: Basic Encapsulation (public)
 ------------------------------------------- */
-// class BankAccountBasic {
-//   constructor(owner, balance) {
-//     this.owner = owner;
-//     this.balance = balance; // public (can be modified directly — risky)
-//   }
+class BankAccountBasic {
+  constructor(owner, balance) {
+    this.owner = owner;
+    this.balance = balance; // public (can be modified directly — risky)
+  }
 
-//   deposit(amount) {
-//     if (amount <= 0) return;
-//     this.balance += amount;
-//   }
+  deposit(amount) {
+    if (amount <= 0) return;
+    this.balance += amount;
+  }
 
-//   withdraw(amount) {
-//     if (amount <= 0) return;
-//     if (amount > this.balance) {
-//       console.log("Insufficient funds");
-//       return;
-//     }
-//     this.balance -= amount;
-//   }
-// }
+  withdraw(amount) {
+    if (amount <= 0) return;
+    if (amount > this.balance) {
+      console.log("Insufficient funds");
+      return;
+    }
+    this.balance -= amount;
+  }
+}
 
-// const a1 = new BankAccountBasic("Vandana", 1000);
-// a1.deposit(500);
-// console.log("Balance (basic):", a1.balance);
+const a1 = new BankAccountBasic("Vandana", 1000);
+a1.deposit(500);
+console.log("Balance (basic):", a1.balance);
 
-// // Risk: user can directly change balance (bad)
-// a1.balance = -999; // invalid but allowed
-// console.log("Balance after direct wrong change:", a1.balance);
+// Risk: user can directly change balance (bad)
+a1.balance = -999; // invalid but allowed
+console.log("Balance after direct wrong change:", a1.balance);
 
 // /* -------------------------------------------
 //    Example 2: Better Encapsulation using Getter/Setter

@@ -26,7 +26,7 @@
 // console.log(myObj.__proto__);
 
 // function(foo)
-//         pototype------->prototype object 
+//         pototype------->prototype object
 //                          |
 // object(newfoo)                   |
 //        __proto__---------
@@ -55,7 +55,6 @@
 // emp1.dept();
 // emp2.dept();
 
-
 // var emp3=new Employee("jim");
 // emp3.dept();
 
@@ -64,7 +63,7 @@
 // emp3.greet();
 // emp1.greet();
 
-// foo --- proptype---> prototype object 
+// foo --- proptype---> prototype object
 //    obj----> __proto__---> prototype object
 //    __proto__ is called dunder proto
 // function has a property "prototype"
@@ -79,4 +78,4 @@
 // var b = new a.__proto__.constructor();
 // console.log(b);
 
-
+// ========================

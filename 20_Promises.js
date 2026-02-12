@@ -24,10 +24,12 @@
 // resolve and reject.
 // The resolve function is called when the asynchronous operation is successful,
 //  while the reject function is called if there's an error or failure.
+// promise will be called automatically
 // ===============
 // console.log("Promise example")
 // let juiceOrder = new Promise((resolve, reject) => {
 //     let isShopOpen = true;
+//     console.log("promise started");
 
 //     setTimeout(() => {
 //         if (isShopOpen) {
@@ -186,26 +188,26 @@
 // Example of Using Promises with Asynchronous Operations (Simulating an API Call)
 // ===============
 
-function fetchData() {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            const data = { name: "John", age: 30 };
-            resolve(data);
-        }, 2000);
-    });
-}
+// function fetchData() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             const data = { name: "John", age: 30 };
+//             resolve(data);
+//         }, 2000);
+//     });
+// }
 
-fetchData()
-    .then((data) => {
-        console.log("Data fetched:", data); // { name: "John", age: 30 }
-        return data.name; // Pass result to the next `.then()`
-    })
-    .then((name) => {
-        console.log("Name is:", name);
-    })
-    .catch((error) => {
-        console.log("Error:", error);
-    });
+// fetchData()
+//     .then((data) => {
+//         console.log("Data fetched:", data); // { name: "John", age: 30 }
+//         return data.name; // Pass result to the next `.then()`
+//     })
+//     .then((name) => {
+//         console.log("Name is:", name);
+//     })
+//     .catch((error) => {
+//         console.log("Error:", error);
+//     });
 
 // ===============
 // Example of Promise.all with Error Handling

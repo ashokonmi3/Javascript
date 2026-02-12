@@ -4,7 +4,7 @@
 // global.myGlobalVariable = "Hello, global world!";
 // ================================
 // 2
-// export const exportGlobalVariable = "Hello, world!";
+export const exportGlobalVariable = "Hello, world!";
 // ===============
 //3
 // // // myModule.js
@@ -32,7 +32,7 @@ function anotherFunctionObj() {
     console.log('This is another function.');
 }
 
-// Exporting all values together
+// // Exporting all values together
 export default {
     myVarObj,
     myFunctionObj,
