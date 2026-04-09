@@ -7,8 +7,8 @@
 // ===================
 // var year = 2016;
 // if (year == 2015) {
-//     console.log("That's correct!"); // If condition is true, this block runs.
-//     console.log("You're so smart!");
+//   console.log("That's correct!"); // If condition is true, this block runs.
+//   console.log("You're so smart!");
 // }
 
 // // ============================
@@ -91,27 +91,27 @@
 // --------------------------
 // // // Example with falsy values
 // if (0 || 0) {
-//     console.log('truthy!');
+//   console.log("truthy!");
 // } else {
-//     console.log('falsy!');
+//   console.log("falsy!");
 // }
 
 // ============================
 // // Using OR (||) operator with real-life example
 // var hour = 21; // Time of the day
 // if (hour < 10 || hour > 18) {
-//     console.log('The office is closed.'); // The office is closed if before 10 or after 18
+//   console.log("The office is closed."); // The office is closed if before 10 or after 18
 // } else {
-//     console.log('The office is open.');
+//   console.log("The office is open.");
 // }
 // ==============================
 // Example with OR and weekend
 // var hour = 21;
 // var isWeekend = false;
 // if (hour < 10 || hour > 18 || isWeekend) {
-//     console.log('The office is closed.'); // The office is closed if it's the weekend or outside office hours
+//   console.log("The office is closed."); // The office is closed if it's the weekend or outside office hours
 // } else {
-//     console.log('The office is open.');
+//   console.log("The office is open.");
 // }
 
 // // ============================
@@ -153,9 +153,9 @@
 
 // var a = "hello";
 // if (a) {
-//     console.log("values are equal"); // This will print because a is truthy
+//   console.log("values are equal"); // This will print because a is truthy
 // } else {
-//     console.log("values are not equal");
+//   console.log("values are not equal");
 // }
 // -----------------------
 // var a = "";
@@ -190,26 +190,25 @@
 // -------------------
 // var a = false;
 // if (a) {
-//     console.log("values are equal");
+//   console.log("values are equal");
 // } else {
-//     console.log("value not equal"); // This will print because a is falsy
+//   console.log("value not equal"); // This will print because a is falsy
 // }
 
 // ============================
 // Undefined values
 // var a = "undefined";
 // if (a) {
-//     console.log("values are equal"); // This will print because a is a string
+//   console.log("values are equal"); // This will print because a is a string
 // } else {
-//     console.log("value not equal");
+//   console.log("value not equal");
 // }
 // ============
 // var year = 2016;
-// if (year = 2015) {
-//     console.log("This code run");
-// }
-// else {
-//     console.log("This code run in else");
+// if ((year = 2015)) {
+//   console.log("This code run");
+// } else {
+//   console.log("This code run in else");
 // }
 // =================
 // if (0 || 1) {
@@ -221,18 +220,14 @@
 // ====================
 // let number = 0;
 // if (number > 0) {
-//     console.log("Number is Positive");
+//   console.log("Number is Positive");
+// } else if (number < 0) {
+//   console.log("Number is Negetive");
+// } else if (Number == 0) {
+//   console.log("Number is equal to zero");
+// } else {
+//   console.log("This is not a Numbner");
 // }
-// else if (number < 0) {
-//     console.log("Number is Negetive")
-// }
-// else if (Number == 0) {
-//     console.log("Number is equal to zero");
-// }
-// else {
-//     console.log("This is not a Numbner")
-// }
-
 
 // ============================
 // Example with multiple conditions combined
@@ -252,62 +247,66 @@
 // let day = "Monday";
 
 // switch (day) {
-//     case "Monday":
-//         console.log("Start of the work week.");
-//         break;
-//     case "Tuesday":
-//         console.log("Second day of the work week.");
-//         break;
-//     case "Wednesday":
-//         console.log("Midweek");
-//         break;
-//     case "Thursday":
-//         console.log("Almost Friday.");
-//         break;
-//     case "Friday":
-//         console.log("End of the work week.");
-//         break;
-//     default:
-//         console.log("It's the weekend!");
+//   case "Monday":
+//     console.log("Start of the work week.");
+//     break;
+//   case "Tuesday":
+//     console.log("Second day of the work week.");
+//     break;
+//   case "Wednesday":
+//     console.log("Midweek");
+//     break;
+//   case "Thursday":
+//     console.log("Almost Friday.");
+//     break;
+//   case "Friday":
+//     console.log("End of the work week.");
+//     break;
+//   default:
+//     console.log("It's the weekend!");
 // }
 // ===================
 
 // let role = "admin";
 
 // switch (role) {
-//     case "admin":
-//         console.log("Full access granted.");
-//         break;
-//     case "editor":
-//         console.log("Access to edit content.");
-//         break;
-//     case "viewer":
-//         console.log("View only access.");
-//         break;
-//     default:
-//         console.log("No access granted.");
+//   case "admin":
+//     console.log("Full access granted.");
+//     break;
+//   case "editor":
+//     console.log("Access to edit content.");
+//     break;
+//   case "viewer":
+//     console.log("View only access.");
+//     break;
+//   default:
+//     console.log("No access granted.");
 // }
 // ===========================
 // let statusCode = 404;
 
 // switch (statusCode) {
-//     case 200:
-//         console.log("OK: The request was successful.");
-//         break;
-//     case 201:
-//         console.log("Created: The request was successful and a resource was created.");
-//         break;
-//     case 400:
-//         console.log("Bad Request: The request could not be understood or was missing required parameters.");
-//         break;
-//     case 404:
-//         console.log("Not Found: Resource could not be found.");
-//         break;
-//     case 500:
-//         console.log("Internal Server Error: An error occurred on the server.");
-//         break;
-//     default:
-//         console.log("Unknown status code.");
+//   case 200:
+//     console.log("OK: The request was successful.");
+//     break;
+//   case 201:
+//     console.log(
+//       "Created: The request was successful and a resource was created.",
+//     );
+//     break;
+//   case 400:
+//     console.log(
+//       "Bad Request: The request could not be understood or was missing required parameters.",
+//     );
+//     break;
+//   case 404:
+//     console.log("Not Found: Resource could not be found.");
+//     break;
+//   case 500:
+//     console.log("Internal Server Error: An error occurred on the server.");
+//     break;
+//   default:
+//     console.log("Unknown status code.");
 // }
 // =======================
 // let month = "August";
@@ -431,22 +430,21 @@
 
 // -------------------
 
-const readline = require('readline');
+// const readline = require('readline');
 
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
+// const rl = readline.createInterface({
+//     input: process.stdin,
+//     output: process.stdout
+// });
 
-rl.question("Enter the student's score: ", (input) => {
-    const score = parseFloat(input);
+// rl.question("Enter the student's score: ", (input) => {
+//     const score = parseFloat(input);
 
-    console.log("Score:", score);
-    console.log("Type:", typeof score);
+//     console.log("Score:", score);
+//     console.log("Type:", typeof score);
 
-    rl.close();
-});
-
+//     rl.close();
+// });
 
 // Multiple input
 // const readline = require('readline');
@@ -519,4 +517,3 @@ rl.question("Enter the student's score: ", (input) => {
 // Write a function that checks if a given character(single letter) is a vowel or consonant.
 // Return "Vowel" if the character is one of a, e, i, o, u(case -insensitive).
 // Otherwise, return "Consonant".
-
