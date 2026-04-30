@@ -53,11 +53,11 @@ Example:
 
 // var a = 10;
 // console.log("value of a : " + a);
-// console.log("value of typeof(a) : " + typeof(a));
+// console.log("value of typeof(a) : " + typeof a);
 
 // a = "hello";
 // console.log("value of a : " + a);
-// console.log("value of typeof(a) : " + typeof(a));
+// console.log("value of typeof(a) : " + typeof a);
 
 /* ===============================================================================
 Declaration vs Definition
@@ -69,7 +69,7 @@ Example:
 
 // var value;
 // console.log("value of value : " + value);
-// console.log("value of typeof(value) : " + typeof(value));
+// console.log("value of typeof(value) : " + typeof value);
 
 // value = 20;
 // console.log("value of value after assignment : " + value);
@@ -97,7 +97,7 @@ JavaScript allows reassigning different types to same variable.
 
 // value = "JavaScript";
 // console.log("value after change : " + value);
-// console.log("value of typeof(value) : " + typeof(value));
+// console.log("value of typeof(value) : " + typeof value);
 
 /* ===============================================================================
 Number Data Type
@@ -106,11 +106,11 @@ JavaScript uses Number type for both integers and decimals.
 
 // var a = 10;
 // console.log("value of a : " + a);
-// console.log("value of typeof(a) : " + typeof(a));
+// console.log("value of typeof(a) : " + typeof a);
 
 // var c = 10.5;
 // console.log("value of c : " + c);
-// console.log("value of typeof(c) : " + typeof(c));
+// console.log("value of typeof(c) : " + typeof c);
 
 /* ===============================================================================
 String Data Type
@@ -120,7 +120,7 @@ Even a single character is treated as a string.
 
 // var d = "Hello";
 // console.log("value of d : " + d);
-// console.log("value of typeof(d) : " + typeof(d));
+// console.log("value of typeof(d) : " + typeof d);
 
 /* ===============================================================================
 Undefined vs Null
@@ -130,13 +130,13 @@ Null → intentionally assigned empty value
 Important Interview Point:
 ================================================================================ */
 
-// var f;
-// console.log("value of f : " + f);
-// console.log("value of typeof(f) : " + typeof(f));
+// var undefinedValue;
+// console.log("value of f : " + undefinedValue);
+// console.log("value of typeof(f) : " + typeof undefinedValue);
 
-// var g = null;
-// console.log("value of g : " + g);
-// console.log("value of typeof(g) : " + typeof(g)); // object (quirk)
+// var nullValue = null;
+// console.log("value of g : " + nullValue);
+// console.log("value of typeof(g) : " + typeof nullValue); // object (quirk)
 
 /* ===============================================================================
 Boolean Data Type
@@ -145,7 +145,7 @@ Used in conditions and logical operations.
 
 // var isAvailable = true;
 // console.log("value of isAvailable : " + isAvailable);
-// console.log("value of typeof(isAvailable) : " + typeof(isAvailable));
+// console.log("value of typeof(isAvailable) : " + typeof isAvailable);
 
 /* ===============================================================================
 typeof Operator
@@ -154,11 +154,11 @@ Used to find the type of a variable at runtime.
 
 // var num = 10;
 // console.log("value of num : " + num);
-// console.log("value of typeof(num) : " + typeof(num));
+// console.log("value of typeof(num) : " + typeof num);
 
 // num = "Hello";
 // console.log("value of num : " + num);
-// console.log("value of typeof(num) : " + typeof(num));
+// console.log("value of typeof(num) : " + typeof num);
 
 /* ===============================================================================
 Strict Mode ("use strict")
@@ -171,7 +171,7 @@ Key Benefits:
 ================================================================================ */
 
 // "use strict";
-
+// var strictVar;
 // strictVar = 10; // Error
 // console.log("value of strictVar : " + strictVar);
 
@@ -252,7 +252,7 @@ if (true) {
 }
 
 console.log("value of x outside block : " + x);
-// console.log("value of y outside block : " + y); // Error
+console.log("value of y outside block : " + y); // Error
 
 /* ===============================================================================
 Comparison Table (var vs let)
