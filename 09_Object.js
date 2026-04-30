@@ -17,7 +17,7 @@
 // An inline object is created using curly braces `{}` and can be populated with properties as needed.
 // ====================
 
-// var myObj = {};  // Empty object created
+// var myObj = {}; // Empty object created
 // console.log(myObj); // Output: {}
 
 // myObj.prop1 = "hello"; // Adding property dynamically
@@ -44,28 +44,26 @@
 // array["Studio"]-- > "Marvels"
 // array["Movie"]-- > "Avangers"
 
-
-
 // ====================
 // Object Literal Notation
 // The most common way to create objects in JavaScript is using object literals. This allows for defining key-value pairs directly inside the curly braces `{}`.
 // ====================
 
 // var myObjLiteral = {
-//     prop1: "hello",
-//     prop2: 123,
-//     boolProp2: true,
-//     boolProp1: false
+//   prop1: "hello",
+//   prop2: 123,
+//   boolProp2: true,
+//   boolProp1: false,
 // };
 
 // console.log(myObjLiteral);
 // =============================
 // // Example of a person object
 // var person = {
-//     firstName: "John",
-//     lastName: "Doe",
-//     age: 50,
-//     eyeColor: "blue"
+//   firstName: "John",
+//   lastName: "Doe",
+//   age: 50,
+//   eyeColor: "blue",
 // };
 
 // console.log(person);
@@ -74,7 +72,6 @@
 // console.log(person.lastName); // Accessing property with bracket notation
 
 // console.log("Property that does not exist: " + person.prop3); // Accessing Non-Existent Properties
-
 
 // ====================
 // Modifying and Adding Properties
@@ -106,12 +103,12 @@
 // The property name must be known at the time of coding (not dynamic).
 
 // let person = {
-//     name: "John",
-//     age: 30
+//   name: "John",
+//   age: 30,
 // };
 
-// console.log(person.name);  // ✅ "John"
-// console.log(person.age);   // ✅ 30
+// console.log(person.name); // ✅ "John"
+// console.log(person.age); // ✅ 30
 // ------------------------
 // 2. Using Bracket Notation ([])
 // ✅ Use bracket notation when:
@@ -197,11 +194,11 @@
 // // ====================
 
 // var nestedObj = {
-//     "prop": "hello",
-//     "objProp": {
-//         "innerProp": "Inner Property",
-//         "newInner": "new inner property"
-//     }
+//   prop: "hello",
+//   objProp: {
+//     innerProp: "Inner Property",
+//     newInner: "new inner property",
+//   },
 // };
 
 // console.log(nestedObj.objProp.innerProp); // Accessing nested property
@@ -216,9 +213,9 @@
 // ====================
 
 // var personWithAge = {
-//     name: "Ashok",
-//     surname: "Sharma",
-//     age: 25
+//   name: "Ashok",
+//   surname: "Sharma",
+//   age: 25,
 // };
 
 // delete personWithAge.age;
@@ -240,7 +237,6 @@
 // var shallowCopy = { ...original }; // spread operator
 // // console.log("Original " + original);
 // // console.log("shallowCopy" + shallowCopy);
-
 
 // shallowCopy.prop2.inner = "modified";
 // console.log("Original " + original.prop2.inner);
@@ -278,7 +274,7 @@ const employee = {
   name: "Amit",
   role: "Developer",
   salary: 75000,
-  location: "Bangalore"
+  location: "Bangalore",
 };
 
 /*
@@ -289,11 +285,11 @@ const employee = {
 - Best for simple object iteration
 */
 
-console.log("---- for...in loop ----");
+// console.log("---- for...in loop ----");
 
-for (let key in employee) {
-  console.log(key, ":", employee[key]);
-}
+// for (let key in employee) {
+//   console.log(key, ":", employee[key]);
+// }
 
 /*
 🧠 Point:
@@ -301,7 +297,6 @@ for (let key in employee) {
 - employee[key] → value
 - Dot notation (employee.key) ❌ will NOT work here
 */
-
 
 /*
 =====================================================
@@ -311,20 +306,21 @@ for (let key in employee) {
 - Useful when you want index control
 */
 
-console.log("---- Object.keys() ----");
+// console.log("---- Object.keys() ----");
+// console.log("---- Object.keys() ----", keys);
 
-const keys = Object.keys(employee);
+// const keys = Object.keys(employee);
+// console.log("---- Object.keys() ----", keys);
 
-for (let i = 0; i < keys.length; i++) {
-  console.log(keys[i], ":", employee[keys[i]]);
-}
+// for (let i = 0; i < keys.length; i++) {
+//   console.log(keys[i], ":", employee[keys[i]]);
+// }
 
 /*
 🧠 Point:
 - keys = ["empId","name","role","salary","location"]
 - Very useful when combining with conditions
 */
-
 
 /*
 =====================================================
@@ -334,14 +330,14 @@ for (let i = 0; i < keys.length; i++) {
 - Use when keys are NOT required
 */
 
-console.log("---- Object.values() ----");
+// console.log("---- Object.values() ----");
 
-const values = Object.values(employee);
+// const values = Object.values(employee);
+// console.log("---- Object.values() ----", values);
 
-for (let value of values) {
-  console.log(value);
-}
-
+// for (let value of values) {
+//   console.log(value);
+// }
 
 /*
 =====================================================
@@ -351,18 +347,17 @@ for (let value of values) {
 - Best for real-world applications
 */
 
-console.log("---- Object.entries() ----");
+// console.log("---- Object.entries() ----");
 
-for (let [key, value] of Object.entries(employee)) {
-  console.log(`${key} => ${value}`);
-}
+// for (let [key, value] of Object.entries(employee)) {
+//   console.log(`${key} => ${value}`);
+// }
 
 /*
 🧠 Tip:
 - Preferred in modern JavaScript
 - Very readable & interview-friendly
 */
-
 
 /*
 =====================================================
@@ -371,14 +366,13 @@ for (let [key, value] of Object.entries(employee)) {
 Example: Find salary-related properties
 */
 
-console.log("---- Conditional Logic ----");
+// console.log("---- Conditional Logic ----");
 
-for (let key in employee) {
-  if (key === "salary") {
-    console.log("Salary Found:", employee[key]);
-  }
-}
-
+// for (let key in employee) {
+//   if (key === "salary") {
+//     console.log("Salary Found:", employee[key]);
+//   }
+// }
 
 /*
 =====================================================
@@ -386,21 +380,21 @@ for (let key in employee) {
 =====================================================
 */
 
-const student = {
-  id: 1,
-  name: "Riya",
-  marks: {
-    math: 85,
-    science: 90,
-    english: 78
-  }
-};
+// const student = {
+//   id: 1,
+//   name: "Riya",
+//   marks: {
+//     math: 85,
+//     science: 90,
+//     english: 78,
+//   },
+// };
 
-console.log("---- Nested Object ----");
+// console.log("---- Nested Object ----");
 
-for (let subject in student.marks) {
-  console.log(subject, ":", student.marks[subject]);
-}
+// for (let subject in student.marks) {
+//   console.log(subject, ":", student.marks[subject]);
+// }
 
 /*
 🧠 Tip:
@@ -408,28 +402,26 @@ for (let subject in student.marks) {
 - Then loop on it separately
 */
 
-
 /*
 =====================================================
 7️⃣ OBJECT INSIDE ARRAY (REAL  SCENARIO)
 =====================================================
 */
 
-const employees = [
-  { id: 1, name: "Amit", role: "Dev" },
-  { id: 2, name: "Neha", role: "Tester" },
-  { id: 3, name: "Rahul", role: "Manager" }
-];
+// const employees = [
+//   { id: 1, name: "Amit", role: "Dev" },
+//   { id: 2, name: "Neha", role: "Tester" },
+//   { id: 3, name: "Rahul", role: "Manager" },
+// ];
 
-console.log("---- Object inside Array ----");
+// console.log("---- Object inside Array ----");
 
-for (let emp of employees) {
-  for (let key in emp) {
-    console.log(key, ":", emp[key]);
-  }
-  console.log("------");
-}
-
+// for (let emp of employees) {
+//   for (let key in emp) {
+//     console.log(key, ":", emp[key]);
+//   }
+//   console.log("------");
+// }
 
 /*
 =====================================================
@@ -443,7 +435,6 @@ for (let emp of employees) {
 ✔ employee[key] → Correct
 */
 
-
 /*
 =====================================================
 📌 QUICK INTERVIEW SUMMARY
@@ -455,9 +446,6 @@ for (let emp of employees) {
 4. Object.entries() → key + value (BEST PRACTICE)
 5. Nested objects need nested loops
 */
-
-
-
 
 // // ====================
 // // Questions on JavaScript Objects

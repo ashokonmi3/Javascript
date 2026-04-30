@@ -277,3 +277,15 @@ null + 1
 
 Explain results in comments.
 ================================================================================ */
+//  var age = 18;
+function add(a, b) {
+  console.log("inside function ");
+  var result = a + b;
+  console.log("after console");
+  return result;
+}
+console.log("before function call");
+add(5, 6);
+
+// var message = age >= 18 ? "You are an adult." : "You are a minor";
+// console.log("value of message : " + message);

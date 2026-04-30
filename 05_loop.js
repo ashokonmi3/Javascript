@@ -49,10 +49,10 @@
 // Syntax: while (condition) { statement }
 // ===============
 
-// let x = 5;// initialization
+// let x = 5; // initialization
 // while (x >= 0) {
-//     console.log(x); // Prints current value of x
-//     x--; // Decreases x by 1 each iteration
+//   console.log(x); // Prints current value of x
+//   x--; // Decreases x by 1 each iteration
 // }
 // Output: 5, 4, 3, 2, 1, 0
 // =========================
@@ -72,7 +72,7 @@
 //     console.log(count);
 //     count--;
 // }
-// // Output: 3, 2, 1
+// Output: 3, 2, 1
 
 // ===============
 //  Do...While Loop
@@ -97,13 +97,13 @@
 // ===============
 
 // for (let k = 0; k < 3; k++) {
-//     console.log(k); // Prints value of k in each iteration
+//   console.log(k); // Prints value of k in each iteration
 // }
 // // Output: 0, 1, 2
 // -----------------
 // Example: Counting down with for loop
 // for (let l = 5; l >= 0; l--) {
-//     console.log(l); // Outputs value of l from 5 to 0
+//   console.log(l); // Outputs value of l from 5 to 0
 // }
 // Output: 5, 4, 3, 2, 1, 0
 // -----------------
@@ -122,7 +122,7 @@
 // =======================
 
 // for (var m = 0; m < 3; m++) {
-//     console.log(m); // Outputs value of m within loop
+//   console.log(m); // Outputs value of m within loop
 // }
 // console.log("Outside loop:", m); // Shows m is still accessible outside
 
@@ -229,8 +229,8 @@
 // let fixedI = 1;
 // for (let j = 1; j <= 3; j++) {
 //   console.log(fixedI + " " + j);
-// }
 
+// }
 
 // let fixedI = 2;
 // for (let j = 1; j <= 3; j++) {
@@ -241,7 +241,6 @@
 // for (let j = 1; j <= 3; j++) {
 //   console.log(fixedI + " " + j);
 // }
-
 
 // ------------------
 // Nested loops
@@ -276,15 +275,13 @@
 //   console.log(row);
 // }
 
-
- //-------------------
+//-------------------
 // for loop scope example
 // let ctr;
 // for (ctr = 0; ctr < 5; ++ctr) {
 //   console.log(ctr);
 // }
 // console.log(ctr); // accessible outside loop
-
 
 // ===============
 //  Infinite Loop
@@ -328,21 +325,17 @@
 // console.log(2 === '2');
 // console.log(2 == '2');
 
-
 // ===============
 //  Switch Statement in Loops
 // Can be used to handle different cases within a loop
 // ===============
-
 
 // ===============
 //  Nested Loops
 // Loops inside other loops, useful for multidimensional data structures.
 // ===============
 
-
 // ===========
-
 
 // for(let i = 1 ; i<=10; i++){
 
