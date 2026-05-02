@@ -29,16 +29,18 @@ Used to assign values to variables.
 // console.log("value of a after += : " + a);
 
 /* ------------------------------------------------------------------------------- */
+// var a = 10;
 
-// a -= 5;
+// a -= 5; //a = a-5
 // console.log("value of a after -= : " + a);
 
 /* ------------------------------------------------------------------------------- */
+// var a = 10;
 
 // a *= 2;
 // console.log("value of a after *= : " + a);
 
-/* ------------------------------------------------------------------------------- */
+// /* ------------------------------------------------------------------------------- */
 
 // a /= 4;
 // console.log("value of a after /= : " + a);
@@ -60,8 +62,8 @@ Used for mathematical calculations.
 
 /* ------------------------------------------------------------------------------- */
 
-// console.log("value of (2 ** 3) : " + (2 ** 3));
-// console.log("value of (4 ** 0.5) : " + (4 ** 0.5));
+// console.log("value of (2 ** 3) : " + 2 ** 3);
+// console.log("value of (4 ** 0.5) : " + 4 ** 0.5);
 
 /* ------------------------------------------------------------------------------- */
 
@@ -70,12 +72,12 @@ Special Numeric Values
 JavaScript does not crash for invalid math operations.
 ================================================================================ */
 
-// console.log("value of (1 / 0) : " + (1 / 0));
-// console.log("value of (-1 / 0) : " + (-1 / 0));
+// console.log("value of (1 / 0) : " + 1 / 0);
+// console.log("value of (-1 / 0) : " + -1 / 0);
 
 /* ------------------------------------------------------------------------------- */
 
-// console.log("value of ('not a number' / 2) : " + ("not a number" / 2));
+// console.log("value of ('not a number' / 2) : " + "not a number" / 2);
 // console.log("value of isNaN('hello') : " + isNaN("hello"));
 // console.log("value of isNaN(123) : " + isNaN(123));
 
@@ -162,7 +164,7 @@ Logical AND (&&) → returns last truthy or first falsy
 */
 
 // console.log("value of (true && false) : " + (true && false));
-// console.log("value of ('abc' && 123) : " + ("abc" && 123));
+// console.log("value of ('abc' && 123) : " + ("abc" && 123 && false));
 // console.log("value of (false && 'abc') : " + (false && "abc"));
 
 /* ------------------------------------------------------------------------------- */
@@ -171,8 +173,8 @@ Logical AND (&&) → returns last truthy or first falsy
 Logical NOT (!)
 */
 
-// console.log("value of (!true) : " + (!true));
-// console.log("value of (!false) : " + (!false));
+// console.log("value of (!true) : " + !true);
+// console.log("value of (!false) : " + !false);
 
 /* ------------------------------------------------------------------------------- */
 
@@ -215,12 +217,6 @@ Interview Questions
 
 /* ------------------------------------------------------------------------------- */
 
-// console.log("value of typeof(5) : " + typeof(5));
-// console.log("value of typeof('Hello') : " + typeof("Hello"));
-// console.log("value of typeof(true) : " + typeof(true));
-
-/* ------------------------------------------------------------------------------- */
-
 // console.log("value of ('5' - 2) : " + ("5" - 2));
 // console.log("value of (false + 1) : " + (false + 1));
 // console.log("value of (null + 1) : " + (null + 1));
@@ -239,9 +235,9 @@ Safe Mathematical Operations
 JavaScript handles invalid operations safely using special values.
 ================================================================================ */
 
-// console.log("value of (10 / 0) : " + (10 / 0));
-// console.log("value of ('abc' * 2) : " + ("abc" * 2));
-// console.log("value of isNaN('abc') : " + isNaN("abc"));
+console.log("value of (10 / 0) : " + 10 / 0);
+console.log("value of ('abc' * 2) : " + "abc" * 2);
+console.log("value of isNaN('abc') : " + isNaN("abc"));
 
 /* ------------------------------------------------------------------------------- */
 
@@ -278,14 +274,14 @@ null + 1
 Explain results in comments.
 ================================================================================ */
 //  var age = 18;
-function add(a, b) {
-  console.log("inside function ");
-  var result = a + b;
-  console.log("after console");
-  return result;
-}
-console.log("before function call");
-add(5, 6);
+// function add(a, b) {
+//   console.log("inside function ");
+//   var result = a + b;
+//   console.log("after console");
+//   return result;
+// }
+// console.log("before function call");
+// add(5, 6);
 
 // var message = age >= 18 ? "You are an adult." : "You are a minor";
 // console.log("value of message : " + message);
