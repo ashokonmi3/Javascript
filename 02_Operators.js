@@ -18,12 +18,6 @@ Categories:
 Assignment Operators
 Used to assign values to variables.
 ================================================================================ */
-
-// var x = 1;
-// console.log("value of x : " + x);
-
-/* ------------------------------------------------------------------------------- */
-
 // var a = 10;
 // a += 5;
 // console.log("value of a after += : " + a);
@@ -41,6 +35,7 @@ Used to assign values to variables.
 // console.log("value of a after *= : " + a);
 
 // /* ------------------------------------------------------------------------------- */
+// var a = 10;
 
 // a /= 4;
 // console.log("value of a after /= : " + a);
@@ -75,7 +70,7 @@ JavaScript does not crash for invalid math operations.
 // console.log("value of (1 / 0) : " + 1 / 0);
 // console.log("value of (-1 / 0) : " + -1 / 0);
 
-/* ------------------------------------------------------------------------------- */
+// /* ------------------------------------------------------------------------------- */
 
 // console.log("value of ('not a number' / 2) : " + "not a number" / 2);
 // console.log("value of isNaN('hello') : " + isNaN("hello"));
@@ -151,7 +146,7 @@ Logical Operators
 
 /*
 Logical OR (||) → returns first truthy value
-*/
+// */
 
 // console.log("value of (true || false) : " + (true || false));
 // console.log("value of ('abc' || 123) : " + ("abc" || 123));
@@ -175,23 +170,6 @@ Logical NOT (!)
 
 // console.log("value of (!true) : " + !true);
 // console.log("value of (!false) : " + !false);
-
-/* ------------------------------------------------------------------------------- */
-
-/* ===============================================================================
-Ternary Operator
-condition ? value1 : value2
-================================================================================ */
-
-// var age = 18;
-// var message = age >= 18 ? "You are an adult." : "You are a minor";
-// console.log("value of message : " + message);
-
-/* ------------------------------------------------------------------------------- */
-
-// var age = 8;
-// var message = age >= 18 ? "You are an adult." : "You are a minor";
-// console.log("value of message : " + message);
 
 /* ------------------------------------------------------------------------------- */
 
@@ -235,9 +213,8 @@ Safe Mathematical Operations
 JavaScript handles invalid operations safely using special values.
 ================================================================================ */
 
-console.log("value of (10 / 0) : " + 10 / 0);
-console.log("value of ('abc' * 2) : " + "abc" * 2);
-console.log("value of isNaN('abc') : " + isNaN("abc"));
+// console.log("value of (10 / 0) : " + 10 / 0);
+// console.log("value of ('abc' * 2) : " + "abc" * 2);
 
 /* ------------------------------------------------------------------------------- */
 

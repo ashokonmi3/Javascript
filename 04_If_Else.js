@@ -1,8 +1,8 @@
 // // Basic if-else statement example
 // var year = 2015;
 // if (year == 2015) {
-//     console.log("That's correct!"); // If condition is true, this block runs.
-//     console.log("You're so smart!");
+//   console.log("That's correct!"); // If condition is true, this block runs.
+//   console.log("You're so smart!");
 // }
 // ===================
 // var year = 2016;
@@ -15,30 +15,30 @@
 // // Prompt user for input and validate the year
 // var year = 2016;
 // if (year == 2015) {
-//     console.log("Correct! ECMAScript-2015 was published in 2015.");
+//   console.log("Correct! ECMAScript-2015 was published in 2015.");
 // } else {
-//     console.log("Incorrect, try again.");
+//   console.log("Incorrect, try again.");
 // }
 
 // ============================
 // Multiple conditions using if-else-if
 // var year = 2015;
 // if (year < 2015) {
-//     console.log('Too early...');  // Runs if year is before 2015
+//   console.log("Too early..."); // Runs if year is before 2015
 // } else if (year > 2015) {
-//     console.log('Too late');  // Runs if year is after 2015
+//   console.log("Too late"); // Runs if year is after 2015
 // } else {
-//     console.log('Exactly!');  // Runs if year is exactly 2015
+//   console.log("Exactly!"); // Runs if year is exactly 2015
 // }
 // =================
 
 // var year = 2015;
 // if (year < 2018) {
-//     console.log('Too early...');  // Runs if year is before 2015
+//   console.log("Too early..."); // Runs if year is before 2015
 // } else if (year == 2015) {
-//     console.log('Too late');  // Runs if year is after 2015
+//   console.log("Too late"); // Runs if year is after 2015
 // } else {
-//     console.log('Exactly!');  // Runs if year is exactly 2015
+//   console.log("Exactly!"); // Runs if year is exactly 2015
 // }
 
 // ============================
@@ -46,37 +46,42 @@
 // var accessAllowed;
 // var age = 28;
 // if (age > 18) {
-//     accessAllowed = true; // If age is above 18, access is allowed
+//   accessAllowed = true; // If age is above 18, access is allowed
 // } else {
-//     accessAllowed = false; // Else, access is denied
+//   accessAllowed = false; // Else, access is denied
 // }
 // console.log(accessAllowed); // Prints true or false based on age
 
 // // ============================
 // // Ternary Operator (conditional operator) for simpler conditions
 // var age = 28;
-// var accessAllowed = (age > 18) ? true : false; // Similar to if-else in one line
+// var accessAllowed = age > 18 ? true : false; // Similar to if-else in one line
 // console.log(accessAllowed); // Prints true or false
 
 // ============================
 // Example using ternary operator for different age ranges
 // var age = 100;
-// var message = (age < 3) ? 'Hi, baby!' :
-//     (age < 18) ? 'Hello!' :
-//         (age < 100) ? 'Greetings!' : 'What an unusual age!';
+// var message =
+//   age < 3
+//     ? "Hi, baby!"
+//     : age < 18
+//       ? "Hello!"
+//       : age < 100
+//         ? "Greetings!"
+//         : "What an unusual age!";
 // console.log(message); // Prints the message based on age
 
 // // ============================
-// // Same logic using if-else statements for age categories
+// // // Same logic using if-else statements for age categories
 // var age = 18;
 // if (age < 3) {
-//     message = 'Hi, baby!';
+//   message = "Hi, baby!";
 // } else if (age < 18) {
-//     message = 'Hello!';
+//   message = "Hello!";
 // } else if (age < 100) {
-//     message = 'Greetings!';
+//   message = "Greetings!";
 // } else {
-//     message = 'What an unusual age!';
+//   message = "What an unusual age!";
 // }
 // console.log(message);
 
@@ -84,12 +89,12 @@
 // // Logical Operators
 
 // // // OR Operator (||)
-// console.log(true || true);   // true
-// console.log(false || true);  // true
-// console.log(true || false);  // true
+// console.log(true || true); // true
+// console.log(false || true); // true
+// console.log(true || false); // true
 // console.log(false || false); // false
 // --------------------------
-// // // Example with falsy values
+// // // // Example with falsy values
 // if (0 || 0) {
 //   console.log("truthy!");
 // } else {
@@ -115,19 +120,19 @@
 // }
 
 // // ============================
-// // AND Operator (&&)
-// console.log(true && true);   // true
-// console.log(false && true);  // false
-// console.log(true && false);  // false
+// // // AND Operator (&&)
+// console.log(true && true); // true
+// console.log(false && true); // false
+// console.log(true && false); // false
 // console.log(false && false); // false
 // ----------------
 // // // Example with AND operator to check exact time
 // var hour = 12;
 // var minute = 30;
 // if (hour == 12 && minute == 30) {
-//     console.log('Time is 12:30');
+//   console.log("Time is 12:30");
 // } else {
-//     console.log('Time is other time');
+//   console.log("Time is other time");
 // }
 
 // // ============================
@@ -160,32 +165,32 @@
 // -----------------------
 // var a = "";
 // if (a) {
-//     console.log("values are equal");
+//   console.log("values are equal");
 // } else {
-//     console.log("values are not equal"); // This will print because a is falsy
+//   console.log("values are not equal"); // This will print because a is falsy
 // }
 // --------------------------
 // var a; // undefined
 // if (a) {
-//     console.log("values are equal");
+//   console.log("values are equal");
 // } else {
-//     console.log("values are not equal"); // This will print because a is falsy
+//   console.log("values are not equal"); // This will print because a is falsy
 // }
 // ----------------------
 // var a = null;
 // if (a) {
-//     console.log("values are equal");
+//   console.log("values are equal");
 // } else {
-//     console.log("values are not equal"); // This will print because a is falsy
+//   console.log("values are not equal"); // This will print because a is falsy
 // }
 
 // ============================
 // Truthy and Falsy in conditions
 // var a = true;
 // if (a) {
-//     console.log("values are equal"); // This will print because a is truthy
+//   console.log("values are equal"); // This will print because a is truthy
 // } else {
-//     console.log("values are not equal");
+//   console.log("values are not equal");
 // }
 // -------------------
 // var a = false;
@@ -212,10 +217,9 @@
 // }
 // =================
 // if (0 || 1) {
-//     console.log(false)
-// }
-// else {
-//     console.log(true)
+//   console.log(false);
+// } else {
+//   console.log(true);
 // }
 // ====================
 // let number = 0;
@@ -226,7 +230,7 @@
 // } else if (Number == 0) {
 //   console.log("Number is equal to zero");
 // } else {
-//   console.log("This is not a Numbner");
+//   console.log("This is not a Number");
 // }
 
 // ============================
@@ -235,12 +239,13 @@
 // var year = 2024;
 // var a = 10;
 // var b = 100;
-// if (year < 2015 && a == 10 && b == 20) { // < , ==,&& ||   , false && true && false
-//     console.log("Too early...");
+// if (year < 2015 && a == 10 && b == 20) {
+//   // < , ==,&& ||   , false && true && false
+//   console.log("Too early...");
 // } else if (year == 2015) {
-//     console.log("Too late");
+//   console.log("Too late");
 // } else {
-//     console.log("Exactly!");
+//   console.log("Exactly!");
 // }
 // =======
 
@@ -267,7 +272,7 @@
 // }
 // ===================
 
-// let role = "admin";
+// let role = "viewer";
 
 // switch (role) {
 //   case "admin":
@@ -311,87 +316,63 @@
 // =======================
 // let month = "August";
 // switch (month) {
-//     case "December":
-//     case "January":
-//     case "February":
-//         console.log("Winter");
-//         break;
-//     case "March":
-//     case "April":
-//     case "May":
-//         console.log("Spring");
-//         break;
-//     case "June":
-//     case "July":
-//     case "August":
-//         console.log("Summer");
-//         break;
-//     case "September":
-//     case "October":
-//     case "November":
-//         console.log("Autumn");
-//         break;
-//     default:
-//         console.log("Unknown month.");
+//   case "December":
+//   case "January":
+//   case "February":
+//     console.log("Winter");
+//     break;
+//   case "March":
+//   case "April":
+//   case "May":
+//     console.log("Spring");
+//     break;
+//   case "June":
+//   case "July":
+//   case "August":
+//     console.log("Summer");
+//     break;
+//   case "September":
+//   case "October":
+//   case "November":
+//     console.log("Autumn");
+//     break;
+//   default:
+//     console.log("Unknown month.");
 // }
 // ================
 // let trafficLight = "red";
 
 // switch (trafficLight) {
-//     case "red":
-//         console.log("Stop");
-//     case "yellow":
-//         console.log("Ready");
+//   case "red":
+//     console.log("Stop");
+//   case "yellow":
+//     console.log("Ready");
 
-//     case "green":
-//         console.log("Go");
-//         break;
-//     default:
-//         console.log("Invalid traffic light signal.");
+//   case "green":
+//     console.log("Go");
+//     break;
+//   default:
+//     console.log("Invalid traffic light signal.");
 // }
 // ================
 // let value = 3.14159;
 
 // switch (true) {
-//     case value === Math.PI:
-//         console.log("The value is approximately Pi.");
-//         break;
-//     case value > 3 && value < 3.2:
-//         console.log("The value is greater than 3 but less than 3.2.");
-//         break;
-//     case value > 2 && value < 3:
-//         console.log("The value is between 2 and 3.");
-//         break;
-//     default:
-//         console.log("Unknown range.");
+//   case value === Math.PI:
+//     console.log("The value is approximately Pi.");
+//     break;
+//   case value > 3 && value < 3.2:
+//     console.log("The value is greater than 3 but less than 3.2.");
+//     break;
+//   case value > 2 && value < 3:
+//     console.log("The value is between 2 and 3.");
+//     break;
+//   default:
+//     console.log("Unknown range.");
 // }
 // // ================
-// let amount = 99.99;
-
-// switch (amount) {
-//     case 99.99:
-//         console.log("The price is $99.99.");
-//         break;
-//     case 49.99:
-//         console.log("The price is $49.99.");
-//         break;
-//     case 19.99:
-//         console.log("The price is $19.99.");
-//         break;
-//     default:
-//         console.log("Price not listed.");
-// }
 // =============
-// var age = 89;
-// if (age < 18) {
-//     console.log("Minor");
-// } else if (age >= 18 && age <= 64) {
-//     console.log("Adult");
-// } else if (age >= 65) {
-//     console.log("Senior");
-// } else {
-//     console.log("Default age");
-// }
+
 // ==========================
 // User input - we can not run this code directly
 // command to execute node 02_Operators.js
@@ -401,10 +382,10 @@
 
 // const rl = readline.createInterface({
 //   input: process.stdin, //👉 process.stdin always reads input as a string (text).
-//   output: process.stdout
+//   output: process.stdout,
 // });
 
-// rl.question("Enter your name: ", function(name) {
+// rl.question("Enter your name: ", function (name) {
 //   console.log("Hello", name);
 //   console.log("Type:", typeof name);
 
@@ -412,54 +393,54 @@
 // });
 // ----------------------
 // Integer input
-// const readline = require('readline');
+// const readline = require("readline");
 
 // const rl = readline.createInterface({
-//     input: process.stdin,
-//     output: process.stdout
+//   input: process.stdin,
+//   output: process.stdout,
 // });
 
 // rl.question("Enter the student's score: ", (input) => {
-//     const score = Number(input);
+//   const score = Number(input);
 
-//     console.log("Score:", score);
-//     console.log("Type:", typeof score);
+//   console.log("Score:", score);
+//   console.log("Type:", typeof score);
 
-//     rl.close();
+//   rl.close();
 // });
 
 // -------------------
 
-// const readline = require('readline');
+// const readline = require("readline");
 
 // const rl = readline.createInterface({
-//     input: process.stdin,
-//     output: process.stdout
+//   input: process.stdin,
+//   output: process.stdout,
 // });
 
 // rl.question("Enter the student's score: ", (input) => {
-//     const score = parseFloat(input);
+//   const score = parseFloat(input);
 
-//     console.log("Score:", score);
-//     console.log("Type:", typeof score);
+//   console.log("Score:", score);
+//   console.log("Type:", typeof score);
 
-//     rl.close();
+//   rl.close();
 // });
 
-// Multiple input
-// const readline = require('readline');
+// // Multiple input
+const readline = require("readline");
 
-// const rl = readline.createInterface({
-//     input: process.stdin,
-//     output: process.stdout
-// });
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
 
-// rl.question('Enter your name: ', (name) => {
-//     rl.question('Enter your age: ', (age) => {
-//         console.log(`Hello, ${name}. You are ${age} years old.`);
-//         rl.close();
-//     });
-// });
+rl.question("Enter your name: ", (name) => {
+  rl.question("Enter your age: ", (age) => {
+    console.log(`Hello, ${name}. You are ${age} years old.`);
+    rl.close();
+  });
+});
 
 // ===================
 // Write a program that takes a student's score as input and outputs

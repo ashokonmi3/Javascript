@@ -15,28 +15,19 @@ const { stringify } = require("querystring");
 // Template Literals
 // Template literals are enclosed in backticks (``) and can span multiple lines.
 // ===============
-// '' `` ~
-// var str1= 'this is to learn
-// string '
-// // var str1= "this is to learn
-// string "
 
-// // var str = `write over multiple
+// var str = `write over multiple
 // lines`;
 // console.log(str);
-// s1=str.replace(/\n/g,' ')
-// // over multiple lines
-// console.log(s1 == 'write over multiple lines'); // true
+
 // -------------------
 // Alternative concatenation using + operator
-// str = 'written over multiple lines'; // true
 
-// var str2 = 'written ' +
-//     'over ' +
-//     'multiple ' +
-//     'lines';
+// str = "written over multiple lines"; // true
 
-// console.log(str2);  // Output: written over multiple lines
+// var str2 = "written " + "over " + "multiple " + "lines";
+
+// console.log(str2); // Output: written over multiple lines
 // console.log(str == str2); // true
 
 // ===============
@@ -52,12 +43,13 @@ const { stringify } = require("querystring");
 // Accessing characters in a string using the charAt() method.
 // ===============
 // A b c
-// // 0 1 2
+// 0 1 2
 // // No negative indexing
 // console.log("Abc".charAt(1)); // Output: b
 // console.log("abc".charAt(0)); // Output: a
 
-// // // // String indexing using array-like syntax (returns a string, not a character)
+// // // // // String indexing using array-like syntax (returns a string, not a character)
+
 // console.log("Abc"[0]); // Output: A
 // console.log("abc"[1]); // Output: b
 
@@ -93,7 +85,7 @@ const { stringify } = require("querystring");
 // ===============
 // String Search Methods
 // indexOf() method returns the index of the first occurrence of a substring.
-// ===============
+// // ===============
 
 // console.log("abcabc".indexOf("b")); // Output: 1
 // console.log("abcabc".indexOf("z")); // Output: -1 (not found)
@@ -106,7 +98,7 @@ const { stringify } = require("querystring");
 // console.log("Widget with id".includes("Widget")); // true
 // console.log("Hello".includes("Bye")); // false
 
-// // // // The optional second argument of str.includes is the position to start searching from:
+// // // // // // The optional second argument of str.includes is the position to start searching from:
 // console.log("Widget".includes("id")); // true
 // console.log("Widget".includes("id", 3)); // false, from position 3 there is no "id"
 
@@ -115,10 +107,6 @@ const { stringify } = require("querystring");
 // The methods str.startsWith and str.endsWith do exactly what they say:
 // ===============
 
-// console.log("Widget".startsWith("Wid")); // true, "Widget" starts with "Wid"
-// console.log("Widget".endsWith("get")); // true, "Widget" ends with "get"
-// ctrl + f5
-// ctrl +/
 // ===============
 // String Slicing Methods
 // The slice() method extracts a section of a string and returns it as a new string.
@@ -148,20 +136,25 @@ const { stringify } = require("querystring");
 // ===============
 // Comparing Strings
 // Strings in JavaScript are compared lexicographically, character by character.
+// a - 97
+// A 65
 // ===============
 
 // console.log("abc".codePointAt(0)); // Output: 97
-// console.log("A".codePointAt(0)); // Output: 65
+// console.log("abc".codePointAt(2)); // Output: 97
+
+// console.log("ABC".codePointAt(1)); // Output: 65
+// console.log("ABC".codePointAt(2)); // Output: 65
 
 // ===============
 // Type Conversion to String
 // Strings can be created from other data types using the String() function.
 // ===============
 
-// console.log(String(123));  // Output: '123'
-// console.log(String(4.5));  // Output: '4.5'
+// console.log(String(123)); // Output: '123'
+// console.log(String(4.5)); // Output: '4.5'
 
-// ===============
+// // ===============
 // String Concatenation
 // Strings can be concatenated using the + operator or the concat() method.
 // ===============
@@ -170,8 +163,8 @@ const { stringify } = require("querystring");
 // str1 += "say hello";
 // console.log(str1); // Output: say hello
 
-// // str1 += 7;
-// // console.log(str1);  // Output: say hello7
+// // // str1 += 7;
+// // // console.log(str1);  // Output: say hello7
 
 // console.log("hello".concat(" ", "world")); // Output: hello world
 
@@ -182,6 +175,7 @@ const { stringify } = require("querystring");
 
 // console.log("abcdedf".split("d")); // Output: [ 'abc', 'ef' ]
 // console.log("abcdedf adf asdf".split(" ")); // Output: [ 'abcdedf', 'adf', 'asdf' ]
+
 // =================
 // let url = "https://example.com/?name=John Doe";
 
@@ -201,6 +195,7 @@ const { stringify } = require("querystring");
 // for (let i = 0; i < str.length; i++) {
 //   console.log(str[i]);
 // }
+
 // --------------------
 // let str = "hello";
 
@@ -209,25 +204,10 @@ const { stringify } = require("querystring");
 // }
 
 // -----------------
-// let str = "hello";
-// let i = 0;
 
-// while (i < str.length) {
-//   console.log(str[i]);
-//   i++;
-// }
 // =============
-// let str = "javascript";
 
-// for (let i = 0; i < str.length; i++) {
-//   console.log(i, str[i]);
-// }
 // =========
-
-// var str = "hello world";
-// for (var ch of str) {
-//   console.log(ch);
-// }
 
 // // ===============
 // // Reverse a String
@@ -238,19 +218,21 @@ const { stringify } = require("querystring");
 // var p = "";
 // for (var i = s.length - 1; i >= 0; i--) {
 //   p = p + s[i];
+//   console.log(p); // Output: gnirts a si siht
 // }
-// console.log(p); // Output: gnirts a si siht
+// console.log("Reverse is " + p); // Output: gnirts a si siht
+
 // ====================
 // Count vowels
-// let str = "education";
-// let count = 0;
+let str = "education";
+let count = 0;
 
-// for (let i = 0; i < str.length; i++) {
-//   if ("aeiou".includes(str[i])) {
-//     count++;
-//   }
-// }
-// console.log(count);
+for (let i = 0; i < str.length; i++) {
+  if ("aeiou".includes(str[i])) {
+    count++;
+  }
+}
+console.log(count);
 
 // console.log("a".includes("e")); //i = 0
 // console.log("aeiou".includes("e")); //i = 0
@@ -284,3 +266,25 @@ const { stringify } = require("querystring");
 // If it is divisible by both, return "Divisible by 3 and 5".
 // If it is divisible by only one, return "Divisible by 3" or "Divisible by 5".
 // If it is divisible by neither, return "Not Divisible by 3 or 5".
+
+// J a v a s c r i p t
+// 0 1 2 3 4 5 6 7 8 9
+//         // -7  -6-5  -4  -3  -2  -1
+// ============================
+// Assignment
+/*
+1. Replace Every K-th Word with Its Length
+
+Problem Statement:
+Replace every K-th word in a sentence with the length of that word.
+
+Example:
+Input:
+K = 2
+" Coding challenges are amazing to solve "
+
+Output:
+" Coding 10 are 7 to 5 "
+
+*/
+// ----------------------------

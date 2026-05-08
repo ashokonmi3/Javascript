@@ -49,6 +49,12 @@
 // Syntax: while (condition) { statement }
 // ===============
 
+// let x = 0; // initialization
+// while (x < 5) {
+//   console.log(x); // Prints current value of x
+//   x++; // Decreases x by 1 each iteration
+// }
+// -------------------------
 // let x = 5; // initialization
 // while (x >= 0) {
 //   console.log(x); // Prints current value of x
@@ -59,19 +65,20 @@
 // // Example: Simple Counter
 // let i = 0;
 // while (i < 3) {
-//     console.log(i); // Output current value of i
-//     // process.stdout.write(`i value ${i}`);
+//   console.log(i); // Output current value of i
 
-//     i++; // Increase i by 1 in each iteration
+//   i++; // Increase i by 1 in each iteration
 // }
 // // Output: 0, 1, 2
 // --------------------
 // // // Edge Case: Loop ending at 1
 // let count = 3;
-// while (count) { // Runs until count is falsy (0)
-//     console.log(count);
-//     count--;
+// while (count) {
+//   // Runs until count is falsy (0)
+//   console.log(count);
+//   count--;
 // }
+
 // Output: 3, 2, 1
 
 // ===============
@@ -85,6 +92,7 @@
 //     console.log(j); // Outputs current value of j
 //     j++;
 // } while (j < 3); // Runs at least once, as condition is checked after loop body
+
 // Output: 10
 
 // Interview Note: Use 'do...while' for cases where code must
@@ -99,26 +107,34 @@
 // for (let k = 0; k < 3; k++) {
 //   console.log(k); // Prints value of k in each iteration
 // }
+
 // // Output: 0, 1, 2
 // -----------------
 // Example: Counting down with for loop
+
 // for (let l = 5; l >= 0; l--) {
 //   console.log(l); // Outputs value of l from 5 to 0
 // }
+
 // Output: 5, 4, 3, 2, 1, 0
 // -----------------
 // Variable Scope Example
+
 // let m = 0;
 // for (m = 0; m < 3; m++) {
-//     console.log(m); // Outputs value of m within loop
+//   console.log(m); // Outputs value of m within loop
 // }
 // console.log("Outside loop:", m); // Shows m is still accessible outside
+
 // // Output: 0, 1, 2, Outside loop: 3
 // -----------------------------
+// {} block  let block scope
+
 // for (let m = 0; m < 3; m++) {
-//     console.log(m); // Outputs value of m within loop
+//   console.log(m); // Outputs value of m within loop
 // }
 // console.log("Outside loop:", m); // Shows m is still accessible outside
+
 // =======================
 
 // for (var m = 0; m < 3; m++) {
@@ -126,36 +142,34 @@
 // }
 // console.log("Outside loop:", m); // Shows m is still accessible outside
 
-// ====================
-// let m;
-// for (m = 1; m <= 5; m++) {
-//   console.log("inner" + m)
-// }
-// console.log("Outer" + m);
 // ===============================
 // JavaScript Loops – Single File
 // ===============================
 
 //-------------------
 // Print "javascript" 6 times
+
 // for (let i = 0; i <= 5; i++) {
 //   console.log("javascript");
 // }
 
 // //-------------------
 // //  Print "javascript : i"
+
 // for (let i = 0; i <= 10; i++) {
 //   console.log("javascript : " + i);
 // }
 
 // //-------------------
 // // Print 10 to 1
+
 // for (let i = 10; i >= 1; i--) {
 //   console.log(i);
 // }
 
 // -------------------
 // Print 1 to 10 except 7
+
 // for (let i = 1; i <= 10; i++) {
 //   if (i !== 7) {
 //     console.log(i);
@@ -165,6 +179,7 @@
 
 //-------------------
 // Print 1 to 10 except 4 and 7
+
 // for (let i = 1; i <= 10; i++) {
 //   if (i !== 4 && i !== 7) {
 //     console.log(i);
@@ -180,30 +195,6 @@
 //     console.log("javascript " + i);
 //   }
 // }
-
-//-------------------
-// while loop (2 to 10)
-// let i = 2;
-// while (i <= 10) {
-//   console.log(i);
-//   i++;
-// }
-
-//-------------------
-// Print 10 to 1 using while
-// i = 10;
-// while (i >= 1) {
-//   console.log(i);
-//   i--;
-// }
-
-// //-------------------
-// // 9️⃣ do...while loop
-// i = 1000;
-// do {
-//   console.log("i value is : " + i);
-//   i++;
-// } while (i <= 10);
 
 // //-------------------
 // break example
@@ -226,19 +217,19 @@
 
 // -------------------
 //  Fixed i with loop
-// let fixedI = 1;
-// for (let j = 1; j <= 3; j++) {
-//   console.log(fixedI + " " + j);
-
-// }
-
-// let fixedI = 2;
-// for (let j = 1; j <= 3; j++) {
+// var fixedI = 1;
+// for (var j = 1; j <= 3; j++) {
 //   console.log(fixedI + " " + j);
 // }
+// console.log("--------------------------");
+// var fixedI = 2;
+// for (var j = 1; j <= 3; j++) {
+//   console.log(fixedI + " " + j);
+// }
+// console.log("--------------------------");
 
-// let fixedI = 3;
-// for (let j = 1; j <= 3; j++) {
+// var fixedI = 3;
+// for (var j = 1; j <= 3; j++) {
 //   console.log(fixedI + " " + j);
 // }
 
@@ -250,12 +241,11 @@
 //   }
 // }
 
+// Note: for every outer loop value the complete inner loop will execute
 // //-------------------
 // // 1️⃣4️⃣ Loop labels
-// outerloop:
-// for (let i = 1; i <= 3; i++) {
-//   innerloop:
-//   for (let j = 1; j <= 3; j++) {
+// outerloop: for (let i = 1; i <= 3; i++) {
+//   innerloop: for (let j = 1; j <= 3; j++) {
 //     if (i === 2 && j === 2) {
 //       break outerloop;
 //     }
@@ -281,7 +271,18 @@
 // for (ctr = 0; ctr < 5; ++ctr) {
 //   console.log(ctr);
 // }
-// console.log(ctr); // accessible outside loop
+// console.log("Outer " + ctr); // accessible outside loop
+// ---------------------
+// for (let ctr = 0; ctr < 5; ++ctr) {
+//   console.log(ctr);
+// }
+// console.log("Outer " + ctr);
+// ----------------
+
+// for (var ctr = 0; ctr < 5; ++ctr) {
+//   console.log(ctr);
+// }
+// console.log("Outer " + ctr);
 
 // ===============
 //  Infinite Loop
@@ -295,36 +296,6 @@
 // Loops through properties of an object
 // Syntax: for (key in object) { statement }
 // ===============
-
-// ===============
-//  Break Statement
-// Exits a loop when a specific condition is met.
-// ===============
-
-// for (let n = 0; n < 10; n++) {
-//     if (n === 3) break; // Exits loop when n is 3
-//     console.log(n);
-// }
-// console.log("I am outside the loop");
-
-// Output: 0, 1, 2
-
-// ===============
-//  Continue Statement
-// Skips the current iteration and moves to the next one.
-// ===============
-
-// for (let p = 0; p < 5; p++) {
-//     if (p === 2) continue; // Skips when p is 2
-//     console.log(p);
-// }
-// Output: 0, 1, 3, 4
-
-// var s = 2;
-// var s1= '2';
-// console.log(2 === '2');
-// console.log(2 == '2');
-
 // ===============
 //  Switch Statement in Loops
 // Can be used to handle different cases within a loop

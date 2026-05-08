@@ -54,13 +54,10 @@ This is one of the most common examples of implicit type coercion.
 ================================================================================ */
 
 // console.log("value of ('5' + 2 + 3) : " + ("5" + 2 + 3));
-// console.log("value of typeof('5' + 2 + 3) : " + typeof ("5" + 2 + 3));
 
 // console.log("value of (5 + 2 + '3') : " + (5 + 2 + "3"));
-// console.log("value of typeof(5 + 2 + '3') : " + typeof (5 + 2 + "3"));
 
 // console.log("value of ('hello' + true) : " + ("hello" + true));
-// console.log("value of typeof('hello' + true) : " + typeof ("hello" + true));
 
 // Explanation:
 // "5" + 2       -> "52"
@@ -84,7 +81,6 @@ confusion caused by implicit coercion.
 // var convertedToString = String(value);
 
 // console.log("value of value : " + value);
-// console.log("value of typeof(value) : " + typeof value);
 
 // console.log("value of convertedToString : " + convertedToString);
 // console.log("value of typeof(convertedToString) : " + typeof convertedToString);
@@ -108,11 +104,9 @@ If conversion is not possible, JavaScript returns NaN.
 
 // var result4 = "10" * 2;
 // console.log("value of result4 : " + result4);
-// console.log("value of typeof(result4) : " + typeof result4);
 
 // var result5 = Number("5") + 3;
 // console.log("value of result5 : " + result5);
-// console.log("value of typeof(result5) : " + typeof result5);
 
 /* ===============================================================================
 Explicit Numeric Conversion using Number()
@@ -154,12 +148,14 @@ operation, but the value could not be interpreted as a valid number.
 // console.log("value of result7 : " + result7);
 // console.log("value of typeof(result7) : " + typeof result7);
 
-console.log(+"7" + 3);
-console.log(3 + "7");
-console.log(+"7");
-console.log(+true);
-console.log(+"abc");
-console.log(-"7" + 3);
+// console.log("7" + 3);
+// console.log(+"7" + 3);
+
+// console.log(3 + "7");
+// console.log(+"7");
+// console.log(+true);
+// console.log(+"abc");
+// console.log(-"7" + 3);
 
 /* ===============================================================================
 Boolean Conversion
@@ -178,36 +174,24 @@ All remaining values are treated as truthy, which means they become true.
 ================================================================================ */
 
 // console.log("value of Boolean(0) : " + Boolean(0));
-// console.log("value of typeof(Boolean(0)) : " + typeof Boolean(0));
 
 // console.log("value of Boolean('') : " + Boolean(""));
-// console.log("value of typeof(Boolean('')) : " + typeof Boolean(""));
 
 // console.log("value of Boolean(undefined) : " + Boolean(undefined));
-// console.log(
-//   "value of typeof(Boolean(undefined)) : " + typeof Boolean(undefined),
-// );
 
 // console.log("value of Boolean(null) : " + Boolean(null));
-// console.log("value of typeof(Boolean(null)) : " + typeof Boolean(null));
 
 // console.log("value of Boolean(NaN) : " + Boolean(NaN));
-// console.log("value of typeof(Boolean(NaN)) : " + typeof Boolean(NaN));
 
 // console.log("value of Boolean(false) : " + Boolean(false));
-// console.log("value of typeof(Boolean(false)) : " + typeof Boolean(false));
-
+// // -------------------------------------------------
 // console.log("value of Boolean('hello') : " + Boolean("hello"));
-// console.log("value of typeof(Boolean('hello')) : " + typeof Boolean("hello"));
 
 // console.log("value of Boolean(1) : " + Boolean(1));
-// console.log("value of typeof(Boolean(1)) : " + typeof Boolean(1));
 
 // console.log("value of Boolean(10.0) : " + Boolean(10.0));
-// console.log("value of typeof(Boolean(10.0)) : " + typeof Boolean(10.0));
 
 // console.log("value of Boolean(true) : " + Boolean(true));
-// console.log("value of typeof(Boolean(true)) : " + typeof Boolean(true));
 
 /* ===============================================================================
 Falsy Values in JavaScript
@@ -237,15 +221,12 @@ execution logic step by step.
 
 // var x = 5 + "2" + 3;
 // console.log("value of x : " + x);
-// console.log("value of typeof(x) : " + typeof x);
 
 // var y = 5 + 2 + "3";
 // console.log("value of y : " + y);
-// console.log("value of typeof(y) : " + typeof y);
 
 // var z = "10" - 5;
 // console.log("value of z : " + z);
-// console.log("value of typeof(z) : " + typeof z);
 
 // Explanation:
 // 5 + "2"      -> "52"
@@ -267,19 +248,14 @@ This is why + behaves differently from -, *, and /.
 ================================================================================ */
 
 // console.log("value of ('1' + 2) : " + ("1" + 2));
-// console.log("value of typeof('1' + 2) : " + typeof ("1" + 2));
 
 // console.log("value of (2 + '1') : " + (2 + "1"));
-// console.log("value of typeof(2 + '1') : " + typeof (2 + "1"));
 
 // console.log("value of (2 - '1') : " + (2 - "1"));
-// console.log("value of typeof(2 - '1') : " + typeof (2 - "1"));
 
 // console.log("value of ('6' / '2') : " + "6" / "2");
-// console.log("value of typeof('6' / '2') : " + typeof ("6" / "2"));
 
 // console.log("value of ('6' * '2') : " + "6" * "2");
-// console.log("value of typeof('6' * '2') : " + typeof ("6" * "2"));
 
 /* ===============================================================================
 Equality (==) vs Strict Equality (===)
@@ -299,26 +275,16 @@ results and avoids hidden conversions.
 // var b = "10";
 
 // console.log("value of a : " + a);
-// console.log("value of typeof(a) : " + typeof a);
 
 // console.log("value of b : " + b);
-// console.log("value of typeof(b) : " + typeof b);
 
 // console.log("value of (a == b) : " + (a == b));
-// console.log("value of typeof(a == b) : " + typeof (a == b));
 
 // console.log("value of (a === b) : " + (a === b));
-// console.log("value of typeof(a === b) : " + typeof (a === b));
 
 // console.log("value of (null == undefined) : " + (null == undefined));
-// console.log(
-//   "value of typeof(null == undefined) : " + typeof (null == undefined),
-// );
 
 // console.log("value of (null === undefined) : " + (null === undefined));
-// console.log(
-//   "value of typeof(null === undefined) : " + typeof (null === undefined),
-// );
 
 /* ===============================================================================
 Why === is Safer than ==
@@ -345,38 +311,20 @@ a compatible form before performing the comparison.
 ================================================================================ */
 
 // console.log("value of (2 > 1) : " + (2 > 1));
-// console.log("value of typeof(2 > 1) : " + typeof (2 > 1));
 
 // console.log("value of (2 == 1) : " + (2 == 1));
-// console.log("value of typeof(2 == 1) : " + typeof (2 == 1));
 
 // console.log("value of (2 != 1) : " + (2 != 1));
-// console.log("value of typeof(2 != 1) : " + typeof (2 != 1));
 
 // console.log("value of ('2' > 1) : " + ("2" > 1));
-// console.log("value of typeof('2' > 1) : " + typeof ("2" > 1));
 
 // console.log("value of ('01' == 1) : " + ("01" == 1));
-// console.log("value of typeof('01' == 1) : " + typeof ("01" == 1));
 
 // console.log("value of (true == 1) : " + (true == 1));
-// console.log("value of typeof(true == 1) : " + typeof (true == 1));
 
 // console.log("value of (false == 0) : " + (false == 0));
-// console.log("value of typeof(false == 0) : " + typeof (false == 0));
 
 // console.log("value of (0 === false) : " + (0 === false));
-// console.log("value of typeof(0 === false) : " + typeof (0 === false));
-
-// console.log("value of (null === undefined) : " + (null === undefined));
-// console.log(
-//   "value of typeof(null === undefined) : " + typeof (null === undefined),
-// );
-
-// console.log("value of (null == undefined) : " + (null == undefined));
-// console.log(
-//   "value of typeof(null == undefined) : " + typeof (null == undefined),
-// );
 
 /* ===============================================================================
 Special Case: null and undefined
@@ -393,33 +341,21 @@ null type      -> object  (historical behavior in JavaScript)
 undefined type -> undefined
 ================================================================================ */
 
-// console.log("value of null : " + null);
-// console.log("value of typeof(null) : " + typeof null);
-
-// var tempValue;
-// console.log("value of tempValue : " + tempValue);
-// console.log("value of typeof(tempValue) : " + typeof tempValue);
-
 /* ===============================================================================
 More Type Coercion Examples
 These examples help students understand how JavaScript switches behavior based
 on operator and operand types.
 ================================================================================ */
 
-// console.log("value of (2 + '3' + 4) : " + (2 + "3" + 4));
-// console.log("value of typeof(2 + '3' + 4) : " + typeof (2 + "3" + 4));
+console.log("value of (2 + '3' + 4) : " + (2 + "3" + 4));
 
-// console.log("value of (2 - '1') : " + (2 - "1"));
-// console.log("value of typeof(2 - '1') : " + typeof (2 - "1"));
+console.log("value of (2 - '1') : " + (2 - "1"));
 
-// console.log("value of ('20' - '5') : " + ("20" - "5"));
-// console.log("value of typeof('20' - '5') : " + typeof ("20" - "5"));
+console.log("value of ('20' - '5') : " + ("20" - "5"));
 
-// console.log("value of ('20' + '5') : " + ("20" + "5"));
-// console.log("value of typeof('20' + '5') : " + typeof ("20" + "5"));
+console.log("value of ('20' + '5') : " + ("20" + "5"));
 
-// console.log("value of ('5' * '4') : " + "5" * "4");
-// console.log("value of typeof('5' * '4') : " + typeof ("5" * "4"));
+console.log("value of ('5' * '4') : " + "5" * "4");
 
 /* ===============================================================================
 Summary and Best Practices

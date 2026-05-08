@@ -92,13 +92,6 @@ Important:
 JavaScript allows reassigning different types to same variable.
 ================================================================================ */
 
-// var value = 45;
-// console.log("value of value : " + value);
-
-// value = "JavaScript";
-// console.log("value after change : " + value);
-// console.log("value of typeof(value) : " + typeof value);
-
 /* ===============================================================================
 Number Data Type
 JavaScript uses Number type for both integers and decimals.
@@ -118,17 +111,13 @@ JavaScript does not have a separate character type.
 Even a single character is treated as a string.
 ================================================================================ */
 
-// var d = "Hello";
-// console.log("value of d : " + d);
-// console.log("value of typeof(d) : " + typeof d);
-
 /* ===============================================================================
 Undefined vs Null
 Undefined → variable declared but not assigned
 Null → intentionally assigned empty value
 
 Important Interview Point:
-================================================================================ */
+// ================================================================================ */
 
 // var undefinedValue;
 // console.log("value of f : " + undefinedValue);
@@ -147,19 +136,7 @@ Used in conditions and logical operations.
 // console.log("value of isAvailable : " + isAvailable);
 // console.log("value of typeof(isAvailable) : " + typeof isAvailable);
 
-/* ===============================================================================
-typeof Operator
-Used to find the type of a variable at runtime.
-================================================================================ */
-
-// var num = 10;
-// console.log("value of num : " + num);
-// console.log("value of typeof(num) : " + typeof num);
-
-// num = "Hello";
-// console.log("value of num : " + num);
-// console.log("value of typeof(num) : " + typeof num);
-
+/* ==
 /* ===============================================================================
 Strict Mode ("use strict")
 Strict mode helps catch errors and prevents bad practices.
@@ -174,17 +151,6 @@ Key Benefits:
 // var strictVar;
 // strictVar = 10; // Error
 // console.log("value of strictVar : " + strictVar);
-
-/* ===============================================================================
-Dynamic Typing
-Same variable can hold different types at runtime.
-================================================================================ */
-
-// var dynamicVar = "string";
-// console.log("value of typeof(dynamicVar) : " + typeof(dynamicVar));
-
-// dynamicVar = 100;
-// console.log("value of typeof(dynamicVar) : " + typeof(dynamicVar));
 
 /* ===============================================================================
 const Keyword
@@ -203,7 +169,7 @@ JavaScript moves variable declarations to the top of scope.
 Important:
 Only declaration is hoisted, not initialization.
 ================================================================================ */
-
+// var hoistedVar // internally
 // console.log("value of hoistedVar : " + hoistedVar);
 // var hoistedVar = 10;
 
@@ -243,16 +209,16 @@ var → function/global scope
 let → block scope
 ================================================================================ */
 
-if (true) {
-  var x = 10;
-  let y = 20;
+// if (true) {
+//   var x = 10;
+//   let y = 20;
 
-  console.log("value of x inside block : " + x);
-  console.log("value of y inside block : " + y);
-}
+//   console.log("value of x inside block : " + x);
+//   console.log("value of y inside block : " + y);
+// }
 
-console.log("value of x outside block : " + x);
-console.log("value of y outside block : " + y); // Error
+// console.log("value of x outside block : " + x);
+// console.log("value of y outside block : " + y); // Error
 
 /* ===============================================================================
 Comparison Table (var vs let)
