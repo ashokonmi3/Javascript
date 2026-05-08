@@ -26,8 +26,8 @@ BASIC FUNCTION (NO PARAMETERS)
 */
 
 // function showMessage() {
-//     console.log("Hello");
-//     console.log("Welcome to JavaScript Functions");
+//   console.log("Hello");
+//   console.log("Welcome to JavaScript Functions");
 // }
 
 // /*
@@ -36,7 +36,6 @@ BASIC FUNCTION (NO PARAMETERS)
 
 // showMessage();
 // showMessage();
-
 
 /*
 ------------------------------------------------------------
@@ -49,13 +48,13 @@ FUNCTION WITH PARAMETERS
 */
 
 // function calculateInterest(amount, duration, rateOfInterest) {
-//     /*
+//   /*
 //     amount         represents the principal amount
 //     duration       represents the time period
 //     rateOfInterest represents the interest rate
 //     */
-//     let interest = (amount * duration * rateOfInterest) / 100;
-//     console.log("Calculated Interest:", interest);
+//   let interest = (amount * duration * rateOfInterest) / 100;
+//   console.log("Calculated Interest:", interest);
 // }
 
 // /*
@@ -64,7 +63,6 @@ FUNCTION WITH PARAMETERS
 
 // calculateInterest(10000, 12, 5);
 // calculateInterest(50000, 10, 7);
-
 
 /*
 ------------------------------------------------------------
@@ -77,7 +75,7 @@ FUNCTION WITH RETURN VALUE
 */
 
 // function calculateArea(x) {
-//     return x * 2;
+//   return x * 2;
 // }
 
 // /*
@@ -92,7 +90,6 @@ FUNCTION WITH RETURN VALUE
 
 // console.log("Final Price:", result * 100);
 
-
 /*
 ------------------------------------------------------------
 FUNCTION WITH MULTIPLE PARAMETERS
@@ -103,11 +100,10 @@ FUNCTION WITH MULTIPLE PARAMETERS
 */
 
 // function displayStrings(str1, str2) {
-//     console.log(str2, str1);
+//   console.log(str2, str1);
 // }
 
 // displayStrings("JavaScript", "Learning");
-
 
 /*
 ------------------------------------------------------------
@@ -121,7 +117,7 @@ Function Declaration:
 */
 
 // function add(a, b) {
-//     return a + b;
+//   return a + b;
 // }
 
 // console.log(add(3, 4));
@@ -134,11 +130,10 @@ Function Expression:
 */
 
 // let addExpression = function (a, b) {
-//     return a + b + 100;
+//   return a + b + 100;
 // };
 
 // console.log(addExpression(5, 5));
-
 
 /*
 ------------------------------------------------------------
@@ -150,15 +145,14 @@ CALLING ONE FUNCTION FROM ANOTHER FUNCTION
 */
 
 // function greet() {
-//     console.log("Hello");
+//   console.log("Hello");
 // }
 
 // function outerFunction() {
-//     greet();
+//   greet();
 // }
 
 // outerFunction();
-
 
 /*
 ------------------------------------------------------------
@@ -170,15 +164,14 @@ PASSING FUNCTION AS AN ARGUMENT (CALLBACK FUNCTION)
 */
 
 // function greetByName(name) {
-//     console.log("Hello " + name);
+//   console.log("Hello " + name);
 // }
 
 // function executeFunction(fn, value) {
-//     fn(value);
+//   fn(value);
 // }
 
 // executeFunction(greetByName, "Student");
-
 
 /*
 ------------------------------------------------------------
@@ -190,15 +183,14 @@ FUNCTIONS AS OBJECT METHODS
 */
 
 // let person = {
-//     firstName: "Ashok",
-//     lastName: "Sharma",
-//     getFullName: function () {
-//         return this.firstName + " " + this.lastName;
-//     }
+//   firstName: "Ashok",
+//   lastName: "Sharma",
+//   getFullName: function () {
+//     return this.firstName + " " + this.lastName;
+//   },
 // };
 
 // console.log(person.getFullName());
-
 
 /*
 ------------------------------------------------------------
@@ -211,17 +203,15 @@ ARGUMENTS OBJECT
 */
 
 // function showArguments() {
-//     console.log(arguments);
-//         console.log(arguments[0]);
-//         console.log(arguments[1]);
-//                 console.log(arguments[2]);
+//   console.log(arguments);
+//   console.log(arguments[0]);
+//   console.log(arguments[1]);
+//   console.log(arguments[2]);
 
-
-//     console.log("Total arguments:", arguments.length);
+//   console.log("Total arguments:", arguments.length);
 // }
 
 // showArguments(10, "Java", "Python", true);
-
 
 /*
 ------------------------------------------------------------
@@ -233,18 +223,17 @@ USING ARGUMENTS TO FIND MAXIMUM VALUE
 */
 
 // function findMax() {
-//     let max = -Infinity;
+//   let max = -Infinity;
 
-//     for (let i = 0; i < arguments.length; i++) {
-//         if (arguments[i] > max) {
-//             max = arguments[i];
-//         }
+//   for (let i = 0; i < arguments.length; i++) {
+//     if (arguments[i] > max) {
+//       max = arguments[i];
 //     }
-//     return max;
+//   }
+//   return max;
 // }
 
 // console.log("Maximum Value:", findMax(10, 200, 55, 999, 45));
-
 
 /*
 ------------------------------------------------------------
@@ -256,12 +245,11 @@ DEFAULT PARAMETERS
 */
 
 // function showMessageWithDefaults(from, text = "No message provided") {
-//     console.log(from + ": " + text);
+//   console.log(from + ": " + text);
 // }
 
 // showMessageWithDefaults("Admin");
 // showMessageWithDefaults("Admin", "Welcome Students");
-
 
 /*
 ------------------------------------------------------------
@@ -278,7 +266,6 @@ ARROW FUNCTIONS
 // let greetUser = (name) => "Hello " + name;
 // console.log(greetUser("Developer"));
 
-
 /*
 ------------------------------------------------------------
 FUNCTION HOISTING
@@ -291,7 +278,7 @@ FUNCTION HOISTING
 // hoistedFunction();
 
 // function hoistedFunction() {
-//     console.log("This function works because of hoisting");
+//   console.log("This function works because of hoisting");
 // }
 
 /*
@@ -299,7 +286,7 @@ The following would cause an error if uncommented:
 */
 // notHoisted();
 // let notHoisted = function () {
-//     console.log("This will not work");
+//   console.log("This will not work");
 // };
 
 /*
@@ -312,13 +299,12 @@ FUNCTION SCOPE
 */
 
 // function scopeExample() {
-//     let localVariable = "I am local";
-//     console.log(localVariable);
+//   let localVariable = "I am local";
+//   console.log(localVariable);
 // }
 
 // scopeExample();
 // console.log(localVariable); // Error
-
 
 /*
 ------------------------------------------------------------
@@ -332,11 +318,11 @@ GLOBAL VS LOCAL VARIABLES
 // let globalVariable = "I am global";
 
 // function accessGlobal() {
-//     console.log(globalVariable);
+//   console.log(globalVariable);
 // }
 
 // accessGlobal();
-
+// console.log(globalVariable);
 
 /*
 ------------------------------------------------------------
@@ -348,15 +334,14 @@ REST PARAMETERS
 */
 
 // function sumAll(...numbers) {
-//     let sum = 0;
-//     for (let value of numbers) {
-//         sum += value;
-//     }
-//     return sum;
+//   let sum = 0;
+//   for (let value of numbers) {
+//     sum += value;
+//   }
+//   return sum;
 // }
 
 // console.log("Sum:", sumAll(10, 20, 30, 40));
-
 
 /*
 ------------------------------------------------------------
@@ -368,7 +353,6 @@ ARGUMENTS VS REST PARAMETERS
 - arguments do not work with arrow functions.
 */
 
-
 /*
 ------------------------------------------------------------
 ARROW FUNCTION AND this KEYWORD
@@ -378,18 +362,17 @@ ARROW FUNCTION AND this KEYWORD
 */
 
 // let user = {
-//     name: "Riya",
-//     normalFunction: function () {
-//         console.log("Normal Function:", this.name);
-//     },
-//     arrowFunction: () => {
-//         console.log("Arrow Function:", this.name);
-//     }
+//   name: "Riya",
+//   normalFunction: function () {
+//     console.log("Normal Function:", this.name);
+//   },
+//   arrowFunction: () => {
+//     console.log("Arrow Function:", this.name); // this is not supported here
+//   },
 // };
 
 // user.normalFunction();
 // user.arrowFunction();
-
 
 /*
 ------------------------------------------------------------
@@ -401,12 +384,11 @@ PURE FUNCTION
 */
 
 // function pureAdd(a, b) {
-//     return a + b;
+//   return a + b;
 // }
 
 // console.log(pureAdd(2, 3));
 // console.log(pureAdd(2, 3));
-
 
 /*
 ------------------------------------------------------------
@@ -419,13 +401,12 @@ IMPURE FUNCTION
 // let count = 0;
 
 // function impureIncrement() {
-//     count++;
-//     return count;
+//   count++;
+//   return count;
 // }
 
 // console.log(impureIncrement());
 // console.log(impureIncrement());
-
 
 /*
 ------------------------------------------------------------
@@ -436,9 +417,8 @@ IMMEDIATELY INVOKED FUNCTION EXPRESSION (IIFE)
 */
 
 (function () {
-    console.log("This function runs immediately");
+  console.log("This function runs immediately");
 })();
-
 
 /*
 ------------------------------------------------------------
@@ -449,7 +429,6 @@ COMMON MISTAKES WITH FUNCTIONS
 - Using arrow functions when this is required
 - Overusing global variables
 */
-
 
 /*
 ------------------------------------------------------------

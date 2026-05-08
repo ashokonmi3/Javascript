@@ -15,7 +15,7 @@
 // ====================
 // Inline Object Creation
 // An inline object is created using curly braces `{}` and can be populated with properties as needed.
-// ====================
+// // ====================
 
 // var myObj = {}; // Empty object created
 // console.log(myObj); // Output: {}
@@ -29,7 +29,7 @@
 
 // -----------------------
 
-// array = ["Thor", " Marvels", "Avegners"]
+array = ["Thor", " Marvels", "Avegners"];
 //          0          1          2
 //         "Name"    "Studio"     "Movie"
 
@@ -83,7 +83,7 @@
 // car.owner = "Johnson"; // Adding a new property
 // console.log(car);
 
-// // // Attempting to reassign a const object
+// // Attempting to reassign a const object
 // car = { type: "Volvo", model: "EX60", color: "red" }; // ERROR: Assignment to constant variable
 
 // ====================
@@ -118,14 +118,14 @@
 // The property name is a number (like in arrays or objects with numeric keys).
 
 // let user = {
-//     "first name": "Alice",
-//     "last-name": "Doe",
-//     "@score": 100
+//   "first name": "Alice",
+//   "last-name": "Doe",
+//   "@score": 100,
 // };
 
-// console.log(user["first name"]);  // ✅ "Alice"
-// console.log(user["last-name"]);   // ✅ "Doe"
-// console.log(user["@score"]);      // ✅ 100
+// console.log(user["first name"]); // ✅ "Alice"
+// console.log(user["last-name"]); // ✅ "Doe"
+// console.log(user["@score"]); // ✅ 100
 // console.log(user.first name);  // ✅ "Alice"
 
 // -------------------
@@ -133,11 +133,11 @@
 // let key = "age";
 // let person = { name: "John", age: 30 };
 
-// console.log(person[key]);  // ✅ 30 (equivalent to person.age)
+// console.log(person[key]); // ✅ 30 (equivalent to person.age)
 // // -----------------
 // let obj = { 1: "one", 2: "two" };
 
-// console.log(obj[1]);   // ✅ "one"
+// console.log(obj[1]); // ✅ "one"
 // console.log(obj["2"]); // ✅ "two" (JavaScript converts "2" to a number)
 // ---------------------------
 // ❌ Using Dot Notation (Throws Error)
@@ -206,6 +206,7 @@
 // // // Adding new nested properties
 // nestedObj.objProp.additionalProp = "Additional Inner Property";
 // console.log(nestedObj.objProp.additionalProp);
+// console.log(nestedObj); // Accessing nested property
 
 // ====================
 // Deleting Properties
@@ -231,31 +232,46 @@
 // console.log(str.length); // Accessing property of String wrapper object
 // ===================
 // Cloning of object shallow copy
-// the copy is created only for the first level of an object, nested objects will be shared beteween both copies
+// the copy is created only for the first level of an object,
+// //  nested objects will be shared beteween both copies
 // var original = { prop1: "value1", prop2: { inner: "innervalue" } };
 
 // var shallowCopy = { ...original }; // spread operator
-// // console.log("Original " + original);
-// // console.log("shallowCopy" + shallowCopy);
+// console.log("Original ");
+// console.log(original);
 
-// shallowCopy.prop2.inner = "modified";
-// console.log("Original " + original.prop2.inner);
+// console.log("shallowCopy");
+// console.log(shallowCopy);
+
+// // shallowCopy.prop2.inner = "modified";
+// // console.log("Original after change");
+// // console.log(original);
+
+// // console.log("shallowCopy after change ");
+// // console.log(shallowCopy);
 
 // shallowCopy.prop1 = "modified";
 // console.log(original.prop1);
+// console.log("Original after non nested change");
+// console.log(original);
+
+// console.log("shallowCopy after non nested change ");
+// console.log(shallowCopy);
+
 // ===============================
 // Deep copy : JSON.parse(JSON.stringify())
 
 // var original = { prop1: "value1", prop2: { inner: "innervalue" } };
 // var deepCopy = JSON.parse(JSON.stringify(original));
-// console.log( "deepCopy");
-// console.log( deepCopy);
+// console.log("deepCopy");
+// console.log(deepCopy);
+
 // deepCopy.prop2.inner = "modified";
 // console.log(original.prop2.inner);
-// console.log( "original");
-// console.log( original);
+// console.log("original");
+// console.log(original);
 // deepCopy.prop1 = "modified";
-// console.log( "original");
+// console.log("original");
 // console.log(original.prop1);
 // =============================
 /*******************************************************
@@ -269,13 +285,13 @@
 - Objects are NOT indexed → normal for-loop does NOT work directly
 */
 
-const employee = {
-  empId: 101,
-  name: "Amit",
-  role: "Developer",
-  salary: 75000,
-  location: "Bangalore",
-};
+// const employee = {
+//   empId: 101,
+//   name: "Amit",
+//   role: "Developer",
+//   salary: 75000,
+//   location: "Bangalore",
+// };
 
 /*
 =====================================================
@@ -306,8 +322,13 @@ const employee = {
 - Useful when you want index control
 */
 
-// console.log("---- Object.keys() ----");
-// console.log("---- Object.keys() ----", keys);
+// const employee = {
+//   empId: 101,
+//   name: "Amit",
+//   role: "Developer",
+//   salary: 75000,
+//   location: "Bangalore",
+// };
 
 // const keys = Object.keys(employee);
 // console.log("---- Object.keys() ----", keys);
@@ -328,8 +349,15 @@ const employee = {
 =====================================================
 - Returns only VALUES
 - Use when keys are NOT required
-*/
+// */
 
+// const employee = {
+//   empId: 101,
+//   name: "Amit",
+//   role: "Developer",
+//   salary: 75000,
+//   location: "Bangalore",
+// };
 // console.log("---- Object.values() ----");
 
 // const values = Object.values(employee);
@@ -346,7 +374,13 @@ const employee = {
 - Returns [key, value] pairs
 - Best for real-world applications
 */
-
+// const employee = {
+//   empId: 101,
+//   name: "Amit",
+//   role: "Developer",
+//   salary: 75000,
+//   location: "Bangalore",
+// };
 // console.log("---- Object.entries() ----");
 
 // for (let [key, value] of Object.entries(employee)) {
@@ -365,7 +399,13 @@ const employee = {
 =====================================================
 Example: Find salary-related properties
 */
-
+// const employee = {
+//   empId: 101,
+//   name: "Amit",
+//   role: "Developer",
+//   salary: 75000,
+//   location: "Bangalore",
+// };
 // console.log("---- Conditional Logic ----");
 
 // for (let key in employee) {
@@ -408,20 +448,20 @@ Example: Find salary-related properties
 =====================================================
 */
 
-// const employees = [
-//   { id: 1, name: "Amit", role: "Dev" },
-//   { id: 2, name: "Neha", role: "Tester" },
-//   { id: 3, name: "Rahul", role: "Manager" },
-// ];
+const employees = [
+  { id: 1, name: "Amit", role: "Dev" },
+  { id: 2, name: "Neha", role: "Tester" },
+  { id: 3, name: "Rahul", role: "Manager" },
+];
 
-// console.log("---- Object inside Array ----");
+console.log("---- Object inside Array ----");
 
-// for (let emp of employees) {
-//   for (let key in emp) {
-//     console.log(key, ":", emp[key]);
-//   }
-//   console.log("------");
-// }
+for (let emp of employees) {
+  for (let key in emp) {
+    console.log(key, ":", emp[key]);
+  }
+  console.log("------");
+}
 
 /*
 =====================================================
