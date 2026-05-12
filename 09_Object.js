@@ -448,20 +448,20 @@ Example: Find salary-related properties
 =====================================================
 */
 
-const employees = [
-  { id: 1, name: "Amit", role: "Dev" },
-  { id: 2, name: "Neha", role: "Tester" },
-  { id: 3, name: "Rahul", role: "Manager" },
-];
+// const employees = [
+//   { id: 1, name: "Amit", role: "Dev" },
+//   { id: 2, name: "Neha", role: "Tester" },
+//   { id: 3, name: "Rahul", role: "Manager" },
+// ];
 
-console.log("---- Object inside Array ----");
+// console.log("---- Object inside Array ----");
 
-for (let emp of employees) {
-  for (let key in emp) {
-    console.log(key, ":", emp[key]);
-  }
-  console.log("------");
-}
+// for (let emp of employees) {
+//   for (let key in emp) {
+//     console.log(key, ":", emp[key]);
+//   }
+//   console.log("------");
+// }
 
 /*
 =====================================================
@@ -476,6 +476,11 @@ for (let emp of employees) {
 */
 
 /*
+
+
+
+
+
 =====================================================
 📌 QUICK INTERVIEW SUMMARY
 =====================================================
@@ -534,3 +539,21 @@ for (let emp of employees) {
 // shallowCopy.prop2.inner = "modified";
 // console.log(original.prop2.inner); // "modified" because shallowCopy affects original
 // console.log(deepCopy.prop2.inner); // "innerValue"
+// =========================
+let student = {
+  name: "Rahul",
+  age: 22,
+  course: "JavaScript",
+};
+
+// let name = student.name;
+// let age = student.age;
+// let course = student.course;
+
+// let {name,age,course}= student
+
+let { name: empName, age: empAge, course: empCourse } = student;
+
+console.log(empName);
+console.log(empAge);
+console.log(empCourse);

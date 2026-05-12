@@ -1,4 +1,3 @@
-
 /************************************************************
  * JAVASCRIPT SCOPE
  * CONCEPTS AND READING NOTES WITH EXAMPLES
@@ -32,14 +31,15 @@ GLOBAL SCOPE
   - hard-to-debug issues
 */
 
-// var a = 10;  // Global variable
-// console.log(a);  // Output: 10
+// var a = 10; // Global variable
+// console.log(a); // Output: 10
 
 // function displayA() {
 //   console.log(a); // Output: 10 (global variable accessible inside function)
 // }
 
 // displayA();
+// console.log(a); // Output: 10
 
 /*
 Important note about global scope:
@@ -47,7 +47,6 @@ Important note about global scope:
 - In strict mode and modules, behavior can be different.
 - Best practice is to limit globals as much as possible.
 */
-
 
 /*
 ------------------------------------------------------------
@@ -72,7 +71,6 @@ Why function scope matters:
 - Local variables are removed after function execution (garbage collection),
   helping memory usage in long-running programs.
 */
-
 
 /*
 ------------------------------------------------------------
@@ -105,7 +103,6 @@ Key takeaway:
 - Use var only when you clearly understand its scoping rules.
 */
 
-
 /*
 ------------------------------------------------------------
 IIFE (IMMEDIATELY INVOKED FUNCTION EXPRESSION) FOR SCOPE CONTROL
@@ -117,7 +114,7 @@ IIFE (IMMEDIATELY INVOKED FUNCTION EXPRESSION) FOR SCOPE CONTROL
 */
 
 // (function () {
-//   var d = 40;  // Scoped to this IIFE only
+//   var d = 40; // Scoped to this IIFE only
 //   console.log(d); // Output: 40
 // })();
 
@@ -129,7 +126,6 @@ Important clarification:
   then console.log(d) would print that global value.
 - The d inside the IIFE is a different variable (local to the IIFE).
 */
-
 
 /*
 ------------------------------------------------------------
@@ -144,7 +140,7 @@ HOISTING AND SCOPE
   - declarations are hoisted too, but they are in a "Temporal Dead Zone"
   - accessing before declaration causes a ReferenceError
 */
-
+//var e
 // console.log(e); // Output: undefined (var declaration hoisted, value not assigned yet)
 // var e = 50;
 
@@ -153,7 +149,6 @@ If using let:
 - console.log(e); // ReferenceError
 - let e = 50;
 */
-
 
 /*
 ------------------------------------------------------------
@@ -181,7 +176,6 @@ Lexical scope is the foundation for closures:
 - When an inner function "remembers" outer variables even after outer function ends.
 */
 
-
 /*
 ------------------------------------------------------------
 SCOPE CHAIN AND VARIABLE LOOKUP
@@ -200,8 +194,8 @@ SCOPE CHAIN AND VARIABLE LOOKUP
 //   var localVar = "local";
 
 //   function secondFunction() {
-//     console.log(globalVar);  // Output: "global" (found in global scope)
-//     console.log(localVar);   // Output: "local" (found in firstFunction scope)
+//     console.log(globalVar); // Output: "global" (found in global scope)
+//     console.log(localVar); // Output: "local" (found in firstFunction scope)
 //   }
 
 //   secondFunction();
@@ -215,7 +209,6 @@ Common bug warning:
   (in non-strict mode), which is risky and causes bugs.
 */
 
-
 /*
 ------------------------------------------------------------
 STRICT MODE AND ACCIDENTAL GLOBALS
@@ -224,15 +217,15 @@ STRICT MODE AND ACCIDENTAL GLOBALS
 - This helps prevent accidental global variables.
 - this will work only non-strict-compatible Node version or environment.
 */
-
+// accidental = 10; // ReferenceError in strict mode
+// //
 // "use strict";
 // function testStrict() {
 //   accidental = 10; // ReferenceError in strict mode
 //   console.log(accidental);
 // }
 // testStrict();
-
-
+// console.log(accidental);
 /*
 ------------------------------------------------------------
 VAR, LET, CONST AND SCOPE DIFFERENCES
@@ -256,17 +249,15 @@ VAR, LET, CONST AND SCOPE DIFFERENCES
 // let y = 2;
 // const z = 3;
 
-
 // if (true) {
-//   var a = 10;   // accessible outside the block if not inside a function
-//   let b = 20;   // block-scoped
+//   var a = 10; // accessible outside the block if not inside a function
+//   let b = 20; // block-scoped
 //   const c = 30; // block-scoped
 // }
 
 // console.log(a); // Output: 10
 // console.log(b); // Error: b is not defined
 // console.log(c); // Error: c is not defined
-
 
 /*
 ------------------------------------------------------------
@@ -295,7 +286,6 @@ Q: Difference between var, let, and const in terms of scope?
 A: var is function-scoped; let/const are block-scoped.
    var is hoisted with undefined; let/const have temporal dead zone.
 */
-
 
 /*
 ------------------------------------------------------------

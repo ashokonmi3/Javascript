@@ -23,7 +23,6 @@ Closures are important because they enable:
 - Powerful patterns like callbacks, modules, and event handlers
 */
 
-
 /*
 ------------------------------------------------------------
 BASIC CLOSURE EXAMPLE
@@ -34,14 +33,14 @@ An inner function accessing variables from outer scopes.
 // var a = 10; // global variable
 
 // function outer() {
-//     var b = 20; // variable inside outer function
+//   var b = 20; // variable inside outer function
 
-//     function inner() {
-//         console.log(a); // accessing global variable
-//         console.log(b); // accessing outer function variable
-//     }
+//   function inner() {
+//     console.log(a); // accessing global variable
+//     console.log(b); // accessing outer function variable
+//   }
 
-//     inner(); // calling inner function inside outer
+//   inner(); // calling inner function inside outer
 // }
 
 // outer(); // prints 10 and 20
@@ -55,7 +54,6 @@ Explanation:
 - This access chain is what enables closure behavior.
 */
 
-
 /*
 ------------------------------------------------------------
 RETURNING A CLOSURE
@@ -68,14 +66,14 @@ from where it was created.
 // var a = 10;
 
 // function outer() {
-//     var b = 20;
+//   var b = 20;
 
-//     var inner = function () {
-//         console.log(a); // global variable
-//         console.log(b); // outer function variable
-//     };
+//   var inner = function () {
+//     console.log(a); // global variable
+//     console.log(b); // outer function variable
+//   };
 
-//     return inner; // returning inner function
+//   return inner; // returning inner function
 // }
 
 // var innerFn = outer(); // outer() finishes execution
@@ -89,7 +87,6 @@ Explanation:
 - This preserved environment is called a closure
 */
 
-
 /*
 ------------------------------------------------------------
 CLOSURE WITH MODIFIED VARIABLES
@@ -100,16 +97,16 @@ Closures can read and modify variables from outer scopes.
 // var a = 10;
 
 // function outer() {
-//     var b = 20;
+//   var b = 20;
 
-//     var inner = function () {
-//         a++; // modifying global variable
-//         b++; // modifying outer variable
-//         console.log(a);
-//         console.log(b);
-//     };
+//   var inner = function () {
+//     a++; // modifying global variable
+//     b++; // modifying outer variable
+//     console.log(a);
+//     console.log(b);
+//   };
 
-//     return inner;
+//   return inner;
 // }
 
 // var innerFn1 = outer();
@@ -125,7 +122,6 @@ Important notes:
 - Closures preserve state per function instance
 */
 
-
 /*
 ------------------------------------------------------------
 CLOSURE IN ASYNCHRONOUS CODE
@@ -136,13 +132,12 @@ Closures are heavily used in asynchronous programming.
 // var i = 10;
 
 // setTimeout(function () {
-//     console.log(i);
+//   console.log(i);
 // }, 1000);
 
 /*
 The callback remembers `i` from its lexical scope.
 */
-
 
 /*
 ------------------------------------------------------------
@@ -153,11 +148,11 @@ often causes unexpected results.
 */
 
 // for (var i = 0; i < 5; i++) {
-//     console.log(i);
+//   console.log(i);
 
-//     setTimeout(function () {
-//         console.log("setTimeout:", i);
-//     }, 1000);
+//   setTimeout(function () {
+//     console.log("setTimeout:", i);
+//   }, 1000);
 // }
 
 // console.log(i);
@@ -170,7 +165,6 @@ Explanation:
 - Final value of i is 5, so 5 is printed multiple times
 */
 
-
 /*
 ------------------------------------------------------------
 SOLUTION USING let (BLOCK SCOPE)
@@ -178,11 +172,13 @@ SOLUTION USING let (BLOCK SCOPE)
 Each iteration gets its own `i`.
 */
 
-// for (let i = 0; i < 5; i++) {
-//     setTimeout(() => {
-//         console.log(i);
-//     }, 1000);
-// }
+for (let i = 0; i < 5; i++) {
+  console.log(i);
+
+  setTimeout(() => {
+    console.log("setTimeout:", i);
+  }, 1000);
+}
 
 /*
 Explanation:
@@ -190,7 +186,6 @@ Explanation:
 - Each loop iteration creates a new binding
 - Closures capture the correct value
 */
-
 
 /*
 ------------------------------------------------------------
@@ -200,11 +195,11 @@ Manually capturing the value using an IIFE.
 */
 
 // for (var i = 0; i < 5; i++) {
-//     (function (currentValue) {
-//         setTimeout(function () {
-//             console.log(currentValue);
-//         }, 1000);
-//     })(i);
+//   (function (currentValue) {
+//     setTimeout(function () {
+//       console.log(currentValue);
+//     }, 1000);
+//   })(i);
 // }
 
 /*
@@ -214,7 +209,6 @@ Explanation:
 - setTimeout callback uses the captured value
 */
 
-
 /*
 ------------------------------------------------------------
 MODULE PATTERN USING CLOSURE
@@ -223,20 +217,20 @@ Closures allow creation of private variables.
 */
 
 // function createPerson() {
-//     var firstName = "John";
-//     var lastName = "Doe";
+//   var firstName = "John";
+//   var lastName = "Doe";
 
-//     return {
-//         getFirstName: function () {
-//             return firstName;
-//         },
-//         getLastName: function () {
-//             return lastName;
-//         },
-//         setFirstName: function (newName) {
-//             firstName = newName;
-//         }
-//     };
+//   return {
+//     getFirstName: function () {
+//       return firstName;
+//     },
+//     getLastName: function () {
+//       return lastName;
+//     },
+//     setFirstName: function (newName) {
+//       firstName = newName;
+//     },
+//   };
 // }
 
 // var person = createPerson();
@@ -252,7 +246,6 @@ Explanation:
 - Only exposed through closure-based methods
 */
 
-
 /*
 ------------------------------------------------------------
 CLOSURE FOR DATA ENCAPSULATION
@@ -260,30 +253,30 @@ CLOSURE FOR DATA ENCAPSULATION
 Closures help maintain state safely.
 */
 
-function counter() {
-    var count = 0; // private variable
+// function counter() {
+//   var count = 0; // private variable
 
-    return {
-        increment: function () {
-            count++;
-            return count;
-        },
-        decrement: function () {
-            count--;
-            return count;
-        },
-        getCount: function () {
-            return count;
-        }
-    };
-}
+//   return {
+//     increment: function () {
+//       count++;
+//       return count;
+//     },
+//     decrement: function () {
+//       count--;
+//       return count;
+//     },
+//     getCount: function () {
+//       return count;
+//     },
+//   };
+// }
 
-var myCounter = counter();
+// var myCounter = counter();
 
-console.log(myCounter.increment()); // 1
-console.log(myCounter.increment()); // 2
-console.log(myCounter.decrement()); // 1
-console.log(myCounter.getCount());  // 1
+// console.log(myCounter.increment()); // 1
+// console.log(myCounter.increment()); // 2
+// console.log(myCounter.decrement()); // 1
+// console.log(myCounter.getCount()); // 1
 
 /*
 Explanation:
@@ -291,7 +284,6 @@ Explanation:
 - State is preserved across calls
 - This is a classic real-world closure use case
 */
-
 
 /*
 ------------------------------------------------------------
@@ -315,7 +307,6 @@ Explanation:
 - setTimeout prints correct values
 */
 
-
 /*
 ------------------------------------------------------------
 COMMON MISCONCEPTIONS ABOUT CLOSURES
@@ -325,7 +316,6 @@ COMMON MISCONCEPTIONS ABOUT CLOSURES
 - Closures do NOT leak memory by default
 - Memory is released when closures are no longer referenced
 */
-
 
 /*
 ------------------------------------------------------------
@@ -337,7 +327,6 @@ WHEN TO USE CLOSURES
 - Implementing modules and factories
 - Event handling and timers
 */
-
 
 /*
 ------------------------------------------------------------
@@ -364,7 +353,6 @@ Q: Difference between closures with var and let?
 A: var shares a single variable across closures;
    let creates a new variable per block/iteration.
 */
-
 
 /*
 ------------------------------------------------------------

@@ -16,18 +16,17 @@ OBJECT BASICS
 
 // object is basically collection of multiple values
 
-// var myObj={};
+// var myObj = {};
 
 // console.log(myObj);
 
-// myObj.foo="value";
+// myObj.foo = "value";
 
+// console.log(myObj.foo); //  we can use . operator to access property of any object
+
+// myObj.foo = "hello";
 // console.log(myObj.foo);
 
-// // // // // we can use . operator to access property of any object
-
-// myObj.foo="hello";
-// console.log(myObj.foo);
 // we can change property any time
 // we can add property any where freely
 //
@@ -40,7 +39,6 @@ Notes:
 - You can update existing properties anytime: obj.prop = newValue
 */
 
-
 /*
 ------------------------------------------------------------
 OBJECT LITERALS AND NESTED OBJECTS
@@ -52,15 +50,14 @@ OBJECT LITERALS AND NESTED OBJECTS
 
 // ==========================
 
-// var myObj={
-// 	foo:"value",
-// 	age:30,
-// 	address:{
-// 		street:"main street",
-// 		city:"bangalore",
-// 		pincode:1234
-
-// 	}
+// var myObj = {
+//   foo: "value",
+//   age: 30,
+//   address: {
+//     street: "main street",
+//     city: "bangalore",
+//     pincode: 1234,
+//   },
 // };
 
 // console.log(myObj);
@@ -75,7 +72,6 @@ Notes:
   myObj["address"]["city"]
 */
 
-
 /*
 ------------------------------------------------------------
 CREATING MULTIPLE OBJECTS MANUALLY
@@ -85,18 +81,17 @@ CREATING MULTIPLE OBJECTS MANUALLY
 */
 
 // // =========================
-// var emp1={};
-// emp1.firstName="ashok";
-// emp1.lastName="sharma";
-// emp1.gender="M";
-// emp1.designation="Manager";
+// var emp1 = {};
+// emp1.firstName = "ashok";
+// emp1.lastName = "sharma";
+// emp1.gender = "M";
+// emp1.designation = "Manager";
 
-// var emp2={};
-// emp2.firstName="harshan"
-// emp2.lastName="s";
-// emp2.gender="M";
-// emp2.designation="developer";
-
+// var emp2 = {};
+// emp2.firstName = "harshan";
+// emp2.lastName = "s";
+// emp2.gender = "M";
+// emp2.designation = "developer";
 
 /*
 ------------------------------------------------------------
@@ -108,19 +103,18 @@ FACTORY FUNCTION (CREATING OBJECTS USING A FUNCTION)
 */
 
 // ======================
-// function createEmployeeObject(firstName,lastName,gender,designation){
-//    var emp={};
-//    emp.firstName=firstName;
-//    emp.lastName=lastName;
-//    emp.gender=gender;
-//    emp.designation=designation;
-//    return emp;
-
+// function createEmployeeObject(firstName, lastName, gender, designation) {
+//   var emp = {};
+//   emp.firstName = firstName;
+//   emp.lastName = lastName;
+//   emp.gender = gender;
+//   emp.designation = designation;
+//   return emp;
 // }
 
-// var emp1=createEmployeeObject("ashok","sharma","M","Manager");
-// console.log(emp1.firstName)
-// var emp2=createEmployeeObject("harshan","s","M","developer");
+// var emp1 = createEmployeeObject("ashok", "sharma", "M", "Manager");
+// console.log(emp1.firstName);
+// var emp2 = createEmployeeObject("harshan", "s", "M", "developer");
 // console.log(emp2);
 
 /*
@@ -129,7 +123,6 @@ Notes:
 - This approach is clear and works well
 - But JavaScript also provides constructor-style creation using `new`
 */
-
 
 /*
 ------------------------------------------------------------
@@ -158,16 +151,16 @@ Constructor naming convention:
 
 // so java script will take care of these 2 lines , it will create the empty object and return
 
-// function Employee(firstName,lastName,gender,designation){
-//    // var this={}; //this line javascript will add
-//    this.firstName=firstName;
-//    this.lastName=lastName;
-//    this.gender=gender;
-//    this.designation=designation;
-//         //  return this;  //this line also javascript will add
+// function Employee(firstName, lastName, gender, designation) {
+//   // var this={}; //this line javascript will add
+//   this.firstName = firstName;
+//   this.lastName = lastName;
+//   this.gender = gender;
+//   this.designation = designation;
+//   //  return this;  //this line also javascript will add
 // }
 
-// var  emp1=new Employee("ashok","sharma","M","Manager");
+// var emp1 = new Employee("ashok", "sharma", "M", "Manager");
 
 // console.log(emp1);
 // console.log(emp1.firstName);
@@ -177,7 +170,6 @@ Important:
 - Without `new`, `this` may point to global object (non-strict) or be undefined (strict).
 - With `new`, `this` points to the newly created object.
 */
-
 
 /*
 ------------------------------------------------------------
@@ -190,46 +182,44 @@ Objects can be created in multiple ways depending on the requirement.
 
 // Creating bicycle object diff way
 // first
-// var bicycle={
-// 	"cadence":50,
-// 	"speed":20,
-// 	"gear":4
+// var bicycle = {
+//   cadence: 50,
+//   speed: 20,
+//   gear: 4,
 // };
 // --------------------
 //second  without constructor
 
-// function createBicycle(cadence,speed,gear){
-// 	var newBicycle={};
-// 	newBicycle.cadence=cadence;
-// 	newBicycle.speed=speed;
-// 	newBicycle.gear=gear;
-// 	return newBicycle;
+// function createBicycle(cadence, speed, gear) {
+//   var newBicycle = {};
+//   newBicycle.cadence = cadence;
+//   newBicycle.speed = speed;
+//   newBicycle.gear = gear;
+//   return newBicycle;
 // }
 
-// var bicycle1=createBicycle(30, 4, 2);
+// var bicycle1 = createBicycle(30, 4, 2);
 
-// var bicycle2=createBicycle(40, 3, 4);
+// var bicycle2 = createBicycle(40, 3, 4);
 // /----------------------------
 
 // 3) using constructor
-// function Bicycle(cadence,speed,gear){
-// 	// var newBicycle={};
-// 	this.cadence=cadence;
-// 	this.speed=speed;
-// 	this.gear=gear;
-// 	// return newBicycle;
-
+// function Bicycle(cadence, speed, gear) {
+//   // var newBicycle={};
+//   this.cadence = cadence;
+//   this.speed = speed;
+//   this.gear = gear;
+//   // return newBicycle;
 // }
 
-// var bicycle1=new Bicycle(30, 4, 2);
+// var bicycle1 = new Bicycle(30, 4, 2);
 
-// var bicycle2=new Bicycle(40, 3, 4);
+// var bicycle2 = new Bicycle(40, 3, 4);
 // console.log(bicycle1);
 // console.log(bicycle2);
 
 // this is a constructor in normal function mode
 // constructor starts with capital letter
-
 
 /*
 ------------------------------------------------------------
@@ -243,15 +233,15 @@ If you call a constructor function without `new`:
 
 // ==========================================
 // constructor without new we will get undefined
-// function Bicycle(cadence,speed,gear){
-// 	// var this={};
-// 	this.cadence=cadence;
-// 	this.speed=speed;
-// 	this.gear=gear;
-// 	// return newBicycle;
+// function Bicycle(cadence, speed, gear) {
+//   // var this={};
+//   this.cadence = cadence;
+//   this.speed = speed;
+//   this.gear = gear;
+//   // return newBicycle;
 // }
 
-// var bicycle1= Bicycle(30, 4, 2);
+// var bicycle1 = Bicycle(30, 4, 2);
 
 // console.log(bicycle1);
 // Bicycle1 will be undefined as we are not returning anything
@@ -263,7 +253,6 @@ Important clarification:
   - In non-strict mode, `this` can point to global object and create global variables.
   - In strict mode, `this` is undefined and will throw an error when assigning properties.
 */
-
 
 /*
 ------------------------------------------------------------
@@ -280,21 +269,20 @@ If it does not return an object explicitly:
 
 // ===================
 // normal function with new
-// function Bicycle(cadence,speed,gear){
-// 	// var this={} provided by javascript
-// 	var newBicycle={};
-// 	newBicycle.cadence=cadence;
-// 	newBicycle.speed=speed;
-// 	newBicycle.gear=gear;
-// 	return newBicycle;
-//     // return this
+// function Bicycle(cadence, speed, gear) {
+//   // var this={} provided by javascript
+//   var newBicycle = {};
+//   newBicycle.cadence = cadence;
+//   newBicycle.speed = speed;
+//   newBicycle.gear = gear;
+//   return newBicycle;
+//   // return this;
 // }
 
-// var bicycle1= new Bicycle(30, 4, 2);
+// var bicycle1 = new Bicycle(30, 4, 2);
 
 // console.log(bicycle1);
 // Regular function still works with the new keyword , as 2 lines added extra
-
 
 /*
 ------------------------------------------------------------
@@ -309,25 +297,25 @@ The value of `this` depends on how the function is called.
 
 // first way regular way
 
-// function foo(){
-// 	console.log("hello");
+// function foo() {
+//   console.log("hello");
 // }
 // foo();
 
 // --------------
 //second way as property
 
-// var obj={};
-// obj.foo=function(){
-// 	console.log("hello");
-// }
+// var obj = {};
+// obj.foo = function () {
+//   console.log("hello");
+// };
 
 // obj.foo();
 
 // ---------------
 //3rd way -- constructor
-// function foo(){
-// 	console.log("hello");
+// function foo() {
+//   console.log("hello");
 // }
 
 // new foo();
@@ -335,7 +323,6 @@ The value of `this` depends on how the function is called.
 // ----------------------
 
 // 4th way later
-
 
 /*
 ------------------------------------------------------------
@@ -347,7 +334,6 @@ Every function in JavaScript has access to:
 
 Understanding `this` is essential for objects, constructors, methods, and call/apply/bind.
 */
-
 
 /*
 ------------------------------------------------------------
@@ -365,12 +351,11 @@ Normal execution:
 // 1) normal execution: this reference points to global object
 // this refers to global object
 
-// function foo(){
-// 	console.log("hello");
-// 	console.log(this);
+// function foo() {
+//   console.log("hello");
+//   console.log(this);
 // }
 // foo();
-
 
 /*
 ------------------------------------------------------------
@@ -385,12 +370,11 @@ When called as object property:
 // 2)
 // var obj = { prop: "this is object itself" };
 // obj.foo = function () {
-//     console.log("hello");
-//     console.log(this); // In a method, this refers to the object calling the method.
-// }
+//   console.log("hello");
+//   console.log(this); // In a method, this refers to the object calling the method.
+// };
 
 // obj.foo();
-
 
 /*
 ------------------------------------------------------------
@@ -406,15 +390,14 @@ When using new:
 // 3) new keyword, this will be empty object
 //
 
-// function foo(){
-// 	// var this={}
-// 	console.log("hello");
-// 	console.log(this);
-// // return this
+// function foo() {
+//   // var this={}
+//   console.log("hello");
+//   console.log(this);
+//   // return this
 // }
 
 // new foo();
-
 
 /*
 ------------------------------------------------------------
@@ -424,31 +407,30 @@ Methods can be created inside constructor functions.
 This creates a separate copy of the method for every object created.
 */
 
-// createBicycle
-// function Bicycle(cadence,speed,gear,tyrePressure){
-// 	this.cadence=cadence;
-// 	this.speed=speed;
-// 	this.gear=gear;
-// 	this.tyrePressure=tyrePressure;
-// 	this.inflateTires=function(){
-// 	this.tyrePressure+=3;
-// 	}
-// }
+// createBicycle;
+function Bicycle(cadence, speed, gear, tyrePressure) {
+  this.cadence = cadence;
+  this.speed = speed;
+  this.gear = gear;
+  this.tyrePressure = tyrePressure;
+  this.inflateTires = function () {
+    this.tyrePressure += 3;
+  };
+}
 
-// var bicycle1= new Bicycle(50,34,5,25);
-// bicycle1.inflateTires();
-// console.log(bicycle1);
+var bicycle1 = new Bicycle(50, 34, 5, 25);
+bicycle1.inflateTires();
+console.log(bicycle1);
 
-// var bicycle2=new Bicycle(30,32,4,30)
-// bicycle2.inflateTires();
-// console.log(bicycle2.tyrePressure);
+var bicycle2 = new Bicycle(30, 32, 4, 30);
+bicycle2.inflateTires();
+console.log(bicycle2.tyrePressure);
 
 /*
 Note:
 - inflateTires uses this.tyrePressure
 - It depends on this pointing to a bicycle object
 */
-
 
 /*
 ------------------------------------------------------------
@@ -477,7 +459,6 @@ Important clarification:
   and mech does not have tyrePressure, so it won't work properly.
 */
 
-
 /*
 ------------------------------------------------------------
 CALL() TO CONTROL this EXPLICITLY
@@ -494,7 +475,6 @@ without permanently changing the method’s association.
 It provides flexibility in how and where methods can be applied,
 allowing for dynamic binding of this.
 */
-
 
 /*
 Example: Using call to run inflateTires on bicycle1 explicitly
@@ -544,7 +524,6 @@ Final state:
 - mech is not modified (because this was explicitly set to bicycle1)
 */
 
-
 /*
 ------------------------------------------------------------
 ADDITIONAL IMPORTANT NOTES (USEFUL FOR STUDENTS)
@@ -570,7 +549,6 @@ call vs apply vs bind (quick awareness):
 - apply(thisArg, [a,b,c])  passes arguments as array
 - bind(thisArg)            returns a new function with fixed this
 */
-
 
 /*
 ------------------------------------------------------------

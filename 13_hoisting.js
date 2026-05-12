@@ -98,7 +98,6 @@ If you actually run c++ when c is undefined:
 - after that, c becomes NaN
 */
 
-
 /*
 ------------------------------------------------------------
 VARIABLE HOISTING WITH let AND const (TEMPORAL DEAD ZONE)
@@ -128,13 +127,11 @@ Same TDZ behavior with const:
 // console.log(z); // ReferenceError due to TDZ
 // const z = 30;
 
-
 /*
 Explanation:
 Variables `let` and `const` are hoisted, but unlike `var`,
 accessing them before their declaration throws an error.
 */
-
 
 /*
 ------------------------------------------------------------
@@ -149,7 +146,7 @@ Function expressions (using `var`, `let`, or `const`) are not fully hoisted in t
 // myFunction(); // Output: "Hello from myFunction!" - works because function declaration is hoisted
 
 // function myFunction() {
-//     console.log("Hello from myFunction!");
+//   console.log("Hello from myFunction!");
 // }
 
 /*
@@ -162,7 +159,7 @@ FUNCTION EXPRESSION WITH var
 // myFunctionExpression(); // TypeError: myFunctionExpression is not a function
 
 // var myFunctionExpression = function () {
-//     console.log("Hello from myFunctionExpression!");
+//   console.log("Hello from myFunctionExpression!");
 // };
 
 /*
@@ -171,7 +168,6 @@ In the case of `var` function expressions, only the variable is hoisted, not the
 So, `myFunctionExpression` is hoisted as a variable with an `undefined` value,
 and calling it before its definition results in a TypeError.
 */
-
 
 /*
 ------------------------------------------------------------
@@ -187,7 +183,6 @@ HOISTING WITH let/const FUNCTION EXPRESSIONS
 // } catch (error) {
 //     console.log(error);
 // }
-
 
 /*
 ------------------------------------------------------------
@@ -208,12 +203,8 @@ which affects cases like accidental global variables.
 */
 
 // function myStrictFunction() {
-//     "use strict";
-//     try {
-//         undeclaredVariable = 10; // ReferenceError due to strict mode
-//     } catch (error) {
-//         console.log(error);
-//     }
+//   "use strict";
+//   undeclaredVariable = 10; // ReferenceError due to strict mode
 // }
 // myStrictFunction();
 
@@ -222,9 +213,9 @@ A direct strict-mode example that should throw:
 */
 
 // function myStrictFunction() {
-//     "use strict";
-//     undeclaredVariable = 10; // ReferenceError due to strict mode
-//     console.log(undeclaredVariable);
+//   "use strict";
+//   undeclaredVariable = 10; // ReferenceError due to strict mode
+//   console.log(undeclaredVariable);
 // }
 
 // myStrictFunction();
@@ -244,7 +235,6 @@ Important environment note:
 - In Node, using ES modules (.mjs or "type":"module") is a clean way to ensure strict behavior.
 */
 
-
 /*
 ------------------------------------------------------------
 SHORT SUMMARY EXAMPLE (HOISTING QUICK DEMO)
@@ -259,15 +249,15 @@ Hoisting works partially for variables but fully for function declarations.
 // sayHello(); // Output: "Hello!"
 
 // function sayHello() {
-//     var a = 10;
-//     console.log("Hello!");
+//   var a = 10;
+//   console.log("Hello!");
 // }
 
-// console.log(meLet)
-// let mylet = 10
+// console.log(meLet);
+// let mylet = 10;
 // sayHello(); // Output: "Hello!"
-// console.log(meLet)
-// console.log(exampleVar)
+// console.log(meLet);
+// console.log(exampleVar);
 
 /*
 The above has a typo mismatch:
@@ -275,7 +265,6 @@ The above has a typo mismatch:
 - Accessing meLet will cause ReferenceError.
 - If the intention is to use mylet, it should be console.log(mylet).
 */
-
 
 /*
 ------------------------------------------------------------
@@ -308,7 +297,6 @@ Example mental flow (conceptual):
 // 10               (after assignment)
 */
 
-
 /*
 ------------------------------------------------------------
 WHY HOISTING EXISTS (PRACTICAL NOTES)
@@ -321,7 +309,6 @@ Also important:
 - Hoisting can hide bugs when var is used heavily.
 - let/const reduce many hoisting-related confusion by using TDZ.
 */
-
 
 /*
 ------------------------------------------------------------
@@ -337,7 +324,6 @@ COMMON MISTAKES (VERY IMPORTANT FOR STUDENTS)
 - Using different variable names accidentally (meLet vs mylet).
 - Using variables before declaration and expecting values.
 */
-
 
 /*
 ------------------------------------------------------------
@@ -370,7 +356,6 @@ Example:
 // // console.log(MyClass); // ReferenceError
 // class MyClass {}
 
-
 /*
 ------------------------------------------------------------
 INTERVIEW QUESTIONS ON HOISTING IN JAVASCRIPT
@@ -398,7 +383,6 @@ A: "use strict" enforces stricter parsing and error handling.
    It requires variables to be declared before use (prevents accidental globals),
    which reduces certain hoisting-related issues and makes code safer.
 */
-
 
 /*
 ------------------------------------------------------------
