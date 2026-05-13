@@ -85,13 +85,12 @@ If child class does not define a constructor, JavaScript automatically call the 
 // }
 
 // const dog = new Dog("Tommy");
-// console.log(dog.eat());   // inherited from Animal
-// console.log(dog.bark());  // own method
+// console.log(dog.eat()); // inherited from Animal
+// console.log(dog.bark()); // own method
 
 // const cat = new Cat("Kitty");
-// console.log(cat.eat());   // inherited from Animal
-// console.log(cat.meow());  // own method
-
+// console.log(cat.eat()); // inherited from Animal
+// console.log(cat.meow()); // own method
 
 /*
 ---------------------------------------------------------------
@@ -118,7 +117,8 @@ Why super()?
 //   constructor(name, age, role) {
 //     // super() calls parent constructor
 //     super(name, age);
-
+// // this.name = name;
+// //     this.age = age;
 //     // child-specific property
 //     this.role = role;
 //   }
@@ -130,7 +130,7 @@ Why super()?
 
 // const e1 = new Employee("Vandana", 30, "Trainer");
 // console.log(e1.intro()); // from Person
-// console.log(e1.work());  // from Employee
+// console.log(e1.work()); // from Employee
 
 /*
 IMPORTANT NOTE:
@@ -138,7 +138,6 @@ If you write a child constructor, you MUST call super(...)
 before using this.role = ...
 Otherwise: ReferenceError
 */
-
 
 /*
 ---------------------------------------------------------------
@@ -183,7 +182,6 @@ Same method name, different behavior.
 CLASSROOM NOTE:
 Overriding = Child replaces the parent behavior.
 */
-
 
 /*
 ---------------------------------------------------------------
@@ -243,12 +241,12 @@ because #balance belongs ONLY to BankAccount class body.
 //   }
 // }
 
-// /*
-// Child account type: SavingsAccount
-// - Inherits deposit(), withdraw(), getBalance()
-// - Adds addInterest()
-// - BUT still cannot access #balance directly
-// */
+// // /*
+// // Child account type: SavingsAccount
+// // - Inherits deposit(), withdraw(), getBalance()
+// // - Adds addInterest()
+// // - BUT still cannot access #balance directly
+// // */
 // class SavingsAccount extends BankAccount {
 //   constructor(owner, initialBalance, interestRate = 0.05) {
 //     super(owner, initialBalance);
@@ -272,7 +270,7 @@ because #balance belongs ONLY to BankAccount class body.
 //   // }
 // }
 
-// const sAcc = new SavingsAccount("Ashok", 1000, 0.10);
+// const sAcc = new SavingsAccount("Ashok", 1000, 0.1);
 // console.log("Initial Balance:", sAcc.getBalance());
 // console.log("After Interest:", sAcc.addInterest());
 
@@ -282,7 +280,6 @@ CLASSROOM NOTE:
 - Child must use parent methods to interact with private data.
 This is real Encapsulation.
 */
-
 
 /*
 ---------------------------------------------------------------
@@ -323,7 +320,6 @@ CLASSROOM NOTE:
 Polymorphism = One method call, many behaviors.
 */
 
-
 /*
 1) What does `extends` do?
    - It links child prototype to parent prototype -> child gets parent methods.
@@ -344,7 +340,6 @@ Polymorphism = One method call, many behaviors.
    - Use inheritance only for true "IS-A" relations.
 */
 
-
 /*
 ===============================================================
 PRACTICE TASKS (Homework)
@@ -361,7 +356,7 @@ PRACTICE TASKS (Homework)
    - Each overrides work() with different output
 ===============================================================
 */
-"use strict";
+("use strict");
 
 /*
 =====================================================================
@@ -427,9 +422,8 @@ Dog adds: bark()
 // }
 
 // const d1 = new Dog("Tommy");
-// console.log(d1.eat());  // inherited
+// console.log(d1.eat()); // inherited
 // console.log(d1.bark()); // own
-
 
 /*
 ------------------------------------------------------------
@@ -474,8 +468,6 @@ Each child adds its own behavior.
 // console.log(dev.join(), "|", dev.code());
 // console.log(hr.join(), "|", hr.hire());
 // console.log(mgr.join(), "|", mgr.manage());
-
-
 
 /*
 ------------------------------------------------------------
@@ -537,11 +529,10 @@ ElectricCar (GrandChild):
 // console.log(c1.honk());
 
 // const ec1 = new ElectricCar("Tesla", 140, 45);
-// console.log(ec1.move());          // from Vehicle
-// console.log(ec1.honk());          // from Car
+// console.log(ec1.move()); // from Vehicle
+// console.log(ec1.honk()); // from Car
 // console.log(ec1.batteryStatus()); // from ElectricCar
 // console.log(ec1.charge());
-
 
 /*
 ------------------------------------------------------------
@@ -635,8 +626,6 @@ RULE:
 // ❌ Do not uncomment: child cannot access #balance
 // console.log(pAcc.#balance);
 
-
-
 /*
 ------------------------------------------------------------
 IMPORTANT:
@@ -653,7 +642,6 @@ class C extends A, B {}   // SyntaxError
 So what do we do?
 ✅ Use MIXINS (code reuse) as an alternative.
 */
-
 
 /*
 ------------------------------------------------------------
@@ -704,8 +692,6 @@ CLASSROOM NOTE:
 Mixins are a practical alternative to multiple inheritance in JS.
 */
 
-
-
 /*
 1) Single inheritance:
    class Child extends Parent
@@ -721,4 +707,3 @@ Mixins are a practical alternative to multiple inheritance in JS.
    Child cannot access #private directly
    Must use parent methods (getBalance, deposit, etc.)
 */
-
