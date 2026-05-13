@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * JAVASCRIPT CLASSES 
+ * JAVASCRIPT CLASSES
  * ============================================================
  * 1) Normal class (empty)
  * 2) Constructor (initialize data)
@@ -26,21 +26,20 @@
 // const d1 = new DemoClass();
 // console.log("Created object from DemoClass:", d1);
 
-
 // ----------------
 
 // class Person {
-//   name = "Unknown";   // property without constructor
-//   age = 0;
+//   name = "Ashok"; // property without constructor
+//   age = 30;
 // }
 
 // const p1 = new Person();
-// console.log(p1.name);  // Unknown
-// console.log(p1.age);   // 0
+// console.log(p1.name); // Unknown
+// console.log(p1.age); // 0
 // --------------------------
 // class Person {
-//   name = "Unknown";
-//   age = 0;
+//   name = "Ashok";
+//   age = 30;
 
 //   // Method not using object properties
 //   greetSomeone(personName) {
@@ -60,10 +59,9 @@
 // class Person {
 //   constructor(name, age) {
 //     // Public instance properties (created on every object)
-//     name = name;
+//     name = name; // localVariable= localVariable
 //     age = age;
 //     console.log("Person object is created");
-
 //   }
 // }
 
@@ -73,7 +71,6 @@
 
 // ===============================
 
-
 // class Person {
 //   constructor(name, age) {
 //     // Public instance properties (created on every object)
@@ -82,7 +79,7 @@
 //   }
 // }
 
-// const p1 = new Person("Vandana", 30);
+// const p1 = new Person("Ashok", 30);
 // console.log("Person object:", p1);
 // console.log("Name:", p1.name, "| Age:", p1.age);
 
@@ -148,7 +145,7 @@
 //   }
 // }
 
-// const u1 = new User("vandana", "vandana@test.com");
+// const u1 = new User("ashok", "ashok@test.com");
 // console.log("User:", u1);
 // u1.changeEmail("new@mail.com");
 // console.log("Updated email:", u1.email);
@@ -160,7 +157,7 @@
    Getter looks like a property but runs like a function.
 ============================================================ */
 
-"use strict";
+("use strict");
 
 /*
 ========================================================
@@ -191,13 +188,11 @@ They LOOK like properties but WORK like functions.
 //   constructor() {
 //     console.log("constructor is called here "); // GETTER runs
 
-//     this.age = 0;  // Internal storage variable (not accessed directly outside)
-//           console.log("constructor completed");
-
+//     this.age = 0; // Internal storage variable (not accessed directly outside)
+//     console.log("constructor completed");
 //   }
 
-//  set age(value) {
-    
+//   set age(value) {
 //     console.log("setter is called here "); // GETTER runs
 
 //     if (value < 0) {
@@ -212,13 +207,12 @@ They LOOK like properties but WORK like functions.
 //   get age() {
 //     console.log("getter is called here "); // GETTER runs
 
-    
 //     return this._age;
 //   }
 // }
 // const u1 = new User();
 
-// u1.age = 25;         // SETTER runs
+// u1.age = 25; // SETTER runs
 // console.log(u1.age); // GETTER runs
 
 //   /*
@@ -229,13 +223,11 @@ They LOOK like properties but WORK like functions.
 //   constructor() {
 //     console.log("constructor is called here "); // GETTER runs
 
-//     this.age = 0;  // Internal storage variable (not accessed directly outside)
-//           console.log("constructor completed");
-
+//     this.age = 0; // Internal storage variable (not accessed directly outside)
+//     console.log("constructor completed");
 //   }
 
-//  set age(value) {
-    
+//   set age(value) {
 //     console.log("setter is called here "); // GETTER runs
 
 //     if (value < 0) {
@@ -250,28 +242,26 @@ They LOOK like properties but WORK like functions.
 //   get age() {
 //     console.log("getter is called here "); // GETTER runs
 
-    
 //     return this._age;
 //   }
 // }
 // const u1 = new User();
 
-// u1.age = 25;         // SETTER runs
+// u1.age = 25; // SETTER runs
 // console.log(u1.age); // GETTER runs
-
 
 // ==========================
 
-
 // class Rectangle {
 //   constructor(width, height) {
-//     this.width = width;   // uses setter
+//     this.width = width; // uses setter
 //     this.height = height; // uses setter
 //   }
 
 //   // setter for width (validation)
 //   set width(w) {
-//     if (typeof w !== "number" || w <= 0) throw new Error("width must be positive number");
+//     if (typeof w !== "number" || w <= 0)
+//       throw new Error("width must be positive number");
 //     this._width = w;
 //   }
 
@@ -281,7 +271,8 @@ They LOOK like properties but WORK like functions.
 //   }
 
 //   set height(h) {
-//     if (typeof h !== "number" || h <= 0) throw new Error("height must be positive number");
+//     if (typeof h !== "number" || h <= 0)
+//       throw new Error("height must be positive number");
 //     this._height = h;
 //   }
 
@@ -309,23 +300,24 @@ They LOOK like properties but WORK like functions.
    Private: #balance -> accessible ONLY inside the class
 ============================================================ */
 
-
 // class BankAccount {
 //   #balance; // private field
 
 //   constructor(owner, initialBalance = 0) {
-//     this.owner = owner;        // public
+//     this.owner = owner; // public
 //     this.#balance = initialBalance; // private
 //   }
 
 //   deposit(amount) {
-//     if (typeof amount !== "number" || amount <= 0) throw new Error("amount must be positive");
+//     if (typeof amount !== "number" || amount <= 0)
+//       throw new Error("amount must be positive");
 //     this.#balance += amount;
 //     return this.#balance;
 //   }
 
 //   withdraw(amount) {
-//     if (typeof amount !== "number" || amount <= 0) throw new Error("amount must be positive");
+//     if (typeof amount !== "number" || amount <= 0)
+//       throw new Error("amount must be positive");
 //     if (amount > this.#balance) throw new Error("Insufficient funds");
 //     this.#balance -= amount;
 //     return this.#balance;
@@ -342,7 +334,7 @@ They LOOK like properties but WORK like functions.
 // console.log("Owner:", b1.owner);
 // console.log("Balance via method:", b1.getBalance());
 
-// // b1.#balance; // ❌ SyntaxError if you uncomment (true private)
+// b1.#balance; // ❌ SyntaxError if you uncomment (true private)
 
 // /* IMPORTANT NOTE:
 //    Private fields are REAL privacy in JS (not just convention).
@@ -355,7 +347,6 @@ They LOOK like properties but WORK like functions.
     Can be accessed throught the class only not object
    Used for shared data (same for all objects).
 ============================================================ */
-
 
 // class TrainingBatch {
 //   static instituteName = "VandanaCoach Academy"; // class-level shared value
@@ -378,7 +369,8 @@ They LOOK like properties but WORK like functions.
 // // Access static like this:
 // console.log("Institute:", TrainingBatch.instituteName);
 
-// batch1.instituteName // ❌ undefined (static is not on object)
+// batch1.instituteName(
+// ❌ undefined (static is not on object)
 
 /* ============================================================
    STEP 8) STATIC METHOD
@@ -387,14 +379,13 @@ They LOOK like properties but WORK like functions.
    Used for utility logic that does NOT need object data.
 ============================================================ */
 
-
 // class StringUtil {
 //   static toTitleCase(str) {
 //     if (typeof str !== "string") throw new Error("str must be string");
 //     return str
 //       .trim()
 //       .split(/\s+/)
-//       .map(word => word[0].toUpperCase() + word.slice(1).toLowerCase())
+//       .map((word) => word[0].toUpperCase() + word.slice(1).toLowerCase())
 //       .join(" ");
 //   }
 
@@ -440,11 +431,12 @@ They LOOK like properties but WORK like functions.
 //   }
 
 //   get priceWithTax() {
-//     return this.#price + (this.#price * Product.taxRate);
+//     return this.#price + this.#price * Product.taxRate;
 //   }
 
 //   static changeTaxRate(newRate) {
-//     if (typeof newRate !== "number" || newRate < 0) throw new Error("rate must be >= 0");
+//     if (typeof newRate !== "number" || newRate < 0)
+//       throw new Error("rate must be >= 0");
 //     Product.taxRate = newRate;
 //   }
 // }
@@ -459,11 +451,17 @@ They LOOK like properties but WORK like functions.
 //   }
 
 //   get subtotal() {
-//     return this.items.reduce((sum, item) => sum + item.product.price * item.qty, 0);
+//     return this.items.reduce(
+//       (sum, item) => sum + item.product.price * item.qty,
+//       0,
+//     );
 //   }
 
 //   get totalWithTax() {
-//     return this.items.reduce((sum, item) => sum + item.product.priceWithTax * item.qty, 0);
+//     return this.items.reduce(
+//       (sum, item) => sum + item.product.priceWithTax * item.qty,
+//       0,
+//     );
 //   }
 // }
 
@@ -477,7 +475,7 @@ They LOOK like properties but WORK like functions.
 // console.log("Subtotal:", cart.subtotal);
 // console.log("Total with tax:", cart.totalWithTax);
 
-// Product.changeTaxRate(0.20);
+// Product.changeTaxRate(0.2);
 // console.log("Total with NEW tax:", cart.totalWithTax);
 
 /* ============================================================
@@ -489,7 +487,8 @@ They LOOK like properties but WORK like functions.
    4) Create static method Product.isValidPrice(x)
 ============================================================ */
 
-"use strict";
+//   "use strict",
+// );
 
 /*
 ========================================================
@@ -508,43 +507,42 @@ In JS, encapsulation is commonly done using:
 ========================================================
 */
 
-
 /* -------------------------------------------
    Example 1: Basic Encapsulation (public)
 ------------------------------------------- */
-class BankAccountBasic {
-  constructor(owner, balance) {
-    this.owner = owner;
-    this.balance = balance; // public (can be modified directly — risky)
-  }
+// class BankAccountBasic {
+//   constructor(owner, balance) {
+//     this.owner = owner;
+//     this.balance = balance; // public (can be modified directly — risky)
+//   }
 
-  deposit(amount) {
-    if (amount <= 0) return;
-    this.balance += amount;
-  }
+//   deposit(amount) {
+//     if (amount <= 0) return;
+//     this.balance += amount;
+//   }
 
-  withdraw(amount) {
-    if (amount <= 0) return;
-    if (amount > this.balance) {
-      console.log("Insufficient funds");
-      return;
-    }
-    this.balance -= amount;
-  }
-}
+//   withdraw(amount) {
+//     if (amount <= 0) return;
+//     if (amount > this.balance) {
+//       console.log("Insufficient funds");
+//       return;
+//     }
+//     this.balance -= amount;
+//   }
+// }
 
-const a1 = new BankAccountBasic("Vandana", 1000);
-a1.deposit(500);
-console.log("Balance (basic):", a1.balance);
+// const a1 = new BankAccountBasic("Vandana", 1000);
+// a1.deposit(500);
+// console.log("Balance (basic):", a1.balance);
 
-// Risk: user can directly change balance (bad)
-a1.balance = -999; // invalid but allowed
-console.log("Balance after direct wrong change:", a1.balance);
+// // Risk: user can directly change balance (bad)
+// a1.balance = -999; // invalid but allowed
+// console.log("Balance after direct wrong change:", a1.balance);
 
 // /* -------------------------------------------
 //    Example 2: Better Encapsulation using Getter/Setter
 //    (No private fields yet, but controlled access)
-// ------------------------------------------- */
+// // ------------------------------------------- */
 // class BankAccountWithSetter {
 //   constructor(owner, balance) {
 //     this.owner = owner;
@@ -618,7 +616,6 @@ console.log("Balance after direct wrong change:", a1.balance);
 
 // a3.#balance  ❌ not accessible (true encapsulation)
 
-
 /*
 ========================================================
  ABSTRACTION (JavaScript)
@@ -679,32 +676,31 @@ Real life:
    but private fields (#) + internal helper methods is common.)
 ------------------------------------------------- */
 
-// class PaymentProcessor {
-//   #merchantId = "MRC-2026";
+class PaymentProcessor {
+  #merchantId = "MRC-2026";
 
-//   pay(amount) {
-//     // Public method — user calls only this
-//     if (!this.#validateAmount(amount)) return "❌ Invalid amount";
-//     const token = this.#createToken(amount);
-//     const result = this.#charge(token);
-//     return result;
-//   }
+  pay(amount) {
+    // Public method — user calls only this
+    if (!this.#validateAmount(amount)) return "❌ Invalid amount";
+    const token = this.#createToken(amount);
+    const result = this.#charge(token);
+    return result;
+  }
 
-//   #validateAmount(amount) {
-//     return typeof amount === "number" && amount > 0;
-//   }
+  #validateAmount(amount) {
+    return typeof amount === "number" && amount > 0;
+  }
 
-//   #createToken(amount) {
-//     return `TOKEN-${this.#merchantId}-${amount}-${Date.now()}`;
-//   }
+  #createToken(amount) {
+    return `TOKEN-${this.#merchantId}-${amount}-${Date.now()}`;
+  }
 
-//   #charge(token) {
-//     // simulate charge success
-//     return `✅ Payment success with ${token}`;
-//   }
-// }
+  #charge(token) {
+    // simulate charge success
+    return `✅ Payment success with ${token}`;
+  }
+}
 
-// const pay = new PaymentProcessor();
-// console.log(pay.pay(500));
-// console.log(pay.pay(-10)); // invalid
-
+const pay = new PaymentProcessor();
+console.log(pay.pay(500));
+console.log(pay.pay(-10)); // invalid

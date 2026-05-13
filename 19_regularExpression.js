@@ -21,12 +21,10 @@ There are two common ways to create RegExp:
 - Literal form: /pattern/flags
 */
 
-
 // regexp = new RegExp("pattern","flags")
 
 // // regexp= /pattern/; // without any flags
 // // regexp= /pattern/gmi; //with flags
-
 
 /*
 ------------------------------------------------------------
@@ -37,16 +35,15 @@ BASIC SEARCH USING search()
 - search() does not return the matched text, only the position
 */
 
-// var str= "I love JavaScript!";
+// var str = "I love JavaScript!";
 // var regexp = /love/;
 // console.log(str.search(regexp));
 
 // --------------------------
-// var str= "what you want to search?"
-// var regexp= new RegExp("what");
+// var str = "what you want to search?";
+// var regexp = new RegExp("what");
 
-// console.log(str.search(regexp))
-
+// console.log(str.search(regexp));
 
 /*
 ------------------------------------------------------------
@@ -60,7 +57,6 @@ Common flags:
 - m  multiline (^ and $ work per line)
 - y  sticky match (match must start at lastIndex)
 */
-
 
 /*
 ------------------------------------------------------------
@@ -76,7 +72,7 @@ IGNORE CASE FLAG: i
 // console.log(str.search(/LOVE/i)); // i for ignore case
 
 // ================
-// var str= " A drop of ink may make a million think";
+// var str = " A drop of ink may make a million think";
 // console.log(str.search(/a/i));
 
 // important: search always looks for the first match
@@ -92,12 +88,11 @@ match() RESULT DETAILS (WITHOUT g)
 */
 
 // ----------------
-// var str= "Fame is the thirst of youth";
+// var str = "Fame is the thirst of youth";
 // var result = str.match(/fame/i);
 // console.log(result[0]);
 // console.log(result.index);
 // console.log(result.input);
-
 
 /*
 ------------------------------------------------------------
@@ -117,7 +112,6 @@ CAPTURING GROUPS USING ( )
 // console.log(result[2]); // second group
 // console.log(result.index);
 // console.log(result.input);
-
 
 /*
 ------------------------------------------------------------
@@ -140,7 +134,6 @@ GLOBAL FLAG: g WITH match()
 // var result= str.match(/ho/ig);
 // console.log(result);
 
-
 /*
 ------------------------------------------------------------
 split() WITH REGEX
@@ -156,7 +149,6 @@ split() WITH REGEX
 
 // console.log('12-34-45'.split(/-/));
 
-
 /*
 ------------------------------------------------------------
 replace() WITH REGEX
@@ -168,17 +160,16 @@ replace() WITH REGEX
 // ========================
 // replace
 
-// console.log('12-34-45'.replace('-',':'));// last occurance
+// console.log("12-34-45".replace("-", ":")); // first occurance
 
-// console.log('12-34-45'.replace(/-/g,':')); // replace all -
+// console.log("12-34-45".replace(/-/g, ":")); // replace all -
 
 // ==================
 // var str = " Ashok , Ashok sharma and Ashok gupta";
-// console.log(str.replace(/Ashok/g, 'Mr.$&')); // $& represents each match
+// console.log(str.replace(/Ashok/g, "Mr.$&")); // $& represents each match
 
-// var str = "Ashok Sharma"
-// console.log(str.replace(/(Ashok) (Sharma)/, '$2,$1'))
-
+// var str = "Ashok Sharma";
+// console.log(str.replace(/(Ashok) (Sharma)/, "$2,$1"));
 
 /*
 ------------------------------------------------------------
@@ -193,14 +184,13 @@ JavaScript calls it automatically with parameters like:
 */
 
 // ==========================
-// function replacer(str,offset,s){
-//     console.log('Found '+str+ ' at position '+offset+ ' in string ' +s);
-//     return str.toLowerCase();
+// function replacer(str, offset, s) {
+//   console.log("Found " + str + " at position " + offset + " in string " + s);
+//   return str.toLowerCase();
 // }
 
-// var result="HI-Hi-hi".replace(/hi/gi,replacer);
-// console.log('Result:' +result);
-
+// var result = "HI-Hi-hi".replace(/hi/gi, replacer);
+// console.log("Result:" + result);
 
 /*
 ------------------------------------------------------------
@@ -215,9 +205,8 @@ test() METHOD
 // test function
 // the test method looks for any match and returns true/false
 
-// var str= " i love JavaScript"
+// var str = " i love JavaScript";
 // console.log(/Love/.test(str));
-
 
 /*
 ------------------------------------------------------------
@@ -231,27 +220,26 @@ exec() METHOD
 // ===================
 // Exec- returns array of match and detailed return
 
-var str= " A lot about w3cschool at https://w3cschool.com"
-var regexp= /W3C(SCHOOL)/ig;
+// var str = " A lot about w3cschool at https://w3cschool.com";
+// var regexp = /W3C(SCHOOL)/gi;
 
-// var matchOne=regexp.exec(str);
-// console.log(matchOne[0]);// complete match
+// var matchOne = regexp.exec(str);
+// console.log(matchOne[0]); // complete match
 // console.log(matchOne[1]);
 // console.log(matchOne.index);
 // console.log(matchOne.input);
 // console.log(regexp.lastIndex);
 
-// var matchTwo= regexp.exec(str);
+// var matchTwo = regexp.exec(str);
 // console.log(matchTwo[0]);
 // console.log(matchTwo[1]);
 // console.log(matchTwo.index);
 // console.log(matchTwo.input);
 // console.log(regexp.lastIndex);
 
-// regexp.lastIndex=30;
-// var match= regexp.exec(str);
+// regexp.lastIndex = 30;
+// var match = regexp.exec(str);
 // console.log(match.index);
-
 
 /*
 ------------------------------------------------------------
@@ -265,13 +253,12 @@ STICKY FLAG: y
 // =======================
 // Y flag- strict search from the last index
 
-// var str= "I love JavaScript";
-// var reg= /javascript/iy;
+// var str = "I love JavaScript";
+// var reg = /javascript/iy;
 // console.log(reg.lastIndex); // 0 by default javascript is not at 0 the location so we will get null here
 // console.log(str.match(reg));
-// reg.lastIndex=7;
+// reg.lastIndex = 7;
 // console.log(str.match(reg)); // as javascript at 7th position we will get the match
-
 
 /*
 ------------------------------------------------------------
@@ -295,11 +282,11 @@ Reverse classes:
 // \s a space symbol, includes spaces tabs new line
 // \w letter of english or a digit or an underscore
 
-// var str= "+7(901)-34343-34-675";
-// var reg=/\d/
+// var str = "+7(901)-34343-34-675";
+// var reg = /\d/;
 // console.log(str.match(reg));
 
-// var reg=/\d/g
+// var reg = /\d/g;
 // console.log(str.match(reg));
 
 // ==================
@@ -307,7 +294,6 @@ Reverse classes:
 // console.log(str.match(/CSS\d/));
 
 // console.log("I love HTML5".match(/\w\w\w\w\d/));
-
 
 /*
 ------------------------------------------------------------
@@ -323,15 +309,14 @@ WORD BOUNDARY: \b
 // Word boundary \b
 
 // console.log("Hello, Java!".match(/\bJava\b/)); // space before java and special char after so match
-// console.log("Hello, JavaScript!".match(/\bJava\b/));// S after java so no match
-// console.log("Hello, JavaScript!".match(/\bHello\b/));//, after java so match
-// console.log("Hello, Java!".match(/\bJava\b/));//! after java so match
-// console.log("Hello, Java!".match(/\bHell\b/));// no match
-// console.log("Hello, Java!".match(/\bHell\b/));// no match
+// console.log("Hello, JavaScript!".match(/\bJava\b/)); // S after java so no match
+// console.log("Hello, JavaScript!".match(/\bHello\b/)); //, after java so match
+// console.log("Hello, Java!".match(/\bJava\b/)); //! after java so match
+// console.log("Hello, Java!".match(/\bHell\b/)); // no match
+// console.log("Hello, Java!".match(/\bHell\b/)); // no match
 
 // console.log("1 23 3456 78".match(/b\d\d\b/g)); // note: this pattern has "b" not "\b" so b followed by 2 digits
 // console.log("Hello, Javaa!".match(/Java\b/)); // space before java and special char after so match
-
 
 /*
 ------------------------------------------------------------
@@ -343,11 +328,10 @@ This is a common data-cleaning task:
 
 // Reverse classes
 
-// var str= "+9(102)-345-34-55";
-// console.log(str.replace(/\D/g,""));
+// var str = "+9(102)-345-34-55";
+// console.log(str.replace(/\D/g, ""));
 
-// console.log(str.match(/\d/g).join(' '));
-
+// console.log(str.match(/\d/g).join(" "));
 
 /*
 ------------------------------------------------------------
@@ -360,7 +344,6 @@ Whitespace matters when matching patterns.
 
 // console.log("1 - 5".match(/\d-\d/));       // does not match because spaces exist
 // console.log("1 - 5".match(/\d\s-\s\d/));   // matches because \s handles spaces
-
 
 /*
 ------------------------------------------------------------
@@ -379,12 +362,11 @@ DOT CHARACTER: .
 
 // console.log("CS4".match(/CS.4/));
 
-// var st= " javascript class at 09:00 at location 123:456";
+// var st = " javascript class at 09:00 at location 123:456";
 
 // console.log(st.match(/\d\d.\d\d/));
 // console.log(st.match(/\d\d.\d\d/g));
 // .\d\d.\d\d.
-
 
 /*
 ------------------------------------------------------------
@@ -405,12 +387,11 @@ Examples:
 // ====================
 // Escaping character \
 
-// console.log("Java 8.0".match(/\d\.\d/))
+// console.log("Java 8.0".match(/\d\.\d/));
 
-// console.log("Java 8.0 g()".match(/g\(\)/))
+// console.log("Java 8.0 g()".match(/g\(\)/));
 
 // console.log("1/2".match(/\d\/\d/)); // note: this line has a syntax issue due to //
-
 
 /*
 ------------------------------------------------------------
@@ -446,7 +427,6 @@ The bracket form is one-character matching.
 // \w is [a-zA-z0-9_]
 // \s is same as [\t\n\f\r]
 
-
 /*
 ------------------------------------------------------------
 EXCLUDING CHARACTERS WITH [^ ]
@@ -460,8 +440,7 @@ Examples:
 
 // Excluding range
 
-// console.log("alice15@gmail.com".match(/[^\d\sA-Z]/gi))
-
+// console.log("alice15@gmail.com".match(/[^\d\sA-Z]/gi));
 
 /*
 ------------------------------------------------------------
@@ -474,20 +453,19 @@ But escaping is still okay if it improves readability.
 */
 
 // No escaping in [...]
-// console.log("1 + 32 - 3".match(/[-().^+]/g))
+// console.log("1 + 32 - 3".match(/[-().^+]/g));
 
-// console.log("1 + 32 - 3".match(/[\-\(\)\.\^\+]/g))
+// console.log("1 + 32 - 3".match(/[\-\(\)\.\^\+]/g));
 
-// console.log("JavaScript".match(/Java[^Script]/));//null
+// console.log("JavaScript".match(/Java[^Script]/)); //null
 
 // console.log("JavaScript".match(/Java[^script]/));
 
-// var  st = "python at 09:44 java at 21-30 45a56"
+// var st = "python at 09:44 java at 21-30 45a56";
 // console.log(st.match(/[0-9][0-9].[0-9][0-9]/g));
 
-// console.log(st.match(/[0-9][0-9][^0-9A-F][0-9][0-9]/g));// [^0-9A-F] A character that is NOT 0–9 and NOT A–F
+// console.log(st.match(/[0-9][0-9][^0-9A-F][0-9][0-9]/g)); // [^0-9A-F] A character that is NOT 0–9 and NOT A–F
 // console.log(st.match(/\d\d[:-]\d\d/g));
-
 
 /*
 ------------------------------------------------------------
@@ -506,21 +484,20 @@ Quantifiers control how many times a pattern repeats.
 
 // Quantifiers +,*? {n}
 
-// console.log(" I am 12345 year old".match(/\d{5}/))
-// console.log(" i am not 142 but 1234 years old".match(/\d{3,5}/))
+// console.log(" I am 12345 year old".match(/\d{5}/));
+// console.log(" i am not 142 but 1234 years old".match(/\d{3,5}/));
 
 // // + one or more
-// console.log("+7(903)-1233-34-45".match(/\d+/g))
+// console.log("+7(903)-1233-34-45".match(/\d+/g));
 
 // // ? zero or one
-// console.log("should i write color or colour".match(/colou?r/g))
+// console.log("should i write color or colour".match(/colou?r/g));
 
 // // * zero or more
-// console.log("100000000000000000101".match(/\d0*/g))
+// console.log("100000000000000000101".match(/\d0*/g));
 
-// console.log("hello!...how goes?....".match(/\.{3,}/g))
-// console.log("color:#121212; background-color:#AA00ef".match(/^#[a-f0-9]{6}/ig))
-
+// console.log("hello!...how goes?....".match(/\.{3,}/g));
+// console.log("color:#121212; background-color:#AA00ef".match(/^#[a-f0-9]{6}/gi));
 
 /*
 ------------------------------------------------------------
@@ -529,20 +506,19 @@ SOME QUICK test() PRACTICE LINES
 These show how test works with different patterns.
 */
 
-// var result = (/abc/.test("abcde"));
-// var result = (/abc/.test("abxde"));
-// var result = (/[xys]/.test("in 1992"));
-// var result = (/[0-9]/.test("in 1992"));
-// var result = (/'\d+'/.test("'0'"));
-// var result = (/'\d+'/.test("''"));
-// var result = (/'\d*'/.test("''"));
-// var result = (/'\d*'/.test("''"));
+// var result = /abc/.test("abcde");
+// var result = /abc/.test("abxde");
+// var result = /[xys]/.test("in 1992");
+// var result = /[0-9]/.test("in 1992");
+// var result = /'\d+'/.test("'0'");
+// var result = /'\d+'/.test("''");
+// var result = /'\d*'/.test("''");
+// var result = /'\d*'/.test("''");
 // var result = /\d\d-\d\d-\d\d\d\d \d\d:\d\d/;
-// var result = (/neighbou?r/.test("neifhbour"));
-// var result = (/neighbou?r/.test("neighbor"));
+// var result = /neighbou?r/.test("neifhbour");
+// var result = /neighbou?r/.test("neighbor");
 
 // console.log(result);
-
 
 /*
 ------------------------------------------------------------
@@ -554,19 +530,20 @@ It can be extracted using match() or exec().
 
 // Capturing group -- a part of pattern enclosed in () is called group
 
-// console.log("Gogooogooo now".match(/go+/gi))
+console.log("Gogooogooo now".match(/go+/gi));
 
-// console.log("my@mail.com @ his@site.com.uk".match(/[-.\w]+@[\w-]+[\w-]{2,20}/g))
+console.log(
+  "my@mail.com @ his@site.com.uk".match(/[-.\w]+@[\w-]+[\w-]{2,20}/g),
+);
 
-// var str= "<h1> hello world </h1>"
-// console.log(str.match(/<(.*?)>/))
+var str = "<h1> hello world </h1>";
+console.log(str.match(/<(.*?)>/));
 
-// var str= "He said: \"she is one!\".";
-// console.log(str.match(/['"](.*?)['"]/g))
+var str = 'He said: "she is one!".';
+console.log(str.match(/['"](.*?)['"]/g));
 
-// console.log('a "witch" and her "broom" is one'.match(/".+"/g));
-// console.log('a "witch" and her "broom" is one'.match(/".+?"/g));
-
+console.log('a "witch" and her "broom" is one'.match(/".+"/g));
+console.log('a "witch" and her "broom" is one'.match(/".+?"/g));
 
 /*
 ------------------------------------------------------------
@@ -604,7 +581,6 @@ and browser environment to run.
 // </body>
 // </html>
 
-
 // <!-- <!DOCTYPE html>
 // <html>
 // <body>
@@ -626,7 +602,6 @@ and browser environment to run.
 // </body>
 // </html>
 //  -->
-
 
 /*
 Another browser example using test():
@@ -655,7 +630,6 @@ Another browser example using test():
 // </html>
 //  -->
 
-
 /*
 Global match example in browser:
 */
@@ -682,7 +656,6 @@ Global match example in browser:
 // </body>
 // </html>
 //  -->
-
 
 /*
 ------------------------------------------------------------
@@ -713,7 +686,6 @@ These are classic regex patterns students often practice:
 // var quotedText = /'([^']*)'/;
 // result = (quotedText.exec("she said 'hello'"));
 
-
 /*
 ------------------------------------------------------------
 ABOUT exec()
@@ -725,7 +697,6 @@ If no match is found, it returns null.
 With g flag, exec remembers where it left off using lastIndex.
 This allows step-by-step matching.
 */
-
 
 /*
 ------------------------------------------------------------
@@ -774,8 +745,6 @@ Regex can look confusing at first, but practice makes patterns familiar.
 // 10. Write a regex for <a string that does NOT contain digits>
 // Answer: /^[^\d]*$/
 
-
-
 // ================= INTERMEDIATE =================
 
 // 11. Write a regex for <a valid email address>
@@ -807,8 +776,6 @@ Regex can look confusing at first, but practice makes patterns familiar.
 
 // 20. Write a regex for <repeated characters like "boook">
 // Answer: /(.)\1+/
-
-
 
 // ================= ADVANCED =================
 
