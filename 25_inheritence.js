@@ -359,6 +359,9 @@ PRACTICE TASKS (Homework)
 ("use strict");
 
 /*
+
+we are trying best for next week 
+
 =====================================================================
 JS OOP — INHERITANCE: SINGLE + MULTIPLE CHILDREN + MULTI-LEVEL
 =====================================================================
@@ -545,83 +548,83 @@ RULE:
 - They must use parent methods like getBalance(), deposit(), withdraw()
 ------------------------------------------------------------
 */
-// class Account {
-//   #balance;
+class Account {
+  #balance;
 
-//   constructor(owner, initialBalance = 0) {
-//     this.owner = owner;
+  constructor(owner, initialBalance = 0) {
+    this.owner = owner;
 
-//     if (typeof initialBalance !== "number" || initialBalance < 0) {
-//       throw new Error("initialBalance must be >= 0");
-//     }
-//     this.#balance = initialBalance;
-//   }
+    if (typeof initialBalance !== "number" || initialBalance < 0) {
+      throw new Error("initialBalance must be >= 0");
+    }
+    this.#balance = initialBalance;
+  }
 
-//   deposit(amount) {
-//     if (typeof amount !== "number" || amount <= 0) {
-//       throw new Error("deposit must be positive");
-//     }
-//     this.#balance += amount;
-//     return this.#balance;
-//   }
+  deposit(amount) {
+    if (typeof amount !== "number" || amount <= 0) {
+      throw new Error("deposit must be positive");
+    }
+    this.#balance += amount;
+    return this.#balance;
+  }
 
-//   withdraw(amount) {
-//     if (typeof amount !== "number" || amount <= 0) {
-//       throw new Error("withdraw must be positive");
-//     }
-//     if (amount > this.#balance) {
-//       throw new Error("Insufficient funds");
-//     }
-//     this.#balance -= amount;
-//     return this.#balance;
-//   }
+  withdraw(amount) {
+    if (typeof amount !== "number" || amount <= 0) {
+      throw new Error("withdraw must be positive");
+    }
+    if (amount > this.#balance) {
+      throw new Error("Insufficient funds");
+    }
+    this.#balance -= amount;
+    return this.#balance;
+  }
 
-//   getBalance() {
-//     return this.#balance;
-//   }
-// }
+  getBalance() {
+    return this.#balance;
+  }
+}
 
-// class SavingsAccount extends Account {
-//   constructor(owner, initialBalance, interestRate = 0.05) {
-//     super(owner, initialBalance);
-//     this.interestRate = interestRate;
-//   }
+class SavingsAccount extends Account {
+  constructor(owner, initialBalance, interestRate = 0.05) {
+    super(owner, initialBalance);
+    this.interestRate = interestRate;
+  }
 
-//   addInterest() {
-//     // cannot access #balance directly; use getBalance()
-//     const interest = this.getBalance() * this.interestRate;
-//     this.deposit(interest);
-//     return this.getBalance();
-//   }
-// }
+  addInterest() {
+    // cannot access #balance directly; use getBalance()
+    const interest = this.getBalance() * this.interestRate;
+    this.deposit(interest);
+    return this.getBalance();
+  }
+}
 
-// class PremiumSavingsAccount extends SavingsAccount {
-//   constructor(owner, initialBalance, interestRate, cashbackRate = 0.01) {
-//     super(owner, initialBalance, interestRate);
-//     this.cashbackRate = cashbackRate;
-//   }
+class PremiumSavingsAccount extends SavingsAccount {
+  constructor(owner, initialBalance, interestRate, cashbackRate = 0.01) {
+    super(owner, initialBalance, interestRate);
+    this.cashbackRate = cashbackRate;
+  }
 
-//   // premium feature: cashback on deposits
-//   depositWithCashback(amount) {
-//     this.deposit(amount);
-//     const cashback = amount * this.cashbackRate;
-//     this.deposit(cashback);
-//     return {
-//       amountDeposited: amount,
-//       cashbackAdded: cashback,
-//       finalBalance: this.getBalance(),
-//     };
-//   }
-// }
+  // premium feature: cashback on deposits
+  depositWithCashback(amount) {
+    this.deposit(amount);
+    const cashback = amount * this.cashbackRate;
+    this.deposit(cashback);
+    return {
+      amountDeposited: amount,
+      cashbackAdded: cashback,
+      finalBalance: this.getBalance(),
+    };
+  }
+}
 
-// const Acc = new SavingsAccount("Vandana", 1000, 0.1);
-// console.log("Savings Initial:", sAcc.getBalance());
-// console.log("After Interest:", sAcc.addInterest());
+const Acc = new SavingsAccount("Vandana", 1000, 0.1);
+console.log("Savings Initial:", sAcc.getBalance());
+console.log("After Interest:", sAcc.addInterest());
 
-// const pAcc = new PremiumSavingsAccount("Ashok", 2000, 0.08, 0.02);
-// console.log("Premium Initial:", pAcc.getBalance());
-// console.log("Deposit with cashback:", pAcc.depositWithCashback(500));
-// console.log("Premium Final:", pAcc.getBalance());
+const pAcc = new PremiumSavingsAccount("Ashok", 2000, 0.08, 0.02);
+console.log("Premium Initial:", pAcc.getBalance());
+console.log("Deposit with cashback:", pAcc.depositWithCashback(500));
+console.log("Premium Final:", pAcc.getBalance());
 
 // ❌ Do not uncomment: child cannot access #balance
 // console.log(pAcc.#balance);
