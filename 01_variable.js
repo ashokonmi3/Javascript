@@ -174,23 +174,6 @@ Only declaration is hoisted, not initialization.
 // var hoistedVar = 10;
 
 /* ===============================================================================
-User Input (Node.js)
-Used to take input from console using readline module.
-================================================================================ */
-
-// const readline = require("readline");
-
-// const rl = readline.createInterface({
-//   input: process.stdin,
-//   output: process.stdout
-// });
-
-// rl.question("Enter name: ", function(name){
-//   console.log("value of name : " + name);
-//   rl.close();
-// });
-
-/* ===============================================================================
 Redeclaration (var vs let)
 var → allows redeclaration
 let → does not allow redeclaration

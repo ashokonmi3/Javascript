@@ -540,20 +540,54 @@ Example: Find salary-related properties
 // console.log(original.prop2.inner); // "modified" because shallowCopy affects original
 // console.log(deepCopy.prop2.inner); // "innerValue"
 // =========================
-let student = {
-  name: "Rahul",
-  age: 22,
-  course: "JavaScript",
-};
+// let student = {
+//   name: "Rahul",
+//   age: 22,
+//   course: "JavaScript",
+// };
 
-// let name = student.name;
-// let age = student.age;
-// let course = student.course;
+// // let name = student.name;
+// // let age = student.age;
+// // let course = student.course;
 
-// let {name,age,course}= student
+// // let {name,age,course}= student
 
-let { name: empName, age: empAge, course: empCourse } = student;
+// let { name: empName, age: empAge, course: empCourse } = student;
 
-console.log(empName);
-console.log(empAge);
-console.log(empCourse);
+// console.log(empName);
+// console.log(empAge);
+// console.log(empCourse);
+
+function countLogs(logs) {
+
+    let count = {};
+
+    for (let log of logs) {
+
+        // Split the log
+        let parts = log.split("|");
+
+        // Get LEVEL
+        let level = parts[1];
+
+        // Count levels
+        if (count[level]) {
+            count[level]++;
+        } else {
+            count[level] = 1;
+        }
+    }
+
+    console.log(count);
+}
+
+
+// Sample Input
+let logs = [
+    "10:01|ERROR|Disk full",
+    "10:02|INFO|Started",
+    "10:03|ERROR|Crash",
+    "10:04|WARN|Low memory"
+];
+
+countLogs(logs);

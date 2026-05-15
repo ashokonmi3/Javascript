@@ -375,3 +375,34 @@ Output:
 5
 
 */
+function generateUsernames(names) {
+  let result = [];
+  let count = {};
+
+  for (let name of names) {
+    // First time username appears
+    if (count[name] === undefined) {
+      result.push(name);
+      count[name] = 1;
+    } else {
+      // Username already exists
+      let newName = name + count[name];
+
+      result.push(newName);
+
+      // Increase count
+      count[name]++;
+    }
+  }
+
+  return result;
+}
+
+// Sample Input
+const names = ["john", "john", "john", "josh"];
+
+// Function Call
+const output = generateUsernames(names);
+
+// Output
+console.log(output);

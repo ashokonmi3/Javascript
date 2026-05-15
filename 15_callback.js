@@ -185,6 +185,30 @@ Common pattern: callback(error, data)
 // }
 
 // fetchDataWithErrorHandling(myerror);
+// =================================
+
+function fetchDataWithErrorHandling(callback) {
+  let errorOccurred = false;
+
+  setTimeout(() => {
+    if (errorOccurred) {
+      callback("Error: Failed to fetch data");
+    } else {
+      const data = { id: 2, name: "Bob" };
+      callback(null, data);
+    }
+  }, 2000);
+}
+
+function myerror(error, data) {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log("Data received:", data);
+  }
+}
+
+fetchDataWithErrorHandling(myerror);
 
 /*
 ------------------------------------------------------------
